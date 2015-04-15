@@ -20,6 +20,7 @@ body {
 	font-size: 12px;
 	color: #fff;
 	background-color: #000;
+	cursor: default;
 }
 
 #screens .screen {
@@ -34,10 +35,12 @@ button {
 	padding: 8px 16px 8px 16px;
 	border: solid #ffffff 2px;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 button[disabled] {
 	opacity: 0.5;
+	cursor: default;
 }
 
 button.full {
@@ -48,6 +51,7 @@ button.full {
 
 a {
 	color: #06f;
+	cursor: pointer;
 }
 
 

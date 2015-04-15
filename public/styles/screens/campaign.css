@@ -18,6 +18,7 @@
 #screen-campaign .levels .level.available {
 	color: #fff;
 	outline: 2px solid #fff;
+	cursor: pointer;
 }
 
 #screen-campaign .levels .level.current {
