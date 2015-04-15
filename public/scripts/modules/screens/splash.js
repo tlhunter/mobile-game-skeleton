@@ -25,10 +25,14 @@ MODULE.SplashScreen = (function() {
         this.$actions.html($button);
     };
 
+    /*
     SplashScreen.prototype.display = function() {
         $('#screens > .screen').hide();
         this.$screen.show();
+
+        app.analytics.track('SCREEN-SPLASH');
     };
+    */
 
     return SplashScreen;
 }());

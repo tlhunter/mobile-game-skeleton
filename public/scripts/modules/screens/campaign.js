@@ -10,6 +10,8 @@ MODULE.CampaignScreen = (function() {
     CampaignScreen.prototype.display = function() {
         $('#screens > .screen').hide();
         this.$screen.show();
+
+        app.analytics.track('SCREEN-CAMPAIGN');
     };
 
     return CampaignScreen;

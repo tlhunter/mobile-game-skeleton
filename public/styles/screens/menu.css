@@ -10,10 +10,10 @@
 
 #screen-menu .buttons {
 	position: absolute;
-	bottom: 0px;
+	bottom: 5%;
 	width: 100%;
 }
 
 #screen-menu .buttons button {
-	margin-bottom: 10%;
+	margin-top: 20px;
 }
