@@ -43,7 +43,8 @@ button:active {
 }
 
 button[disabled] {
-	opacity: 0.5;
+	color: #666;
+	border-color: #666;
 	cursor: default;
 }
 

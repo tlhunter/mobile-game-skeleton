@@ -20,6 +20,7 @@ MODULE.SplashScreen = (function() {
 
         $button.on('click', function() {
             app.screens.menu.display();
+            document.getElementById('background-music').play()
         });
 
         this.$actions.html($button);
