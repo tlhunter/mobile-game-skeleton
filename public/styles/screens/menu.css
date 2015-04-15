@@ -1,0 +1,19 @@
+#screen-menu {
+	background: black url("/images/ui/screen-background.png") no-repeat center center;
+	background-size: cover;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	position: absolute;
+}
+
+#screen-menu .buttons {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+#screen-menu .buttons button {
+	margin-bottom: 10%;
+}

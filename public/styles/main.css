@@ -26,10 +26,6 @@ body {
 	display: none;
 }
 
-#screens #screen-splash {
-	display: block;
-}
-
 button {
 	background: #383838;
 	background-image: -webkit-linear-gradient(top, #383838, #050505);
@@ -45,8 +41,41 @@ button {
 	text-decoration: none;
 }
 
+button[disabled] {
+	opacity: 0.5;
+}
+
 button.full {
 	display: block;
 	width: 80%;
 	margin: 0 auto;
+}
+
+a {
+	color: #06f;
+}
+
+
+.common-header {
+	position: absolute;
+	width: 100%;
+}
+
+.common-header {
+	text-align: center;
+	top: 20px;
+}
+
+.common-header h1,
+.common-header h2 {
+	margin: 0;
+	padding: 0;
+}
+
+.common-header h1 {
+	font-size: 32px;
+}
+
+.common-header h2 {
+	font-size: 24px;
 }
