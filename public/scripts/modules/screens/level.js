@@ -17,7 +17,9 @@ MODULE.LevelScreen = (function() {
         };
 
         this.$buttons.exit.on('click', function() {
-            app.screens.campaign.display();
+            if (window.confirm("Are you sure you want to leave? Any progress will be lost.")) {
+                app.screens.campaign.display();
+            }
         });
 
         this.level = null;
