@@ -1,0 +1,44 @@
+#screen-splash {
+	background: black url("/images/meta/splash.png") no-repeat center center;
+	background-size: cover;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	position: absolute;
+}
+
+#screen-splash .header,
+#screen-splash .footer {
+	position: absolute;
+	width: 100%;
+}
+
+#screen-splash .header {
+	text-align: center;
+	top: 20px;
+}
+
+#screen-splash .header h1,
+#screen-splash .header h2 {
+	margin: 0;
+	padding: 0;
+}
+
+#screen-splash .header h1 {
+	font-size: 32px;
+}
+
+#screen-splash .header h2 {
+	font-size: 24px;
+}
+
+#screen-splash .footer {
+	text-align: center;
+	bottom: 20px;
+	font-size: 12px;
+}
+
+#screen-splash .footer .play {
+	margin-bottom: 16px;
+}

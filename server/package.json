@@ -1,0 +1,26 @@
+{
+  "name": "strategic-game-of-life",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tlhunter/mobile-game-skeleton.git"
+  },
+  "author": "Thomas Hunter II <me@thomashunter.name>",
+  "license": "BSD/GPL",
+  "bugs": {
+    "url": "https://github.com/tlhunter/mobile-game-skeleton/issues"
+  },
+  "homepage": "https://github.com/tlhunter/mobile-game-skeleton",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}

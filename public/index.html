@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Mobile Game Skeleton</title>
+    <title>Strategic GoL</title>
 	
 	<!-- Third Party Libraries -->
     <script src="/scripts/lib/mixpanel.js"></script>
@@ -11,6 +11,13 @@
 
 	<!-- Styles -->
     <link href="/styles/main.css" type="text/css" rel="stylesheet" />
+    <link href="/styles/screens/campaign.css" type="text/css" rel="stylesheet" />
+    <link href="/styles/screens/help.css" type="text/css" rel="stylesheet" />
+    <link href="/styles/screens/level.css" type="text/css" rel="stylesheet" />
+    <link href="/styles/screens/menu.css" type="text/css" rel="stylesheet" />
+    <link href="/styles/screens/online.css" type="text/css" rel="stylesheet" />
+    <link href="/styles/screens/settings.css" type="text/css" rel="stylesheet" />
+    <link href="/styles/screens/splash.css" type="text/css" rel="stylesheet" />
 
 	<!-- Mobile Settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui" />
@@ -25,14 +32,30 @@
 
 <body>
 
-<header id="main-header" class="fixed">Header</header>
-<footer id="main-footer" class="fixed">Footer</footer>
-
 <main id="screens">
-    <section id="screen-splash" class="screen">Splash</section>
-    <section id="screen-main" class="screen">Main</section>
-    <section id="screen-help" class="screen">Help</section>
-    <section id="screen-game" class="screen">Game</section>
+    <section id="screen-splash" class="screen">
+        <div class="header">
+            <h1>Strategic</h1>
+            <h2>Game of Life</h2>
+        </div>
+
+        <div class="footer">
+            <div class="play"><button class="full">Play</button></div>
+            <div class="author">Created by Thomas Hunter II</div>
+        </div>
+    </section>
+
+    <section id="screen-menu" class="screen">Main Menu</section>
+
+    <section id="screen-campaign" class="screen">Campaign</section>
+
+    <section id="screen-online" class="screen">Online</section>
+
+    <section id="screen-settings" class="screen">Settings</section>
+
+    <section id="screen-help" class="screen">How to Play</section>
+
+    <section id="screen-level" class="screen">Level</section>
 </main>
 
 <script src="/scripts/modules/analytics.js"></script>
