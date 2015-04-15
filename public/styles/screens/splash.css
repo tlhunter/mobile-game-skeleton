@@ -2,11 +2,6 @@
 	display: block;
 	background: black url("/images/meta/splash.png") no-repeat center center;
 	background-size: cover;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	position: absolute;
 }
 
 #screen-splash .footer {

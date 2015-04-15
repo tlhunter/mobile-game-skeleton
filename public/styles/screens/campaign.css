@@ -1,0 +1,36 @@
+#screen-campaign {
+}
+
+#screen-campaign .levels {
+	text-align: center;
+}
+
+#screen-campaign .levels .level {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	line-height: 32px;
+	text-align: center;
+	margin: 8px;
+	font-size: 16px;
+}
+
+#screen-campaign .levels .level.available {
+	color: #fff;
+	outline: 2px solid #fff;
+}
+
+#screen-campaign .levels .level.current {
+	outline-width: 2px;
+	outline-style: solid;
+
+	-webkit-animation: cycle 2s linear infinite;
+    -moz-animation: cycle 2s linear infinite;
+    animation: cycle 2s linear infinite;
+}
+
+#screen-campaign .levels .level.unavailable {
+	color: #666;
+	outline: 2px solid #666;
+}
+
