@@ -9,7 +9,7 @@ var MODULE = window.MODULE || {};
 		network: null,
 		storage: null,
 		analytics: new MODULE.Analytics(mixpanel_id),
-		audio: null,
+		audio: new MODULE.Audio(),
 		data: null,
 		screens: {
 			campaign: new MODULE.CampaignScreen(),

@@ -32,6 +32,7 @@ MODULE.LevelScreen = (function() {
         this.level_id = level_id;
 
         this.level = new MODULE.Level(level_id);
+        app.audio.playMusic('level');
 
         this.$screen.show();
 
