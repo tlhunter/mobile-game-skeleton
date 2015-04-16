@@ -53,7 +53,7 @@ MODULE.LevelScreen = (function() {
 
         this.$screen.show();
 
-        app.analytics.track('SCREEN-SETTINGS');
+        app.analytics.track('LEVEL-' + level_id);
     };
 
     return LevelScreen;
