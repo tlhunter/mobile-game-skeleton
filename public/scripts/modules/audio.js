@@ -9,6 +9,11 @@ MODULE.Audio = (function() {
             level: document.getElementById('music-level')
         };
 
+        this.sound = {
+            back: document.getElementById('sound-back'),
+            select: document.getElementById('sound-select')
+        };
+
         this.current = null;
     };
 
@@ -22,6 +27,10 @@ MODULE.Audio = (function() {
         }
 
         this.current = id;
+    };
+
+    Audio.prototype.playSound = function(id) {
+        this.sound[id].play();
     };
 
     return Audio;

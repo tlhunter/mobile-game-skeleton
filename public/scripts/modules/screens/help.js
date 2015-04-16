@@ -11,6 +11,7 @@ MODULE.HelpScreen = (function() {
         };
 
         this.$buttons.back.on('click', function() {
+            app.audio.playSound('back');
             app.screens.menu.display();
         });
     };

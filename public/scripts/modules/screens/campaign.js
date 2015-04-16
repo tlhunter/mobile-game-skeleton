@@ -13,12 +13,14 @@ MODULE.CampaignScreen = (function() {
         this.$levels = this.$screen.find('.levels');
 
         this.$buttons.back.on('click', function() {
+            app.audio.playSound('back');
             app.screens.menu.display();
         });
 
         this.$levels.delegate('.available', 'click', function() {
             var level = Math.floor($(this).text());
 
+            app.audio.playSound('select');
             app.screens.level.display(level);
         });
     };

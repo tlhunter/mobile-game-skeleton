@@ -14,18 +14,22 @@ MODULE.MenuScreen = (function() {
         };
 
         this.$buttons.campaign.on('click', function() {
+            app.audio.playSound('select');
             app.screens.campaign.display();
         });
 
         this.$buttons.online.on('click', function() {
+            app.audio.playSound('select');
             app.screens.online.display();
         });
 
         this.$buttons.settings.on('click', function() {
+            app.audio.playSound('select');
             app.screens.settings.display();
         });
 
         this.$buttons.help.on('click', function() {
+            app.audio.playSound('select');
             app.screens.help.display();
         });
     };
