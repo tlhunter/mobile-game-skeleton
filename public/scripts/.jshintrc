@@ -1,0 +1,12 @@
+{
+	"node": false,
+	"browser": true,
+	"jquery": true,
+	"globalstrict": true,
+	"devel": true,
+	"loopfunc": true,
+	"globals": {
+		"app": true,
+		"MODULE": true
+	}
+}
