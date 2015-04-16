@@ -11,7 +11,10 @@ MODULE.Audio = (function() {
 
         this.sound = {
             back: document.getElementById('sound-back'),
-            select: document.getElementById('sound-select')
+            select: document.getElementById('sound-select'),
+            clear: document.getElementById('sound-clear'),
+            play: document.getElementById('sound-play'),
+            stop: document.getElementById('sound-stop')
         };
 
         this.current = null;

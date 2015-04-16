@@ -16,6 +16,22 @@ MODULE.LevelScreen = (function() {
             exit: this.$footer.find('button.exit')
         };
 
+        this.$buttons.play.on('click', function() {
+            app.audio.playSound('play');
+        });
+
+        this.$buttons.clear.on('click', function() {
+            app.audio.playSound('clear');
+        });
+
+        this.$buttons.help.on('click', function() {
+            console.log('help');
+        });
+
+        this.$buttons.library.on('click', function() {
+            console.log('library');
+        });
+
         this.$buttons.exit.on('click', function() {
             app.audio.playSound('back');
             if (window.confirm("Are you sure you want to leave? Any progress will be lost.")) {
