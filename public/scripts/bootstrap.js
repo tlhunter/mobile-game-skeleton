@@ -4,10 +4,11 @@ var MODULE = window.MODULE || {};
 
 (function() {
 	var mixpanel_id = "f598ce903232263c47ca516bff05c18b";
+	var storage_prefix = "sgol-";
 
 	var app = {
 		network: null,
-		storage: null,
+		storage: new MODULE.Storage(storage_prefix),
 		analytics: new MODULE.Analytics(mixpanel_id),
 		audio: new MODULE.Audio(),
 		data: null,
