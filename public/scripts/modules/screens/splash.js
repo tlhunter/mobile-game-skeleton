@@ -8,18 +8,22 @@ MODULE.SplashScreen = (function() {
         this.$screen = $('#screen-splash');
 
         this.$actions = this.$screen.find('.actions');
-    };
+        this.$loading = this.$actions.find('.loading');
 
-    SplashScreen.prototype.finish = function() {
-        var $button = $('<button class="full">Play</button>');
+        this.$buttons = {
+            play: this.$actions.find('.play')
+        };
 
-        $button.on('click', function() {
+        this.$buttons.play.on('click', function() {
             app.screens.menu.display();
             app.audio.playSound('select');
             app.audio.playMusic('background');
         });
+    };
 
-        this.$actions.html($button);
+    SplashScreen.prototype.finish = function() {
+        this.$loading.hide();
+        this.$buttons.play.show();
     };
 
     /*

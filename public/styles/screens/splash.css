@@ -18,3 +18,10 @@
 #screen-splash .footer .actions {
 	margin-bottom: 16px;
 }
+
+#screen-splash .footer .actions .loading {
+}
+
+#screen-splash .footer .actions .play {
+	display: none;
+}

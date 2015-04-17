@@ -1,6 +1,6 @@
 'use strict';
 
-var MODULE = window.MODULE || {};
+if (!MODULE) { var MODULE = {}; }
 
 (function() {
 	var mixpanel_id = "f598ce903232263c47ca516bff05c18b";
