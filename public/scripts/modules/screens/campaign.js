@@ -38,15 +38,15 @@ MODULE.CampaignScreen = (function() {
 
     CampaignScreen.prototype.drawLevels = function() {
         var levels = "";
-        var last_completed = app.storage.get('level', 0);
+        var current_level = app.storage.get('level', 0) + 1;
         var c;
 
         var level_count = Object.keys(app.content.data.campaign).length;
 
         for (var i = 1; i <= level_count; i++) {
-            if (i < last_completed) {
+            if (i < current_level) {
                 c = "available";
-            } else if (i === last_completed) {
+            } else if (i === current_level) {
                 c = "available current";
             } else {
                 c = "unavailable";
