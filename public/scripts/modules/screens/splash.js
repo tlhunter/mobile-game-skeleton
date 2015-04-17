@@ -22,8 +22,15 @@ MODULE.SplashScreen = (function() {
     };
 
     SplashScreen.prototype.finish = function() {
-        this.$loading.hide();
-        this.$buttons.play.show();
+        var self = this;
+
+        setTimeout(function() {
+            self.$loading.slideUp(350);
+
+            setTimeout(function() {
+                self.$buttons.play.slideDown(500);
+            }, 350);
+        }, 350);
     };
 
     /*
