@@ -25,12 +25,12 @@ MODULE.SplashScreen = (function() {
         var self = this;
 
         setTimeout(function() {
-            self.$loading.slideUp(350);
+            self.$loading.fadeOut(250);
 
             setTimeout(function() {
-                self.$buttons.play.slideDown(500);
-            }, 350);
-        }, 350);
+                self.$buttons.play.fadeIn(500);
+            }, 250);
+        }, 250);
     };
 
     /*

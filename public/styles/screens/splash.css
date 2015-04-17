@@ -17,9 +17,14 @@
 
 #screen-splash .footer .actions {
 	margin-bottom: 16px;
+	height: 48px;
+	line-height: 48px;
 }
 
-#screen-splash .footer .actions .loading {
+#screen-splash .footer .author span,
+#screen-splash .footer .actions .loading span {
+	background-color: #000;
+	padding: 0 2px;
 }
 
 #screen-splash .footer .actions .play {
