@@ -3,6 +3,8 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.CampaignScreen = (function() {
+    var MAXIMUM_LEVEL = 48; // TODO: content
+
     var CampaignScreen = function() {
         this.$screen = $('#screen-campaign');
 
@@ -38,16 +40,16 @@ MODULE.CampaignScreen = (function() {
 
     CampaignScreen.prototype.drawLevels = function() {
         var levels = "";
-        var my_level = 25;
+        var last_completed = app.storage.get('level', 0);
         var c;
 
-        for (var i = 1; i <= 48; i++) {
-            if (i < my_level) {
+        for (var i = 1; i <= MAXIMUM_LEVEL; i++) {
+            if (i < last_completed) {
                 c = "available";
-            } else if (i > my_level) {
-                c = "unavailable";
-            } else {
+            } else if (i === last_completed) {
                 c = "available current";
+            } else {
+                c = "unavailable";
             }
 
             levels += "<div class='level " + c + "'>" + i + "</div>";
