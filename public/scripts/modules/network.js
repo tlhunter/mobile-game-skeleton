@@ -25,6 +25,7 @@ MODULE.Network = (function() {
 
     // Placeholder for Socket
     Network.prototype.on = function(event, callback) {
+        throw new Error("Not Yet Implemented");
     };
 
     return Network;

@@ -5,14 +5,14 @@ var MODULE = window.MODULE || {};
 (function() {
 	var mixpanel_id = "f598ce903232263c47ca516bff05c18b";
 	var storage_prefix = "sgol-";
-	var url_prefix = "";
+	var url_prefix = location.origin;
 
 	var app = {
 		network: new MODULE.Network(url_prefix),
 		storage: new MODULE.Storage(storage_prefix),
 		analytics: new MODULE.Analytics(mixpanel_id),
 		audio: new MODULE.Audio(),
-		data: null,
+		content: new MODULE.Content(),
 		screens: {
 			campaign: new MODULE.CampaignScreen(),
 			help: new MODULE.HelpScreen(),
@@ -25,4 +25,8 @@ var MODULE = window.MODULE || {};
 	};
 
 	window.app = app;
+
+	app.content.load(function() {
+		app.screens.splash.finish();
+	});
 })();

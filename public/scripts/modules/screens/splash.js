@@ -8,11 +8,6 @@ MODULE.SplashScreen = (function() {
         this.$screen = $('#screen-splash');
 
         this.$actions = this.$screen.find('.actions');
-
-        setTimeout(function() {
-            // TODO: This will be based on network activity
-            self.finish();
-        }, 1000);
     };
 
     SplashScreen.prototype.finish = function() {
