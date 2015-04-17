@@ -5,9 +5,10 @@ var MODULE = window.MODULE || {};
 (function() {
 	var mixpanel_id = "f598ce903232263c47ca516bff05c18b";
 	var storage_prefix = "sgol-";
+	var url_prefix = "";
 
 	var app = {
-		network: null,
+		network: new MODULE.Network(url_prefix),
 		storage: new MODULE.Storage(storage_prefix),
 		analytics: new MODULE.Analytics(mixpanel_id),
 		audio: new MODULE.Audio(),
