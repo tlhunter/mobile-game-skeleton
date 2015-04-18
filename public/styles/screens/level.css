@@ -2,7 +2,7 @@
 }
 
 #screen-level .level {
-	margin-bottom: 48px;
+	margin: 48px 0;
 	position: relative;
 	width: 512px;
 	height: 512px;
@@ -27,4 +27,14 @@
 #screen-level footer button {
 	font-size: 12px;
 	padding: 4px;
+}
+
+#screen-level header {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	background-color: #000;
+	height: 48px;
+	text-align: center;
+	line-height: 24px;
 }
