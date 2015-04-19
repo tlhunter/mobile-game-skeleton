@@ -104,7 +104,7 @@ a {
 
 .screen-full .footer-buttons {
 	bottom: 0px;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	margin-bottom: 40px;
 }

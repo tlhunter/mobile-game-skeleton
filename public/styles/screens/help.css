@@ -1,0 +1,9 @@
+#screen-help .screen-wrap .content {
+	padding: 0 5% 100px 5%;
+}
+
+#screen-help .footer-buttons {
+	margin-bottom: 0px;
+	background-color: #000;
+	padding: 16px 0 40px;
+}

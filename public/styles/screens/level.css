@@ -33,6 +33,12 @@
 	padding: 4px;
 }
 
+@media (max-width: 320px) {
+	#screen-level footer button {
+		font-size: 10px;
+	}
+}
+
 #screen-level footer button.stop {
 	display: none;
 }

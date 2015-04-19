@@ -1,0 +1,8 @@
+#screen-settings .footer-buttons button {
+	margin-top: 20px;
+}
+
+#screen-settings button.full.reset {
+	border-color: #f30;
+	color: #f30;
+}

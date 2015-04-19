@@ -21,6 +21,11 @@ MODULE.Audio = (function() {
     };
 
     Audio.prototype.playMusic = function(id) {
+        if (app.storage.get('mute', false)) {
+            console.log('muted');
+            return;
+        }
+
         if (!this.current) {
             this.music[id].play();
         } else if (this.current && this.current !== id) {
@@ -33,7 +38,23 @@ MODULE.Audio = (function() {
     };
 
     Audio.prototype.playSound = function(id) {
+        if (app.storage.get('mute', false)) {
+            return;
+        }
+
         this.sound[id].play();
+    };
+
+    Audio.prototype.toggleMute = function() {
+        var mute = !app.storage.get('mute', false);
+
+        if (mute && this.current) {
+            this.music[this.current].pause();
+            this.music[this.current].currentTime = 0;
+            this.current = null;
+        }
+
+        app.storage.set('mute', mute);
     };
 
     return Audio;
