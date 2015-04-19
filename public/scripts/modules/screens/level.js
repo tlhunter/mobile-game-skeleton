@@ -26,6 +26,7 @@ MODULE.LevelScreen = (function() {
 
         this.level = null;
         this.level_id = null;
+        this.library = null;
 
         this.$buttons.play.on('click', function() {
             app.audio.playSound('play');
@@ -51,7 +52,9 @@ MODULE.LevelScreen = (function() {
         });
 
         this.$buttons.library.on('click', function() {
-            console.log('library');
+            app.modal.show(self.getLibrary(), [{
+                text: 'Ok'
+            }]);
         });
 
         this.$buttons.exit.on('click', function() {
@@ -126,6 +129,8 @@ MODULE.LevelScreen = (function() {
 
         this.intro();
 
+        this.library = null;
+
         app.analytics.track('SCREEN-LEVEL');
     };
 
@@ -133,6 +138,36 @@ MODULE.LevelScreen = (function() {
 		app.modal.show("<h3 class='cycle'>" + this.level.name + "</h3>" + this.level.description, [{
 			text: "Ok"
 		}]);
+    };
+
+    LevelScreen.prototype.getLibrary = function() {
+        if (this.library) {
+            return this.library;
+        }
+
+        var self = this;
+
+        var library = '<div class="library">';
+
+        Object.keys(app.content.data.library).forEach(function(lib) {
+            var item = app.content.data.library[lib];
+
+            if (item.id > self.level.library) {
+                return;
+            }
+
+            library +=
+                '<div class="lib">' +
+                    '<strong>' + item.name + '</strong><br />' +
+                    '<img src="' + item.image + '" />' +
+                '</div>';
+        });
+
+        library += '</div>';
+
+        this.library = library;
+
+        return this.library;
     };
 
     return LevelScreen;
