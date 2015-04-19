@@ -14,10 +14,14 @@ MODULE.Level = (function() {
 			height: data.height
 		};
 
-		this.pixel_dimensions = {
-			width: data.width * this.size,
-			height: data.height * this.size
-		};
+		var $gamefield = $('<canvas id="gamefield" width="' + this.dimensions.width * this.size + '" height="' + this.dimensions.height * this.size + '"></canvas>');
+
+		this.$gamefield = $gamefield;
+		this.$container.empty().append($gamefield);
+
+		this.gamefield = this.$gamefield[0].getContext('2d');
+
+		this.resize();
 
 		this.arena = data.arena;
 		this.deadzones = data.deadzones;
@@ -29,14 +33,12 @@ MODULE.Level = (function() {
 		this.name = data.name;
 		this.description = data.description;
 
+		this.generations_until_beaten = 0;
 		this.generation = 0;
 		this.goalPhase = 0;
 
 		this.arena = this.buildArena();
 		this.initial_arena = null;
-
-		this.$gamefield = null;
-		this.gamefield = null;
 
 		this.playing = false;
 
@@ -44,29 +46,49 @@ MODULE.Level = (function() {
 
 		this.generationHandler = function() {};
 		this.playCountHandler = function() {};
+
+		this.render();
     };
 
-	Level.DEFAULT_SIZE = 8;
+	Level.DEFAULT_SIZE = 4;
+	Level.MIN_SIZE = 2;
+	Level.MAX_SIZE = 16;
 
 	Level.COLORS = {
 		abyss:		'rgba(0,0,0,0.3)',
 		playable:	'rgba(0,255,0,0.2)',
 		deadzone:	'rgba(255,0,0,0.2)',
 		alive:		'rgb(175,175,175)',
-		grid:		'rgba(255,255,255,0.035)',
-		stars:		[ '#ffffff', '#ffffff', '#ffffff', '#f0f0f0', '#f0f0f0', '#cccccc', '#e9f29d', '#9dc7f2', '#f9584c' ]
+		grid:		'rgba(255,255,255,0.035)'
 	};
 
-    Level.prototype.render = function() {
-		var $gamefield = $(
-			'<canvas id="gamefield" width="' + this.pixel_dimensions.width + '" height="' + this.pixel_dimensions.height + '"></canvas>'
-		);
+	Level.prototype.changeSize = function(delta) {
+		if (this.size + delta < Level.MIN_SIZE) {
+			return;
+		}
 
-		this.$gamefield = $gamefield;
-		this.$container.html($gamefield);
+		if (this.size + delta > Level.MAX_SIZE) {
+			return;
+		}
 
-		this.gamefield = document.getElementById('gamefield').getContext('2d');
-    };
+		this.size += delta;
+
+		this.resize();
+	};
+
+	Level.prototype.resize = function() {
+		this.pixel_dimensions = {
+			width: this.dimensions.width * this.size,
+			height: this.dimensions.height * this.size
+		};
+
+		this.$gamefield.attr('width', this.pixel_dimensions.width);
+		this.$gamefield.attr('height', this.pixel_dimensions.height);
+
+		this.gamefield.width = this.pixel_dimensions.width;
+		this.gamefield.height = this.pixel_dimensions.height;
+	};
+
 
 	// TODO: Cache
 	Level.prototype.countPlayedPieces = function() {
@@ -155,12 +177,35 @@ MODULE.Level = (function() {
 		this.arena = new_arena;
 	};
 
+	Level.prototype.winLevel = function() {
+		if (this.generations_until_beaten) {
+			return;
+		}
+
+		console.log("Game won in " + this.generation + " generations!");
+		this.generations_until_beaten = this.generation;
+
+		var my_level = app.storage.get('level');
+		var max_level = Object.keys(app.content.data.campaign).length;
+
+		if (this.level === max_level) {
+			console.log("Beat the final level... Now what?");
+		} else if (this.level === my_level) {
+			app.storage.set('level', this.level + 1);
+			console.log("beat most recent level. unlocking next level: " + localStorage.level);
+		}
+	};
+
 	Level.prototype.onGeneration = function(handler) {
 		this.generationHandler = handler;
+
+		return this;
 	};
 
 	Level.prototype.onPlayCount = function(handler) {
 		this.playCountHandler = handler;
+
+		return this;
 	};
 
 	Level.prototype.updateCellState = function(x, y, new_arena) {
@@ -216,6 +261,16 @@ MODULE.Level = (function() {
 		return new_arena;
 	};
 
+	Level.prototype.render = function() {
+		var self = this;
+
+		requestAnimationFrame(function() {
+			self.render();
+		});
+
+		this.drawArena();
+	};
+
 	Level.prototype.drawArena = function() {
 		this.drawClear();
 		this.drawPlayables();
@@ -229,31 +284,37 @@ MODULE.Level = (function() {
 	};
 
 	Level.prototype.drawPlayables = function() {
-		this.gamefield.fillStyle = this.colors.playable;
-		for (var p in this.playables) {
+		this.gamefield.fillStyle = Level.COLORS.playable;
+		var playables = this.playables;
+		var size = this.size;
+
+		for (var p in playables) {
 			this.gamefield.fillRect(
-				this.playables[p].x * this.size,
-				this.playables[p].y * this.size,
-				this.playables[p].width * this.size,
-				this.playables[p].height * this.size
+				playables[p].x * size,
+				playables[p].y * size,
+				playables[p].w * size,
+				playables[p].h * size
 			);
 		}
 	};
 
 	Level.prototype.drawDeadzones = function() {
-		this.gamefield.fillStyle = this.colors.deadzone;
-		for (var d in this.deadzones) {
+		this.gamefield.fillStyle = Level.COLORS.deadzone;
+		var deadzones = this.deadzones;
+		var size = this.size;
+
+		for (var d in deadzones) {
 			this.gamefield.fillRect(
-				this.deadzones[d].x * this.size,
-				this.deadzones[d].y * this.size,
-				this.deadzones[d].width * this.size,
-				this.deadzones[d].height * this.size
+				deadzones[d].x * size,
+				deadzones[d].y * size,
+				deadzones[d].w * size,
+				deadzones[d].h * size
 			);
 		}
 	};
 
 	Level.prototype.drawLivingCells = function() {
-		this.gamefield.fillStyle = this.colors.alive;
+		this.gamefield.fillStyle = Level.COLORS.alive;
 		for (var y = 0; y < this.dimensions.height; y++) {
 			for (var x = 0; x < this.dimensions.width; x++) {
 				if (this.arena[y][x]) {

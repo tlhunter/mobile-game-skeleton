@@ -58,14 +58,13 @@ MODULE.LevelScreen = (function() {
         this.level_id = level_id;
 
         var raw_level = app.content.data.campaign[level_id];
+        this.$title.html(raw_level.name);
+
         this.level = new MODULE.Level(raw_level, this.$level);
-        this.$title.text(raw_level.name);
 
         this.level.onGeneration(function(generation) {
             self.$generation.text(generation);
-        });
-
-        this.level.onPlayCount(function(played) {
+        }).onPlayCount(function(played) {
             self.$played.text(played);
         });
 
