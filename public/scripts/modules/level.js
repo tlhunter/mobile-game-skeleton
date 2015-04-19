@@ -45,6 +45,7 @@ MODULE.Level = (function() {
 
 		this.generationHandler = function() {};
 		this.playCountHandler = function() {};
+		this.statusHandler = function() {};
 
 		this.render();
     };
@@ -253,6 +254,8 @@ MODULE.Level = (function() {
 			return;
 		}
 
+		this.statusHandler('DONE');
+
 		console.log("Game won in " + this.generation + " generations!");
 		this.generations_until_beaten = this.generation;
 
@@ -278,6 +281,12 @@ MODULE.Level = (function() {
 
 	Level.prototype.onPlayCount = function(handler) {
 		this.playCountHandler = handler;
+
+		return this;
+	};
+
+	Level.prototype.onStatus = function(handler) {
+		this.statusHandler = handler;
 
 		return this;
 	};

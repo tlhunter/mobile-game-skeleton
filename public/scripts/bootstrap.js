@@ -13,6 +13,7 @@ if (!MODULE) { var MODULE = {}; }
 		analytics: new MODULE.Analytics(mixpanel_id),
 		audio: new MODULE.Audio(),
 		content: new MODULE.Content(),
+		modal: new MODULE.Modal(),
 		screens: {
 			campaign: new MODULE.CampaignScreen(),
 			help: new MODULE.HelpScreen(),

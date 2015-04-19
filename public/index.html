@@ -11,6 +11,7 @@
 
 	<!-- Styles -->
     <link href="styles/main.css" type="text/css" rel="stylesheet" />
+    <link href="styles/modal.css" type="text/css" rel="stylesheet" />
     <link href="styles/screens/campaign.css" type="text/css" rel="stylesheet" />
     <link href="styles/screens/help.css" type="text/css" rel="stylesheet" />
     <link href="styles/screens/level.css" type="text/css" rel="stylesheet" />
@@ -31,6 +32,16 @@
 </head>
 
 <body>
+
+<div id="modal">
+    <div class="content"></div>
+    <div class="buttons">
+        <!--
+        <button class="accept">OK</button>
+        <button class="cancel">Cancel</button>
+        -->
+    </div>
+</div>
 
 <main id="screens">
     <section id="screen-splash" class="screen screen-full">
@@ -124,6 +135,7 @@
             <div class="stats">
                 GEN: <span class="generation cycle">0</span>
                 PLAYED: <span class="played cycle">0</span>
+                STATUS: <span class="status cycle">INPROG</span>
             </div>
         </header>
 
@@ -172,6 +184,7 @@
 <script src="scripts/modules/network.js"></script>
 <script src="scripts/modules/storage.js"></script>
 <script src="scripts/modules/level.js"></script>
+<script src="scripts/modules/modal.js"></script>
 <script src="scripts/modules/screens/campaign.js"></script>
 <script src="scripts/modules/screens/help.js"></script>
 <script src="scripts/modules/screens/level.js"></script>

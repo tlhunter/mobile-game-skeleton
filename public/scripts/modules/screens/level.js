@@ -12,6 +12,7 @@ MODULE.LevelScreen = (function() {
         this.$header = this.$screen.find('header');
         this.$generation = this.$header.find('.generation');
         this.$played = this.$header.find('.played');
+        this.$status = this.$header.find('.status');
         this.$title = this.$header.find('.title');
 
         this.$buttons = {
@@ -46,7 +47,7 @@ MODULE.LevelScreen = (function() {
         });
 
         this.$buttons.help.on('click', function() {
-            console.log('help');
+            self.intro();
         });
 
         this.$buttons.library.on('click', function() {
@@ -65,10 +66,19 @@ MODULE.LevelScreen = (function() {
         var self = this;
         $('#screens > .screen').hide();
 
+        this.$buttons.play.show();
+        this.$buttons.stop.hide();
+
         this.level_id = level_id;
 
         var raw_level = app.content.data.campaign[level_id];
         this.$title.html(raw_level.name);
+
+        if (level_id > app.storage.get('level')) {
+            self.$status.text('INPROG');
+        } else {
+            self.$status.text('DONE');
+        }
 
         this.level = new MODULE.Level(raw_level, this.$level);
 
@@ -76,28 +86,30 @@ MODULE.LevelScreen = (function() {
             self.$generation.text(generation);
         }).onPlayCount(function(played) {
             self.$played.text(played);
+        }).onStatus(function(status) {
+            self.$status.text(status);
         });
 
         var $gamefield = this.level.$gamefield;
-        var interaction = new Hammer(
+        var finger = new Hammer(
             $gamefield[0]
         );
 
-        interaction.get('pinch').set({
+        finger.get('pinch').set({
             enable: true
         });
 
-        interaction.add(new Hammer.Pan({
+        finger.add(new Hammer.Pan({
             direction: Hammer.DIRECTION_ALL,
             threshold: 0
         }));
 
-        interaction.on('pinch', function(event) {
+        finger.on('pinch', function(event) {
             self.level.setSize(event.scale);
         });
 
         /*
-        interaction.on('pan', function(event) {
+        finger.on('pan', function(event) {
         });
         */
 
@@ -112,7 +124,15 @@ MODULE.LevelScreen = (function() {
 
         this.$screen.show();
 
-        app.analytics.track('LEVEL-' + level_id);
+        this.intro();
+
+        app.analytics.track('SCREEN-LEVEL');
+    };
+
+    LevelScreen.prototype.intro = function() {
+		app.modal.show("<h3 class='cycle'>" + this.level.name + "</h3>" + this.level.description, [{
+			text: "Ok"
+		}]);
     };
 
     return LevelScreen;
