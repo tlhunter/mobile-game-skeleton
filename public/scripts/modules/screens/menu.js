@@ -36,6 +36,7 @@ MODULE.MenuScreen = (function() {
 
     MenuScreen.prototype.display = function() {
         $('#screens > .screen').hide();
+        app.audio.playMusic('background');
         this.$screen.show();
 
         app.analytics.track('SCREEN-MENU');

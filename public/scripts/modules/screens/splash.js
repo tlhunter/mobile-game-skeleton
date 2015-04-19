@@ -15,9 +15,8 @@ MODULE.SplashScreen = (function() {
         };
 
         this.$buttons.play.on('click', function() {
-            app.screens.menu.display();
             app.audio.playSound('select');
-            app.audio.playMusic('background');
+            app.screens.menu.display();
         });
     };
 

@@ -29,7 +29,7 @@ MODULE.CampaignScreen = (function() {
         $('#screens > .screen').hide();
 
         this.drawLevels();
-        app.audio.playMusic('background');
+        //app.audio.playMusic('background');
 
         this.$screen.show();
 
