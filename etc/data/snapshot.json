@@ -1,112 +1,3651 @@
 {
     "campaign": {
         "1": {
-            "description": "",
-            "id": "1",
-            "name": ""
+            "arena": [
+                [
+                    3,
+                    1
+                ],
+                [
+                    4,
+                    2
+                ],
+                [
+                    2,
+                    3
+                ],
+                [
+                    3,
+                    3
+                ],
+                [
+                    4,
+                    3
+                ]
+            ],
+            "deadzones": [],
+            "description": "Welcome to Strategic Game of Life! This is the first tutorial level. The entire Game of Life is governed by the following four rules: <ol><li>Any live cell with fewer than two live neighbours dies.</li><li>Any live cell with two or three live neighbours lives.</li><li>Any live cell with more than three live neighbours dies.</li><li>Any dead cell with exactly three live neighbours becomes a live cell.</li></ol>If you're interested in learning more, read about the <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Game of Life on WikiPedia</a>.<br /><br />Do you see that shape in the middle of the screen? It's called a <strong>Glider</strong>. And that rainbow tile is the <strong>Goal</strong>. Click play and watch what happens. Note that this level isn't interactive.",
+            "goal": {
+                "x": 28,
+                "y": 28
+            },
+            "height": 32,
+            "id": 1,
+            "library": 1,
+            "name": "Tutorial #1: Watch and Learn",
+            "playables": [],
+            "width": 32
         },
         "10": {
-            "description": "",
-            "id": "10",
-            "name": ""
+            "arena": [
+                [
+                    34,
+                    2
+                ],
+                [
+                    34,
+                    3
+                ],
+                [
+                    37,
+                    3
+                ],
+                [
+                    38,
+                    3
+                ],
+                [
+                    39,
+                    3
+                ],
+                [
+                    44,
+                    3
+                ],
+                [
+                    50,
+                    3
+                ],
+                [
+                    51,
+                    3
+                ],
+                [
+                    52,
+                    3
+                ],
+                [
+                    58,
+                    3
+                ],
+                [
+                    34,
+                    4
+                ],
+                [
+                    44,
+                    4
+                ],
+                [
+                    58,
+                    4
+                ],
+                [
+                    43,
+                    5
+                ],
+                [
+                    45,
+                    5
+                ],
+                [
+                    57,
+                    5
+                ],
+                [
+                    59,
+                    5
+                ],
+                [
+                    36,
+                    6
+                ],
+                [
+                    44,
+                    6
+                ],
+                [
+                    58,
+                    6
+                ],
+                [
+                    36,
+                    7
+                ],
+                [
+                    44,
+                    7
+                ],
+                [
+                    58,
+                    7
+                ],
+                [
+                    36,
+                    8
+                ],
+                [
+                    44,
+                    8
+                ],
+                [
+                    58,
+                    8
+                ],
+                [
+                    44,
+                    9
+                ],
+                [
+                    58,
+                    9
+                ],
+                [
+                    43,
+                    10
+                ],
+                [
+                    45,
+                    10
+                ],
+                [
+                    57,
+                    10
+                ],
+                [
+                    59,
+                    10
+                ],
+                [
+                    44,
+                    11
+                ],
+                [
+                    50,
+                    11
+                ],
+                [
+                    51,
+                    11
+                ],
+                [
+                    52,
+                    11
+                ],
+                [
+                    58,
+                    11
+                ],
+                [
+                    44,
+                    12
+                ],
+                [
+                    58,
+                    12
+                ],
+                [
+                    44,
+                    18
+                ],
+                [
+                    48,
+                    18
+                ],
+                [
+                    49,
+                    18
+                ],
+                [
+                    53,
+                    18
+                ],
+                [
+                    54,
+                    18
+                ],
+                [
+                    58,
+                    18
+                ],
+                [
+                    43,
+                    19
+                ],
+                [
+                    45,
+                    19
+                ],
+                [
+                    47,
+                    19
+                ],
+                [
+                    50,
+                    19
+                ],
+                [
+                    52,
+                    19
+                ],
+                [
+                    55,
+                    19
+                ],
+                [
+                    57,
+                    19
+                ],
+                [
+                    59,
+                    19
+                ],
+                [
+                    44,
+                    20
+                ],
+                [
+                    48,
+                    20
+                ],
+                [
+                    49,
+                    20
+                ],
+                [
+                    53,
+                    20
+                ],
+                [
+                    54,
+                    20
+                ],
+                [
+                    58,
+                    20
+                ]
+            ],
+            "deadzones": [
+                {
+                    "h": 10,
+                    "w": 1,
+                    "x": 32,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "w": 2,
+                    "x": 33,
+                    "y": 9
+                }
+            ],
+            "description": "Lots of stuff going on here. Those two big connected shapes are called <strong>Pentadecathlon</strong>, and they go through a chain reaction before stabilizing into an animation.<br /><br />There are also some <strong>Blinkers</strong> and <strong>Still Lifes</strong> thrown into the mix for fun, as well as an annoying <strong>Dead Zone</strong> getting in your way.<br /><br />Remember that you can often just throw a <strong>Glider</strong> into the chaos and things work themselves out.",
+            "goal": {
+                "x": 34,
+                "y": 7
+            },
+            "height": 64,
+            "id": 10,
+            "library": 7,
+            "name": "Pentadecathlon",
+            "playables": [
+                {
+                    "h": 64,
+                    "w": 8,
+                    "x": 0,
+                    "y": 0
+                }
+            ],
+            "width": 64
         },
         "11": {
-            "description": "",
-            "id": "11",
-            "name": ""
+            "arena": [
+                [
+                    25,
+                    1
+                ],
+                [
+                    23,
+                    2
+                ],
+                [
+                    25,
+                    2
+                ],
+                [
+                    13,
+                    3
+                ],
+                [
+                    14,
+                    3
+                ],
+                [
+                    21,
+                    3
+                ],
+                [
+                    22,
+                    3
+                ],
+                [
+                    35,
+                    3
+                ],
+                [
+                    36,
+                    3
+                ],
+                [
+                    12,
+                    4
+                ],
+                [
+                    16,
+                    4
+                ],
+                [
+                    21,
+                    4
+                ],
+                [
+                    22,
+                    4
+                ],
+                [
+                    35,
+                    4
+                ],
+                [
+                    36,
+                    4
+                ],
+                [
+                    1,
+                    5
+                ],
+                [
+                    2,
+                    5
+                ],
+                [
+                    11,
+                    5
+                ],
+                [
+                    17,
+                    5
+                ],
+                [
+                    21,
+                    5
+                ],
+                [
+                    22,
+                    5
+                ],
+                [
+                    1,
+                    6
+                ],
+                [
+                    2,
+                    6
+                ],
+                [
+                    11,
+                    6
+                ],
+                [
+                    15,
+                    6
+                ],
+                [
+                    17,
+                    6
+                ],
+                [
+                    18,
+                    6
+                ],
+                [
+                    23,
+                    6
+                ],
+                [
+                    25,
+                    6
+                ],
+                [
+                    11,
+                    7
+                ],
+                [
+                    17,
+                    7
+                ],
+                [
+                    25,
+                    7
+                ],
+                [
+                    12,
+                    8
+                ],
+                [
+                    16,
+                    8
+                ],
+                [
+                    13,
+                    9
+                ],
+                [
+                    14,
+                    9
+                ],
+                [
+                    45,
+                    39
+                ],
+                [
+                    46,
+                    39
+                ],
+                [
+                    45,
+                    40
+                ],
+                [
+                    46,
+                    40
+                ],
+                [
+                    50,
+                    40
+                ],
+                [
+                    49,
+                    41
+                ],
+                [
+                    51,
+                    41
+                ],
+                [
+                    50,
+                    42
+                ],
+                [
+                    52,
+                    42
+                ],
+                [
+                    52,
+                    43
+                ],
+                [
+                    52,
+                    44
+                ],
+                [
+                    53,
+                    44
+                ]
+            ],
+            "deadzones": [],
+            "description": "Remember that <strong>Glider Gun</strong> you saw a while ago? Well, it's back! Unfortunately, there's an <strong>Eater</strong> preventing any gliders from hitting the <strong>Goal</strong>.<br /><br />An <strong>Eater</strong>, when placed just right, will destroy a <strong>Glider</strong> and retain its shape.<br /><br />For them to work, a <strong>Glider</strong> needs to hit it at just the right angle. If the <strong>Eater</strong> oscillates, it needs to hit at the right frame of animation as well. Otherwise, if these strict conditions aren't met, it will be damaged or destroyed entirely.",
+            "goal": {
+                "x": 60,
+                "y": 46
+            },
+            "height": 64,
+            "id": 11,
+            "library": 8,
+            "name": "Abaddon: Destroyer of Worlds",
+            "playables": [
+                {
+                    "h": 8,
+                    "w": 8,
+                    "x": 0,
+                    "y": 24
+                }
+            ],
+            "width": 64
         },
         "12": {
-            "description": "",
-            "id": "12",
-            "name": ""
+            "arena": [
+                [
+                    49,
+                    21
+                ],
+                [
+                    49,
+                    22
+                ],
+                [
+                    45,
+                    23
+                ],
+                [
+                    46,
+                    23
+                ],
+                [
+                    48,
+                    23
+                ],
+                [
+                    50,
+                    23
+                ],
+                [
+                    51,
+                    23
+                ],
+                [
+                    52,
+                    23
+                ],
+                [
+                    39,
+                    24
+                ],
+                [
+                    41,
+                    24
+                ],
+                [
+                    42,
+                    24
+                ],
+                [
+                    44,
+                    24
+                ],
+                [
+                    45,
+                    24
+                ],
+                [
+                    47,
+                    24
+                ],
+                [
+                    48,
+                    24
+                ],
+                [
+                    51,
+                    24
+                ],
+                [
+                    53,
+                    24
+                ],
+                [
+                    57,
+                    24
+                ],
+                [
+                    58,
+                    24
+                ],
+                [
+                    39,
+                    25
+                ],
+                [
+                    43,
+                    25
+                ],
+                [
+                    44,
+                    25
+                ],
+                [
+                    47,
+                    25
+                ],
+                [
+                    49,
+                    25
+                ],
+                [
+                    50,
+                    25
+                ],
+                [
+                    53,
+                    25
+                ],
+                [
+                    54,
+                    25
+                ],
+                [
+                    55,
+                    25
+                ],
+                [
+                    58,
+                    25
+                ],
+                [
+                    39,
+                    26
+                ],
+                [
+                    41,
+                    26
+                ],
+                [
+                    42,
+                    26
+                ],
+                [
+                    47,
+                    26
+                ],
+                [
+                    48,
+                    26
+                ],
+                [
+                    49,
+                    26
+                ],
+                [
+                    51,
+                    26
+                ],
+                [
+                    53,
+                    26
+                ],
+                [
+                    54,
+                    26
+                ],
+                [
+                    55,
+                    26
+                ],
+                [
+                    47,
+                    27
+                ],
+                [
+                    48,
+                    27
+                ],
+                [
+                    50,
+                    27
+                ],
+                [
+                    39,
+                    28
+                ],
+                [
+                    41,
+                    28
+                ],
+                [
+                    42,
+                    28
+                ],
+                [
+                    47,
+                    28
+                ],
+                [
+                    48,
+                    28
+                ],
+                [
+                    49,
+                    28
+                ],
+                [
+                    51,
+                    28
+                ],
+                [
+                    53,
+                    28
+                ],
+                [
+                    54,
+                    28
+                ],
+                [
+                    55,
+                    28
+                ],
+                [
+                    39,
+                    29
+                ],
+                [
+                    43,
+                    29
+                ],
+                [
+                    44,
+                    29
+                ],
+                [
+                    47,
+                    29
+                ],
+                [
+                    49,
+                    29
+                ],
+                [
+                    50,
+                    29
+                ],
+                [
+                    53,
+                    29
+                ],
+                [
+                    54,
+                    29
+                ],
+                [
+                    55,
+                    29
+                ],
+                [
+                    58,
+                    29
+                ],
+                [
+                    39,
+                    30
+                ],
+                [
+                    41,
+                    30
+                ],
+                [
+                    42,
+                    30
+                ],
+                [
+                    44,
+                    30
+                ],
+                [
+                    45,
+                    30
+                ],
+                [
+                    47,
+                    30
+                ],
+                [
+                    48,
+                    30
+                ],
+                [
+                    51,
+                    30
+                ],
+                [
+                    53,
+                    30
+                ],
+                [
+                    57,
+                    30
+                ],
+                [
+                    58,
+                    30
+                ],
+                [
+                    45,
+                    31
+                ],
+                [
+                    46,
+                    31
+                ],
+                [
+                    48,
+                    31
+                ],
+                [
+                    50,
+                    31
+                ],
+                [
+                    51,
+                    31
+                ],
+                [
+                    52,
+                    31
+                ],
+                [
+                    49,
+                    32
+                ],
+                [
+                    49,
+                    33
+                ]
+            ],
+            "deadzones": [
+                {
+                    "h": 9,
+                    "w": 64,
+                    "x": 0,
+                    "y": 55
+                }
+            ],
+            "description": "Whoa! Look at that giant slow-moving ship moving towards the <strong>Goal</strong>! We call this thing <strong>Sparky</strong>.<br /><br />Unfortunately, it won't set off the <strong>Goal</strong>, and will even serve to get in your way.<br /><br />Try to activate the <strong>Goal</strong> even though that big thing is in your way!",
+            "goal": {
+                "x": 1,
+                "y": 27
+            },
+            "height": 64,
+            "id": 12,
+            "library": 9,
+            "name": "Hey there Sparky!",
+            "playables": [
+                {
+                    "h": 8,
+                    "w": 8,
+                    "x": 39,
+                    "y": 8
+                },
+                {
+                    "h": 8,
+                    "w": 8,
+                    "x": 39,
+                    "y": 39
+                }
+            ],
+            "width": 64
         },
         "13": {
-            "description": "",
-            "id": "13",
-            "name": ""
+            "arena": [
+                [
+                    2,
+                    1
+                ],
+                [
+                    4,
+                    1
+                ],
+                [
+                    1,
+                    2
+                ],
+                [
+                    1,
+                    3
+                ],
+                [
+                    1,
+                    4
+                ],
+                [
+                    4,
+                    4
+                ],
+                [
+                    11,
+                    4
+                ],
+                [
+                    14,
+                    4
+                ],
+                [
+                    15,
+                    4
+                ],
+                [
+                    16,
+                    4
+                ],
+                [
+                    17,
+                    4
+                ],
+                [
+                    58,
+                    4
+                ],
+                [
+                    59,
+                    4
+                ],
+                [
+                    60,
+                    4
+                ],
+                [
+                    61,
+                    4
+                ],
+                [
+                    1,
+                    5
+                ],
+                [
+                    2,
+                    5
+                ],
+                [
+                    3,
+                    5
+                ],
+                [
+                    14,
+                    5
+                ],
+                [
+                    18,
+                    5
+                ],
+                [
+                    58,
+                    5
+                ],
+                [
+                    62,
+                    5
+                ],
+                [
+                    11,
+                    6
+                ],
+                [
+                    14,
+                    6
+                ],
+                [
+                    58,
+                    6
+                ],
+                [
+                    15,
+                    7
+                ],
+                [
+                    18,
+                    7
+                ],
+                [
+                    59,
+                    7
+                ],
+                [
+                    62,
+                    7
+                ],
+                [
+                    57,
+                    13
+                ],
+                [
+                    58,
+                    13
+                ],
+                [
+                    59,
+                    13
+                ],
+                [
+                    60,
+                    13
+                ],
+                [
+                    61,
+                    13
+                ],
+                [
+                    11,
+                    14
+                ],
+                [
+                    57,
+                    14
+                ],
+                [
+                    62,
+                    14
+                ],
+                [
+                    57,
+                    15
+                ],
+                [
+                    11,
+                    16
+                ],
+                [
+                    58,
+                    16
+                ],
+                [
+                    62,
+                    16
+                ],
+                [
+                    57,
+                    23
+                ],
+                [
+                    58,
+                    23
+                ],
+                [
+                    59,
+                    23
+                ],
+                [
+                    60,
+                    23
+                ],
+                [
+                    61,
+                    23
+                ],
+                [
+                    62,
+                    23
+                ],
+                [
+                    11,
+                    24
+                ],
+                [
+                    57,
+                    24
+                ],
+                [
+                    63,
+                    24
+                ],
+                [
+                    57,
+                    25
+                ],
+                [
+                    11,
+                    26
+                ],
+                [
+                    58,
+                    26
+                ],
+                [
+                    63,
+                    26
+                ],
+                [
+                    60,
+                    27
+                ],
+                [
+                    41,
+                    33
+                ],
+                [
+                    42,
+                    33
+                ],
+                [
+                    43,
+                    33
+                ],
+                [
+                    44,
+                    33
+                ],
+                [
+                    11,
+                    34
+                ],
+                [
+                    41,
+                    34
+                ],
+                [
+                    45,
+                    34
+                ],
+                [
+                    41,
+                    35
+                ],
+                [
+                    11,
+                    36
+                ],
+                [
+                    42,
+                    36
+                ],
+                [
+                    45,
+                    36
+                ],
+                [
+                    11,
+                    44
+                ],
+                [
+                    17,
+                    44
+                ],
+                [
+                    18,
+                    44
+                ],
+                [
+                    19,
+                    44
+                ],
+                [
+                    20,
+                    44
+                ],
+                [
+                    21,
+                    44
+                ],
+                [
+                    22,
+                    44
+                ],
+                [
+                    17,
+                    45
+                ],
+                [
+                    23,
+                    45
+                ],
+                [
+                    11,
+                    46
+                ],
+                [
+                    17,
+                    46
+                ],
+                [
+                    18,
+                    47
+                ],
+                [
+                    23,
+                    47
+                ],
+                [
+                    20,
+                    48
+                ],
+                [
+                    11,
+                    54
+                ],
+                [
+                    58,
+                    54
+                ],
+                [
+                    59,
+                    54
+                ],
+                [
+                    60,
+                    54
+                ],
+                [
+                    61,
+                    54
+                ],
+                [
+                    58,
+                    55
+                ],
+                [
+                    62,
+                    55
+                ],
+                [
+                    11,
+                    56
+                ],
+                [
+                    58,
+                    56
+                ],
+                [
+                    59,
+                    57
+                ],
+                [
+                    62,
+                    57
+                ]
+            ],
+            "deadzones": [
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 52,
+                    "y": 10
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 52,
+                    "y": 20
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 52,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 52,
+                    "y": 30
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 52,
+                    "y": 40
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 52,
+                    "y": 50
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 52,
+                    "y": 60
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 40,
+                    "y": 60
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 40,
+                    "y": 50
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 40,
+                    "y": 40
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 40,
+                    "y": 30
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 40,
+                    "y": 20
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 40,
+                    "y": 10
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 40,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 28,
+                    "y": 60
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 28,
+                    "y": 50
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 28,
+                    "y": 40
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 28,
+                    "y": 30
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 28,
+                    "y": 20
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 28,
+                    "y": 10
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 28,
+                    "y": 0
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 16,
+                    "y": 60
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 16,
+                    "y": 50
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 16,
+                    "y": 40
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 16,
+                    "y": 30
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 16,
+                    "y": 20
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 16,
+                    "y": 10
+                },
+                {
+                    "h": 1,
+                    "w": 4,
+                    "x": 16,
+                    "y": 0
+                }
+            ],
+            "description": "The six <strong>Blinkers</strong> on the left can have their construction finished by playing a tile in the center of them, which will cause a horizontal <strong>Spaceship</strong> to collide.<br /><br />You don't want to cause every ship to collide with a Blinker though; some you just want to hit the far left wall.<br /><br />Find some combination of enabled <strong>Blinkers</strong> to set off the goal.",
+            "goal": {
+                "x": 13,
+                "y": 50
+            },
+            "height": 64,
+            "id": 13,
+            "library": 9,
+            "name": "Gated Spaceship Depot",
+            "playables": [
+                {
+                    "h": 0,
+                    "w": 0,
+                    "x": 24,
+                    "y": 24
+                },
+                {
+                    "h": 1,
+                    "w": 1,
+                    "x": 11,
+                    "y": 55
+                },
+                {
+                    "h": 1,
+                    "w": 1,
+                    "x": 11,
+                    "y": 45
+                },
+                {
+                    "h": 1,
+                    "w": 1,
+                    "x": 11,
+                    "y": 35
+                },
+                {
+                    "h": 1,
+                    "w": 1,
+                    "x": 11,
+                    "y": 25
+                },
+                {
+                    "h": 1,
+                    "w": 1,
+                    "x": 11,
+                    "y": 15
+                },
+                {
+                    "h": 1,
+                    "w": 1,
+                    "x": 11,
+                    "y": 5
+                }
+            ],
+            "width": 64
         },
         "14": {
-            "description": "",
-            "id": "14",
-            "name": ""
+            "arena": [
+                [
+                    30,
+                    29
+                ],
+                [
+                    31,
+                    29
+                ],
+                [
+                    34,
+                    29
+                ],
+                [
+                    30,
+                    30
+                ],
+                [
+                    34,
+                    30
+                ],
+                [
+                    30,
+                    31
+                ],
+                [
+                    33,
+                    31
+                ],
+                [
+                    34,
+                    31
+                ]
+            ],
+            "deadzones": [],
+            "description": "This simple construct is called <strong>Gliders by the Dozen</strong>. If you watch the pretty symmetical animation it plays, you'll soon find out where it gets its name from.<br /><br />Good luck activating the <strong>Goal</strong> amidst all of the chaos!",
+            "goal": {
+                "x": 32,
+                "y": 30
+            },
+            "height": 64,
+            "id": 14,
+            "library": 10,
+            "name": "God Complex",
+            "playables": [
+                {
+                    "h": 8,
+                    "w": 8,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "h": 8,
+                    "w": 8,
+                    "x": 0,
+                    "y": 56
+                },
+                {
+                    "h": 8,
+                    "w": 8,
+                    "x": 56,
+                    "y": 0
+                },
+                {
+                    "h": 8,
+                    "w": 8,
+                    "x": 56,
+                    "y": 56
+                }
+            ],
+            "width": 64
         },
         "15": {
-            "description": "",
-            "id": "15",
-            "name": ""
+            "arena": [
+                [
+                    30,
+                    29
+                ],
+                [
+                    31,
+                    29
+                ],
+                [
+                    34,
+                    29
+                ],
+                [
+                    30,
+                    30
+                ],
+                [
+                    34,
+                    30
+                ],
+                [
+                    30,
+                    31
+                ],
+                [
+                    33,
+                    31
+                ],
+                [
+                    34,
+                    31
+                ]
+            ],
+            "deadzones": [
+                {
+                    "h": 2,
+                    "w": 2,
+                    "x": 8,
+                    "y": 8
+                },
+                {
+                    "h": 2,
+                    "w": 2,
+                    "x": 8,
+                    "y": 54
+                },
+                {
+                    "h": 2,
+                    "w": 2,
+                    "x": 54,
+                    "y": 8
+                },
+                {
+                    "h": 2,
+                    "w": 2,
+                    "x": 54,
+                    "y": 54
+                }
+            ],
+            "description": "Sure, you just beat this level a moment ago, and if I had to guess, you probably sent some <strong>Gliders</strong> towards it at a 45&deg; angle.<br /><br />Can you beat the same level with these new <strong>Dead Zones</strong> in your way?",
+            "goal": {
+                "x": 32,
+                "y": 30
+            },
+            "height": 64,
+            "id": 15,
+            "library": 10,
+            "name": "Complex God",
+            "playables": [
+                {
+                    "h": 8,
+                    "w": 8,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "h": 8,
+                    "w": 8,
+                    "x": 0,
+                    "y": 56
+                },
+                {
+                    "h": 8,
+                    "w": 8,
+                    "x": 56,
+                    "y": 0
+                },
+                {
+                    "h": 8,
+                    "w": 8,
+                    "x": 56,
+                    "y": 56
+                }
+            ],
+            "width": 64
         },
         "16": {
-            "description": "",
-            "id": "16",
-            "name": ""
+            "arena": [
+                [
+                    32,
+                    6
+                ],
+                [
+                    32,
+                    7
+                ],
+                [
+                    32,
+                    8
+                ],
+                [
+                    29,
+                    6
+                ],
+                [
+                    29,
+                    7
+                ],
+                [
+                    29,
+                    8
+                ],
+                [
+                    35,
+                    6
+                ],
+                [
+                    35,
+                    7
+                ],
+                [
+                    35,
+                    8
+                ]
+            ],
+            "deadzones": [],
+            "description": "This mission is a lot like a previous one, except that the playable area has changed quite a bit.<br /><br />Remember that unpredictable things can happen when two objects collide.",
+            "goal": {
+                "x": 32,
+                "y": 2
+            },
+            "height": 64,
+            "id": 16,
+            "library": 10,
+            "name": "Fanblades II",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 16,
+                    "x": 0,
+                    "y": 48
+                },
+                {
+                    "h": 16,
+                    "w": 16,
+                    "x": 48,
+                    "y": 48
+                }
+            ],
+            "width": 64
         },
         "17": {
-            "description": "",
-            "id": "17",
-            "name": ""
+            "arena": [
+                [
+                    52,
+                    51
+                ],
+                [
+                    53,
+                    51
+                ],
+                [
+                    51,
+                    52
+                ],
+                [
+                    52,
+                    52
+                ],
+                [
+                    53,
+                    53
+                ],
+                [
+                    55,
+                    54
+                ],
+                [
+                    60,
+                    54
+                ],
+                [
+                    61,
+                    54
+                ],
+                [
+                    62,
+                    54
+                ],
+                [
+                    55,
+                    55
+                ],
+                [
+                    56,
+                    55
+                ],
+                [
+                    57,
+                    55
+                ],
+                [
+                    62,
+                    55
+                ],
+                [
+                    63,
+                    55
+                ],
+                [
+                    56,
+                    56
+                ],
+                [
+                    57,
+                    56
+                ],
+                [
+                    58,
+                    56
+                ],
+                [
+                    60,
+                    56
+                ],
+                [
+                    62,
+                    56
+                ],
+                [
+                    63,
+                    57
+                ],
+                [
+                    56,
+                    58
+                ],
+                [
+                    58,
+                    58
+                ],
+                [
+                    55,
+                    59
+                ],
+                [
+                    56,
+                    59
+                ],
+                [
+                    58,
+                    59
+                ],
+                [
+                    56,
+                    60
+                ],
+                [
+                    54,
+                    61
+                ],
+                [
+                    55,
+                    61
+                ],
+                [
+                    57,
+                    61
+                ],
+                [
+                    57,
+                    62
+                ],
+                [
+                    55,
+                    63
+                ],
+                [
+                    56,
+                    63
+                ]
+            ],
+            "deadzones": [
+                {
+                    "h": 12,
+                    "w": 12,
+                    "x": 4,
+                    "y": 48
+                },
+                {
+                    "h": 12,
+                    "w": 12,
+                    "x": 48,
+                    "y": 4
+                }
+            ],
+            "description": "This crazy three pronged spaceship is called an <strong>Orion 2</strong>, and is moving towards the upper left corner of the arena, which is where your playable zone is!<br /><br />Can you get past the ship and activate the <strong>Goal</strong>?",
+            "goal": {
+                "x": 59,
+                "y": 59
+            },
+            "height": 64,
+            "id": 17,
+            "library": 11,
+            "name": "Orion's Belt",
+            "playables": [
+                {
+                    "h": 12,
+                    "w": 12,
+                    "x": 4,
+                    "y": 4
+                }
+            ],
+            "width": 64
         },
         "18": {
-            "description": "",
-            "id": "18",
-            "name": ""
+            "arena": [
+                [
+                    28,
+                    28
+                ],
+                [
+                    27,
+                    29
+                ],
+                [
+                    29,
+                    29
+                ],
+                [
+                    27,
+                    30
+                ],
+                [
+                    29,
+                    30
+                ],
+                [
+                    26,
+                    31
+                ],
+                [
+                    27,
+                    31
+                ],
+                [
+                    29,
+                    31
+                ],
+                [
+                    30,
+                    31
+                ],
+                [
+                    26,
+                    38
+                ],
+                [
+                    27,
+                    38
+                ],
+                [
+                    29,
+                    38
+                ],
+                [
+                    30,
+                    38
+                ],
+                [
+                    27,
+                    39
+                ],
+                [
+                    29,
+                    39
+                ],
+                [
+                    27,
+                    40
+                ],
+                [
+                    29,
+                    40
+                ],
+                [
+                    27,
+                    41
+                ],
+                [
+                    29,
+                    41
+                ],
+                [
+                    28,
+                    42
+                ]
+            ],
+            "deadzones": [
+                {
+                    "h": 1,
+                    "w": 13,
+                    "x": 22,
+                    "y": 12
+                }
+            ],
+            "description": "Here is another level with a simple pattern in the middle, which goes through a bunch of chaos before stabilizing into some <strong>Oscillators</strong> and <strong>Still Lifes</strong>.<br /><br />And, would you look at that? There's a <strong>Dead Zone</strong> right outside of the playable area!<br /><br />Try to activate the <strong>Goal</strong> even with these hassles in the way!",
+            "goal": {
+                "x": 28,
+                "y": 39
+            },
+            "height": 64,
+            "id": 18,
+            "library": 11,
+            "name": "Many Hats",
+            "playables": [
+                {
+                    "h": 12,
+                    "w": 13,
+                    "x": 22,
+                    "y": 0
+                }
+            ],
+            "width": 64
         },
         "19": {
-            "description": "",
-            "id": "19",
-            "name": ""
+            "arena": [
+                [
+                    5,
+                    0
+                ],
+                [
+                    13,
+                    0
+                ],
+                [
+                    21,
+                    0
+                ],
+                [
+                    29,
+                    0
+                ],
+                [
+                    34,
+                    0
+                ],
+                [
+                    42,
+                    0
+                ],
+                [
+                    50,
+                    0
+                ],
+                [
+                    58,
+                    0
+                ],
+                [
+                    0,
+                    1
+                ],
+                [
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    1
+                ],
+                [
+                    5,
+                    1
+                ],
+                [
+                    8,
+                    1
+                ],
+                [
+                    9,
+                    1
+                ],
+                [
+                    10,
+                    1
+                ],
+                [
+                    13,
+                    1
+                ],
+                [
+                    16,
+                    1
+                ],
+                [
+                    17,
+                    1
+                ],
+                [
+                    18,
+                    1
+                ],
+                [
+                    21,
+                    1
+                ],
+                [
+                    24,
+                    1
+                ],
+                [
+                    25,
+                    1
+                ],
+                [
+                    26,
+                    1
+                ],
+                [
+                    29,
+                    1
+                ],
+                [
+                    34,
+                    1
+                ],
+                [
+                    37,
+                    1
+                ],
+                [
+                    38,
+                    1
+                ],
+                [
+                    39,
+                    1
+                ],
+                [
+                    42,
+                    1
+                ],
+                [
+                    45,
+                    1
+                ],
+                [
+                    46,
+                    1
+                ],
+                [
+                    47,
+                    1
+                ],
+                [
+                    50,
+                    1
+                ],
+                [
+                    53,
+                    1
+                ],
+                [
+                    54,
+                    1
+                ],
+                [
+                    55,
+                    1
+                ],
+                [
+                    58,
+                    1
+                ],
+                [
+                    61,
+                    1
+                ],
+                [
+                    62,
+                    1
+                ],
+                [
+                    63,
+                    1
+                ],
+                [
+                    5,
+                    2
+                ],
+                [
+                    13,
+                    2
+                ],
+                [
+                    21,
+                    2
+                ],
+                [
+                    29,
+                    2
+                ],
+                [
+                    34,
+                    2
+                ],
+                [
+                    42,
+                    2
+                ],
+                [
+                    50,
+                    2
+                ],
+                [
+                    58,
+                    2
+                ],
+                [
+                    1,
+                    4
+                ],
+                [
+                    9,
+                    4
+                ],
+                [
+                    54,
+                    4
+                ],
+                [
+                    62,
+                    4
+                ],
+                [
+                    1,
+                    5
+                ],
+                [
+                    4,
+                    5
+                ],
+                [
+                    5,
+                    5
+                ],
+                [
+                    6,
+                    5
+                ],
+                [
+                    9,
+                    5
+                ],
+                [
+                    54,
+                    5
+                ],
+                [
+                    57,
+                    5
+                ],
+                [
+                    58,
+                    5
+                ],
+                [
+                    59,
+                    5
+                ],
+                [
+                    62,
+                    5
+                ],
+                [
+                    1,
+                    6
+                ],
+                [
+                    9,
+                    6
+                ],
+                [
+                    54,
+                    6
+                ],
+                [
+                    62,
+                    6
+                ],
+                [
+                    5,
+                    8
+                ],
+                [
+                    58,
+                    8
+                ],
+                [
+                    0,
+                    9
+                ],
+                [
+                    1,
+                    9
+                ],
+                [
+                    2,
+                    9
+                ],
+                [
+                    5,
+                    9
+                ],
+                [
+                    58,
+                    9
+                ],
+                [
+                    61,
+                    9
+                ],
+                [
+                    62,
+                    9
+                ],
+                [
+                    63,
+                    9
+                ],
+                [
+                    5,
+                    10
+                ],
+                [
+                    58,
+                    10
+                ],
+                [
+                    1,
+                    12
+                ],
+                [
+                    62,
+                    12
+                ],
+                [
+                    1,
+                    13
+                ],
+                [
+                    62,
+                    13
+                ],
+                [
+                    1,
+                    14
+                ],
+                [
+                    62,
+                    14
+                ],
+                [
+                    0,
+                    17
+                ],
+                [
+                    1,
+                    17
+                ],
+                [
+                    2,
+                    17
+                ],
+                [
+                    61,
+                    17
+                ],
+                [
+                    62,
+                    17
+                ],
+                [
+                    63,
+                    17
+                ]
+            ],
+            "deadzones": [
+                {
+                    "h": 3,
+                    "w": 3,
+                    "x": 25,
+                    "y": 25
+                },
+                {
+                    "h": 3,
+                    "w": 3,
+                    "x": 35,
+                    "y": 25
+                },
+                {
+                    "h": 3,
+                    "w": 3,
+                    "x": 25,
+                    "y": 35
+                },
+                {
+                    "h": 3,
+                    "w": 3,
+                    "x": 35,
+                    "y": 35
+                },
+                {
+                    "h": 3,
+                    "w": 3,
+                    "x": 30,
+                    "y": 41
+                }
+            ],
+            "description": "The backdrop of this level consists of a field of <strong>Blinkers</strong>, and the <strong>Goal</strong> is surrounded by several <strong>Dead Zones</strong>.",
+            "goal": {
+                "x": 31,
+                "y": 31
+            },
+            "height": 64,
+            "id": 19,
+            "library": 11,
+            "name": "<blink>&lt;blink&gt;blink&lt;/blink&gt;</blink>",
+            "playables": [
+                {
+                    "h": 8,
+                    "w": 17,
+                    "x": 23,
+                    "y": 56
+                }
+            ],
+            "width": 64
         },
         "2": {
-            "description": "",
-            "id": "2",
-            "name": ""
+            "arena": [],
+            "deadzones": [],
+            "description": "Now that you kinda have a feel for how the game works, and you've seen a simulation in action, try to recreate that same <strong>Glider</strong> pattern you saw in the previous level. For your convenience, its pattern has been added to your library.<br /><br />Every pattern you discover in the Game of Life can always be rotated 90&deg; or even flipped horizontally or vertically and will still work the same (although, if the patterns move, they will move in a different direction).<br /><br />You can only alter the state of cells within the green <strong>Playable Zone</strong>.",
+            "goal": {
+                "x": 28,
+                "y": 28
+            },
+            "height": 32,
+            "id": 2,
+            "library": 1,
+            "name": "Tutorial #2: Now you Try",
+            "playables": [
+                {
+                    "h": 8,
+                    "w": 8,
+                    "x": 8,
+                    "y": 8
+                }
+            ],
+            "width": 32
         },
         "20": {
-            "description": "",
-            "id": "20",
-            "name": ""
+            "arena": [],
+            "deadzones": [
+                {
+                    "h": 4,
+                    "w": 20,
+                    "x": 0,
+                    "y": 34
+                },
+                {
+                    "h": 4,
+                    "w": 20,
+                    "x": 44,
+                    "y": 34
+                },
+                {
+                    "h": 4,
+                    "w": 16,
+                    "x": 24,
+                    "y": 16
+                }
+            ],
+            "description": "This one looks pretty difficult. You can't simply send a <strong>Spaceship</strong> up and crash it into the wall and spawn a <strong>Glider</strong>, as the horizontal gap is too small.<br /><br />As a hint, I was able to beat this on Generation 432 with 20 Cells in Play.",
+            "goal": {
+                "x": 32,
+                "y": 4
+            },
+            "height": 64,
+            "id": 20,
+            "library": 11,
+            "name": "Getting Difficult",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 64,
+                    "x": 0,
+                    "y": 48
+                }
+            ],
+            "width": 64
         },
         "21": {
-            "description": "",
-            "id": "21",
-            "name": ""
+            "arena": [
+                [
+                    45,
+                    53
+                ],
+                [
+                    46,
+                    53
+                ],
+                [
+                    50,
+                    53
+                ],
+                [
+                    51,
+                    53
+                ],
+                [
+                    45,
+                    54
+                ],
+                [
+                    46,
+                    54
+                ],
+                [
+                    50,
+                    54
+                ],
+                [
+                    51,
+                    54
+                ],
+                [
+                    45,
+                    58
+                ],
+                [
+                    46,
+                    58
+                ],
+                [
+                    50,
+                    58
+                ],
+                [
+                    51,
+                    58
+                ],
+                [
+                    45,
+                    59
+                ],
+                [
+                    46,
+                    59
+                ],
+                [
+                    50,
+                    59
+                ],
+                [
+                    51,
+                    59
+                ]
+            ],
+            "deadzones": [
+                {
+                    "h": 33,
+                    "w": 4,
+                    "x": 31,
+                    "y": 31
+                }
+            ],
+            "description": "Other than a few <strong>Still Lifes</strong> protecting the <strong>Goal</strong>, this isn't too interesting of a level. Unless, you consider, that there is no line of sight between you and the <strong>Goal</strong>, and you may need to play off of two separate walls to reach the <strong>Goal</strong>.<br /><br />This level was first beaten by @endeavourize with 18 Cells Played and 375 Generations.",
+            "goal": {
+                "x": 48,
+                "y": 56
+            },
+            "height": 64,
+            "id": 21,
+            "library": 11,
+            "name": "Round the Bend",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 31,
+                    "x": 0,
+                    "y": 48
+                }
+            ],
+            "width": 64
         },
         "3": {
-            "description": "",
-            "id": "3",
-            "name": ""
+            "arena": [
+                [
+                    25,
+                    25
+                ],
+                [
+                    25,
+                    26
+                ],
+                [
+                    25,
+                    27
+                ]
+            ],
+            "deadzones": [],
+            "description": "This time, there's something in the way of your <strong>Goal</strong>! This simple shape is called a <strong>Blinker</strong>, and will flip between being horizontal and vertical. Since there are two \\\"frames\\\" of this animation, it can be thought of as a <strong>Period 2 Oscillator</strong>.<br /><br />If you draw a <strong>Glider</strong> in the lower right corner of the playfield, then draw another one to the upper left of it, the first should destroy the barrier, and the second can activate the <strong>Goal</strong>.",
+            "goal": {
+                "x": 28,
+                "y": 28
+            },
+            "height": 32,
+            "id": 3,
+            "library": 2,
+            "name": "Tutorial #3: Build more Gliders!",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 16,
+                    "x": 0,
+                    "y": 0
+                }
+            ],
+            "width": 32
         },
         "4": {
-            "description": "",
-            "id": "4",
-            "name": ""
+            "arena": [
+                [
+                    57,
+                    11
+                ],
+                [
+                    58,
+                    11
+                ],
+                [
+                    59,
+                    11
+                ],
+                [
+                    54,
+                    14
+                ],
+                [
+                    55,
+                    14
+                ],
+                [
+                    56,
+                    14
+                ],
+                [
+                    51,
+                    17
+                ],
+                [
+                    52,
+                    17
+                ],
+                [
+                    53,
+                    17
+                ],
+                [
+                    57,
+                    17
+                ],
+                [
+                    58,
+                    17
+                ],
+                [
+                    59,
+                    17
+                ],
+                [
+                    48,
+                    20
+                ],
+                [
+                    49,
+                    20
+                ],
+                [
+                    50,
+                    20
+                ],
+                [
+                    54,
+                    20
+                ],
+                [
+                    55,
+                    20
+                ],
+                [
+                    56,
+                    20
+                ],
+                [
+                    45,
+                    23
+                ],
+                [
+                    46,
+                    23
+                ],
+                [
+                    47,
+                    23
+                ],
+                [
+                    51,
+                    23
+                ],
+                [
+                    52,
+                    23
+                ],
+                [
+                    53,
+                    23
+                ],
+                [
+                    57,
+                    23
+                ],
+                [
+                    58,
+                    23
+                ],
+                [
+                    59,
+                    23
+                ],
+                [
+                    48,
+                    26
+                ],
+                [
+                    49,
+                    26
+                ],
+                [
+                    50,
+                    26
+                ],
+                [
+                    54,
+                    26
+                ],
+                [
+                    55,
+                    26
+                ],
+                [
+                    56,
+                    26
+                ],
+                [
+                    2,
+                    27
+                ],
+                [
+                    5,
+                    27
+                ],
+                [
+                    6,
+                    28
+                ],
+                [
+                    2,
+                    29
+                ],
+                [
+                    6,
+                    29
+                ],
+                [
+                    45,
+                    29
+                ],
+                [
+                    46,
+                    29
+                ],
+                [
+                    47,
+                    29
+                ],
+                [
+                    51,
+                    29
+                ],
+                [
+                    52,
+                    29
+                ],
+                [
+                    53,
+                    29
+                ],
+                [
+                    57,
+                    29
+                ],
+                [
+                    58,
+                    29
+                ],
+                [
+                    59,
+                    29
+                ],
+                [
+                    3,
+                    30
+                ],
+                [
+                    4,
+                    30
+                ],
+                [
+                    5,
+                    30
+                ],
+                [
+                    6,
+                    30
+                ],
+                [
+                    48,
+                    32
+                ],
+                [
+                    49,
+                    32
+                ],
+                [
+                    50,
+                    32
+                ],
+                [
+                    54,
+                    32
+                ],
+                [
+                    55,
+                    32
+                ],
+                [
+                    56,
+                    32
+                ],
+                [
+                    45,
+                    35
+                ],
+                [
+                    46,
+                    35
+                ],
+                [
+                    47,
+                    35
+                ],
+                [
+                    51,
+                    35
+                ],
+                [
+                    52,
+                    35
+                ],
+                [
+                    53,
+                    35
+                ],
+                [
+                    57,
+                    35
+                ],
+                [
+                    58,
+                    35
+                ],
+                [
+                    59,
+                    35
+                ],
+                [
+                    48,
+                    38
+                ],
+                [
+                    49,
+                    38
+                ],
+                [
+                    50,
+                    38
+                ],
+                [
+                    54,
+                    38
+                ],
+                [
+                    55,
+                    38
+                ],
+                [
+                    56,
+                    38
+                ],
+                [
+                    45,
+                    41
+                ],
+                [
+                    46,
+                    41
+                ],
+                [
+                    47,
+                    41
+                ],
+                [
+                    51,
+                    41
+                ],
+                [
+                    52,
+                    41
+                ],
+                [
+                    53,
+                    41
+                ],
+                [
+                    57,
+                    41
+                ],
+                [
+                    58,
+                    41
+                ],
+                [
+                    59,
+                    41
+                ],
+                [
+                    48,
+                    44
+                ],
+                [
+                    49,
+                    44
+                ],
+                [
+                    50,
+                    44
+                ],
+                [
+                    54,
+                    44
+                ],
+                [
+                    55,
+                    44
+                ],
+                [
+                    56,
+                    44
+                ],
+                [
+                    51,
+                    47
+                ],
+                [
+                    52,
+                    47
+                ],
+                [
+                    53,
+                    47
+                ],
+                [
+                    57,
+                    47
+                ],
+                [
+                    58,
+                    47
+                ],
+                [
+                    59,
+                    47
+                ],
+                [
+                    54,
+                    50
+                ],
+                [
+                    55,
+                    50
+                ],
+                [
+                    56,
+                    50
+                ],
+                [
+                    57,
+                    53
+                ],
+                [
+                    58,
+                    53
+                ],
+                [
+                    59,
+                    53
+                ]
+            ],
+            "deadzones": [],
+            "description": "<strong>Gliders</strong> are pretty fun (and simple), however by playing a few more cells on the playfield, one can produce a <strong>Lightweight Spaceship</strong>! They're like <strong>Gliders</strong> in the sense that they move, exept they move horizontally and vertically instead of diagnolly.<br /><br />You'll notice something a bit different happens after this level is done. Once the <strong>Spaceship</strong> crashes into the <strong>Blinkers</strong>, a chain reaction happens and the <strong>Goal</strong> is activated. This chain reaction is how you will end up solving many of the levels in this game.<br /><br />You'll also notice some debris left on the field which don't move. We call these <strong>Still Lifes</strong>, and they are a common phenomenon of the Game of Life.",
+            "goal": {
+                "x": 60,
+                "y": 32
+            },
+            "height": 64,
+            "id": 4,
+            "library": 4,
+            "name": "Tutorial #4: Intro to Spaceship",
+            "playables": [
+                {
+                    "h": 6,
+                    "w": 7,
+                    "x": 1,
+                    "y": 26
+                }
+            ],
+            "width": 64
         },
         "5": {
-            "description": "",
-            "id": "5",
-            "name": ""
+            "arena": [
+                [
+                    25,
+                    1
+                ],
+                [
+                    23,
+                    2
+                ],
+                [
+                    25,
+                    2
+                ],
+                [
+                    13,
+                    3
+                ],
+                [
+                    14,
+                    3
+                ],
+                [
+                    21,
+                    3
+                ],
+                [
+                    22,
+                    3
+                ],
+                [
+                    35,
+                    3
+                ],
+                [
+                    36,
+                    3
+                ],
+                [
+                    12,
+                    4
+                ],
+                [
+                    16,
+                    4
+                ],
+                [
+                    21,
+                    4
+                ],
+                [
+                    22,
+                    4
+                ],
+                [
+                    35,
+                    4
+                ],
+                [
+                    36,
+                    4
+                ],
+                [
+                    1,
+                    5
+                ],
+                [
+                    2,
+                    5
+                ],
+                [
+                    11,
+                    5
+                ],
+                [
+                    17,
+                    5
+                ],
+                [
+                    21,
+                    5
+                ],
+                [
+                    22,
+                    5
+                ],
+                [
+                    1,
+                    6
+                ],
+                [
+                    2,
+                    6
+                ],
+                [
+                    11,
+                    6
+                ],
+                [
+                    15,
+                    6
+                ],
+                [
+                    17,
+                    6
+                ],
+                [
+                    18,
+                    6
+                ],
+                [
+                    23,
+                    6
+                ],
+                [
+                    25,
+                    6
+                ],
+                [
+                    11,
+                    7
+                ],
+                [
+                    17,
+                    7
+                ],
+                [
+                    25,
+                    7
+                ],
+                [
+                    12,
+                    8
+                ],
+                [
+                    16,
+                    8
+                ],
+                [
+                    13,
+                    9
+                ],
+                [
+                    14,
+                    9
+                ]
+            ],
+            "deadzones": [],
+            "description": "This is another non-interactive level. Just click play and watch what happens!<br /><br />The Game of Life can allow for some complex interactions, and as you're about to see, the results can be quite interesting.<br /><br />The object in the upper left corner of the arena is called a <strong>Gosper Glider Gun</strong> and as you can tell it is aptly named.",
+            "goal": {
+                "x": 60,
+                "y": 46
+            },
+            "height": 64,
+            "id": 5,
+            "library": 5,
+            "name": "Tutorial #5: What is a Glider Gun",
+            "playables": [
+                {
+                    "h": 0,
+                    "w": 0,
+                    "x": 24,
+                    "y": 24
+                }
+            ],
+            "width": 64
         },
         "6": {
-            "description": "",
-            "id": "6",
-            "name": ""
+            "arena": [
+                [
+                    32,
+                    29
+                ],
+                [
+                    33,
+                    29
+                ],
+                [
+                    34,
+                    29
+                ],
+                [
+                    31,
+                    30
+                ],
+                [
+                    34,
+                    30
+                ],
+                [
+                    30,
+                    31
+                ],
+                [
+                    29,
+                    32
+                ]
+            ],
+            "deadzones": [],
+            "description": "This is another non-interactive level.<br /><br />Notice how simple the <strong>Multum in Parvo</strong> pattern in the middle of the arena is, and yet how unpredictabley complex it can become.",
+            "goal": {
+                "x": 32,
+                "y": 2
+            },
+            "height": 64,
+            "id": 6,
+            "library": 6,
+            "name": "Tutorial #6: Multum in Parvo",
+            "playables": [],
+            "width": 64
         },
         "7": {
-            "description": "",
-            "id": "7",
-            "name": ""
+            "arena": [
+                [
+                    32,
+                    6
+                ],
+                [
+                    32,
+                    7
+                ],
+                [
+                    32,
+                    8
+                ],
+                [
+                    29,
+                    6
+                ],
+                [
+                    29,
+                    7
+                ],
+                [
+                    29,
+                    8
+                ],
+                [
+                    35,
+                    6
+                ],
+                [
+                    35,
+                    7
+                ],
+                [
+                    35,
+                    8
+                ]
+            ],
+            "deadzones": [],
+            "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single tile, and the outcome can be completely different.",
+            "goal": {
+                "x": 32,
+                "y": 2
+            },
+            "height": 64,
+            "id": 7,
+            "library": 6,
+            "name": "Fanblades I",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 16,
+                    "x": 24,
+                    "y": 48
+                }
+            ],
+            "width": 64
         },
         "8": {
-            "description": "",
-            "id": "8",
-            "name": ""
+            "arena": [
+                [
+                    56,
+                    27
+                ],
+                [
+                    59,
+                    27
+                ],
+                [
+                    55,
+                    28
+                ],
+                [
+                    55,
+                    29
+                ],
+                [
+                    59,
+                    29
+                ],
+                [
+                    55,
+                    30
+                ],
+                [
+                    56,
+                    30
+                ],
+                [
+                    57,
+                    30
+                ],
+                [
+                    58,
+                    30
+                ]
+            ],
+            "deadzones": [
+                {
+                    "h": 4,
+                    "w": 16,
+                    "x": 0,
+                    "y": 22
+                },
+                {
+                    "h": 4,
+                    "w": 16,
+                    "x": 48,
+                    "y": 22
+                }
+            ],
+            "description": "Notice the red zones. These are <strong>Dead Zones</strong>. No cells will become alive in these zones, so you'll have to find a way to get around them.<br /><br />As a hint, see what happens when that <strong>Spaceship</strong> crashes into a wall...<br /><br />Also, remember that everything in the library can be rotated and flipped, and if you move something by a single tile, the outcome can be completely different.",
+            "goal": {
+                "x": 3,
+                "y": 20
+            },
+            "height": 64,
+            "id": 8,
+            "library": 6,
+            "name": "Hookshot",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 32,
+                    "x": 0,
+                    "y": 48
+                }
+            ],
+            "width": 64
         },
         "9": {
-            "description": "",
-            "id": "9",
-            "name": ""
+            "arena": [
+                [
+                    27,
+                    18
+                ],
+                [
+                    28,
+                    18
+                ],
+                [
+                    29,
+                    18
+                ],
+                [
+                    29,
+                    19
+                ],
+                [
+                    28,
+                    20
+                ],
+                [
+                    8,
+                    23
+                ],
+                [
+                    9,
+                    23
+                ],
+                [
+                    10,
+                    23
+                ],
+                [
+                    10,
+                    24
+                ],
+                [
+                    9,
+                    25
+                ],
+                [
+                    12,
+                    28
+                ],
+                [
+                    13,
+                    28
+                ],
+                [
+                    14,
+                    28
+                ],
+                [
+                    1,
+                    29
+                ],
+                [
+                    2,
+                    29
+                ],
+                [
+                    3,
+                    29
+                ],
+                [
+                    14,
+                    29
+                ],
+                [
+                    21,
+                    29
+                ],
+                [
+                    22,
+                    29
+                ],
+                [
+                    23,
+                    29
+                ],
+                [
+                    3,
+                    30
+                ],
+                [
+                    13,
+                    30
+                ],
+                [
+                    23,
+                    30
+                ],
+                [
+                    2,
+                    31
+                ],
+                [
+                    22,
+                    31
+                ],
+                [
+                    27,
+                    31
+                ],
+                [
+                    28,
+                    31
+                ],
+                [
+                    29,
+                    31
+                ],
+                [
+                    29,
+                    32
+                ],
+                [
+                    28,
+                    33
+                ],
+                [
+                    6,
+                    36
+                ],
+                [
+                    7,
+                    36
+                ],
+                [
+                    8,
+                    36
+                ],
+                [
+                    20,
+                    36
+                ],
+                [
+                    21,
+                    36
+                ],
+                [
+                    22,
+                    36
+                ],
+                [
+                    8,
+                    37
+                ],
+                [
+                    22,
+                    37
+                ],
+                [
+                    30,
+                    37
+                ],
+                [
+                    31,
+                    37
+                ],
+                [
+                    32,
+                    37
+                ],
+                [
+                    7,
+                    38
+                ],
+                [
+                    21,
+                    38
+                ],
+                [
+                    32,
+                    38
+                ],
+                [
+                    31,
+                    39
+                ],
+                [
+                    26,
+                    44
+                ],
+                [
+                    27,
+                    44
+                ],
+                [
+                    28,
+                    44
+                ],
+                [
+                    28,
+                    45
+                ],
+                [
+                    27,
+                    46
+                ],
+                [
+                    7,
+                    47
+                ],
+                [
+                    8,
+                    47
+                ],
+                [
+                    9,
+                    47
+                ],
+                [
+                    9,
+                    48
+                ],
+                [
+                    40,
+                    48
+                ],
+                [
+                    41,
+                    48
+                ],
+                [
+                    42,
+                    48
+                ],
+                [
+                    8,
+                    49
+                ],
+                [
+                    42,
+                    49
+                ],
+                [
+                    41,
+                    50
+                ],
+                [
+                    19,
+                    55
+                ],
+                [
+                    20,
+                    55
+                ],
+                [
+                    21,
+                    55
+                ],
+                [
+                    21,
+                    56
+                ],
+                [
+                    20,
+                    57
+                ]
+            ],
+            "deadzones": [
+                {
+                    "h": 5,
+                    "w": 2,
+                    "x": 51,
+                    "y": 2
+                }
+            ],
+            "description": "This level can be beaten using the same method you beat the last level.",
+            "goal": {
+                "x": 59,
+                "y": 4
+            },
+            "height": 64,
+            "id": 9,
+            "library": 6,
+            "name": "Flock of Gliders",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 32,
+                    "x": 0,
+                    "y": 0
+                }
+            ],
+            "width": 64
         }
     },
-    "dictionary": {},
+    "dictionary": {
+        "how_to_play": "<h3>How to Play</h3>\n<p>Tap the arena to place cells. You must place cells on green zones.</p>"
+    },
     "levels": {
         "1": [
             [
@@ -711,7 +4250,7 @@
                 0,
                 0,
                 0,
-                0,
+                2,
                 0,
                 0,
                 0,
@@ -4334,5 +7873,73 @@
                 0
             ]
         ]
+    },
+    "library": {
+        "1": {
+            "id": 1,
+            "image": "images/library/glider.png",
+            "name": "Glider (45&deg;)",
+            "url": "http://www.conwaylife.com/wiki/Glider"
+        },
+        "10": {
+            "id": 10,
+            "image": "images/library/gliders-by-the-dozen.png",
+            "name": "Gliders by the Dozen",
+            "url": "http://www.conwaylife.com/wiki/Gliders_by_the_dozen"
+        },
+        "11": {
+            "id": 11,
+            "image": "images/library/orion-2.png",
+            "name": "Orion 2",
+            "url": "http://www.conwaylife.com/wiki/Orion_2"
+        },
+        "2": {
+            "id": 2,
+            "image": "images/library/pulsar.png",
+            "name": "Blinker",
+            "url": "http://www.conwaylife.com/wiki/Blinker"
+        },
+        "3": {
+            "id": 3,
+            "image": "images/library/spaceship.png",
+            "name": "Spaceship (90&deg;)",
+            "url": "http://www.conwaylife.com/wiki/Spaceship"
+        },
+        "4": {
+            "id": 4,
+            "image": "images/library/still-lifes.png",
+            "name": "Still Lifes",
+            "url": "http://www.conwaylife.com/wiki/Still_life"
+        },
+        "5": {
+            "id": 5,
+            "image": "images/library/glider-gun.png",
+            "name": "Glider Gun",
+            "url": "http://www.conwaylife.com/wiki/Gun"
+        },
+        "6": {
+            "id": 6,
+            "image": "images/library/multum-in-parvo.png",
+            "name": "Multum in Parvo",
+            "url": "http://www.conwaylife.com/wiki/Multum_in_parvo"
+        },
+        "7": {
+            "id": 7,
+            "image": "images/library/pentadecathlon.png",
+            "name": "Pentadecathlon",
+            "url": "http://www.conwaylife.com/wiki/Pentadecathlon"
+        },
+        "8": {
+            "id": 8,
+            "image": "images/library/eater.png",
+            "name": "Eater",
+            "url": "http://www.conwaylife.com/wiki/Eater"
+        },
+        "9": {
+            "id": 9,
+            "image": "images/library/sparky.png",
+            "name": "Sparky",
+            "url": "http://www.conwaylife.com/wiki/Sparky"
+        }
     }
 }
