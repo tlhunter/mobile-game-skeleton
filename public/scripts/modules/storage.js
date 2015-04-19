@@ -24,7 +24,13 @@ MODULE.Storage = (function() {
 			return fallback || null;
 		}
 
-		var data = JSON.parse(json);
+		var data = fallback;
+
+		try {
+			data = JSON.parse(json);
+		} catch(e) {
+			console.log("ERROR DECODING DATA", e);
+		}
 
 		return data;
 	};

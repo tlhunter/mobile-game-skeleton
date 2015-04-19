@@ -7,6 +7,7 @@
 	"loopfunc": true,
 	"globals": {
 		"app": true,
-		"MODULE": true
+		"MODULE": true,
+		"Hammer": true
 	}
 }

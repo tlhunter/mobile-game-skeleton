@@ -16,6 +16,7 @@ MODULE.LevelScreen = (function() {
 
         this.$buttons = {
             play: this.$footer.find('button.play'),
+            stop: this.$footer.find('button.stop'),
             clear: this.$footer.find('button.clear'),
             help: this.$footer.find('button.help'),
             library: this.$footer.find('button.library'),
@@ -28,6 +29,15 @@ MODULE.LevelScreen = (function() {
         this.$buttons.play.on('click', function() {
             app.audio.playSound('play');
             self.level.onPlay();
+            self.$buttons.play.hide();
+            self.$buttons.stop.show();
+        });
+
+        this.$buttons.stop.on('click', function() {
+            app.audio.playSound('stop');
+            self.level.onStop();
+            self.$buttons.play.show();
+            self.$buttons.stop.hide();
         });
 
         this.$buttons.clear.on('click', function() {
@@ -45,9 +55,9 @@ MODULE.LevelScreen = (function() {
 
         this.$buttons.exit.on('click', function() {
             app.audio.playSound('back');
-            if (window.confirm("Are you sure you want to leave? Any progress will be lost.")) {
-                app.screens.campaign.display();
-            }
+            self.level.destroy();
+            self.level = null;
+            app.screens.campaign.display();
         });
     };
 
@@ -67,6 +77,36 @@ MODULE.LevelScreen = (function() {
         }).onPlayCount(function(played) {
             self.$played.text(played);
         });
+
+        var $gamefield = this.level.$gamefield;
+        var interaction = new Hammer(
+            $gamefield[0]
+        );
+
+        interaction.get('pinch').set({
+            enable: true
+        });
+
+        interaction.add(new Hammer.Pan({
+            direction: Hammer.DIRECTION_ALL,
+            threshold: 0
+        }));
+
+        interaction.on('pinch', function(event) {
+            self.level.setSize(event.scale);
+        });
+
+        /*
+        interaction.on('pan', function(event) {
+        });
+        */
+
+        $gamefield.on('click', function(event) {
+            self.level.onTap(event);
+        });
+
+        // But hammer, I don't want you to stop my panning!
+        $gamefield.attr('style', '');
 
         app.audio.playMusic('level');
 

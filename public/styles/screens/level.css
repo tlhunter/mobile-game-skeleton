@@ -33,6 +33,10 @@
 	padding: 4px;
 }
 
+#screen-level footer button.stop {
+	display: none;
+}
+
 #screen-level header {
 	top: 0px;
 	line-height: 24px;

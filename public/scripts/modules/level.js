@@ -61,6 +61,33 @@ MODULE.Level = (function() {
 		grid:		'rgba(255,255,255,0.035)'
 	};
 
+	Level.prototype.setSize = function(size) {
+		if (size < 1) {
+			// 0.1, 0.2 ... 0.9
+			size = (Math.floor(size * 10) / 10) * Level.DEFAULT_SIZE;
+		} else {
+			// 1, 2, 3
+			size = Math.floor(size) + Level.DEFAULT_SIZE;
+		}
+
+		if (size === this.size) {
+			// hasn't resized, no need
+			return;
+		}
+
+		if (size < Level.MIN_SIZE) {
+			return;
+		}
+
+		if (size > Level.MAX_SIZE) {
+			return;
+		}
+
+		this.size = size;
+
+		this.resize();
+	};
+
 	Level.prototype.changeSize = function(delta) {
 		if (this.size + delta < Level.MIN_SIZE) {
 			return;
@@ -113,6 +140,10 @@ MODULE.Level = (function() {
 	};
 
 	Level.prototype.onPlay = function() {
+		if (this.playing) {
+			return;
+		}
+
 		var self = this;
 
 		this.playing = true;
@@ -124,7 +155,17 @@ MODULE.Level = (function() {
 	};
 
 	Level.prototype.onStop = function() {
+		if (!this.playing) {
+			return;
+		}
+
 		this.playing = false;
+		clearTimeout(this.redraw_interval);
+
+		this.generation = 0;
+		this.generationHandler(this.generation);
+
+		this.arena = this.initial_arena.slice(0);
 	};
 
 	Level.prototype.onClear = function() {
@@ -137,8 +178,8 @@ MODULE.Level = (function() {
 		var arena = this.arena;
 
 		for (var i in playables) {
-			for (var y = playables[i].y; y < playables[i].y + playables[i].height; y++) {
-				for (var x = playables[i].x; x < playables[i].x + playables[i].width; x++) {
+			for (var y = playables[i].y; y < playables[i].y + playables[i].h; y++) {
+				for (var x = playables[i].x; x < playables[i].x + playables[i].w; x++) {
 					arena[y][x] = false;
 				}
 			}
@@ -147,14 +188,45 @@ MODULE.Level = (function() {
 		console.log("The playing field has been cleared.");
 	};
 
+	Level.prototype.onTap = function(event) {
+		var position = this.eventPosition(event);
+		this.setTile(position);
+	};
+
 	Level.prototype.eventPosition = function(event) {
+		var offset = this.$gamefield.offset();
+
 		return {
-			x: Math.floor((event.pageX - this.$gamefield.offset().left) / this.size),
-			y: Math.floor((event.pageY - this.$gamefield.offset().top) / this.size),
+			x: Math.floor((event.pageX - offset.left) / this.size),
+			y: Math.floor((event.pageY - offset.top) / this.size),
 		};
 	};
 
 	Level.prototype.setTile = function(tile, state) {
+		if (this.playing) {
+			console.log("Cannot change the game while playing.");
+			return;
+		}
+
+		if (!this.playables.length) {
+			console.log("This level doesn't have any playable areas. Just click play!");
+			return;
+		}
+
+		for (var i in this.playables) {
+			if (tile.x >= this.playables[i].x && tile.y >= this.playables[i].y && tile.x < this.playables[i].x + this.playables[i].w && tile.y < this.playables[i].y + this.playables[i].h) {
+				if (state === undefined) {
+					state = !this.arena[tile.y][tile.x];
+				}
+
+				this.arena[tile.y][tile.x] = state;
+				console.log("Toggled [" + tile.x + ", " + tile.y + "].");
+				this.countPlayedPieces();
+				return;
+			}
+		}
+
+		console.log("Position [" + tile.x + ", " + tile.y + "] is outside of a playable (green) zone.");
 	};
 
 	Level.prototype.calculateGeneration = function() {
@@ -187,11 +259,14 @@ MODULE.Level = (function() {
 		var my_level = app.storage.get('level');
 		var max_level = Object.keys(app.content.data.campaign).length;
 
-		if (this.level === max_level) {
+		console.log(my_level, max_level, this.level_id);
+
+		if (this.level_id === max_level) {
+			// TODO: Congratulate user on winning
 			console.log("Beat the final level... Now what?");
-		} else if (this.level === my_level) {
-			app.storage.set('level', this.level + 1);
-			console.log("beat most recent level. unlocking next level: " + localStorage.level);
+		} else if (this.level_id === my_level + 1) {
+			app.storage.set('level', this.level_id);
+			console.log("beat most recent level. unlocking next level");
 		}
 	};
 
@@ -224,7 +299,7 @@ MODULE.Level = (function() {
 		}
 
 		for (var i in this.deadzones) {
-			if (this.deadzones[i].x <= x && this.deadzones[i].x+this.deadzones[i].width > x && this.deadzones[i].y <= y && this.deadzones[i].y+this.deadzones[i].height > y) {
+			if (this.deadzones[i].x <= x && this.deadzones[i].x+this.deadzones[i].w > x && this.deadzones[i].y <= y && this.deadzones[i].y+this.deadzones[i].h > y) {
 				new_arena[y][x] = false;
 				return;
 			}
@@ -338,6 +413,10 @@ MODULE.Level = (function() {
 		if (this.goalPhase >= 255) {
 			this.goalPhase = 0;
 		}
+	};
+
+	Level.prototype.destroy = function() {
+		this.onStop();
 	};
 
     return Level;
