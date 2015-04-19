@@ -23,7 +23,6 @@ MODULE.Level = (function() {
 
 		this.resize();
 
-		this.arena = data.arena;
 		this.deadzones = data.deadzones;
 		this.playables = data.playables;
 		this.goal = data.goal;
@@ -37,7 +36,7 @@ MODULE.Level = (function() {
 		this.generation = 0;
 		this.goalPhase = 0;
 
-		this.arena = this.buildArena();
+		this.arena = this.buildArena(data.arena);
 		this.initial_arena = null;
 
 		this.playing = false;
@@ -50,7 +49,7 @@ MODULE.Level = (function() {
 		this.render();
     };
 
-	Level.DEFAULT_SIZE = 4;
+	Level.DEFAULT_SIZE = 8;
 	Level.MIN_SIZE = 2;
 	Level.MAX_SIZE = 16;
 
@@ -248,13 +247,19 @@ MODULE.Level = (function() {
 		}
 	};
 
-	Level.prototype.buildArena = function() {
+	Level.prototype.buildArena = function(data) {
 		var new_arena = [];
 
 		for (var y = 0; y < this.dimensions.height; y++) {
 			new_arena[y] = [];
 			for (var x = 0; x < this.dimensions.width; x++) {
 				new_arena[y][x] = false;
+			}
+		}
+
+		if (data) {
+			for (var coord in data) {
+				new_arena[data[coord][1]][data[coord][0]] = true;
 			}
 		}
 
@@ -315,10 +320,12 @@ MODULE.Level = (function() {
 
 	Level.prototype.drawLivingCells = function() {
 		this.gamefield.fillStyle = Level.COLORS.alive;
+		var size = this.size;
+
 		for (var y = 0; y < this.dimensions.height; y++) {
 			for (var x = 0; x < this.dimensions.width; x++) {
 				if (this.arena[y][x]) {
-					this.gamefield.fillRect(x * this.size, y * this.size, this.size, this.size);
+					this.gamefield.fillRect(x * size, y * size, size, size);
 				}
 			}
 		}
