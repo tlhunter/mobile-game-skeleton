@@ -101,12 +101,6 @@ MODULE.LevelScreen = (function() {
         var raw_level = app.content.data.campaign[level_id];
         this.$title.html(raw_level.name);
 
-        if (level_id > app.storage.get('level')) {
-            self.$status.text('INPROG');
-        } else {
-            self.$status.text('DONE');
-        }
-
         var constraints = {
             width: app.viewport.width,
             height: app.viewport.height - (this.$footer.outerHeight() + this.$header.outerHeight())
@@ -119,13 +113,22 @@ MODULE.LevelScreen = (function() {
         }).onPlayCount(function(played) {
             self.$played.text(played);
         }).onStatus(function(status) {
-            self.$status.text(status);
+            if (status === MODULE.Level.STATUS.DONE) {
+                self.complete();
+            }
         }).onWin(function(old_level, new_level) {
             app.analytics.track('LEVEL-WIN', {
                 level: old_level,
                 new_level: new_level
             });
         });
+
+        if (level_id > app.storage.get('level')) {
+            this.incomplete();
+            this.intro();
+        } else {
+            this.complete();
+        }
 
         var $gamefield = this.level.$gamefield;
         var finger = new Hammer($gamefield[0]);
@@ -161,11 +164,23 @@ MODULE.LevelScreen = (function() {
 
         this.$screen.show();
 
-        this.intro();
-
         this.library = null;
 
         app.analytics.track('SCREEN-LEVEL');
+    };
+
+    LevelScreen.prototype.complete = function() {
+        this.$status.text('Done');
+        this.$header.addClass('done');
+        this.$footer.addClass('done');
+        this.$buttons.exit.addClass('cycle');
+    };
+
+    LevelScreen.prototype.incomplete = function() {
+        this.$status.text('InProg');
+        this.$header.removeClass('done');
+        this.$footer.removeClass('done');
+        this.$buttons.exit.removeClass('cycle');
     };
 
     LevelScreen.prototype.intro = function() {

@@ -71,6 +71,12 @@ MODULE.Level = (function() {
 		grid:		'rgba(255,255,255,0.035)'
 	};
 
+	Level.STATUS = {
+		STOP: 'stop',
+		PLAY: 'play',
+		DONE: 'done',
+	};
+
 	/**
 	 * The user is starting to scale the map
 	 * Keep track of the size at the point when the scaling started
@@ -143,6 +149,8 @@ MODULE.Level = (function() {
 			return;
 		}
 
+		this.statusHandler(Level.STATUS.PLAY);
+
 		var self = this;
 
 		this.playing = true;
@@ -157,6 +165,8 @@ MODULE.Level = (function() {
 		if (!this.playing) {
 			return;
 		}
+
+		this.statusHandler(Level.STATUS.STOP);
 
 		this.playing = false;
 		clearTimeout(this.redraw_interval);
@@ -252,7 +262,7 @@ MODULE.Level = (function() {
 			return;
 		}
 
-		this.statusHandler('DONE');
+		this.statusHandler(Level.STATUS.DONE);
 
 		console.log("Game won in " + this.generation + " generations!");
 		this.generations_until_beaten = this.generation;

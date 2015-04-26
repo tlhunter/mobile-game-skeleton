@@ -48,3 +48,8 @@
 	line-height: 24px;
 	border-bottom: 2px solid #111;
 }
+
+#screen-level header.done,
+#screen-level footer.done {
+	background-color: #060;
+}
