@@ -14,6 +14,10 @@ if (!MODULE) { var MODULE = {}; }
 		audio: new MODULE.Audio(),
 		content: new MODULE.Content(),
 		modal: new MODULE.Modal(),
+		viewport: {
+			width: screen.availWidth,
+			height: Math.min(screen.availHeight, $(window).height())
+		},
 		screens: {
 			campaign: new MODULE.CampaignScreen(),
 			help: new MODULE.HelpScreen(),

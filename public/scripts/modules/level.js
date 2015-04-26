@@ -12,11 +12,14 @@ MODULE.Level = (function() {
 			height: data.height
 		};
 
-		var max_size_w = Math.floor(constraints.width / this.dimensions.width);
-		var max_size_h = Math.floor(constraints.height / this.dimensions.height);
-		console.log('ms', max_size_w, max_size_h);
+		this.last_established_zoom = 0;
 
-		this.size = Math.min(max_size_w, max_size_h);
+		var max_size = {
+			w: Math.floor(constraints.width / this.dimensions.width),
+			h: Math.floor(constraints.height / this.dimensions.height)
+		};
+
+		this.size = Math.min(max_size.w, max_size.h);
 
 		var $gamefield = $('<canvas id="gamefield" width="' + this.dimensions.width * this.size + '" height="' + this.dimensions.height * this.size + '"></canvas>');
 
@@ -68,38 +71,34 @@ MODULE.Level = (function() {
 		grid:		'rgba(255,255,255,0.035)'
 	};
 
-	Level.prototype.setSize = function(size) {
-		if (size === this.size) {
-			return;
-		}
+	/**
+	 * The user is starting to scale the map
+	 * Keep track of the size at the point when the scaling started
+	 */
+	Level.prototype.scaleStart = function() {
+		this.last_established_zoom = this.size;
+	};
 
-		if (size < Level.MIN_SIZE) {
-			size = Level.MIN_SIZE;
-			return;
-		}
+	/**
+	 * The user is moving their fingers while scaling
+	 * If scale = 0.5, it means users fingers are half the distance away from when they started
+	 * If scale = 1, no change. If scale = 2, double.
+	 */
+	Level.prototype.scale = function(scale) {
+		var size = Math.floor(this.last_established_zoom * scale);
 
 		if (size > Level.MAX_SIZE) {
 			size = Level.MAX_SIZE;
-			return;
+		} else if (size < Level.MIN_SIZE) {
+			size = Level.MIN_SIZE;
 		}
 
 		this.size = size;
-
 		this.resize();
 	};
 
-	Level.prototype.changeSize = function(delta) {
-		if (this.size + delta < Level.MIN_SIZE) {
-			return;
-		}
-
-		if (this.size + delta > Level.MAX_SIZE) {
-			return;
-		}
-
-		this.size += delta;
-
-		this.resize();
+	Level.prototype.scaleEnd = function() {
+		this.last_established_zoom = 0;
 	};
 
 	Level.prototype.resize = function() {

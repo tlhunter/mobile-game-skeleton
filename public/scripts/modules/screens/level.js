@@ -108,8 +108,8 @@ MODULE.LevelScreen = (function() {
         }
 
         var constraints = {
-            width: screen.availWidth,
-            height: screen.availHeight - (this.$footer.outerHeight() + this.$header.outerHeight())
+            width: app.viewport.width,
+            height: app.viewport.height - (this.$footer.outerHeight() + this.$header.outerHeight())
         };
 
         this.level = new MODULE.Level(raw_level, this.$level, constraints);
@@ -128,27 +128,27 @@ MODULE.LevelScreen = (function() {
         });
 
         var $gamefield = this.level.$gamefield;
-        var finger = new Hammer(
-            $gamefield[0]
-        );
-
-        finger.get('pinch').set({
-            enable: true
-        });
+        var finger = new Hammer($gamefield[0]);
+        finger.get('pinch').set({enable: true});
 
         finger.add(new Hammer.Pan({
             direction: Hammer.DIRECTION_ALL,
             threshold: 0
         }));
 
-        finger.on('pinch', function(event) {
-            self.level.setSize(event.scale);
+        finger.on('pinchstart', function() {
+            self.level.scaleStart();
         });
 
-        /*
-        finger.on('pan', function(event) {
+        finger.on('pinch', function(event) {
+            self.level.scale(event.scale);
         });
-        */
+
+        finger.on('pinchend', function() {
+            self.level.scaleEnd();
+        });
+
+        // finger.on('pan', function(event) {});
 
         $gamefield.on('click', function(event) {
             self.level.onTap(event);
