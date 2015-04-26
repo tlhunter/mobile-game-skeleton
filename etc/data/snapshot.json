@@ -1,6 +1,7 @@
 {
     "campaign": {
         "1": {
+            "antigoal": null,
             "arena": [
                 [
                     3,
@@ -23,20 +24,505 @@
                     3
                 ]
             ],
+            "chapter": 1,
             "deadzones": [],
             "description": "Welcome to Strategic Game of Life! This is the first tutorial level. The entire Game of Life is governed by the following four rules: <ol><li>Any live cell with fewer than two live neighbours dies.</li><li>Any live cell with two or three live neighbours lives.</li><li>Any live cell with more than three live neighbours dies.</li><li>Any dead cell with exactly three live neighbours becomes a live cell.</li></ol>If you're interested in learning more, read about the <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Game of Life on WikiPedia</a>.<br /><br />Do you see that shape in the middle of the screen? It's called a <strong>Glider</strong>. And that rainbow tile is the <strong>Goal</strong>. Click play and watch what happens. Note that this level isn't interactive.",
             "goal": {
-                "x": 28,
-                "y": 28
+                "x": 14,
+                "y": 14
             },
-            "height": 32,
+            "height": 16,
             "id": 1,
             "library": 1,
-            "name": "Tutorial #1: Watch and Learn",
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Tutorial #1: Hello Glider",
             "playables": [],
-            "width": 32
+            "width": 16
         },
         "10": {
+            "antigoal": null,
+            "arena": [
+                [
+                    32,
+                    29
+                ],
+                [
+                    33,
+                    29
+                ],
+                [
+                    34,
+                    29
+                ],
+                [
+                    31,
+                    30
+                ],
+                [
+                    34,
+                    30
+                ],
+                [
+                    30,
+                    31
+                ],
+                [
+                    29,
+                    32
+                ]
+            ],
+            "chapter": 2,
+            "deadzones": [],
+            "description": "This is another non-interactive level.<br /><br />Notice how simple the <strong>Multum in Parvo</strong> pattern in the middle of the arena is, and yet how unpredictabley complex it can become.",
+            "goal": {
+                "x": 32,
+                "y": 2
+            },
+            "height": 64,
+            "id": 10,
+            "library": 6,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Chaos #2: Multum in Parvo",
+            "playables": [],
+            "width": 64
+        },
+        "11": {
+            "antigoal": null,
+            "arena": [
+                [
+                    16,
+                    6
+                ],
+                [
+                    16,
+                    7
+                ],
+                [
+                    16,
+                    8
+                ],
+                [
+                    13,
+                    6
+                ],
+                [
+                    13,
+                    7
+                ],
+                [
+                    13,
+                    8
+                ],
+                [
+                    19,
+                    6
+                ],
+                [
+                    19,
+                    7
+                ],
+                [
+                    19,
+                    8
+                ]
+            ],
+            "chapter": 2,
+            "deadzones": [],
+            "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single tile, and the outcome can be completely different.",
+            "goal": {
+                "x": 16,
+                "y": 2
+            },
+            "height": 64,
+            "id": 11,
+            "library": 6,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Fanblades I",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 16,
+                    "x": 8,
+                    "y": 48
+                }
+            ],
+            "width": 32
+        },
+        "12": {
+            "antigoal": null,
+            "arena": [
+                [
+                    56,
+                    27
+                ],
+                [
+                    59,
+                    27
+                ],
+                [
+                    55,
+                    28
+                ],
+                [
+                    55,
+                    29
+                ],
+                [
+                    59,
+                    29
+                ],
+                [
+                    55,
+                    30
+                ],
+                [
+                    56,
+                    30
+                ],
+                [
+                    57,
+                    30
+                ],
+                [
+                    58,
+                    30
+                ]
+            ],
+            "chapter": 2,
+            "deadzones": [
+                {
+                    "h": 4,
+                    "w": 16,
+                    "x": 0,
+                    "y": 22
+                },
+                {
+                    "h": 4,
+                    "w": 16,
+                    "x": 48,
+                    "y": 22
+                }
+            ],
+            "description": "Notice the red zones. These are <strong>Dead Zones</strong>. No cells will become alive in these zones, so you'll have to find a way to get around them.<br /><br />As a hint, see what happens when that <strong>Spaceship</strong> crashes into a wall...<br /><br />Also, remember that everything in the library can be rotated and flipped, and if you move something by a single tile, the outcome can be completely different.",
+            "goal": {
+                "x": 3,
+                "y": 20
+            },
+            "height": 64,
+            "id": 12,
+            "library": 6,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Hookshot",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 32,
+                    "x": 0,
+                    "y": 48
+                }
+            ],
+            "width": 64
+        },
+        "13": {
+            "antigoal": null,
+            "arena": [
+                [
+                    27,
+                    18
+                ],
+                [
+                    28,
+                    18
+                ],
+                [
+                    29,
+                    18
+                ],
+                [
+                    29,
+                    19
+                ],
+                [
+                    28,
+                    20
+                ],
+                [
+                    8,
+                    23
+                ],
+                [
+                    9,
+                    23
+                ],
+                [
+                    10,
+                    23
+                ],
+                [
+                    10,
+                    24
+                ],
+                [
+                    9,
+                    25
+                ],
+                [
+                    12,
+                    28
+                ],
+                [
+                    13,
+                    28
+                ],
+                [
+                    14,
+                    28
+                ],
+                [
+                    1,
+                    29
+                ],
+                [
+                    2,
+                    29
+                ],
+                [
+                    3,
+                    29
+                ],
+                [
+                    14,
+                    29
+                ],
+                [
+                    21,
+                    29
+                ],
+                [
+                    22,
+                    29
+                ],
+                [
+                    23,
+                    29
+                ],
+                [
+                    3,
+                    30
+                ],
+                [
+                    13,
+                    30
+                ],
+                [
+                    23,
+                    30
+                ],
+                [
+                    2,
+                    31
+                ],
+                [
+                    22,
+                    31
+                ],
+                [
+                    27,
+                    31
+                ],
+                [
+                    28,
+                    31
+                ],
+                [
+                    29,
+                    31
+                ],
+                [
+                    29,
+                    32
+                ],
+                [
+                    28,
+                    33
+                ],
+                [
+                    6,
+                    36
+                ],
+                [
+                    7,
+                    36
+                ],
+                [
+                    8,
+                    36
+                ],
+                [
+                    20,
+                    36
+                ],
+                [
+                    21,
+                    36
+                ],
+                [
+                    22,
+                    36
+                ],
+                [
+                    8,
+                    37
+                ],
+                [
+                    22,
+                    37
+                ],
+                [
+                    30,
+                    37
+                ],
+                [
+                    31,
+                    37
+                ],
+                [
+                    32,
+                    37
+                ],
+                [
+                    7,
+                    38
+                ],
+                [
+                    21,
+                    38
+                ],
+                [
+                    32,
+                    38
+                ],
+                [
+                    31,
+                    39
+                ],
+                [
+                    26,
+                    44
+                ],
+                [
+                    27,
+                    44
+                ],
+                [
+                    28,
+                    44
+                ],
+                [
+                    28,
+                    45
+                ],
+                [
+                    27,
+                    46
+                ],
+                [
+                    7,
+                    47
+                ],
+                [
+                    8,
+                    47
+                ],
+                [
+                    9,
+                    47
+                ],
+                [
+                    9,
+                    48
+                ],
+                [
+                    40,
+                    48
+                ],
+                [
+                    41,
+                    48
+                ],
+                [
+                    42,
+                    48
+                ],
+                [
+                    8,
+                    49
+                ],
+                [
+                    42,
+                    49
+                ],
+                [
+                    41,
+                    50
+                ],
+                [
+                    19,
+                    55
+                ],
+                [
+                    20,
+                    55
+                ],
+                [
+                    21,
+                    55
+                ],
+                [
+                    21,
+                    56
+                ],
+                [
+                    20,
+                    57
+                ]
+            ],
+            "chapter": 2,
+            "deadzones": [
+                {
+                    "h": 5,
+                    "w": 2,
+                    "x": 51,
+                    "y": 2
+                }
+            ],
+            "description": "This level can be beaten using the same method you beat the last level.",
+            "goal": {
+                "x": 59,
+                "y": 4
+            },
+            "height": 64,
+            "id": 13,
+            "library": 6,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Flock of Gliders",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 32,
+                    "x": 0,
+                    "y": 0
+                }
+            ],
+            "width": 64
+        },
+        "14": {
+            "antigoal": null,
             "arena": [
                 [
                     34,
@@ -275,6 +761,7 @@
                     20
                 ]
             ],
+            "chapter": 2,
             "deadzones": [
                 {
                     "h": 10,
@@ -295,8 +782,10 @@
                 "y": 7
             },
             "height": 64,
-            "id": 10,
+            "id": 14,
             "library": 7,
+            "maxred": 0,
+            "mingreen": 0,
             "name": "Pentadecathlon",
             "playables": [
                 {
@@ -308,7 +797,8 @@
             ],
             "width": 64
         },
-        "11": {
+        "15": {
+            "antigoal": null,
             "arena": [
                 [
                     25,
@@ -503,6 +993,7 @@
                     44
                 ]
             ],
+            "chapter": 2,
             "deadzones": [],
             "description": "Remember that <strong>Glider Gun</strong> you saw a while ago? Well, it's back! Unfortunately, there's an <strong>Eater</strong> preventing any gliders from hitting the <strong>Goal</strong>.<br /><br />An <strong>Eater</strong>, when placed just right, will destroy a <strong>Glider</strong> and retain its shape.<br /><br />For them to work, a <strong>Glider</strong> needs to hit it at just the right angle. If the <strong>Eater</strong> oscillates, it needs to hit at the right frame of animation as well. Otherwise, if these strict conditions aren't met, it will be damaged or destroyed entirely.",
             "goal": {
@@ -510,8 +1001,10 @@
                 "y": 46
             },
             "height": 64,
-            "id": 11,
+            "id": 15,
             "library": 8,
+            "maxred": 0,
+            "mingreen": 0,
             "name": "Abaddon: Destroyer of Worlds",
             "playables": [
                 {
@@ -523,7 +1016,8 @@
             ],
             "width": 64
         },
-        "12": {
+        "16": {
+            "antigoal": null,
             "arena": [
                 [
                     49,
@@ -850,6 +1344,7 @@
                     33
                 ]
             ],
+            "chapter": 2,
             "deadzones": [
                 {
                     "h": 9,
@@ -864,8 +1359,10 @@
                 "y": 27
             },
             "height": 64,
-            "id": 12,
+            "id": 16,
             "library": 9,
+            "maxred": 0,
+            "mingreen": 0,
             "name": "Hey there Sparky!",
             "playables": [
                 {
@@ -883,7 +1380,8 @@
             ],
             "width": 64
         },
-        "13": {
+        "17": {
+            "antigoal": null,
             "arena": [
                 [
                     2,
@@ -1250,6 +1748,7 @@
                     57
                 ]
             ],
+            "chapter": 3,
             "deadzones": [
                 {
                     "h": 1,
@@ -1426,8 +1925,10 @@
                 "y": 50
             },
             "height": 64,
-            "id": 13,
+            "id": 17,
             "library": 9,
+            "maxred": 0,
+            "mingreen": 20,
             "name": "Gated Spaceship Depot",
             "playables": [
                 {
@@ -1475,7 +1976,8 @@
             ],
             "width": 64
         },
-        "14": {
+        "18": {
+            "antigoal": null,
             "arena": [
                 [
                     30,
@@ -1510,6 +2012,7 @@
                     31
                 ]
             ],
+            "chapter": 3,
             "deadzones": [],
             "description": "This simple construct is called <strong>Gliders by the Dozen</strong>. If you watch the pretty symmetical animation it plays, you'll soon find out where it gets its name from.<br /><br />Good luck activating the <strong>Goal</strong> amidst all of the chaos!",
             "goal": {
@@ -1517,8 +2020,10 @@
                 "y": 30
             },
             "height": 64,
-            "id": 14,
+            "id": 18,
             "library": 10,
+            "maxred": 0,
+            "mingreen": 20,
             "name": "God Complex",
             "playables": [
                 {
@@ -1548,7 +2053,8 @@
             ],
             "width": 64
         },
-        "15": {
+        "19": {
+            "antigoal": null,
             "arena": [
                 [
                     30,
@@ -1583,6 +2089,7 @@
                     31
                 ]
             ],
+            "chapter": 3,
             "deadzones": [
                 {
                     "h": 2,
@@ -1615,8 +2122,10 @@
                 "y": 30
             },
             "height": 64,
-            "id": 15,
+            "id": 19,
             "library": 10,
+            "maxred": 0,
+            "mingreen": 20,
             "name": "Complex God",
             "playables": [
                 {
@@ -1646,7 +2155,34 @@
             ],
             "width": 64
         },
-        "16": {
+        "2": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 1,
+            "deadzones": [],
+            "description": "Now that you kinda have a feel for how the game works, and you've seen a simulation in action, try to recreate that same <strong>Glider</strong> pattern you saw in the previous level. For your convenience, its pattern has been added to your library.<br /><br />Every pattern you discover in the Game of Life can always be rotated 90&deg; or even flipped horizontally or vertically and will still work the same (although, if the patterns move, they will move in a different direction).<br /><br />You can only alter the state of cells within the green <strong>Playable Zone</strong>.",
+            "goal": {
+                "x": 14,
+                "y": 14
+            },
+            "height": 16,
+            "id": 2,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Tutorial #2: Build a Glider",
+            "playables": [
+                {
+                    "h": 4,
+                    "w": 4,
+                    "x": 4,
+                    "y": 4
+                }
+            ],
+            "width": 16
+        },
+        "20": {
+            "antigoal": null,
             "arena": [
                 [
                     32,
@@ -1685,6 +2221,7 @@
                     8
                 ]
             ],
+            "chapter": 3,
             "deadzones": [],
             "description": "This mission is a lot like a previous one, except that the playable area has changed quite a bit.<br /><br />Remember that unpredictable things can happen when two objects collide.",
             "goal": {
@@ -1692,8 +2229,10 @@
                 "y": 2
             },
             "height": 64,
-            "id": 16,
+            "id": 20,
             "library": 10,
+            "maxred": 0,
+            "mingreen": 20,
             "name": "Fanblades II",
             "playables": [
                 {
@@ -1711,7 +2250,8 @@
             ],
             "width": 64
         },
-        "17": {
+        "21": {
+            "antigoal": null,
             "arena": [
                 [
                     52,
@@ -1842,6 +2382,7 @@
                     63
                 ]
             ],
+            "chapter": 3,
             "deadzones": [
                 {
                     "h": 12,
@@ -1862,8 +2403,10 @@
                 "y": 59
             },
             "height": 64,
-            "id": 17,
+            "id": 21,
             "library": 11,
+            "maxred": 0,
+            "mingreen": 20,
             "name": "Orion's Belt",
             "playables": [
                 {
@@ -1875,7 +2418,8 @@
             ],
             "width": 64
         },
-        "18": {
+        "22": {
+            "antigoal": null,
             "arena": [
                 [
                     28,
@@ -1958,6 +2502,7 @@
                     42
                 ]
             ],
+            "chapter": 3,
             "deadzones": [
                 {
                     "h": 1,
@@ -1972,8 +2517,10 @@
                 "y": 39
             },
             "height": 64,
-            "id": 18,
+            "id": 22,
             "library": 11,
+            "maxred": 0,
+            "mingreen": 20,
             "name": "Many Hats",
             "playables": [
                 {
@@ -1985,7 +2532,8 @@
             ],
             "width": 64
         },
-        "19": {
+        "23": {
+            "antigoal": null,
             "arena": [
                 [
                     5,
@@ -2348,6 +2896,7 @@
                     17
                 ]
             ],
+            "chapter": 3,
             "deadzones": [
                 {
                     "h": 3,
@@ -2386,8 +2935,10 @@
                 "y": 31
             },
             "height": 64,
-            "id": 19,
+            "id": 23,
             "library": 11,
+            "maxred": 0,
+            "mingreen": 20,
             "name": "<blink>&lt;blink&gt;blink&lt;/blink&gt;</blink>",
             "playables": [
                 {
@@ -2399,30 +2950,10 @@
             ],
             "width": 64
         },
-        "2": {
+        "24": {
+            "antigoal": null,
             "arena": [],
-            "deadzones": [],
-            "description": "Now that you kinda have a feel for how the game works, and you've seen a simulation in action, try to recreate that same <strong>Glider</strong> pattern you saw in the previous level. For your convenience, its pattern has been added to your library.<br /><br />Every pattern you discover in the Game of Life can always be rotated 90&deg; or even flipped horizontally or vertically and will still work the same (although, if the patterns move, they will move in a different direction).<br /><br />You can only alter the state of cells within the green <strong>Playable Zone</strong>.",
-            "goal": {
-                "x": 28,
-                "y": 28
-            },
-            "height": 32,
-            "id": 2,
-            "library": 1,
-            "name": "Tutorial #2: Now you Try",
-            "playables": [
-                {
-                    "h": 8,
-                    "w": 8,
-                    "x": 8,
-                    "y": 8
-                }
-            ],
-            "width": 32
-        },
-        "20": {
-            "arena": [],
+            "chapter": 3,
             "deadzones": [
                 {
                     "h": 4,
@@ -2449,8 +2980,10 @@
                 "y": 4
             },
             "height": 64,
-            "id": 20,
+            "id": 24,
             "library": 11,
+            "maxred": 0,
+            "mingreen": 20,
             "name": "Getting Difficult",
             "playables": [
                 {
@@ -2462,7 +2995,12 @@
             ],
             "width": 64
         },
-        "21": {
+        "25": {
+            "antigoal": {
+                "g": 200,
+                "x": 64,
+                "y": 64
+            },
             "arena": [
                 [
                     45,
@@ -2529,6 +3067,7 @@
                     59
                 ]
             ],
+            "chapter": 4,
             "deadzones": [
                 {
                     "h": 33,
@@ -2543,8 +3082,10 @@
                 "y": 56
             },
             "height": 64,
-            "id": 21,
+            "id": 25,
             "library": 11,
+            "maxred": 0,
+            "mingreen": 0,
             "name": "Round the Bend",
             "playables": [
                 {
@@ -2556,7 +3097,88 @@
             ],
             "width": 64
         },
+        "26": {
+            "antigoal": {
+                "g": 200,
+                "x": 64,
+                "y": 64
+            },
+            "arena": [],
+            "chapter": 4,
+            "deadzones": [],
+            "description": "Placeholder",
+            "goal": null,
+            "height": 16,
+            "id": 26,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "27": {
+            "antigoal": {
+                "g": 200,
+                "x": 64,
+                "y": 64
+            },
+            "arena": [],
+            "chapter": 4,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 27,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "28": {
+            "antigoal": {
+                "g": 200,
+                "x": 64,
+                "y": 64
+            },
+            "arena": [],
+            "chapter": 4,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 28,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "29": {
+            "antigoal": {
+                "g": 200,
+                "x": 64,
+                "y": 64
+            },
+            "arena": [],
+            "chapter": 4,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 29,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
         "3": {
+            "antigoal": null,
             "arena": [
                 [
                     25,
@@ -2571,6 +3193,7 @@
                     27
                 ]
             ],
+            "chapter": 1,
             "deadzones": [],
             "description": "This time, there's something in the way of your <strong>Goal</strong>! This simple shape is called a <strong>Blinker</strong>, and will flip between being horizontal and vertical. Since there are two \\\"frames\\\" of this animation, it can be thought of as a <strong>Period 2 Oscillator</strong>.<br /><br />If you draw a <strong>Glider</strong> in the lower right corner of the playfield, then draw another one to the upper left of it, the first should destroy the barrier, and the second can activate the <strong>Goal</strong>.",
             "goal": {
@@ -2580,7 +3203,9 @@
             "height": 32,
             "id": 3,
             "library": 2,
-            "name": "Tutorial #3: Build more Gliders!",
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Tutorial #3: Build more Gliders",
             "playables": [
                 {
                     "h": 16,
@@ -2591,426 +3216,607 @@
             ],
             "width": 32
         },
+        "30": {
+            "antigoal": {
+                "g": 200,
+                "x": 64,
+                "y": 64
+            },
+            "arena": [],
+            "chapter": 4,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 30,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "31": {
+            "antigoal": {
+                "g": 200,
+                "x": 64,
+                "y": 64
+            },
+            "arena": [],
+            "chapter": 4,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 31,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "32": {
+            "antigoal": {
+                "g": 200,
+                "x": 64,
+                "y": 64
+            },
+            "arena": [],
+            "chapter": 4,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 32,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "33": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 5,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 33,
+            "library": 1,
+            "maxred": 40,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "34": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 5,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 34,
+            "library": 1,
+            "maxred": 40,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "35": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 5,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 35,
+            "library": 1,
+            "maxred": 40,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "36": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 5,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 36,
+            "library": 1,
+            "maxred": 40,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "37": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 5,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 37,
+            "library": 1,
+            "maxred": 40,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "38": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 5,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 38,
+            "library": 1,
+            "maxred": 40,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "39": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 5,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 39,
+            "library": 1,
+            "maxred": 40,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
         "4": {
+            "antigoal": null,
             "arena": [
                 [
-                    57,
+                    11,
                     11
                 ],
                 [
-                    58,
+                    12,
                     11
                 ],
                 [
-                    59,
+                    13,
                     11
                 ],
                 [
-                    54,
-                    14
+                    16,
+                    11
                 ],
                 [
-                    55,
-                    14
+                    17,
+                    11
                 ],
                 [
-                    56,
-                    14
+                    18,
+                    11
                 ],
                 [
-                    51,
+                    11,
+                    12
+                ],
+                [
+                    18,
+                    12
+                ],
+                [
+                    12,
+                    13
+                ],
+                [
+                    17,
+                    13
+                ],
+                [
+                    12,
+                    16
+                ],
+                [
+                    17,
+                    16
+                ],
+                [
+                    11,
                     17
                 ],
                 [
-                    52,
+                    18,
                     17
                 ],
                 [
-                    53,
-                    17
+                    11,
+                    18
                 ],
                 [
-                    57,
-                    17
+                    12,
+                    18
                 ],
                 [
-                    58,
-                    17
+                    13,
+                    18
                 ],
                 [
-                    59,
-                    17
+                    16,
+                    18
                 ],
                 [
-                    48,
-                    20
+                    17,
+                    18
                 ],
                 [
-                    49,
-                    20
+                    18,
+                    18
+                ]
+            ],
+            "chapter": 1,
+            "deadzones": [],
+            "description": "Anything you do in the Game of Life can always be flipped or roated and the effect will likewise be flipped or roated.<br /><br />Notice how the <strong>Glider</strong> you saw in the last level behaves differently depending on the direction it is pointed.",
+            "goal": {
+                "x": 28,
+                "y": 28
+            },
+            "height": 32,
+            "id": 4,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Tutorial #4: Symmetry",
+            "playables": [],
+            "width": 32
+        },
+        "40": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 5,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 40,
+            "library": 1,
+            "maxred": 40,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "41": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 6,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 41,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "42": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 6,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 42,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "43": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 6,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 43,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "44": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 6,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 44,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "45": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 6,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 45,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "46": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 6,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 46,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "47": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 6,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 47,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "48": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 6,
+            "deadzones": [],
+            "description": "",
+            "goal": null,
+            "height": 16,
+            "id": 48,
+            "library": 1,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Placeholder",
+            "playables": [],
+            "width": 16
+        },
+        "5": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 1,
+            "deadzones": [],
+            "description": "Goal in Upper Left",
+            "goal": {
+                "x": 1,
+                "y": 1
+            },
+            "height": 16,
+            "id": 5,
+            "library": 2,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Tutorial #5: Flip your Glider",
+            "playables": [
+                {
+                    "h": 4,
+                    "w": 4,
+                    "x": 12,
+                    "y": 12
+                }
+            ],
+            "width": 16
+        },
+        "6": {
+            "antigoal": null,
+            "arena": [
+                [
+                    21,
+                    55
                 ],
                 [
-                    50,
-                    20
+                    22,
+                    55
                 ],
                 [
-                    54,
-                    20
-                ],
-                [
-                    55,
-                    20
-                ],
-                [
-                    56,
-                    20
-                ],
-                [
-                    45,
-                    23
-                ],
-                [
-                    46,
-                    23
-                ],
-                [
-                    47,
-                    23
-                ],
-                [
-                    51,
-                    23
-                ],
-                [
-                    52,
-                    23
-                ],
-                [
-                    53,
-                    23
-                ],
-                [
-                    57,
-                    23
-                ],
-                [
-                    58,
-                    23
-                ],
-                [
-                    59,
-                    23
-                ],
-                [
-                    48,
-                    26
-                ],
-                [
-                    49,
-                    26
-                ],
-                [
-                    50,
-                    26
-                ],
-                [
-                    54,
-                    26
-                ],
-                [
-                    55,
-                    26
-                ],
-                [
-                    56,
-                    26
+                    23,
+                    55
                 ],
                 [
                     2,
-                    27
-                ],
-                [
-                    5,
-                    27
-                ],
-                [
-                    6,
-                    28
-                ],
-                [
-                    2,
-                    29
-                ],
-                [
-                    6,
-                    29
-                ],
-                [
-                    45,
-                    29
-                ],
-                [
-                    46,
-                    29
-                ],
-                [
-                    47,
-                    29
-                ],
-                [
-                    51,
-                    29
-                ],
-                [
-                    52,
-                    29
-                ],
-                [
-                    53,
-                    29
-                ],
-                [
-                    57,
-                    29
-                ],
-                [
-                    58,
-                    29
-                ],
-                [
-                    59,
-                    29
+                    56
                 ],
                 [
                     3,
-                    30
+                    56
                 ],
                 [
                     4,
-                    30
+                    56
+                ],
+                [
+                    21,
+                    56
+                ],
+                [
+                    24,
+                    56
+                ],
+                [
+                    2,
+                    57
                 ],
                 [
                     5,
-                    30
+                    57
                 ],
                 [
-                    6,
-                    30
+                    21,
+                    57
                 ],
                 [
-                    48,
-                    32
+                    2,
+                    58
                 ],
                 [
-                    49,
-                    32
+                    21,
+                    58
                 ],
                 [
-                    50,
-                    32
+                    2,
+                    59
                 ],
                 [
-                    54,
-                    32
+                    22,
+                    59
                 ],
                 [
-                    55,
-                    32
+                    24,
+                    59
                 ],
                 [
-                    56,
-                    32
+                    3,
+                    60
                 ],
                 [
-                    45,
-                    35
-                ],
-                [
-                    46,
-                    35
-                ],
-                [
-                    47,
-                    35
-                ],
-                [
-                    51,
-                    35
-                ],
-                [
-                    52,
-                    35
-                ],
-                [
-                    53,
-                    35
-                ],
-                [
-                    57,
-                    35
-                ],
-                [
-                    58,
-                    35
-                ],
-                [
-                    59,
-                    35
-                ],
-                [
-                    48,
-                    38
-                ],
-                [
-                    49,
-                    38
-                ],
-                [
-                    50,
-                    38
-                ],
-                [
-                    54,
-                    38
-                ],
-                [
-                    55,
-                    38
-                ],
-                [
-                    56,
-                    38
-                ],
-                [
-                    45,
-                    41
-                ],
-                [
-                    46,
-                    41
-                ],
-                [
-                    47,
-                    41
-                ],
-                [
-                    51,
-                    41
-                ],
-                [
-                    52,
-                    41
-                ],
-                [
-                    53,
-                    41
-                ],
-                [
-                    57,
-                    41
-                ],
-                [
-                    58,
-                    41
-                ],
-                [
-                    59,
-                    41
-                ],
-                [
-                    48,
-                    44
-                ],
-                [
-                    49,
-                    44
-                ],
-                [
-                    50,
-                    44
-                ],
-                [
-                    54,
-                    44
-                ],
-                [
-                    55,
-                    44
-                ],
-                [
-                    56,
-                    44
-                ],
-                [
-                    51,
-                    47
-                ],
-                [
-                    52,
-                    47
-                ],
-                [
-                    53,
-                    47
-                ],
-                [
-                    57,
-                    47
-                ],
-                [
-                    58,
-                    47
-                ],
-                [
-                    59,
-                    47
-                ],
-                [
-                    54,
-                    50
-                ],
-                [
-                    55,
-                    50
-                ],
-                [
-                    56,
-                    50
-                ],
-                [
-                    57,
-                    53
-                ],
-                [
-                    58,
-                    53
-                ],
-                [
-                    59,
-                    53
+                    5,
+                    60
                 ]
             ],
+            "chapter": 1,
+            "deadzones": [
+                {
+                    "height": 1,
+                    "width": 13,
+                    "x": 7,
+                    "y": 56
+                },
+                {
+                    "height": 1,
+                    "width": 13,
+                    "x": 7,
+                    "y": 60
+                }
+            ],
+            "description": "In this level we have two Spaceships. Much like a Glider, a Spaceship can move across the playing field and retain its original shape.<br /><br />An interesting phenomenon happens when a spaceship collides with the edge of the field. Depending on it's distance from the edge, it will form a glider which will travel either right or left from the wall, depending on the distance.<br /><br />If you ever find yourself wanting to get around a corner be sure to try this technique, adjusting the distance if necessary.",
+            "goal": {
+                "x": 15,
+                "y": 8
+            },
+            "height": 64,
+            "id": 6,
+            "library": 4,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Tutorial #6: Intro to Spaceship",
+            "playables": [],
+            "width": 32
+        },
+        "7": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 1,
+            "deadzones": [
+                {
+                    "h": 4,
+                    "w": 16,
+                    "x": 0,
+                    "y": 22
+                }
+            ],
+            "description": "Using your newfound knowledge of Spaceships, try to activate the goal in this level.<br /><br />Notice the red rectangle. This is called a deadzone, no cells will survive inside of it. These will have the same effect as the edge of a map when something collides with it.",
+            "goal": {
+                "x": 3,
+                "y": 20
+            },
+            "height": 64,
+            "id": 7,
+            "library": 6,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Tutorial #7: Build a Spaceship",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 32,
+                    "x": 0,
+                    "y": 48
+                }
+            ],
+            "width": 32
+        },
+        "8": {
+            "antigoal": null,
+            "arena": [],
+            "chapter": 1,
             "deadzones": [],
-            "description": "<strong>Gliders</strong> are pretty fun (and simple), however by playing a few more cells on the playfield, one can produce a <strong>Lightweight Spaceship</strong>! They're like <strong>Gliders</strong> in the sense that they move, exept they move horizontally and vertically instead of diagnolly.<br /><br />You'll notice something a bit different happens after this level is done. Once the <strong>Spaceship</strong> crashes into the <strong>Blinkers</strong>, a chain reaction happens and the <strong>Goal</strong> is activated. This chain reaction is how you will end up solving many of the levels in this game.<br /><br />You'll also notice some debris left on the field which don't move. We call these <strong>Still Lifes</strong>, and they are a common phenomenon of the Game of Life.",
+            "description": "Notice what happens when we change the distance of the spaceship from a wall by a single cell!",
             "goal": {
                 "x": 60,
                 "y": 32
             },
-            "height": 64,
-            "id": 4,
-            "library": 4,
-            "name": "Tutorial #4: Intro to Spaceship",
-            "playables": [
-                {
-                    "h": 6,
-                    "w": 7,
-                    "x": 1,
-                    "y": 26
-                }
-            ],
-            "width": 64
+            "height": 32,
+            "id": 8,
+            "library": 5,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Tutorial #8: Chaos",
+            "playables": [],
+            "width": 32
         },
-        "5": {
+        "9": {
+            "antigoal": null,
             "arena": [
                 [
                     25,
@@ -3157,6 +3963,7 @@
                     9
                 ]
             ],
+            "chapter": 2,
             "deadzones": [],
             "description": "This is another non-interactive level. Just click play and watch what happens!<br /><br />The Game of Life can allow for some complex interactions, and as you're about to see, the results can be quite interesting.<br /><br />The object in the upper left corner of the arena is called a <strong>Gosper Glider Gun</strong> and as you can tell it is aptly named.",
             "goal": {
@@ -3164,9 +3971,11 @@
                 "y": 46
             },
             "height": 64,
-            "id": 5,
+            "id": 9,
             "library": 5,
-            "name": "Tutorial #5: What is a Glider Gun",
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "Chaos #1: What is a Glider Gun",
             "playables": [
                 {
                     "h": 0,
@@ -3176,475 +3985,10 @@
                 }
             ],
             "width": 64
-        },
-        "6": {
-            "arena": [
-                [
-                    32,
-                    29
-                ],
-                [
-                    33,
-                    29
-                ],
-                [
-                    34,
-                    29
-                ],
-                [
-                    31,
-                    30
-                ],
-                [
-                    34,
-                    30
-                ],
-                [
-                    30,
-                    31
-                ],
-                [
-                    29,
-                    32
-                ]
-            ],
-            "deadzones": [],
-            "description": "This is another non-interactive level.<br /><br />Notice how simple the <strong>Multum in Parvo</strong> pattern in the middle of the arena is, and yet how unpredictabley complex it can become.",
-            "goal": {
-                "x": 32,
-                "y": 2
-            },
-            "height": 64,
-            "id": 6,
-            "library": 6,
-            "name": "Tutorial #6: Multum in Parvo",
-            "playables": [],
-            "width": 64
-        },
-        "7": {
-            "arena": [
-                [
-                    32,
-                    6
-                ],
-                [
-                    32,
-                    7
-                ],
-                [
-                    32,
-                    8
-                ],
-                [
-                    29,
-                    6
-                ],
-                [
-                    29,
-                    7
-                ],
-                [
-                    29,
-                    8
-                ],
-                [
-                    35,
-                    6
-                ],
-                [
-                    35,
-                    7
-                ],
-                [
-                    35,
-                    8
-                ]
-            ],
-            "deadzones": [],
-            "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single tile, and the outcome can be completely different.",
-            "goal": {
-                "x": 32,
-                "y": 2
-            },
-            "height": 64,
-            "id": 7,
-            "library": 6,
-            "name": "Fanblades I",
-            "playables": [
-                {
-                    "h": 16,
-                    "w": 16,
-                    "x": 24,
-                    "y": 48
-                }
-            ],
-            "width": 64
-        },
-        "8": {
-            "arena": [
-                [
-                    56,
-                    27
-                ],
-                [
-                    59,
-                    27
-                ],
-                [
-                    55,
-                    28
-                ],
-                [
-                    55,
-                    29
-                ],
-                [
-                    59,
-                    29
-                ],
-                [
-                    55,
-                    30
-                ],
-                [
-                    56,
-                    30
-                ],
-                [
-                    57,
-                    30
-                ],
-                [
-                    58,
-                    30
-                ]
-            ],
-            "deadzones": [
-                {
-                    "h": 4,
-                    "w": 16,
-                    "x": 0,
-                    "y": 22
-                },
-                {
-                    "h": 4,
-                    "w": 16,
-                    "x": 48,
-                    "y": 22
-                }
-            ],
-            "description": "Notice the red zones. These are <strong>Dead Zones</strong>. No cells will become alive in these zones, so you'll have to find a way to get around them.<br /><br />As a hint, see what happens when that <strong>Spaceship</strong> crashes into a wall...<br /><br />Also, remember that everything in the library can be rotated and flipped, and if you move something by a single tile, the outcome can be completely different.",
-            "goal": {
-                "x": 3,
-                "y": 20
-            },
-            "height": 64,
-            "id": 8,
-            "library": 6,
-            "name": "Hookshot",
-            "playables": [
-                {
-                    "h": 16,
-                    "w": 32,
-                    "x": 0,
-                    "y": 48
-                }
-            ],
-            "width": 64
-        },
-        "9": {
-            "arena": [
-                [
-                    27,
-                    18
-                ],
-                [
-                    28,
-                    18
-                ],
-                [
-                    29,
-                    18
-                ],
-                [
-                    29,
-                    19
-                ],
-                [
-                    28,
-                    20
-                ],
-                [
-                    8,
-                    23
-                ],
-                [
-                    9,
-                    23
-                ],
-                [
-                    10,
-                    23
-                ],
-                [
-                    10,
-                    24
-                ],
-                [
-                    9,
-                    25
-                ],
-                [
-                    12,
-                    28
-                ],
-                [
-                    13,
-                    28
-                ],
-                [
-                    14,
-                    28
-                ],
-                [
-                    1,
-                    29
-                ],
-                [
-                    2,
-                    29
-                ],
-                [
-                    3,
-                    29
-                ],
-                [
-                    14,
-                    29
-                ],
-                [
-                    21,
-                    29
-                ],
-                [
-                    22,
-                    29
-                ],
-                [
-                    23,
-                    29
-                ],
-                [
-                    3,
-                    30
-                ],
-                [
-                    13,
-                    30
-                ],
-                [
-                    23,
-                    30
-                ],
-                [
-                    2,
-                    31
-                ],
-                [
-                    22,
-                    31
-                ],
-                [
-                    27,
-                    31
-                ],
-                [
-                    28,
-                    31
-                ],
-                [
-                    29,
-                    31
-                ],
-                [
-                    29,
-                    32
-                ],
-                [
-                    28,
-                    33
-                ],
-                [
-                    6,
-                    36
-                ],
-                [
-                    7,
-                    36
-                ],
-                [
-                    8,
-                    36
-                ],
-                [
-                    20,
-                    36
-                ],
-                [
-                    21,
-                    36
-                ],
-                [
-                    22,
-                    36
-                ],
-                [
-                    8,
-                    37
-                ],
-                [
-                    22,
-                    37
-                ],
-                [
-                    30,
-                    37
-                ],
-                [
-                    31,
-                    37
-                ],
-                [
-                    32,
-                    37
-                ],
-                [
-                    7,
-                    38
-                ],
-                [
-                    21,
-                    38
-                ],
-                [
-                    32,
-                    38
-                ],
-                [
-                    31,
-                    39
-                ],
-                [
-                    26,
-                    44
-                ],
-                [
-                    27,
-                    44
-                ],
-                [
-                    28,
-                    44
-                ],
-                [
-                    28,
-                    45
-                ],
-                [
-                    27,
-                    46
-                ],
-                [
-                    7,
-                    47
-                ],
-                [
-                    8,
-                    47
-                ],
-                [
-                    9,
-                    47
-                ],
-                [
-                    9,
-                    48
-                ],
-                [
-                    40,
-                    48
-                ],
-                [
-                    41,
-                    48
-                ],
-                [
-                    42,
-                    48
-                ],
-                [
-                    8,
-                    49
-                ],
-                [
-                    42,
-                    49
-                ],
-                [
-                    41,
-                    50
-                ],
-                [
-                    19,
-                    55
-                ],
-                [
-                    20,
-                    55
-                ],
-                [
-                    21,
-                    55
-                ],
-                [
-                    21,
-                    56
-                ],
-                [
-                    20,
-                    57
-                ]
-            ],
-            "deadzones": [
-                {
-                    "h": 5,
-                    "w": 2,
-                    "x": 51,
-                    "y": 2
-                }
-            ],
-            "description": "This level can be beaten using the same method you beat the last level.",
-            "goal": {
-                "x": 59,
-                "y": 4
-            },
-            "height": 64,
-            "id": 9,
-            "library": 6,
-            "name": "Flock of Gliders",
-            "playables": [
-                {
-                    "h": 16,
-                    "w": 32,
-                    "x": 0,
-                    "y": 0
-                }
-            ],
-            "width": 64
         }
     },
     "dictionary": {
-        "how_to_play": "<h3>How to Play</h3>\n<p>Tap the arena to place cells. You must place cells on green zones.</p>"
+        "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green Playable Zone to toggle cells.</p>\n<p>No cells can be alive in the red Dead Zones.</p>\n<p>The rainbow tiles are Goal tiles and need to be activiated to beat levels.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n<li>Any live cell with fewer than two live neighbours dies.</li>\n<li>Any live cell with two or three live neighbours lives.</li>\n<li>Any live cell with more than three live neighbours dies.</li>\n<li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life on WikiPedia</a>.</p>"
     },
     "levels": {
         "1": [

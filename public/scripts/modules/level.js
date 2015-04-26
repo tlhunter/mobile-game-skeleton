@@ -3,16 +3,20 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Level = (function() {
-    var Level = function(data, $container) {
+    var Level = function(data, $container, constraints) {
 		this.level_id = data.id;
 		this.$container = $container.empty();
-
-		this.size = Level.DEFAULT_SIZE;
 
 		this.dimensions = {
 			width: data.width,
 			height: data.height
 		};
+
+		var max_size_w = Math.floor(constraints.width / this.dimensions.width);
+		var max_size_h = Math.floor(constraints.height / this.dimensions.height);
+		console.log('ms', max_size_w, max_size_h);
+
+		this.size = Math.min(max_size_w, max_size_h);
 
 		var $gamefield = $('<canvas id="gamefield" width="' + this.dimensions.width * this.size + '" height="' + this.dimensions.height * this.size + '"></canvas>');
 
@@ -28,6 +32,7 @@ MODULE.Level = (function() {
 		this.goal = data.goal;
 
 		this.library = data.library;
+		this.chapter = data.chapter;
 
 		this.name = data.name;
 		this.description = data.description;
@@ -46,13 +51,14 @@ MODULE.Level = (function() {
 		this.generationHandler = function() {};
 		this.playCountHandler = function() {};
 		this.statusHandler = function() {};
+		this.winHandler = function() {};
 
 		this.render();
     };
 
 	Level.DEFAULT_SIZE = 8;
 	Level.MIN_SIZE = 2;
-	Level.MAX_SIZE = 16;
+	Level.MAX_SIZE = 32;
 
 	Level.COLORS = {
 		abyss:		'rgba(0,0,0,0.3)',
@@ -63,24 +69,17 @@ MODULE.Level = (function() {
 	};
 
 	Level.prototype.setSize = function(size) {
-		if (size < 1) {
-			// 0.1, 0.2 ... 0.9
-			size = (Math.floor(size * 10) / 10) * Level.DEFAULT_SIZE;
-		} else {
-			// 1, 2, 3
-			size = Math.floor(size) + Level.DEFAULT_SIZE;
-		}
-
 		if (size === this.size) {
-			// hasn't resized, no need
 			return;
 		}
 
 		if (size < Level.MIN_SIZE) {
+			size = Level.MIN_SIZE;
 			return;
 		}
 
 		if (size > Level.MAX_SIZE) {
+			size = Level.MAX_SIZE;
 			return;
 		}
 
@@ -259,7 +258,7 @@ MODULE.Level = (function() {
 		console.log("Game won in " + this.generation + " generations!");
 		this.generations_until_beaten = this.generation;
 
-		var my_level = app.storage.get('level');
+		var my_level = app.storage.get('level', 0);
 		var max_level = Object.keys(app.content.data.campaign).length;
 
 		console.log(my_level, max_level, this.level_id);
@@ -268,6 +267,7 @@ MODULE.Level = (function() {
 			// TODO: Congratulate user on winning
 			console.log("Beat the final level... Now what?");
 		} else if (this.level_id === my_level + 1) {
+			this.winHandler(my_level, this.level_id, this.generations_until_beaten);
 			app.storage.set('level', this.level_id);
 			console.log("beat most recent level. unlocking next level");
 		}
@@ -287,6 +287,12 @@ MODULE.Level = (function() {
 
 	Level.prototype.onStatus = function(handler) {
 		this.statusHandler = handler;
+
+		return this;
+	};
+
+	Level.prototype.onWin = function(handler) {
+		this.winHandler = handler;
 
 		return this;
 	};

@@ -6,7 +6,8 @@ MODULE.Audio = (function() {
     var Audio = function() {
         this.music = {
             background: document.getElementById('music-background'),
-            level: document.getElementById('music-level')
+            ch1: document.getElementById('music-chapter-1'),
+            ch2: document.getElementById('music-chapter-2')
         };
 
         this.sound = {
@@ -21,6 +22,10 @@ MODULE.Audio = (function() {
     };
 
     Audio.prototype.playMusic = function(id) {
+        if (!this.music[id]) {
+            return console.error("Cannot find music with ID", id);
+        }
+
         if (app.storage.get('mute', false)) {
             console.log('muted');
             return;

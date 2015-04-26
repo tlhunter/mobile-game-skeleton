@@ -30,31 +30,55 @@ MODULE.LevelScreen = (function() {
 
         this.$buttons.play.on('click', function() {
             app.audio.playSound('play');
-            self.level.onPlay();
             self.$buttons.play.hide();
             self.$buttons.stop.show();
+
+            app.analytics.track('LEVEL-START', {
+                level: self.level_id
+            });
+
+            self.level.onPlay();
         });
 
         this.$buttons.stop.on('click', function() {
             app.audio.playSound('stop');
-            self.level.onStop();
             self.$buttons.play.show();
             self.$buttons.stop.hide();
+
+            app.analytics.track('LEVEL-STOP', {
+                level: self.level_id,
+                generation: self.level.generation
+            });
+
+            self.level.onStop();
         });
 
         this.$buttons.clear.on('click', function() {
             app.audio.playSound('clear');
+
+            app.analytics.track('LEVEL-CLEAR', {
+                level: self.level_id
+            });
+
             self.level.onClear();
         });
 
         this.$buttons.help.on('click', function() {
             self.intro();
+
+            app.analytics.track('LEVEL-HELP', {
+                level: self.level_id
+            });
         });
 
         this.$buttons.library.on('click', function() {
             app.modal.show(self.getLibrary(), [{
                 text: 'Ok'
             }]);
+
+            app.analytics.track('LEVEL-LIBRARY', {
+                level: self.level_id
+            });
         });
 
         this.$buttons.exit.on('click', function() {
@@ -83,7 +107,12 @@ MODULE.LevelScreen = (function() {
             self.$status.text('DONE');
         }
 
-        this.level = new MODULE.Level(raw_level, this.$level);
+        var constraints = {
+            width: screen.availWidth,
+            height: screen.availHeight - (this.$footer.outerHeight() + this.$header.outerHeight())
+        };
+
+        this.level = new MODULE.Level(raw_level, this.$level, constraints);
 
         this.level.onGeneration(function(generation) {
             self.$generation.text(generation);
@@ -91,6 +120,11 @@ MODULE.LevelScreen = (function() {
             self.$played.text(played);
         }).onStatus(function(status) {
             self.$status.text(status);
+        }).onWin(function(old_level, new_level) {
+            app.analytics.track('LEVEL-WIN', {
+                level: old_level,
+                new_level: new_level
+            });
         });
 
         var $gamefield = this.level.$gamefield;
@@ -123,7 +157,7 @@ MODULE.LevelScreen = (function() {
         // But hammer, I don't want you to stop my panning!
         $gamefield.attr('style', '');
 
-        app.audio.playMusic('level');
+        app.audio.playMusic('ch' + this.level.chapter);
 
         this.$screen.show();
 
