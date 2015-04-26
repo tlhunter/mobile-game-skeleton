@@ -9,8 +9,8 @@ var app = express();
 var server = require('http').createServer(app);
 var content = require('./lib/content.js');
 
-var port = process.env.DRONECORE_PORT || 1337;
-var host = process.env.DRONECORE_HOST || '0.0.0.0';
+var port = process.env.SGOL_PORT || 1337;
+var host = process.env.SGOL_HOST || '0.0.0.0';
 
 var public_dir = path.normalize(__dirname + '/../public');
 
