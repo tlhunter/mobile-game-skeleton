@@ -3,6 +3,10 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.SplashScreen = (function() {
+    var AFTER_FINISH_TIME = 100;
+    var FADE_OUT_TIME = 250;
+    var FADE_IN_TIME = 500;
+
     var SplashScreen = function() {
         var self = this;
         this.$screen = $('#screen-splash');
@@ -24,12 +28,12 @@ MODULE.SplashScreen = (function() {
         var self = this;
 
         setTimeout(function() {
-            self.$loading.fadeOut(250);
+            self.$loading.fadeOut(FADE_OUT_TIME);
 
             setTimeout(function() {
-                self.$buttons.play.fadeIn(500);
-            }, 250);
-        }, 250);
+                self.$buttons.play.fadeIn(FADE_IN_TIME);
+            }, FADE_OUT_TIME);
+        }, AFTER_FINISH_TIME);
     };
 
     SplashScreen.prototype.display = function() {

@@ -3,6 +3,9 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Modal = (function() {
+    var FADE_IN_TIME = 250;
+    var FADE_OUT_TIME = 500;
+
     var Modal = function() {
         this.$modal = $('#modal');
         this.$content = this.$modal.find('.content');
@@ -33,16 +36,13 @@ MODULE.Modal = (function() {
             self.$buttons.append($button);
         });
 
-        this.$modal.fadeIn(250);
+        this.$modal.fadeIn(FADE_IN_TIME);
     };
 
     Modal.prototype.fadeOut = function() {
-        var self = this;
-        this.$modal.fadeOut(500);
-
-        setTimeout(function() {
-            self.empty();
-        }, 500);
+        this.$modal.fadeOut(FADE_OUT_TIME, function() {
+            this.empty();
+        }.bind(this));
     };
 
     Modal.prototype.hide = function() {
