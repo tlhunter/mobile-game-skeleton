@@ -3,8 +3,8 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Modal = (function() {
-    var FADE_IN_TIME = 250;
-    var FADE_OUT_TIME = 500;
+    var MODAL_SHOW_TIME = 250;
+    var MODAL_HIDE_TIME = 500;
 
     var Modal = function() {
         this.$modal = $('#modal');
@@ -36,11 +36,11 @@ MODULE.Modal = (function() {
             self.$buttons.append($button);
         });
 
-        this.$modal.fadeIn(FADE_IN_TIME);
+        this.$modal.fadeIn(MODAL_SHOW_TIME);
     };
 
     Modal.prototype.fadeOut = function() {
-        this.$modal.fadeOut(FADE_OUT_TIME, function() {
+        this.$modal.fadeOut(MODAL_HIDE_TIME, function() {
             this.empty();
         }.bind(this));
     };
