@@ -13,15 +13,13 @@ MODULE.HelpScreen = (function() {
 
         this.$buttons.back.on('click', function() {
             app.audio.playSound('back');
-            app.screens.menu.display();
+            app.screen.display('menu');
         });
 
         this.content_loaded = false;
     };
 
     HelpScreen.prototype.display = function() {
-        $('#screens > .screen').hide();
-
         if (!this.content_loaded) {
             this.content_loaded = true;
             this.$content.html(app.content.data.dictionary.how_to_play);
@@ -29,6 +27,10 @@ MODULE.HelpScreen = (function() {
         this.$screen.show();
 
         app.analytics.track('SCREEN-HELP');
+    };
+
+    HelpScreen.prototype.hide = function() {
+        this.$screen.hide();
     };
 
     return HelpScreen;

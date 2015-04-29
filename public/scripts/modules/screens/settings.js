@@ -16,12 +16,23 @@ MODULE.SettingsScreen = (function() {
 
         this.$buttons.back.on('click', function() {
             app.audio.playSound('back');
-            app.screens.menu.display();
+            app.screen.display('menu');
         });
 
         this.$buttons.reset.on('click', function() {
-            app.storage.clear();
-            location.reload();
+            app.modal.show(
+                app.content.data.dictionary.confirm_reset,
+                [{
+                    text: "Destroy",
+                    callback: function() {
+                        app.storage.clear();
+                        location.reload();
+                    }
+                },
+                {
+                    text: "Cancel"
+                }]
+            );
         });
 
         this.$buttons.refresh.on('click', function() {
@@ -35,10 +46,13 @@ MODULE.SettingsScreen = (function() {
     };
 
     SettingsScreen.prototype.display = function() {
-        $('#screens > .screen').hide();
         this.$screen.show();
 
         app.analytics.track('SCREEN-SETTINGS');
+    };
+
+    SettingsScreen.prototype.hide = function() {
+        this.$screen.hide();
     };
 
     return SettingsScreen;

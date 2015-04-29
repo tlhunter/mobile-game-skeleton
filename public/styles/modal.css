@@ -30,6 +30,8 @@
 
 #modal .buttons button {
 	margin: 0 8px;
+	font-size: 14px;
+	padding: 6px 12px 6px 14px;
 }
 
 #modal .content h3 {

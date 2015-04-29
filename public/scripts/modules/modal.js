@@ -12,14 +12,18 @@ MODULE.Modal = (function() {
     Modal.prototype.show = function(content, buttons) {
         var self = this;
 
+        buttons = buttons || [{
+            text: 'Ok'
+        }];
+
+        this.empty();
         this.$content.html(content);
-        this.$buttons.empty();
 
         buttons.forEach(function(button) {
             var $button = $('<button>' + button.text + '</button>');
 
             $button.on('click', function() {
-                self.hide();
+                self.fadeOut();
 
                 if (button.callback) {
                     button.callback();
@@ -32,14 +36,23 @@ MODULE.Modal = (function() {
         this.$modal.fadeIn(250);
     };
 
-    Modal.prototype.hide = function(event, callback) {
+    Modal.prototype.fadeOut = function() {
         var self = this;
         this.$modal.fadeOut(500);
 
         setTimeout(function() {
-            self.$content.empty();
-            self.$buttons.empty();
+            self.empty();
         }, 500);
+    };
+
+    Modal.prototype.hide = function() {
+        this.$modal.hide();
+        this.empty();
+    };
+
+    Modal.prototype.empty = function() {
+        this.$content.empty();
+        this.$buttons.empty();
     };
 
     return Modal;

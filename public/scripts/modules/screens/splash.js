@@ -16,7 +16,7 @@ MODULE.SplashScreen = (function() {
 
         this.$buttons.play.on('click', function() {
             app.audio.playSound('select');
-            app.screens.menu.display();
+            app.screen.display('menu');
         });
     };
 
@@ -32,14 +32,15 @@ MODULE.SplashScreen = (function() {
         }, 250);
     };
 
-    /*
     SplashScreen.prototype.display = function() {
-        $('#screens > .screen').hide();
         this.$screen.show();
 
-        app.analytics.track('SCREEN-SPLASH');
+        //app.analytics.track('SCREEN-SPLASH');
     };
-    */
+
+    SplashScreen.prototype.hide = function() {
+        this.$screen.hide();
+    };
 
     return SplashScreen;
 }());

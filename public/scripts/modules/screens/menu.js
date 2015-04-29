@@ -15,31 +15,34 @@ MODULE.MenuScreen = (function() {
 
         this.$buttons.campaign.on('click', function() {
             app.audio.playSound('select');
-            app.screens.campaign.display();
+            app.screen.display('campaign');
         });
 
         this.$buttons.online.on('click', function() {
             app.audio.playSound('select');
-            app.screens.online.display();
+            app.screen.display('online');
         });
 
         this.$buttons.settings.on('click', function() {
             app.audio.playSound('select');
-            app.screens.settings.display();
+            app.screen.display('settings');
         });
 
         this.$buttons.help.on('click', function() {
             app.audio.playSound('select');
-            app.screens.help.display();
+            app.screen.display('help');
         });
     };
 
     MenuScreen.prototype.display = function() {
-        $('#screens > .screen').hide();
         app.audio.playMusic('background');
         this.$screen.show();
 
         app.analytics.track('SCREEN-MENU');
+    };
+
+    MenuScreen.prototype.hide = function() {
+        this.$screen.hide();
     };
 
     return MenuScreen;

@@ -85,13 +85,12 @@ MODULE.LevelScreen = (function() {
             app.audio.playSound('back');
             self.level.destroy();
             self.level = null;
-            app.screens.campaign.display();
+            app.screen.display('campaign');
         });
     };
 
     LevelScreen.prototype.display = function(level_id) {
         var self = this;
-        $('#screens > .screen').hide();
 
         this.$buttons.play.show();
         this.$buttons.stop.hide();
@@ -167,6 +166,10 @@ MODULE.LevelScreen = (function() {
         this.library = null;
 
         app.analytics.track('SCREEN-LEVEL');
+    };
+
+    LevelScreen.prototype.hide = function() {
+        this.$screen.hide();
     };
 
     LevelScreen.prototype.complete = function() {

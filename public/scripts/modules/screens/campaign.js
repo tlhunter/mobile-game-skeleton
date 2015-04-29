@@ -14,26 +14,28 @@ MODULE.CampaignScreen = (function() {
 
         this.$buttons.back.on('click', function() {
             app.audio.playSound('back');
-            app.screens.menu.display();
+            app.screen.display('menu');
         });
 
         this.$levels.delegate('.available', 'click', function() {
             var level = Math.floor($(this).text());
 
             app.audio.playSound('select');
-            app.screens.level.display(level);
+            app.screen.display('level', level);
         });
     };
 
     CampaignScreen.prototype.display = function() {
-        $('#screens > .screen').hide();
-
         this.drawLevels();
         //app.audio.playMusic('background');
 
         this.$screen.show();
 
         app.analytics.track('SCREEN-CAMPAIGN');
+    };
+
+    CampaignScreen.prototype.hide = function() {
+        this.$screen.hide();
     };
 
     CampaignScreen.prototype.drawLevels = function() {

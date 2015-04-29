@@ -14,11 +14,8 @@ if (!MODULE) { var MODULE = {}; }
 		audio: new MODULE.Audio(),
 		content: new MODULE.Content(),
 		modal: new MODULE.Modal(),
-		viewport: {
-			width: screen.availWidth,
-			height: Math.min(screen.availHeight, $(window).height())
-		},
-		screens: {
+		viewport: new MODULE.Viewport(),
+		screen: new MODULE.Screen({
 			campaign: new MODULE.CampaignScreen(),
 			help: new MODULE.HelpScreen(),
 			level: new MODULE.LevelScreen(),
@@ -26,12 +23,14 @@ if (!MODULE) { var MODULE = {}; }
 			online: new MODULE.OnlineScreen(),
 			settings: new MODULE.SettingsScreen(),
 			splash: new MODULE.SplashScreen()
-		}
+		})
 	};
 
 	window.app = app;
 
+	app.screen.display('splash');
+
 	app.content.load(function() {
-		app.screens.splash.finish();
+		app.screen.get('splash').finish();
 	});
 })();

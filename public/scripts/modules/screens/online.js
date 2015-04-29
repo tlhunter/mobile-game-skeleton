@@ -12,15 +12,18 @@ MODULE.OnlineScreen = (function() {
 
         this.$buttons.back.on('click', function() {
             app.audio.playSound('back');
-            app.screens.menu.display();
+            app.screen.display('menu');
         });
     };
 
     OnlineScreen.prototype.display = function() {
-        $('#screens > .screen').hide();
         this.$screen.show();
 
         app.analytics.track('SCREEN-ONLINE');
+    };
+
+    OnlineScreen.prototype.hide = function() {
+        this.$screen.hide();
     };
 
     return OnlineScreen;
