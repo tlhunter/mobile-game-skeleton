@@ -21,10 +21,12 @@ body {
 	font-size: 12px;
 	color: #fff;
 	cursor: default;
+	overflow: hidden;
 }
 
 #screens .screen {
 	display: none;
+	overflow: auto;
 }
 
 button {
