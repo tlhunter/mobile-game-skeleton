@@ -13,13 +13,13 @@ body, html {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	background-color: #000;
 }
 
 body {
 	font-family: RetroComputer;
 	font-size: 12px;
 	color: #fff;
-	background-color: #000;
 	cursor: default;
 }
 
