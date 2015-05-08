@@ -4,7 +4,6 @@
 }
 
 body, html {
-    overflow: visible;
 	margin: 0px;
 	padding: 0px;
 	-webkit-touch-callout: none;
@@ -26,7 +25,15 @@ body {
 
 #screens .screen {
 	display: none;
+}
+
+#screens .screen > .scrollable {
 	overflow: auto;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	position: absolute;
 }
 
 button {
@@ -108,7 +115,8 @@ a {
 	bottom: 0px;
 	position: fixed;
 	width: 100%;
-	margin-bottom: 40px;
+	padding: 16px 0 40px;
+	background-color: #000;
 }
 
 .screen-full h3 {

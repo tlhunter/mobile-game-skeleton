@@ -91,10 +91,12 @@ MODULE.LevelScreen = (function() {
         var finger = new Hammer($gamefield[0]);
         finger.get('pinch').set({enable: true});
 
+        /*
         finger.add(new Hammer.Pan({
             direction: Hammer.DIRECTION_ALL,
             threshold: 0
         }));
+        */
 
         finger.on('pinchstart', function() {
             self.level.scaleStart();
