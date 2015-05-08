@@ -15,6 +15,7 @@ if (!MODULE) { var MODULE = {}; }
 		content: new MODULE.Content(),
 		modal: new MODULE.Modal(),
 		viewport: new MODULE.Viewport(),
+		reload: location.reload.bind(location),
 		screen: new MODULE.Screen({
 			campaign: new MODULE.CampaignScreen(),
 			help: new MODULE.HelpScreen(),

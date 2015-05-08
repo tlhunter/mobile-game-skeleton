@@ -270,8 +270,6 @@ MODULE.Level = (function() {
 		var my_level = app.storage.get('level', 0);
 		var max_level = Object.keys(app.content.data.campaign).length;
 
-		console.log(my_level, max_level, this.level_id);
-
 		if (this.level_id === max_level) {
 			// TODO: Congratulate user on winning
 			console.log("Beat the final level... Now what?");

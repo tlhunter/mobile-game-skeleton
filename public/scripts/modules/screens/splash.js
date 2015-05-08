@@ -7,9 +7,7 @@ MODULE.SplashScreen = (function() {
     var BUTTONS_SHOW_TIME = 500;
 
     var SplashScreen = function() {
-        var self = this;
         this.$screen = $('#screen-splash');
-
         this.$actions = this.$screen.find('.actions');
         this.$loading = this.$actions.find('.loading');
 
@@ -17,10 +15,7 @@ MODULE.SplashScreen = (function() {
             play: this.$actions.find('.play')
         };
 
-        this.$buttons.play.on('click', function() {
-            app.audio.playSound('select');
-            app.screen.display('menu');
-        });
+        this.$buttons.play.on('click', this.onPlay.bind(this));
     };
 
     SplashScreen.prototype.finish = function() {
@@ -37,6 +32,11 @@ MODULE.SplashScreen = (function() {
 
     SplashScreen.prototype.hide = function() {
         this.$screen.hide();
+    };
+
+    SplashScreen.prototype.onPlay = function() {
+        app.audio.playSound('select');
+        app.screen.display('menu');
     };
 
     return SplashScreen;

@@ -5,28 +5,20 @@ if (!MODULE) { var MODULE = {}; }
 MODULE.CampaignScreen = (function() {
     var CampaignScreen = function() {
         this.$screen = $('#screen-campaign');
+        this.$levels = this.$screen.find('.levels');
 
         this.$buttons = {
             back: this.$screen.find('.footer-buttons .back')
         };
 
-        this.$levels = this.$screen.find('.levels');
-
-        this.$buttons.back.on('click', function() {
-            app.audio.playSound('back');
-            app.screen.display('menu');
-        });
-
-        this.$levels.delegate('.available', 'click', function() {
-            var level = Math.floor($(this).text());
-
-            app.audio.playSound('select');
-            app.screen.display('level', level);
-        });
+        this.$buttons.back.on('click', this.onBack.bind(this));
+        this.$levels.delegate('.available', 'click', this.onLevel);
     };
 
     CampaignScreen.prototype.display = function() {
         this.drawLevels();
+
+        // By not playing music, we keep the same song playing between levels within a chapter
         //app.audio.playMusic('background');
 
         this.$screen.show();
@@ -58,6 +50,18 @@ MODULE.CampaignScreen = (function() {
         }
 
         this.$levels.html(levels);
+    };
+
+    CampaignScreen.prototype.onBack = function() {
+        app.audio.playSound('back');
+        app.screen.display('menu');
+    };
+
+    CampaignScreen.prototype.onLevel = function() {
+        var level = Math.floor($(this).text());
+
+        app.audio.playSound('select');
+        app.screen.display('level', level);
     };
 
     return CampaignScreen;

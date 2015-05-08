@@ -12,7 +12,7 @@ MODULE.Modal = (function() {
         this.$buttons = this.$modal.find('.buttons');
     };
 
-    Modal.prototype.show = function(content, buttons) {
+    Modal.prototype.show = function(content, buttons, small) {
         var self = this;
 
         buttons = buttons || [{
@@ -26,22 +26,24 @@ MODULE.Modal = (function() {
             var $button = $('<button>' + button.text + '</button>');
 
             $button.on('click', function() {
-                self.fadeOut();
-
-                if (button.callback) {
-                    button.callback();
-                }
+                self.fadeOut(button.callback);
             });
 
             self.$buttons.append($button);
         });
 
+        this.$modal.toggleClass('small', !!small);
+
         this.$modal.fadeIn(MODAL_SHOW_TIME);
     };
 
-    Modal.prototype.fadeOut = function() {
+    Modal.prototype.fadeOut = function(callback) {
         this.$modal.fadeOut(MODAL_HIDE_TIME, function() {
             this.empty();
+
+            if (callback) {
+                callback();
+            }
         }.bind(this));
     };
 
@@ -52,6 +54,7 @@ MODULE.Modal = (function() {
 
     Modal.prototype.empty = function() {
         this.$content.empty();
+        this.$buttons.find('button').off(); // Memory Leak
         this.$buttons.empty();
     };
 

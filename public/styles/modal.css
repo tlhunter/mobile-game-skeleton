@@ -10,6 +10,13 @@
 	display: none;
 }
 
+#modal.small {
+	top: 30%;
+	bottom: 30%;
+	left: 32px;
+	right: 32px;
+}
+
 #modal .buttons {
 	bottom: 0px;
 	left: 0px;
@@ -24,7 +31,7 @@
 #modal .content {
 	padding: 16px;
 	overflow-y: auto;
-	font-size: 11px;
+	font-size: 14px;
 	max-height: 85%;
 }
 
@@ -32,6 +39,12 @@
 	margin: 0 8px;
 	font-size: 14px;
 	padding: 6px 12px 6px 14px;
+}
+
+@media (max-width: 320px) {
+	#modal .buttons button {
+		font-size: 11px;
+	}
 }
 
 #modal .content h3 {

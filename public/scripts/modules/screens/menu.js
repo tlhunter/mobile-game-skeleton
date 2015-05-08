@@ -13,29 +13,15 @@ MODULE.MenuScreen = (function() {
             help: this.$screen.find('button.help'),
         };
 
-        this.$buttons.campaign.on('click', function() {
-            app.audio.playSound('select');
-            app.screen.display('campaign');
-        });
-
-        this.$buttons.online.on('click', function() {
-            app.audio.playSound('select');
-            app.screen.display('online');
-        });
-
-        this.$buttons.settings.on('click', function() {
-            app.audio.playSound('select');
-            app.screen.display('settings');
-        });
-
-        this.$buttons.help.on('click', function() {
-            app.audio.playSound('select');
-            app.screen.display('help');
-        });
+        this.$buttons.campaign.on('click', this.onCampaign.bind(this));
+        this.$buttons.online.on('click', this.onOnline.bind(this));
+        this.$buttons.settings.on('click', this.onSettings.bind(this));
+        this.$buttons.help.on('click', this.onHelp.bind(this));
     };
 
     MenuScreen.prototype.display = function() {
         app.audio.playMusic('background');
+
         this.$screen.show();
 
         app.analytics.track('SCREEN-MENU');
@@ -43,6 +29,26 @@ MODULE.MenuScreen = (function() {
 
     MenuScreen.prototype.hide = function() {
         this.$screen.hide();
+    };
+
+    MenuScreen.prototype.onCampaign = function() {
+        app.audio.playSound('select');
+        app.screen.display('campaign');
+    };
+
+    MenuScreen.prototype.onOnline = function() {
+        app.audio.playSound('select');
+        app.screen.display('online');
+    };
+
+    MenuScreen.prototype.onSettings = function() {
+        app.audio.playSound('select');
+        app.screen.display('settings');
+    };
+
+    MenuScreen.prototype.onHelp = function() {
+        app.audio.playSound('select');
+        app.screen.display('help');
     };
 
     return MenuScreen;
