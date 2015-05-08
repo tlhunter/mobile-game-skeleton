@@ -129,8 +129,9 @@ MODULE.LevelScreen = (function() {
     };
 
     LevelScreen.prototype.hide = function() {
+        this.level.onStop();
+        this.level = null;
         this.$screen.hide();
-        this.stop();
     };
 
     LevelScreen.prototype.complete = function() {
@@ -197,10 +198,6 @@ MODULE.LevelScreen = (function() {
 
     LevelScreen.prototype.onStop = function() {
         app.audio.playSound('stop');
-        this.stop();
-    };
-
-    LevelScreen.prototype.stop = function() {
         this.$buttons.play.show();
         this.$buttons.stop.hide();
 
@@ -242,8 +239,6 @@ MODULE.LevelScreen = (function() {
 
     LevelScreen.prototype.onExit = function() {
         app.audio.playSound('back');
-        this.level.destroy();
-        this.level = null;
         app.screen.display('campaign');
     };
 

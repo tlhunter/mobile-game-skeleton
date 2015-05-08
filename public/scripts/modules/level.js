@@ -437,9 +437,5 @@ MODULE.Level = (function() {
 		}
 	};
 
-	Level.prototype.destroy = function() {
-		this.onStop();
-	};
-
     return Level;
 }());
