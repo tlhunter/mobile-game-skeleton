@@ -40,6 +40,7 @@ MODULE.Level = (function() {
 		this.antigoal = data.antigoal || null;
 		this.mingreen = data.mingreen || null;
 		this.maxred = data.maxred || null;
+		this.maxplay = data.maxplay || null;
 
 		// Use Green for owned cells and Red for enemy cells
 		this.color_cells = this.mingreen || this.maxred;
