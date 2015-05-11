@@ -3,6 +3,8 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Level = (function() {
+	var noop = function() {};
+
     var Level = function(data, $container, constraints) {
 		this.level_id = data.id;
 		this.$container = $container.empty();
@@ -32,7 +34,8 @@ MODULE.Level = (function() {
 
 		this.deadzones = data.deadzones;
 		this.playables = data.playables;
-		this.goal = data.goal;
+		this.goal = data.goal || null;
+		this.antigoal = data.antigoal || null;
 
 		this.library = data.library;
 		this.chapter = data.chapter;
@@ -43,6 +46,7 @@ MODULE.Level = (function() {
 		this.generations_until_beaten = 0;
 		this.generation = 0;
 		this.goalPhase = 0;
+		this.lost = false;
 
 		this.arena = this.buildArena(data.arena);
 		this.initial_arena = null;
@@ -51,10 +55,10 @@ MODULE.Level = (function() {
 
 		this.redraw_interval = null;
 
-		this.generationHandler = function() {};
-		this.playCountHandler = function() {};
-		this.statusHandler = function() {};
-		this.winHandler = function() {};
+		this.generationHandler = noop;
+		this.playCountHandler = noop;
+		this.statusHandler = noop;
+		this.winHandler = noop;
 
 		this.render();
     };
@@ -75,6 +79,7 @@ MODULE.Level = (function() {
 		STOP: 'stop',
 		PLAY: 'play',
 		DONE: 'done',
+		LOST: 'lost'
 	};
 
 	/**
@@ -120,7 +125,6 @@ MODULE.Level = (function() {
 		this.gamefield.height = this.pixel_dimensions.height;
 	};
 
-
 	// TODO: Cache
 	Level.prototype.countPlayedPieces = function() {
 		if (!this.playables.length) {
@@ -154,6 +158,7 @@ MODULE.Level = (function() {
 		var self = this;
 
 		this.playing = true;
+		this.lost = false;
 		this.initial_arena = this.arena.slice(0); // Clone
 
 		this.redraw_interval = setInterval(function() {
@@ -169,6 +174,7 @@ MODULE.Level = (function() {
 		this.statusHandler(Level.STATUS.STOP);
 
 		this.playing = false;
+		this.lost = false;
 		clearTimeout(this.redraw_interval);
 
 		this.generation = 0;
@@ -250,7 +256,16 @@ MODULE.Level = (function() {
 			}
 		}
 
-		if (this.arena[this.goal.y][this.goal.x]) {
+		if (this.antigoal) {
+			if (this.arena[this.antigoal.y][this.antigoal.x] && this.generation < this.antigoal.g) {
+				this.lost = true;
+				this.statusHandler(Level.STATUS.LOSE);
+			} else if (this.generation >= this.antigoal.g && !this.lost) {
+				this.winLevel();
+			}
+		}
+
+		if (this.goal && this.arena[this.goal.y][this.goal.x] && !this.lost) {
 			this.winLevel();
 		}
 
@@ -429,12 +444,29 @@ MODULE.Level = (function() {
 	};
 
 	Level.prototype.drawGoal = function() {
-		this.gamefield.fillStyle = 'hsla(' + Math.floor((Math.sin(this.goalPhase++/10)+1)/2*255) + ',50%,50%,0.75)'; // fade between 0.5 and 1 opacity
-		this.gamefield.fillRect(this.goal.x * this.size, this.goal.y * this.size, 1 * this.size, 1 * this.size);
+		if (this.goal) {
+			var hue = Math.floor((Math.sin(this.goalPhase/10)+1)/2*255);
+			this.gamefield.fillStyle = 'hsla(' + hue + ',50%,50%,0.75)';
+			this.gamefield.fillRect(this.goal.x * this.size, this.goal.y * this.size, 1 * this.size, 1 * this.size);
+		}
 
-		if (this.goalPhase >= 255) {
+		if (this.antigoal) {
+			var sat = Math.floor((Math.sin(this.goalPhase/4)+1)/2*100);
+			this.gamefield.fillStyle = 'hsla(0,' + sat + '%,50%,0.5)';
+			this.gamefield.fillRect(this.antigoal.x * this.size, this.antigoal.y * this.size, 1 * this.size, 1 * this.size);
+		}
+
+		if (this.goalPhase++ >= 255) {
 			this.goalPhase = 0;
 		}
+	};
+
+	Level.prototype.getGenerationGoal = function() {
+		if (!this.antigoal || !this.antigoal.g) {
+			return null;
+		}
+
+		return this.antigoal.g;
 	};
 
     return Level;

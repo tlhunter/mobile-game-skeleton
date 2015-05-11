@@ -10,10 +10,13 @@ MODULE.LevelScreen = (function() {
         this.$level = this.$screen.find('.level');
         this.$footer = this.$screen.find('footer');
         this.$header = this.$screen.find('header');
+        this.$headerfooter = this.$screen.find('header, footer');
         this.$generation = this.$header.find('.generation');
         this.$played = this.$header.find('.played');
         this.$status = this.$header.find('.status');
         this.$title = this.$header.find('.title');
+        this.$antigoal = this.$header.find('.antigoal');
+        this.$gengoal = this.$antigoal.find('.antigoal-gen');
 
         this.$buttons = {
             play: this.$footer.find('button.play'),
@@ -61,6 +64,8 @@ MODULE.LevelScreen = (function() {
         }).onStatus(function(status) {
             if (status === MODULE.Level.STATUS.DONE) {
                 self.complete();
+            } else if (status === MODULE.Level.STATUS.LOSE) {
+                self.lose();
             }
         }).onWin(function(old_level, new_level) {
             app.analytics.track('LEVEL-WIN', {
@@ -86,6 +91,8 @@ MODULE.LevelScreen = (function() {
         } else {
             this.complete();
         }
+
+        this.setGenerationGoal(this.level.getGenerationGoal());
 
         var $gamefield = this.level.$gamefield;
         var finger = new Hammer($gamefield[0]);
@@ -133,20 +140,34 @@ MODULE.LevelScreen = (function() {
     LevelScreen.prototype.hide = function() {
         this.level.onStop();
         this.level = null;
+        this.setGenerationGoal(0);
         this.$screen.hide();
+    };
+
+    LevelScreen.prototype.setGenerationGoal = function(generation) {
+        this.$gengoal.text(generation);
+
+        if (generation) {
+            return this.$antigoal.show();
+        }
+
+        return this.$antigoal.hide();
     };
 
     LevelScreen.prototype.complete = function() {
         this.$status.text('Done');
-        this.$header.addClass('done');
-        this.$footer.addClass('done');
+        this.$headerfooter.addClass('done');
         this.$buttons.exit.addClass('cycle');
+    };
+
+    LevelScreen.prototype.lose = function() {
+        this.$status.text('Lose');
+        this.$headerfooter.addClass('lose');
     };
 
     LevelScreen.prototype.incomplete = function() {
         this.$status.text('InProg');
-        this.$header.removeClass('done');
-        this.$footer.removeClass('done');
+        this.$headerfooter.removeClass('done');
         this.$buttons.exit.removeClass('cycle');
     };
 
@@ -208,7 +229,12 @@ MODULE.LevelScreen = (function() {
             generation: this.level.generation
         });
 
+        this.unLose();
         this.level.onStop();
+    };
+
+    LevelScreen.prototype.unLose = function() {
+        this.$headerfooter.removeClass('lose');
     };
 
     LevelScreen.prototype.onClear = function() {
