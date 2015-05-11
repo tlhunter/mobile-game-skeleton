@@ -1,5 +1,16 @@
 #modal {
 	position: fixed;
+	z-index: 950;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none;
+}
+
+#modal .modal {
+	position: fixed;
 	z-index: 1000;
 	top: 16px;
 	left: 16px;
@@ -7,17 +18,16 @@
 	bottom: 16px;
 	border: 2px solid rgba(255, 255, 255, 0.25);
 	background-color: rgba(0, 0, 0, 0.8);
-	display: none;
 }
 
-#modal.small {
+#modal .modal.small {
 	top: 30%;
 	bottom: 30%;
 	left: 32px;
 	right: 32px;
 }
 
-#modal .buttons {
+#modal .modal .buttons {
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
@@ -29,7 +39,7 @@
 	line-height: 60px;
 }
 
-#modal .content {
+#modal .modal .content {
 	overflow-y: auto;
 	font-size: 14px;
 	position: absolute;
@@ -39,34 +49,34 @@
 	bottom: 76px;
 }
 
-#modal .buttons button {
+#modal .modal .buttons button {
 	margin: 0 8px;
 	font-size: 14px;
 	padding: 6px 12px 6px 14px;
 }
 
 @media (max-width: 320px) {
-	#modal .buttons button {
+	#modal .modal .buttons button {
 		font-size: 11px;
 	}
 }
 
-#modal .content h3 {
+#modal .modal .content h3 {
 	font-size: 16px;
 	text-align: center;
 }
 
-#modal .content h3,
-#modal .content p {
+#modal .modal .content h3,
+#modal .modal .content p {
 	margin: 0 0 16px 0;
 	padding: 0px;
 }
 
-#modal .library {
+#modal .modal .library {
 	text-align: center;
 	font-size: 16px;
 }
 
-#modal .library img {
+#modal .modal .library img {
 	margin-bottom: 8px;
 }

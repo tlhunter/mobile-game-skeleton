@@ -7,7 +7,8 @@ MODULE.Modal = (function() {
     var MODAL_HIDE_TIME = 500;
 
     var Modal = function() {
-        this.$modal = $('#modal');
+        this.$background = $('#modal');
+        this.$modal = this.$background.find('.modal');
         this.$content = this.$modal.find('.content');
         this.$buttons = this.$modal.find('.buttons');
     };
@@ -34,11 +35,11 @@ MODULE.Modal = (function() {
 
         this.$modal.toggleClass('small', !!small);
 
-        this.$modal.fadeIn(MODAL_SHOW_TIME);
+        this.$background.fadeIn(MODAL_SHOW_TIME);
     };
 
     Modal.prototype.fadeOut = function(callback) {
-        this.$modal.fadeOut(MODAL_HIDE_TIME, function() {
+        this.$background.fadeOut(MODAL_HIDE_TIME, function() {
             this.empty();
 
             if (callback) {
@@ -48,7 +49,7 @@ MODULE.Modal = (function() {
     };
 
     Modal.prototype.hide = function() {
-        this.$modal.hide();
+        this.$background.hide();
         this.empty();
     };
 
