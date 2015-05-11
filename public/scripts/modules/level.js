@@ -250,6 +250,8 @@ MODULE.Level = (function() {
 		}
 
 		console.log("The playing field has been cleared.");
+
+		this.countPlayedPieces();
 	};
 
 	Level.prototype.onTap = function(event) {
