@@ -34,8 +34,15 @@ MODULE.Level = (function() {
 
 		this.deadzones = data.deadzones;
 		this.playables = data.playables;
+
+		// Win Conditions
 		this.goal = data.goal || null;
 		this.antigoal = data.antigoal || null;
+		this.mingreen = data.mingreen || null;
+		this.maxred = data.maxred || null;
+
+		// Use Green for owned cells and Red for enemy cells
+		this.color_cells = this.mingreen || this.maxred;
 
 		this.library = data.library;
 		this.chapter = data.chapter;
@@ -47,8 +54,9 @@ MODULE.Level = (function() {
 		this.generation = 0;
 		this.goalPhase = 0;
 		this.lost = false;
+		this.won = false;
 
-		this.arena = this.buildArena(data.arena);
+		this.arena = this.buildArena(data.arena, true);
 		this.initial_arena = null;
 
 		this.playing = false;
@@ -67,11 +75,20 @@ MODULE.Level = (function() {
 	Level.MIN_SIZE = 2;
 	Level.MAX_SIZE = 32;
 
+	Level.CELL = {
+		DEAD: 0,
+		NORMAL: 1,
+		MINE: 2,
+		FOE: 3
+	};
+
 	Level.COLORS = {
 		abyss:		'rgba(0,0,0,0.3)',
 		playable:	'rgba(0,255,0,0.2)',
 		deadzone:	'rgba(255,0,0,0.2)',
 		alive:		'rgb(175,175,175)',
+		alive_self:	'rgb(0,175,0)',
+		alive_foe:	'rgb(175,0,0)',
 		grid:		'rgba(255,255,255,0.035)'
 	};
 
@@ -126,6 +143,7 @@ MODULE.Level = (function() {
 	};
 
 	// TODO: Cache
+	// TODO: This will double count tiles if playables overlap
 	Level.prototype.countPlayedPieces = function() {
 		if (!this.playables.length) {
 			return 0;
@@ -134,8 +152,10 @@ MODULE.Level = (function() {
 		var counter = 0;
 
 		for (var i in this.playables) {
-			for (var y = this.playables[i].y; y < this.playables[i].y + this.playables[i].height; y++) {
-				for (var x = this.playables[i].x; x < this.playables[i].x + this.playables[i].width; x++) {
+			var p = this.playables[i];
+
+			for (var y = p.y; y < p.y + p.h; y++) {
+				for (var x = p.x; x < p.x + p.w; x++) {
 					if (this.arena[y][x]) {
 						counter++;
 					}
@@ -146,6 +166,33 @@ MODULE.Level = (function() {
 		this.playCountHandler(counter);
 
 		return counter;
+	};
+
+	Level.prototype.countPieces = function() {
+		var types = {
+			'0': 0,
+			'1': 0,
+			'2': 0,
+			'3': 0
+		};
+
+		var h = this.dimensions.height;
+		var w = this.dimensions.width;
+
+		for (var y = 0; y < h; y++) {
+			for (var x = 0; x < w; x++) {
+				types[this.arena[y][x]]++;
+			}
+		}
+
+		var alive = types[1] + types[2] + types[3];
+
+		return {
+			alive: alive,
+			dead: w * h - alive,
+			mine: types[2],
+			foe: types[3]
+		};
 	};
 
 	Level.prototype.onPlay = function() {
@@ -159,6 +206,7 @@ MODULE.Level = (function() {
 
 		this.playing = true;
 		this.lost = false;
+		this.won = false;
 		this.initial_arena = this.arena.slice(0); // Clone
 
 		this.redraw_interval = setInterval(function() {
@@ -175,6 +223,7 @@ MODULE.Level = (function() {
 
 		this.playing = false;
 		this.lost = false;
+		this.won = false;
 		clearTimeout(this.redraw_interval);
 
 		this.generation = 0;
@@ -217,7 +266,7 @@ MODULE.Level = (function() {
 		};
 	};
 
-	Level.prototype.setTile = function(tile, state) {
+	Level.prototype.setTile = function(tile) {
 		if (this.playing) {
 			console.log("Cannot change the game while playing.");
 			return;
@@ -228,20 +277,41 @@ MODULE.Level = (function() {
 			return;
 		}
 
-		for (var i in this.playables) {
-			if (tile.x >= this.playables[i].x && tile.y >= this.playables[i].y && tile.x < this.playables[i].x + this.playables[i].w && tile.y < this.playables[i].y + this.playables[i].h) {
-				if (state === undefined) {
-					state = !this.arena[tile.y][tile.x];
-				}
+		if (!this.isPlayable(tile)) {
+			return console.log("Position [" + tile.x + ", " + tile.y + "] is outside of a playable (green) zone.");
+		}
 
-				this.arena[tile.y][tile.x] = state;
-				console.log("Toggled [" + tile.x + ", " + tile.y + "].");
-				this.countPlayedPieces();
-				return;
+		var state = this.arena[tile.y][tile.x];
+
+		if (state) {
+			state = Level.CELL.DEAD;
+		} else {
+			state = this.color_cells ? Level.CELL.MINE : Level.CELL.NORMAL;
+		}
+
+		this.arena[tile.y][tile.x] = state;
+		console.log("Toggled [" + tile.x + ", " + tile.y + "].");
+		this.countPlayedPieces();
+	};
+
+	Level.prototype.isPlayable = function(coordinate) {
+		for (var i in this.playables) {
+			if (coordinate.x >= this.playables[i].x && coordinate.y >= this.playables[i].y && coordinate.x < this.playables[i].x + this.playables[i].w && coordinate.y < this.playables[i].y + this.playables[i].h) {
+				return true;
 			}
 		}
 
-		console.log("Position [" + tile.x + ", " + tile.y + "] is outside of a playable (green) zone.");
+		return false;
+	};
+
+	Level.prototype.isDead = function(coordinate) {
+		for (var i in this.deadzones) {
+			if (this.deadzones[i].x <= coordinate.x && this.deadzones[i].x+this.deadzones[i].w > coordinate.x && this.deadzones[i].y <= coordinate.y && this.deadzones[i].y+this.deadzones[i].h > coordinate.y) {
+				return true;
+			}
+		}
+
+		return false;
 	};
 
 	Level.prototype.calculateGeneration = function() {
@@ -258,8 +328,7 @@ MODULE.Level = (function() {
 
 		if (this.antigoal) {
 			if (this.arena[this.antigoal.y][this.antigoal.x] && this.generation < this.antigoal.g) {
-				this.lost = true;
-				this.statusHandler(Level.STATUS.LOSE);
+				this.loseLevel();
 			} else if (this.generation >= this.antigoal.g && !this.lost) {
 				this.winLevel();
 			}
@@ -269,6 +338,16 @@ MODULE.Level = (function() {
 			this.winLevel();
 		}
 
+		var pieces = this.countPieces();
+
+		if (this.mingreen && !this.lost && pieces.mine >= this.mingreen) {
+			this.winLevel();
+		}
+
+		if (this.maxred && !this.won && pieces.foe >= this.maxred) {
+			this.loseLevel();
+		}
+
 		this.arena = new_arena;
 	};
 
@@ -276,6 +355,8 @@ MODULE.Level = (function() {
 		if (this.generations_until_beaten) {
 			return;
 		}
+
+		this.won = true;
 
 		this.statusHandler(Level.STATUS.DONE);
 
@@ -293,6 +374,12 @@ MODULE.Level = (function() {
 			app.storage.set('level', this.level_id);
 			console.log("beat most recent level. unlocking next level");
 		}
+	};
+
+	Level.prototype.loseLevel = function() {
+		this.lost = true;
+
+		this.statusHandler(Level.STATUS.LOSE);
 	};
 
 	Level.prototype.onGeneration = function(handler) {
@@ -320,41 +407,54 @@ MODULE.Level = (function() {
 	};
 
 	Level.prototype.updateCellState = function(x, y, new_arena) {
+		if (this.isDead({x: x, y: y})) {
+			new_arena[y][x] = Level.CELL.DEAD;
+			return;
+		}
+
 		var cell_state = this.arena[y][x];
-		var living_neighbors = 0;
+
+		var living = {
+			'0': 0,
+			'1': 0,
+			'2': 0,
+			'3': 0
+		};
 
 		for (var mod_x = -1; mod_x <= 1; mod_x++) {
 			for (var mod_y = -1; mod_y <= 1; mod_y++) {
 				if (x + mod_x >= 0 && x + mod_x < this.dimensions.width && // Is this X coordinate outside of the array?
 					y + mod_y >= 0 && y + mod_y < this.dimensions.height && // Is this Y coordinate outside of the array?
-					(!(mod_y === 0 && mod_x === 0)) && // Not looking at self but neighbor
-					this.arena[y + mod_y][x + mod_x]) { // Is this cell alive?
-
-				   living_neighbors++;
+					(!(mod_y === 0 && mod_x === 0))) { // Not looking at self but neighbor
+						living[this.arena[y + mod_y][x + mod_x]]++;
 			   }
 			}
 		}
 
-		for (var i in this.deadzones) {
-			if (this.deadzones[i].x <= x && this.deadzones[i].x+this.deadzones[i].w > x && this.deadzones[i].y <= y && this.deadzones[i].y+this.deadzones[i].h > y) {
-				new_arena[y][x] = false;
-				return;
-			}
-		}
+		var living_total = living[Level.CELL.NORMAL] + living[Level.CELL.MINE] + living[Level.CELL.FOE];
 
 		if (cell_state) { // Cell is alive
-			if (living_neighbors < 2) { // Under-Population
-				new_arena[y][x] = false;
-			} else if (living_neighbors > 3) { // Over-Crowding
-				new_arena[y][x] = false;
+			if (living_total < 2) { // Under-Population
+				new_arena[y][x] = Level.CELL.DEAD;
+			} else if (living_total > 3) { // Over-Crowding
+				new_arena[y][x] = Level.CELL.DEAD;
 			} else { // live on
-				new_arena[y][x] = true;
+				new_arena[y][x] = cell_state;
 			}
 		} else { // Cell is dead
-			if (living_neighbors == 3) { // Reproduction
-				new_arena[y][x] = true;
+			if (living_total === 3) { // Reproduction
+				if (living[Level.CELL.MINE] >= 2) {
+					// parents are mostly mine
+					new_arena[y][x] = Level.CELL.MINE;
+				} else if (living[Level.CELL.FOE] >= 2) {
+					// parents are mostly not mine
+					new_arena[y][x] = Level.CELL.FOE;
+				} else {
+					// must be a normal match
+					new_arena[y][x] = Level.CELL.NORMAL;
+				}
 			} else {
-				new_arena[y][x] = false;
+				new_arena[y][x] = Level.CELL.DEAD;
 			}
 		}
 	};
@@ -369,9 +469,18 @@ MODULE.Level = (function() {
 			}
 		}
 
-		if (data) {
+		if (data && this.color_cells) {
+			var s = Level.CELL.MINE;
+			var f = Level.CELL.FOE;
+
 			for (var coord in data) {
-				new_arena[data[coord][1]][data[coord][0]] = true;
+				new_arena[data[coord][1]][data[coord][0]] = this.isPlayable({x: coord[0], y: coord[1]}) ? s : f;
+			}
+		} else if (data && !this.color_cells) {
+			var n = Level.CELL.NORMAL;
+
+			for (var coord in data) {
+				new_arena[data[coord][1]][data[coord][0]] = n;
 			}
 		}
 
@@ -431,12 +540,20 @@ MODULE.Level = (function() {
 	};
 
 	Level.prototype.drawLivingCells = function() {
-		this.gamefield.fillStyle = Level.COLORS.alive;
 		var size = this.size;
 
 		for (var y = 0; y < this.dimensions.height; y++) {
 			for (var x = 0; x < this.dimensions.width; x++) {
-				if (this.arena[y][x]) {
+				var cell = this.arena[y][x];
+				if (cell) {
+					if (cell === Level.CELL.NORMAL) {
+						this.gamefield.fillStyle = Level.COLORS.alive;
+					} else if (cell === Level.CELL.MINE) {
+						this.gamefield.fillStyle = Level.COLORS.alive_self;
+					} else if (cell === Level.CELL.FOE) {
+						this.gamefield.fillStyle = Level.COLORS.alive_foe;
+					}
+
 					this.gamefield.fillRect(x * size, y * size, size, size);
 				}
 			}
@@ -444,18 +561,22 @@ MODULE.Level = (function() {
 	};
 
 	Level.prototype.drawGoal = function() {
+		// Cycle through hue's like a rainbow
 		if (this.goal) {
 			var hue = Math.floor((Math.sin(this.goalPhase/10)+1)/2*255);
 			this.gamefield.fillStyle = 'hsla(' + hue + ',50%,50%,0.75)';
 			this.gamefield.fillRect(this.goal.x * this.size, this.goal.y * this.size, 1 * this.size, 1 * this.size);
 		}
 
+		// Cycle through saturations of red
 		if (this.antigoal) {
 			var sat = Math.floor((Math.sin(this.goalPhase/4)+1)/2*100);
 			this.gamefield.fillStyle = 'hsla(0,' + sat + '%,50%,0.5)';
 			this.gamefield.fillRect(this.antigoal.x * this.size, this.antigoal.y * this.size, 1 * this.size, 1 * this.size);
 		}
 
+		// Increment the goal phase value with each frame
+		// TODO: Change these values based on time
 		if (this.goalPhase++ >= 255) {
 			this.goalPhase = 0;
 		}
