@@ -51,8 +51,8 @@ MODULE.LevelScreen = (function() {
         this.$title.html(raw_level.name);
 
         var constraints = {
-            width: app.viewport.width,
-            height: app.viewport.height - (this.$footer.outerHeight() + this.$header.outerHeight())
+            width: app.device.viewport.width,
+            height: app.device.viewport.height - (this.$footer.outerHeight() + this.$header.outerHeight())
         };
 
         this.level = new MODULE.Level(raw_level, this.$level, constraints);

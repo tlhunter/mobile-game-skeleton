@@ -14,7 +14,7 @@ if (!MODULE) { var MODULE = {}; }
 		audio: new MODULE.Audio(),
 		content: new MODULE.Content(),
 		modal: new MODULE.Modal(),
-		viewport: new MODULE.Viewport(),
+		device: new MODULE.Device(),
 		reload: location.reload.bind(location),
 		screen: new MODULE.Screen({
 			campaign: new MODULE.CampaignScreen(),
