@@ -49,6 +49,11 @@
 	border-bottom: 2px solid #111;
 }
 
+#screen-level header .generation {
+	min-width: 30px;
+	display: inline-block;
+}
+
 #screen-level header .antigoal {
 	display: none;
 }
