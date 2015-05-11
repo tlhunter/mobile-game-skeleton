@@ -50,6 +50,12 @@ button {
 	cursor: pointer;
 }
 
+@media (max-width: 320px) {
+	button {
+		font-size: 18px;
+	}
+}
+
 button:active {
 	background: #333;
 }
