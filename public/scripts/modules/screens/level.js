@@ -15,8 +15,12 @@ MODULE.LevelScreen = (function() {
         this.$played = this.$header.find('.played');
         this.$status = this.$header.find('.status');
         this.$title = this.$header.find('.title');
+
         this.$antigoal = this.$header.find('.antigoal');
         this.$gengoal = this.$antigoal.find('.antigoal-gen');
+
+        this.$maxplay = this.$header.find('.maxplay');
+        this.$maxplayval = this.$maxplay.find('.maxplay-val');
 
         this.$buttons = {
             play: this.$footer.find('button.play'),
@@ -93,6 +97,7 @@ MODULE.LevelScreen = (function() {
         }
 
         this.setGenerationGoal(this.level.getGenerationGoal());
+        this.setMaxPlay(this.level.maxplay);
 
         var $gamefield = this.level.$gamefield;
         var finger = new Hammer($gamefield[0]);
@@ -144,6 +149,7 @@ MODULE.LevelScreen = (function() {
         this.level.onStop();
         this.level = null;
         this.setGenerationGoal(0);
+        this.setMaxPlay(0);
         this.$screen.hide();
     };
 
@@ -155,6 +161,16 @@ MODULE.LevelScreen = (function() {
         }
 
         return this.$antigoal.hide();
+    };
+
+    LevelScreen.prototype.setMaxPlay = function(maxplay) {
+        this.$maxplayval.text(maxplay);
+
+        if (maxplay) {
+            return this.$maxplay.show();
+        }
+
+        return this.$maxplay.hide();
     };
 
     LevelScreen.prototype.complete = function() {

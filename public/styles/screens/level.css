@@ -33,12 +33,6 @@
 	padding: 4px;
 }
 
-@media (max-width: 320px) {
-	#screen-level footer button {
-		font-size: 10px;
-	}
-}
-
 #screen-level footer button.stop {
 	display: none;
 }
@@ -50,7 +44,6 @@
 }
 
 #screen-level header .generation {
-	min-width: 30px;
 	display: inline-block;
 }
 
@@ -66,4 +59,14 @@
 #screen-level header.lose,
 #screen-level footer.lose {
 	background-color: #600;
+}
+
+@media (max-width: 320px) {
+	#screen-level footer button {
+		font-size: 10px;
+	}
+
+	#screen-level header {
+		font-size: 11px;
+	}
 }

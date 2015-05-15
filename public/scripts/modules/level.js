@@ -289,12 +289,16 @@ MODULE.Level = (function() {
 		if (state) {
 			state = Level.CELL.DEAD;
 		} else {
+			if (this.maxplay && this.countPlayedPieces() >= this.maxplay) {
+				return console.log("Cannot bring cell to life, already at max");
+			}
+
 			state = this.color_cells ? Level.CELL.MINE : Level.CELL.NORMAL;
 		}
 
 		this.arena[tile.y][tile.x] = state;
 		console.log("Toggled [" + tile.x + ", " + tile.y + "].");
-		this.countPlayedPieces();
+		this.countPlayedPieces(); // TODO: Only run this once
 	};
 
 	Level.prototype.isPlayable = function(coordinate) {
