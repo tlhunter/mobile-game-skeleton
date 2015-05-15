@@ -68,8 +68,6 @@ MODULE.Level = (function() {
 		this.playCountHandler = noop;
 		this.statusHandler = noop;
 		this.winHandler = noop;
-
-		this.render();
     };
 
 	Level.DEFAULT_SIZE = 8;
@@ -98,6 +96,11 @@ MODULE.Level = (function() {
 		PLAY: 'play',
 		DONE: 'done',
 		LOST: 'lost'
+	};
+
+	Level.prototype.start = function() {
+		this.countPlayedPieces();
+		this.render();
 	};
 
 	/**
@@ -146,10 +149,6 @@ MODULE.Level = (function() {
 	// TODO: Cache
 	// TODO: This will double count tiles if playables overlap
 	Level.prototype.countPlayedPieces = function() {
-		if (!this.playables.length) {
-			return 0;
-		}
-
 		var counter = 0;
 
 		for (var i in this.playables) {

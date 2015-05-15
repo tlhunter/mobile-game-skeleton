@@ -87,7 +87,7 @@ MODULE.LevelScreen = (function() {
                     }
                 }], true
             );
-        });
+        }).start();
 
         if (level_id > app.storage.get('level')) {
             this.incomplete();
