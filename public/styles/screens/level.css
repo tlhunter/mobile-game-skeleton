@@ -1,11 +1,13 @@
 #screen-level {
 }
 
-#screen-level .grid,
 #screen-level .level {
 	margin: 48px 0;
-	position: absolute;
+	position: relative;
 	text-align: center;
+}
+#screen-level .grid {
+	display: none;
 }
 
 #screen-level .level .field {
