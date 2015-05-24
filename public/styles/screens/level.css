@@ -2,17 +2,16 @@
 }
 
 #screen-level .level {
-	margin: 48px 0 0 0;
+	margin: 48px 0;
 	position: relative;
-	text-align: center;
 }
 
-#screen-level .level .level-container,
+#screen-level .level .level-container {
+	position: relative;
+}
+
 #screen-level .level .grid-container {
-	margin: 0 0 48px 0;
 	position: absolute;
-	top: 0;
-	left: 0;
 }
 
 #screen-level footer,
