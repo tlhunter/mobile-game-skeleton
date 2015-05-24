@@ -23,7 +23,7 @@ MODULE.Level = (function() {
 
 		this.size = Math.min(max_size.w, max_size.h);
 
-		var $gamefield = $('<canvas id="gamefield" width="' + this.dimensions.width * this.size + '" height="' + this.dimensions.height * this.size + '"></canvas>');
+		var $gamefield = $('<canvas width="' + this.dimensions.width * this.size + '" height="' + this.dimensions.height * this.size + '"></canvas>');
 
 		this.$gamefield = $gamefield;
 		this.$container.empty().append($gamefield);

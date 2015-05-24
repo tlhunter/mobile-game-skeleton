@@ -10,7 +10,7 @@ MODULE.Grid = (function() {
         this.size = size;
         console.log(arguments);
 
-		var $grid = $('<canvas id="grid" width="' + this.width * this.size + '" height="' + this.height * this.size + '"></canvas>');
+		var $grid = $('<canvas width="' + this.width * this.size + '" height="' + this.height * this.size + '"></canvas>');
 
         this.$grid = $grid;
 		this.$container.empty().append($grid);
