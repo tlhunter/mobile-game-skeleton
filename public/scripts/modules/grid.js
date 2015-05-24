@@ -20,7 +20,7 @@ MODULE.Grid = (function() {
         this.resize();
     };
 
-    Grid.COLOR = 'rgba(255, 255, 255, 0.1)';
+    Grid.COLOR = '#ffffff';
 
     /**
      * This is the same as performing Level#scale()

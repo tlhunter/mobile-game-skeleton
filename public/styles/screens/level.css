@@ -17,6 +17,7 @@
 
 #screen-level .level .grid-container {
 	position: absolute;
+	opacity: 0.1;
 }
 
 #screen-level footer,
