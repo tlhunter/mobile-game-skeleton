@@ -1,9 +1,10 @@
 #screen-level {
 }
 
+#screen-level .grid,
 #screen-level .level {
-	margin: 50px 0;
-	position: relative;
+	margin: 48px 0;
+	position: absolute;
 	text-align: center;
 }
 

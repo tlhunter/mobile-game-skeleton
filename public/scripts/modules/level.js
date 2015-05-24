@@ -82,13 +82,11 @@ MODULE.Level = (function() {
 	};
 
 	Level.COLORS = {
-		abyss:		'rgba(0,0,0,0.3)',
 		playable:	'rgba(0,255,0,0.2)',
 		deadzone:	'rgba(255,0,0,0.2)',
 		alive:		'rgb(175,175,175)',
 		alive_self:	'rgb(0,175,0)',
-		alive_foe:	'rgb(175,0,0)',
-		grid:		'rgba(255,255,255,0.035)'
+		alive_foe:	'rgb(175,0,0)'
 	};
 
 	Level.STATUS = {

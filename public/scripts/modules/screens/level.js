@@ -8,6 +8,7 @@ MODULE.LevelScreen = (function() {
 
         this.$screen = $('#screen-level');
         this.$level = this.$screen.find('.level');
+        this.$grid = this.$screen.find('.grid');
         this.$footer = this.$screen.find('footer');
         this.$header = this.$screen.find('header');
         this.$headerfooter = this.$screen.find('header, footer');
@@ -32,6 +33,7 @@ MODULE.LevelScreen = (function() {
         };
 
         this.level = null;
+        this.grid = null;
         this.level_id = null;
         this.library = null;
 
@@ -60,6 +62,13 @@ MODULE.LevelScreen = (function() {
         };
 
         this.level = new MODULE.Level(raw_level, this.$level, constraints);
+
+        this.grid = new MODULE.Grid(
+            this.level.dimensions.width,
+            this.level.dimensions.height,
+            this.level.size,
+            this.$grid
+        );
 
         this.level.onGeneration(function(generation) {
             self.$generation.text(generation);
@@ -116,6 +125,7 @@ MODULE.LevelScreen = (function() {
 
         finger.on('pinch', function(event) {
             self.level.scale(event.scale);
+            self.grid.scale(self.level.size);
         });
 
         finger.on('pinchend', function() {
