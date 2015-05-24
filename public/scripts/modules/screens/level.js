@@ -7,8 +7,8 @@ MODULE.LevelScreen = (function() {
         var self = this;
 
         this.$screen = $('#screen-level');
-        this.$level = this.$screen.find('.level');
-        this.$grid = this.$screen.find('.grid');
+        this.$level = this.$screen.find('.level-container');
+        this.$grid = this.$screen.find('.grid-container');
         this.$footer = this.$screen.find('footer');
         this.$header = this.$screen.find('header');
         this.$headerfooter = this.$screen.find('header, footer');

@@ -2,15 +2,14 @@
 }
 
 #screen-level .level {
-	margin: 48px 0;
+	margin: 48px 0 0 0;
 	position: relative;
 	text-align: center;
 }
-#screen-level .grid {
-	display: none;
-}
 
-#screen-level .level .field {
+#screen-level .level .level-container,
+#screen-level .level .grid-container {
+	margin: 0 0 48px 0;
 	position: absolute;
 	top: 0;
 	left: 0;
