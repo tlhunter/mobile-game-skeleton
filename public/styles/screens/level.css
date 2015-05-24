@@ -1,6 +1,12 @@
 #screen-level {
 }
 
+#screen-level .scrollable {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 #screen-level .level {
 	margin: 48px 0;
 }
