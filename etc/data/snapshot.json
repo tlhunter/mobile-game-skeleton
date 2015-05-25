@@ -1,4 +1,78 @@
 {
+    "audio": {
+        "back": {
+            "file": "audio/back.wav",
+            "id": "back",
+            "name": "Back",
+            "type": "sound"
+        },
+        "background": {
+            "file": "audio/OutThere.ogg",
+            "id": "background",
+            "name": "Menu Music",
+            "type": "music"
+        },
+        "chapter-1": {
+            "file": "audio/AmbientalExperience.mp3",
+            "id": "chapter-1",
+            "name": "Chapter 1 Music",
+            "type": "music"
+        },
+        "chapter-2": {
+            "file": "audio/Evasion.ogg",
+            "id": "chapter-2",
+            "name": "Chapter 2 Music",
+            "type": "music"
+        },
+        "chapter-3": {
+            "file": "audio/Evasion.ogg",
+            "id": "chapter-3",
+            "name": "Chapter 3 Music",
+            "type": "music"
+        },
+        "chapter-4": {
+            "file": "audio/Evasion.ogg",
+            "id": "chapter-4",
+            "name": "Chapter 4 Music",
+            "type": "music"
+        },
+        "chapter-5": {
+            "file": "audio/Evasion.ogg",
+            "id": "chapter-5",
+            "name": "Chapter 5 Music",
+            "type": "music"
+        },
+        "chapter-6": {
+            "file": "audio/Evasion.ogg",
+            "id": "chapter-6",
+            "name": "Chapter 6 Music",
+            "type": "music"
+        },
+        "clear": {
+            "file": "audio/clear.wav",
+            "id": "clear",
+            "name": "Clear",
+            "type": "sound"
+        },
+        "play": {
+            "file": "audio/play.wav",
+            "id": "play",
+            "name": "Play",
+            "type": "sound"
+        },
+        "select": {
+            "file": "audio/select.wav",
+            "id": "select",
+            "name": "Select",
+            "type": "sound"
+        },
+        "stop": {
+            "file": "audio/stop.wav",
+            "id": "stop",
+            "name": "Stop",
+            "type": "sound"
+        }
+    },
     "campaign": {
         "1": {
             "antigoal": null,
@@ -3909,7 +3983,7 @@
             "height": 32,
             "id": 9,
             "library": 6,
-            "maxplay": 0,
+            "maxplay": 10,
             "maxred": 0,
             "mingreen": 0,
             "name": "Fanblades I",

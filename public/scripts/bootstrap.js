@@ -32,6 +32,7 @@ if (!MODULE) { var MODULE = {}; }
 	app.screen.display('splash');
 
 	app.content.load(function() {
+		app.audio.init();
 		app.screen.get('splash').finish();
 	});
 })();

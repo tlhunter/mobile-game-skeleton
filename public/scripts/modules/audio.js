@@ -4,25 +4,32 @@ if (!MODULE) { var MODULE = {}; }
 
 MODULE.Audio = (function() {
     var Audio = function() {
-        this.music = {
-            background: document.getElementById('music-background'),
-            ch1: document.getElementById('music-chapter-1'),
-            ch2: document.getElementById('music-chapter-2')
-        };
-
-        this.sound = {
-            back: document.getElementById('sound-back'),
-            select: document.getElementById('sound-select'),
-            clear: document.getElementById('sound-clear'),
-            play: document.getElementById('sound-play'),
-            stop: document.getElementById('sound-stop')
+        this.collection = {
+            music: {},
+            sound: {}
         };
 
         this.current = null;
     };
 
+    Audio.prototype.init = function() {
+        var data = app.content.data.audio;
+
+        Object.keys(data).forEach(function(audio_id) {
+            var audio = data[audio_id];
+
+            var audio_tag = new window.Audio(audio.file);
+
+            if (audio.type === 'music') {
+                audio_tag.loop = 'loop';
+            }
+
+            this.collection[audio.type][audio.id] = audio_tag;
+        }, this);
+    };
+
     Audio.prototype.playMusic = function(id) {
-        if (!this.music[id]) {
+        if (!this.collection.music[id]) {
             return console.error("Cannot find music with ID", id);
         }
 
@@ -32,11 +39,11 @@ MODULE.Audio = (function() {
         }
 
         if (!this.current) {
-            this.music[id].play();
+            this.collection.music[id].play();
         } else if (this.current && this.current !== id) {
-            this.music[this.current].pause();
-            this.music[this.current].currentTime = 0;
-            this.music[id].play();
+            this.collection.music[this.current].pause();
+            this.collection.music[this.current].currentTime = 0;
+            this.collection.music[id].play();
         }
 
         this.current = id;
@@ -47,15 +54,15 @@ MODULE.Audio = (function() {
             return;
         }
 
-        this.sound[id].play();
+        this.collection.sound[id].play();
     };
 
     Audio.prototype.toggleMute = function() {
         var mute = !app.storage.get('mute', false);
 
         if (mute && this.current) {
-            this.music[this.current].pause();
-            this.music[this.current].currentTime = 0;
+            this.collection.music[this.current].pause();
+            this.collection.music[this.current].currentTime = 0;
             this.current = null;
         }
 
