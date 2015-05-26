@@ -5,25 +5,37 @@ if (!MODULE) { var MODULE = {}; }
 MODULE.SettingsScreen = (function() {
     var SettingsScreen = function() {
         this.$screen = $('#screen-settings');
-        this.$footer = this.$screen.find('.footer-buttons');
+        var $buttons = this.$screen.find('.footer-buttons');
 
         this.$buttons = {
-            back: this.$footer.find('.back'),
-            reset: this.$footer.find('.reset'),
-            audio: this.$footer.find('.audio'),
-            refresh: this.$footer.find('.refresh')
+            back: $buttons.find('.back'),
+            reset: $buttons.find('.reset'),
+            sound: $buttons.find('.toggle-sfx'),
+            music: $buttons.find('.toggle-bgm'),
+            refresh: $buttons.find('.refresh')
         };
+
+        this.$sound_mute = this.$buttons.sound.find('span');
+        this.$music_mute = this.$buttons.music.find('span');
 
         this.$buttons.back.on('click', this.onBack.bind(this));
         this.$buttons.reset.on('click', this.onReset.bind(this));
         this.$buttons.refresh.on('click', this.onRefresh.bind(this));
-        this.$buttons.audio.on('click', this.onAudio.bind(this));
+        this.$buttons.sound.on('click', this.onSound.bind(this));
+        this.$buttons.music.on('click', this.onMusic.bind(this));
     };
 
     SettingsScreen.prototype.display = function() {
         this.$screen.show();
 
         app.analytics.track('SCREEN-SETTINGS');
+
+        this.renderMuteButtons();
+    };
+
+    SettingsScreen.prototype.renderMuteButtons = function() {
+        this.$sound_mute.text(app.audio.isMuteSound() ? "Enable" : "Disable");
+        this.$music_mute.text(app.audio.isMuteMusic() ? "Enable" : "Disable");
     };
 
     SettingsScreen.prototype.hide = function() {
@@ -50,9 +62,17 @@ MODULE.SettingsScreen = (function() {
         app.reload();
     };
 
-    SettingsScreen.prototype.onAudio = function() {
-        app.audio.toggleMute();
+    SettingsScreen.prototype.onSound = function() {
+        app.audio.muteSound();
+
+        this.renderMuteButtons();
+    };
+
+    SettingsScreen.prototype.onMusic = function() {
+        app.audio.muteMusic();
         app.audio.playMusic('background');
+
+        this.renderMuteButtons();
     };
 
     SettingsScreen.prototype.onBack = function() {

@@ -12,6 +12,14 @@ MODULE.Audio = (function() {
         this.current = null;
     };
 
+    Audio.MUSIC = 'music';
+    Audio.SOUND = 'sound';
+
+    Audio.MUTE = {
+        MUSIC: 'mute-music',
+        SOUND: 'mute-sound'
+    };
+
     Audio.prototype.init = function() {
         var data = app.content.data.audio;
 
@@ -20,7 +28,7 @@ MODULE.Audio = (function() {
 
             var audio_tag = new window.Audio(audio.file);
 
-            if (audio.type === 'music') {
+            if (audio.type === Audio.MUSIC) {
                 audio_tag.loop = 'loop';
             }
 
@@ -33,7 +41,7 @@ MODULE.Audio = (function() {
             return console.error("Cannot find music with ID", id);
         }
 
-        if (app.storage.get('mute', false)) {
+        if (app.storage.get(Audio.MUTE.MUSIC, false)) {
             console.log('muted');
             return;
         }
@@ -50,23 +58,35 @@ MODULE.Audio = (function() {
     };
 
     Audio.prototype.playSound = function(id) {
-        if (app.storage.get('mute', false)) {
+        if (app.storage.get(Audio.MUTE.SOUND, false)) {
             return;
         }
 
         this.collection.sound[id].play();
     };
 
-    Audio.prototype.toggleMute = function() {
-        var mute = !app.storage.get('mute', false);
+    Audio.prototype.muteSound = function(mute) {
+        mute = typeof mute === 'boolean' ? mute : !app.storage.get(Audio.MUTE.SOUND, false);
+        app.storage.set(Audio.MUTE.SOUND, mute);
+    };
+
+    Audio.prototype.muteMusic = function(mute) {
+        mute = typeof mute === 'boolean' ? mute : !app.storage.get(Audio.MUTE.MUSIC, false);
+        app.storage.set(Audio.MUTE.MUSIC, mute);
 
         if (mute && this.current) {
             this.collection.music[this.current].pause();
             this.collection.music[this.current].currentTime = 0;
             this.current = null;
         }
+    };
 
-        app.storage.set('mute', mute);
+    Audio.prototype.isMuteSound = function() {
+        return app.storage.get(Audio.MUTE.SOUND, false);
+    };
+
+    Audio.prototype.isMuteMusic = function() {
+        return app.storage.get(Audio.MUTE.MUSIC, false);
     };
 
     return Audio;
