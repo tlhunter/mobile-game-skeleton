@@ -26,14 +26,17 @@ content.load(function(err) {
 });
 
 app.get('/', function (req, res) {
+  console.log('GET /');
   res.sendFile(public_dir + '/index.html');
 });
 
 app.get('/data', function (req, res) {
+  console.log('GET /data');
   res.send(content);
 });
 
 app.get('/data/rebuild', function(req, res) {
+  console.log('GET /data/rebuild');
   content.update(function(err) {
     if (err) {
       return res.status(500).send(err);
