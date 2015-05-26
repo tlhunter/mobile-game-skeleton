@@ -141,7 +141,7 @@ MODULE.LevelScreen = (function() {
         // But hammer, I don't want you to stop my panning!
         $gamefield.attr('style', '');
 
-        app.audio.playMusic('ch' + this.level.chapter);
+        app.audio.playMusic('chapter-' + this.level.chapter);
 
         this.$screen.show();
 
