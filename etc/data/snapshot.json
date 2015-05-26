@@ -145,7 +145,7 @@
             ],
             "chapter": 2,
             "deadzones": [],
-            "description": "",
+            "description": "This mission is a bit different than the ones you've played before. This time, instead of activating a goal, you're trying to NOT activate the blinking red <strong>Anti Goal</strong>!<br /><br />To win, you must survive 50 generations without the Anti Goal activating.",
             "goal": null,
             "height": 16,
             "id": 10,
@@ -3937,47 +3937,47 @@
             "antigoal": null,
             "arena": [
                 [
-                    8,
+                    9,
                     6
                 ],
                 [
-                    8,
+                    9,
                     7
                 ],
                 [
-                    8,
+                    9,
                     8
                 ],
                 [
-                    5,
+                    6,
                     6
                 ],
                 [
-                    5,
+                    6,
                     7
                 ],
                 [
-                    5,
+                    6,
                     8
                 ],
                 [
-                    11,
+                    12,
                     6
                 ],
                 [
-                    11,
+                    12,
                     7
                 ],
                 [
-                    11,
+                    12,
                     8
                 ]
             ],
             "chapter": 2,
             "deadzones": [],
-            "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single tile, and the outcome can be completely different.",
+            "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single tile, and the outcome can be completely different.<br /><br />Also, notice how this level is limited to playing a maximum of 10 cells in the green playable zone!",
             "goal": {
-                "x": 8,
+                "x": 9,
                 "y": 2
             },
             "height": 32,
@@ -3990,12 +3990,12 @@
             "playables": [
                 {
                     "h": 8,
-                    "w": 16,
+                    "w": 19,
                     "x": 0,
                     "y": 24
                 }
             ],
-            "width": 16
+            "width": 19
         }
     },
     "dictionary": {
