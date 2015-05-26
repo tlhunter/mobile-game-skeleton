@@ -1,3 +1,12 @@
+#screen-settings {
+	background: #000 url("/images/ui/settings-background.png") no-repeat center center;
+	background-size: contain;
+}
+
+#screen-settings .footer-buttons {
+	background-color: transparent;
+}
+
 #screen-settings .footer-buttons button {
 	margin-top: 20px;
 }
