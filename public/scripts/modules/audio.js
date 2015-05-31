@@ -34,6 +34,14 @@ MODULE.Audio = (function() {
 
             this.collection[audio.type][audio.id] = audio_tag;
         }, this);
+
+        window.addEventListener('blur', function() {
+            this.pauseMusic();
+        }.bind(this));
+
+        window.addEventListener('focus', function() {
+            this.resumeMusic();
+        }.bind(this));
     };
 
     Audio.prototype.playMusic = function(id) {
@@ -55,6 +63,18 @@ MODULE.Audio = (function() {
         }
 
         this.current = id;
+    };
+
+    Audio.prototype.pauseMusic = function() {
+        if (this.current) {
+            this.collection.music[this.current].pause();
+        }
+    };
+
+    Audio.prototype.resumeMusic = function() {
+        if (this.current) {
+            this.collection.music[this.current].play();
+        }
     };
 
     Audio.prototype.playSound = function(id) {
