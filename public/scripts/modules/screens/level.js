@@ -64,6 +64,7 @@ MODULE.LevelScreen = (function() {
 
         this.$buttons.play.show();
         this.$buttons.stop.hide();
+        this.$headerfooter.removeClass();
 
         this.level_id = level_id;
 
@@ -93,12 +94,12 @@ MODULE.LevelScreen = (function() {
         })
         .on('status', function(status) {
             if (status === MODULE.Level.STATUS.DONE) {
-                self.complete();
+                self.win();
             } else if (status === MODULE.Level.STATUS.LOSE) {
                 self.lose();
             }
         })
-        .on('win', function(old_level, new_level, generation) {
+        .on('levelup', function(old_level, new_level, generation) {
             app.analytics.track('LEVEL-WIN', {
                 level: old_level,
                 new_level: new_level,
@@ -116,6 +117,8 @@ MODULE.LevelScreen = (function() {
                 }], true
             );
         })
+        .on('win', function() {
+        })
         .on('lose', function() {
             app.modal.show(
                 app.content.data.campaign[self.level_id].lose, [{
@@ -130,7 +133,7 @@ MODULE.LevelScreen = (function() {
             self.$maxred_current.text(count);
         });
 
-        this.level.start();
+        this.level.initialize();
 
         if (level_id > app.storage.get('level')) {
             this.incomplete();
@@ -239,6 +242,11 @@ MODULE.LevelScreen = (function() {
         this.$buttons.exit.addClass('cycle');
     };
 
+    LevelScreen.prototype.win = function() {
+        this.$headerfooter.addClass('win');
+        this.$buttons.exit.addClass('cycle');
+    };
+
     LevelScreen.prototype.lose = function() {
         this.$headerfooter.addClass('lose');
     };
@@ -289,6 +297,8 @@ MODULE.LevelScreen = (function() {
         this.$buttons.play.hide();
         this.$buttons.stop.show();
 
+        this.$headerfooter.addClass('playing');
+
         app.analytics.track('LEVEL-START', {
             level: this.level_id
         });
@@ -300,6 +310,9 @@ MODULE.LevelScreen = (function() {
         app.audio.playSound('stop');
         this.$buttons.play.show();
         this.$buttons.stop.hide();
+
+        this.$headerfooter.removeClass('playing');
+        this.$headerfooter.removeClass('win');
 
         app.analytics.track('LEVEL-STOP', {
             level: this.level_id,

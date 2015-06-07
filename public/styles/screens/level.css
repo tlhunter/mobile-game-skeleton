@@ -61,8 +61,17 @@
 	display: none;
 }
 
+#screen-level header.done.playing,
+#screen-level footer.done.playing {
+	background-color: #000;
+}
+
 #screen-level header.done,
-#screen-level footer.done {
+#screen-level footer.done,
+#screen-level header.win,
+#screen-level footer.win,
+#screen-level header.win.playing,
+#screen-level footer.win.playing {
 	background-color: #060;
 }
 
