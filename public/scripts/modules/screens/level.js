@@ -7,14 +7,17 @@ MODULE.LevelScreen = (function() {
         var self = this;
 
         this.$screen = $('#screen-level');
+
         this.$level = this.$screen.find('.level-container');
         this.$grid = this.$screen.find('.grid-container');
+
         this.$footer = this.$screen.find('footer');
         this.$header = this.$screen.find('header');
         this.$headerfooter = this.$screen.find('header, footer');
+
         this.$generation = this.$header.find('.generation');
         this.$played = this.$header.find('.played');
-        this.$status = this.$header.find('.status');
+
         this.$title = this.$header.find('.title');
 
         this.$antigoal = this.$header.find('.antigoal');
@@ -22,6 +25,17 @@ MODULE.LevelScreen = (function() {
 
         this.$maxplay = this.$header.find('.maxplay');
         this.$maxplayval = this.$maxplay.find('.maxplay-val');
+
+        this.$segment_generation = this.$header.find('.segment-gen');
+        this.$segment_played = this.$header.find('.segment-played');
+        this.$segment_red = this.$header.find('.segment-red');
+        this.$segment_green = this.$header.find('.segment-green');
+
+        this.$maxred_current = this.$segment_red.find('.current');
+        this.$maxred_limit = this.$segment_red.find('.limit');
+
+        this.$mingreen_current = this.$segment_green.find('.current');
+        this.$mingreen_limit = this.$segment_green.find('.limit');
 
         this.$buttons = {
             play: this.$footer.find('button.play'),
@@ -70,17 +84,21 @@ MODULE.LevelScreen = (function() {
             this.$grid
         );
 
-        this.level.onGeneration(function(generation) {
+        this.level
+        .on('generation', function(generation) {
             self.$generation.text(generation);
-        }).onPlayCount(function(played) {
+        })
+        .on('play-count', function(played) {
             self.$played.text(played);
-        }).onStatus(function(status) {
+        })
+        .on('status', function(status) {
             if (status === MODULE.Level.STATUS.DONE) {
                 self.complete();
             } else if (status === MODULE.Level.STATUS.LOSE) {
                 self.lose();
             }
-        }).onWin(function(old_level, new_level) {
+        })
+        .on('win', function(old_level, new_level) {
             app.analytics.track('LEVEL-WIN', {
                 level: old_level,
                 new_level: new_level
@@ -96,7 +114,15 @@ MODULE.LevelScreen = (function() {
                     }
                 }], true
             );
-        }).start();
+        })
+        .on('green-count', function(count) {
+            self.$mingreen_current.text(count);
+        })
+        .on('red-count', function(count) {
+            self.$maxred_current.text(count);
+        });
+
+        this.level.start();
 
         if (level_id > app.storage.get('level')) {
             this.incomplete();
@@ -107,6 +133,9 @@ MODULE.LevelScreen = (function() {
 
         this.setGenerationGoal(this.level.getGenerationGoal());
         this.setMaxPlay(this.level.maxplay);
+        this.togglePlayedSegment(!!this.level.playables.length);
+        this.toggleRedSegment(this.level.maxred);
+        this.toggleGreenSegment(this.level.mingreen);
 
         var $gamefield = this.level.$gamefield;
         var finger = new Hammer($gamefield[0]);
@@ -183,19 +212,30 @@ MODULE.LevelScreen = (function() {
         return this.$maxplay.hide();
     };
 
+    LevelScreen.prototype.togglePlayedSegment = function(count) {
+        this.$segment_played.toggle(!!count);
+    };
+
+    LevelScreen.prototype.toggleRedSegment = function(count) {
+        this.$maxred_limit.text(count);
+        this.$segment_red.toggle(!!count);
+    };
+
+    LevelScreen.prototype.toggleGreenSegment = function(count) {
+        this.$mingreen_limit.text(count);
+        this.$segment_green.toggle(!!count);
+    };
+
     LevelScreen.prototype.complete = function() {
-        this.$status.text('Done');
         this.$headerfooter.addClass('done');
         this.$buttons.exit.addClass('cycle');
     };
 
     LevelScreen.prototype.lose = function() {
-        this.$status.text('Lose');
         this.$headerfooter.addClass('lose');
     };
 
     LevelScreen.prototype.incomplete = function() {
-        this.$status.text('InProg');
         this.$headerfooter.removeClass('done');
         this.$buttons.exit.removeClass('cycle');
     };

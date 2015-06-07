@@ -6,6 +6,7 @@ MODULE.Level = (function() {
 	var noop = function() {};
 
     var Level = function(data, $container, constraints) {
+        EventEmitter.apply(this);
 		this.level_id = data.id;
 		this.$container = $container.empty();
 
@@ -43,7 +44,7 @@ MODULE.Level = (function() {
 		this.maxplay = data.maxplay || null;
 
 		// Use Green for owned cells and Red for enemy cells
-		this.color_cells = this.mingreen || this.maxred;
+		this.color_cells = !!(this.mingreen || this.maxred);
 
 		this.library = data.library;
 		this.chapter = data.chapter;
@@ -63,12 +64,9 @@ MODULE.Level = (function() {
 		this.playing = false;
 
 		this.redraw_interval = null;
-
-		this.generationHandler = noop;
-		this.playCountHandler = noop;
-		this.statusHandler = noop;
-		this.winHandler = noop;
     };
+
+    Level.prototype = Object.create(EventEmitter.prototype);
 
 	Level.DEFAULT_SIZE = 8;
 	Level.MIN_SIZE = 2;
@@ -161,7 +159,9 @@ MODULE.Level = (function() {
 			}
 		}
 
-		this.playCountHandler(counter);
+		this.emit('play-count', counter);
+
+		this.countPieces();
 
 		return counter;
 	};
@@ -174,23 +174,29 @@ MODULE.Level = (function() {
 			'3': 0
 		};
 
-		var h = this.dimensions.height;
-		var w = this.dimensions.width;
+		var height = this.dimensions.height;
+		var width = this.dimensions.width;
 
-		for (var y = 0; y < h; y++) {
-			for (var x = 0; x < w; x++) {
+		for (var y = 0; y < height; y++) {
+			for (var x = 0; x < width; x++) {
 				types[this.arena[y][x]]++;
 			}
 		}
 
 		var alive = types[1] + types[2] + types[3];
 
-		return {
+		var result = {
 			alive: alive,
-			dead: w * h - alive,
+			dead: width * height - alive,
 			mine: types[2],
 			foe: types[3]
 		};
+
+		this.emit('alive-count', result.alive);
+		this.emit('green-count', result.mine);
+		this.emit('red-count', result.foe);
+
+		return result;
 	};
 
 	Level.prototype.onPlay = function() {
@@ -198,7 +204,7 @@ MODULE.Level = (function() {
 			return;
 		}
 
-		this.statusHandler(Level.STATUS.PLAY);
+		this.emit('status', Level.STATUS.PLAY);
 
 		var self = this;
 
@@ -217,7 +223,7 @@ MODULE.Level = (function() {
 			return;
 		}
 
-		this.statusHandler(Level.STATUS.STOP);
+		this.emit('status', Level.STATUS.STOP);
 
 		this.playing = false;
 		this.lost = false;
@@ -225,7 +231,7 @@ MODULE.Level = (function() {
 		clearTimeout(this.redraw_interval);
 
 		this.generation = 0;
-		this.generationHandler(this.generation);
+		this.emit('generation', this.generation);
 
 		this.arena = this.initial_arena.slice(0);
 	};
@@ -320,7 +326,7 @@ MODULE.Level = (function() {
 
 	Level.prototype.calculateGeneration = function() {
 		this.generation++;
-		this.generationHandler(this.generation);
+		this.emit('generation', this.generation);
 
 		var new_arena = this.buildArena();
 
@@ -362,7 +368,7 @@ MODULE.Level = (function() {
 
 		this.won = true;
 
-		this.statusHandler(Level.STATUS.DONE);
+		this.emit('status', Level.STATUS.DONE);
 
 		console.log("Game won in " + this.generation + " generations!");
 		this.generations_until_beaten = this.generation;
@@ -374,7 +380,7 @@ MODULE.Level = (function() {
 			// TODO: Congratulate user on winning
 			console.log("Beat the final level... Now what?");
 		} else if (this.level_id === my_level + 1) {
-			this.winHandler(my_level, this.level_id, this.generations_until_beaten);
+			this.emit('win', my_level, this.level_id, this.generations_until_beaten);
 			app.storage.set('level', this.level_id);
 			console.log("beat most recent level. unlocking next level");
 		}
@@ -383,31 +389,7 @@ MODULE.Level = (function() {
 	Level.prototype.loseLevel = function() {
 		this.lost = true;
 
-		this.statusHandler(Level.STATUS.LOSE);
-	};
-
-	Level.prototype.onGeneration = function(handler) {
-		this.generationHandler = handler;
-
-		return this;
-	};
-
-	Level.prototype.onPlayCount = function(handler) {
-		this.playCountHandler = handler;
-
-		return this;
-	};
-
-	Level.prototype.onStatus = function(handler) {
-		this.statusHandler = handler;
-
-		return this;
-	};
-
-	Level.prototype.onWin = function(handler) {
-		this.winHandler = handler;
-
-		return this;
+		this.emit('status', Level.STATUS.LOSE);
 	};
 
 	Level.prototype.updateCellState = function(x, y, new_arena) {
@@ -431,7 +413,7 @@ MODULE.Level = (function() {
 					y + mod_y >= 0 && y + mod_y < this.dimensions.height && // Is this Y coordinate outside of the array?
 					(!(mod_y === 0 && mod_x === 0))) { // Not looking at self but neighbor
 						living[this.arena[y + mod_y][x + mod_x]]++;
-			   }
+				}
 			}
 		}
 
@@ -473,17 +455,19 @@ MODULE.Level = (function() {
 			}
 		}
 
+		var coord;
+
 		if (data && this.color_cells) {
 			var s = Level.CELL.MINE;
 			var f = Level.CELL.FOE;
 
-			for (var coord in data) {
+			for (coord in data) {
 				new_arena[data[coord][1]][data[coord][0]] = this.isPlayable({x: coord[0], y: coord[1]}) ? s : f;
 			}
 		} else if (data && !this.color_cells) {
 			var n = Level.CELL.NORMAL;
 
-			for (var coord in data) {
+			for (coord in data) {
 				new_arena[data[coord][1]][data[coord][0]] = n;
 			}
 		}

@@ -54,7 +54,10 @@
 	display: inline-block;
 }
 
-#screen-level header .antigoal {
+#screen-level header .antigoal,
+#screen-level header .segment-played,
+#screen-level header .segment-red,
+#screen-level header .segment-green {
 	display: none;
 }
 
