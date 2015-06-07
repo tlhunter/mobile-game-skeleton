@@ -8,6 +8,7 @@
 	"globals": {
 		"app": true,
 		"MODULE": true,
-		"Hammer": true
+		"Hammer": true,
+		"EventEmitter": true
 	}
 }

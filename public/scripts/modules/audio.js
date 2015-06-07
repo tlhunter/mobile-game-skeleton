@@ -35,11 +35,11 @@ MODULE.Audio = (function() {
             this.collection[audio.type][audio.id] = audio_tag;
         }, this);
 
-        window.addEventListener('blur', function() {
+        app.device.on('blur', function() {
             this.pauseMusic();
         }.bind(this));
 
-        window.addEventListener('focus', function() {
+        app.device.on('focus', function() {
             this.resumeMusic();
         }.bind(this));
     };

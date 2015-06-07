@@ -4,13 +4,27 @@ if (!MODULE) { var MODULE = {}; }
 
 MODULE.Device = (function() {
     var Device = function() {
+        EventEmitter.apply(this);
+
         this.viewport = {
             width: screen.availWidth,
             height: Math.min(screen.availHeight, $(window).height())
         };
 
         this.vendor = Device.getVendor();
+
+        var self = this;
+        document.addEventListener('visibilitychange', function() {
+            console.log("VISIBILITY CHANGE, hidden:", document.hidden);
+            if (document.hidden) {
+                self.emit('blur');
+            } else {
+                self.emit('focus');
+            }
+        });
     };
+
+    Device.prototype = Object.create(EventEmitter.prototype);
 
     Device.VENDORS = {
         ANDROID: 'android',
