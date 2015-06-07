@@ -105,13 +105,20 @@ MODULE.LevelScreen = (function() {
             });
 
             app.modal.show(
-                app.content.data.dictionary.win_level, [{
+                app.content.data.campaign[self.level_id].win, [{
                     text: "Stay"
                 },{
                     text: "Next Level",
                     callback: function() {
                         app.screen.display('level', self.level_id + 1);
                     }
+                }], true
+            );
+        })
+        .on('lose', function() {
+            app.modal.show(
+                app.content.data.campaign[self.level_id].lose, [{
+                    text: "Ok"
                 }], true
             );
         })

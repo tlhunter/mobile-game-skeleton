@@ -108,12 +108,14 @@
             "height": 16,
             "id": 1,
             "library": 1,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Tutorial #1: Hello Glider",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": "Good Job!"
         },
         "10": {
             "antigoal": {
@@ -150,6 +152,7 @@
             "height": 16,
             "id": 10,
             "library": 6,
+            "lose": "Hint: Try to cut off the glider and keep the Anti Goal from activating within 50 generations!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -162,7 +165,8 @@
                     "y": 7
                 }
             ],
-            "width": 16
+            "width": 16,
+            "win": "Good Job!"
         },
         "11": {
             "antigoal": null,
@@ -182,12 +186,14 @@
             "height": 12,
             "id": 11,
             "library": 6,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "asdf",
             "playables": [],
-            "width": 12
+            "width": 12,
+            "win": "Good Job!"
         },
         "12": {
             "antigoal": null,
@@ -249,6 +255,7 @@
             "height": 64,
             "id": 12,
             "library": 6,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 10,
@@ -261,7 +268,8 @@
                     "y": 48
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "13": {
             "antigoal": null,
@@ -544,6 +552,7 @@
             "height": 64,
             "id": 13,
             "library": 6,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -556,7 +565,8 @@
                     "y": 0
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "14": {
             "antigoal": null,
@@ -821,6 +831,7 @@
             "height": 64,
             "id": 14,
             "library": 7,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -833,7 +844,8 @@
                     "y": 0
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "15": {
             "antigoal": null,
@@ -1041,6 +1053,7 @@
             "height": 64,
             "id": 15,
             "library": 8,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -1053,7 +1066,8 @@
                     "y": 24
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "16": {
             "antigoal": null,
@@ -1400,6 +1414,7 @@
             "height": 64,
             "id": 16,
             "library": 9,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -1418,7 +1433,8 @@
                     "y": 39
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "17": {
             "antigoal": null,
@@ -1967,6 +1983,7 @@
             "height": 64,
             "id": 17,
             "library": 9,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
@@ -2015,7 +2032,8 @@
                     "y": 5
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "18": {
             "antigoal": null,
@@ -2063,6 +2081,7 @@
             "height": 64,
             "id": 18,
             "library": 10,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
@@ -2093,7 +2112,8 @@
                     "y": 56
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "19": {
             "antigoal": null,
@@ -2166,8 +2186,9 @@
             "height": 64,
             "id": 19,
             "library": 10,
+            "lose": "N/A",
             "maxplay": 0,
-            "maxred": 0,
+            "maxred": 300,
             "mingreen": 20,
             "name": "Complex God",
             "playables": [
@@ -2196,7 +2217,8 @@
                     "y": 56
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "2": {
             "antigoal": null,
@@ -2211,6 +2233,7 @@
             "height": 16,
             "id": 2,
             "library": 1,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -2223,7 +2246,8 @@
                     "y": 3
                 }
             ],
-            "width": 16
+            "width": 16,
+            "win": "Good Job!"
         },
         "20": {
             "antigoal": null,
@@ -2275,6 +2299,7 @@
             "height": 64,
             "id": 20,
             "library": 10,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
@@ -2293,7 +2318,8 @@
                     "y": 48
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "21": {
             "antigoal": null,
@@ -2450,6 +2476,7 @@
             "height": 64,
             "id": 21,
             "library": 11,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
@@ -2462,7 +2489,8 @@
                     "y": 4
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "22": {
             "antigoal": null,
@@ -2565,6 +2593,7 @@
             "height": 64,
             "id": 22,
             "library": 11,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
@@ -2577,7 +2606,8 @@
                     "y": 0
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "23": {
             "antigoal": null,
@@ -2984,6 +3014,7 @@
             "height": 64,
             "id": 23,
             "library": 11,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
@@ -2996,7 +3027,8 @@
                     "y": 56
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "24": {
             "antigoal": null,
@@ -3030,6 +3062,7 @@
             "height": 64,
             "id": 24,
             "library": 11,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
@@ -3042,7 +3075,8 @@
                     "y": 48
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "25": {
             "antigoal": {
@@ -3133,6 +3167,7 @@
             "height": 64,
             "id": 25,
             "library": 11,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3145,7 +3180,8 @@
                     "y": 48
                 }
             ],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "26": {
             "antigoal": {
@@ -3161,12 +3197,14 @@
             "height": 16,
             "id": 26,
             "library": 1,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": "Good Job!"
         },
         "27": {
             "antigoal": {
@@ -3182,12 +3220,14 @@
             "height": 16,
             "id": 27,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "28": {
             "antigoal": {
@@ -3203,12 +3243,14 @@
             "height": 16,
             "id": 28,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "29": {
             "antigoal": {
@@ -3224,12 +3266,14 @@
             "height": 16,
             "id": 29,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "3": {
             "antigoal": null,
@@ -3261,6 +3305,7 @@
             "height": 20,
             "id": 3,
             "library": 2,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3279,7 +3324,8 @@
                     "y": 8
                 }
             ],
-            "width": 20
+            "width": 20,
+            "win": "Good Job!"
         },
         "30": {
             "antigoal": {
@@ -3295,12 +3341,14 @@
             "height": 16,
             "id": 30,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "31": {
             "antigoal": {
@@ -3316,12 +3364,14 @@
             "height": 16,
             "id": 31,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "32": {
             "antigoal": {
@@ -3337,12 +3387,14 @@
             "height": 16,
             "id": 32,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "33": {
             "antigoal": null,
@@ -3354,12 +3406,14 @@
             "height": 16,
             "id": 33,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "34": {
             "antigoal": null,
@@ -3371,12 +3425,14 @@
             "height": 16,
             "id": 34,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "35": {
             "antigoal": null,
@@ -3388,12 +3444,14 @@
             "height": 16,
             "id": 35,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "36": {
             "antigoal": null,
@@ -3405,12 +3463,14 @@
             "height": 16,
             "id": 36,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "37": {
             "antigoal": null,
@@ -3422,12 +3482,14 @@
             "height": 16,
             "id": 37,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "38": {
             "antigoal": null,
@@ -3439,12 +3501,14 @@
             "height": 16,
             "id": 38,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "39": {
             "antigoal": null,
@@ -3456,12 +3520,14 @@
             "height": 16,
             "id": 39,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "4": {
             "antigoal": null,
@@ -3557,12 +3623,14 @@
             "height": 32,
             "id": 4,
             "library": 1,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Tutorial #4: Symmetry",
             "playables": [],
-            "width": 32
+            "width": 32,
+            "win": "Good Job!"
         },
         "40": {
             "antigoal": null,
@@ -3574,12 +3642,14 @@
             "height": 16,
             "id": 40,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "41": {
             "antigoal": null,
@@ -3591,12 +3661,14 @@
             "height": 16,
             "id": 41,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "42": {
             "antigoal": null,
@@ -3608,12 +3680,14 @@
             "height": 16,
             "id": 42,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "43": {
             "antigoal": null,
@@ -3625,12 +3699,14 @@
             "height": 16,
             "id": 43,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "44": {
             "antigoal": null,
@@ -3642,12 +3718,14 @@
             "height": 16,
             "id": 44,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "45": {
             "antigoal": null,
@@ -3659,12 +3737,14 @@
             "height": 16,
             "id": 45,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "46": {
             "antigoal": null,
@@ -3676,12 +3756,14 @@
             "height": 16,
             "id": 46,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "47": {
             "antigoal": null,
@@ -3693,12 +3775,14 @@
             "height": 16,
             "id": 47,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "48": {
             "antigoal": null,
@@ -3710,12 +3794,14 @@
             "height": 16,
             "id": 48,
             "library": 1,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "width": 16
+            "width": 16,
+            "win": ""
         },
         "5": {
             "antigoal": null,
@@ -3730,6 +3816,7 @@
             "height": 16,
             "id": 5,
             "library": 2,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3742,7 +3829,8 @@
                     "y": 12
                 }
             ],
-            "width": 16
+            "width": 16,
+            "win": "Good Job!"
         },
         "6": {
             "antigoal": null,
@@ -3843,12 +3931,14 @@
             "height": 64,
             "id": 6,
             "library": 4,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Tutorial #6: Intro to Spaceship",
             "playables": [],
-            "width": 32
+            "width": 32,
+            "win": "Good Job!"
         },
         "7": {
             "antigoal": null,
@@ -3870,6 +3960,7 @@
             "height": 32,
             "id": 7,
             "library": 6,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3882,7 +3973,8 @@
                     "y": 23
                 }
             ],
-            "width": 24
+            "width": 24,
+            "win": "Good Job!"
         },
         "8": {
             "antigoal": null,
@@ -3926,12 +4018,14 @@
             "height": 64,
             "id": 8,
             "library": 6,
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Tutorial #8: Multum in Parvo",
             "playables": [],
-            "width": 64
+            "width": 64,
+            "win": "Good Job!"
         },
         "9": {
             "antigoal": null,
@@ -3983,6 +4077,7 @@
             "height": 32,
             "id": 9,
             "library": 6,
+            "lose": "N/A",
             "maxplay": 10,
             "maxred": 0,
             "mingreen": 0,
@@ -3995,7 +4090,8 @@
                     "y": 24
                 }
             ],
-            "width": 19
+            "width": 19,
+            "win": "Good Job!"
         }
     },
     "dictionary": {

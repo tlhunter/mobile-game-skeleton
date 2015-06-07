@@ -390,6 +390,7 @@ MODULE.Level = (function() {
 		this.lost = true;
 
 		this.emit('status', Level.STATUS.LOSE);
+		this.emit('lose');
 	};
 
 	Level.prototype.updateCellState = function(x, y, new_arena) {
