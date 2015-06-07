@@ -52,7 +52,7 @@ MODULE.Level = (function() {
 		this.name = data.name;
 		this.description = data.description;
 
-		this.generations_until_beaten = 0;
+		this.generations_until_beaten = Infinity;
 		this.generation = 0;
 		this.goalPhase = 0;
 		this.lost = false;
@@ -225,6 +225,7 @@ MODULE.Level = (function() {
 
 		this.emit('status', Level.STATUS.STOP);
 
+		this.generations_until_beaten = Infinity;
 		this.playing = false;
 		this.lost = false;
 		this.won = false;
@@ -362,7 +363,7 @@ MODULE.Level = (function() {
 	};
 
 	Level.prototype.winLevel = function() {
-		if (this.generations_until_beaten) {
+		if (isFinite(this.generations_until_beaten)) {
 			return;
 		}
 
@@ -375,7 +376,7 @@ MODULE.Level = (function() {
 
 		this.emit('win', {
 			level: this.level_id,
-			generation: this.generations_until_beaten,
+			generation: this.generation,
 			played: this.countPlayedPieces()
 		});
 	};
@@ -384,7 +385,11 @@ MODULE.Level = (function() {
 		this.lost = true;
 
 		this.emit('status', Level.STATUS.LOSE);
-		this.emit('lose');
+		this.emit('lose', {
+			level: this.level_id,
+			generation: this.generation,
+			played: this.countPlayedPieces()
+		});
 	};
 
 	Level.prototype.updateCellState = function(x, y, new_arena) {

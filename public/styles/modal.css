@@ -83,3 +83,22 @@
 #modal .modal .library img {
 	margin-bottom: 8px;
 }
+
+#modal .summary .ranking {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+}
+
+#modal .summary .group {
+    display: inline-block;
+    height: 60px;
+    vertical-align: top;
+    line-height: 30px;
+}
+
+#modal .flavor {
+	margin-top: 8px;
+}

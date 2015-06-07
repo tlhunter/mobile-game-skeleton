@@ -114,7 +114,7 @@
             "mingreen": 0,
             "name": "Tutorial #1: Hello Glider",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": "You Won!"
         },
@@ -166,20 +166,20 @@
                     "y": 7
                 }
             ],
-            "rank": {
-                "a": {
-                    "g": 999,
-                    "p": 3
+            "rank": [
+                {
+                    "p": 3,
+                    "r": "a"
                 },
-                "b": {
-                    "g": 999,
-                    "p": 4
+                {
+                    "p": 4,
+                    "r": "b"
                 },
-                "c": {
-                    "g": 999,
-                    "p": 5
+                {
+                    "p": 5,
+                    "r": "c"
                 }
-            },
+            ],
             "width": 16,
             "win": "You Won!"
         },
@@ -207,7 +207,7 @@
             "mingreen": 0,
             "name": "asdf",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 12,
             "win": "You Won!"
         },
@@ -284,7 +284,7 @@
                     "y": 48
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -582,7 +582,7 @@
                     "y": 0
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -862,7 +862,7 @@
                     "y": 0
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -1085,7 +1085,7 @@
                     "y": 24
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -1453,7 +1453,7 @@
                     "y": 39
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -2053,7 +2053,7 @@
                     "y": 5
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -2134,7 +2134,7 @@
                     "y": 56
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -2240,7 +2240,7 @@
                     "y": 56
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -2270,11 +2270,12 @@
                     "y": 3
                 }
             ],
-            "rank": {
-                "a": {
-                    "p": 5
+            "rank": [
+                {
+                    "p": 5,
+                    "r": "a"
                 }
-            },
+            ],
             "width": 16,
             "win": "You Won!"
         },
@@ -2347,7 +2348,7 @@
                     "y": 48
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -2519,7 +2520,7 @@
                     "y": 4
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -2637,7 +2638,7 @@
                     "y": 0
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -3059,7 +3060,7 @@
                     "y": 56
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -3108,7 +3109,7 @@
                     "y": 48
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -3214,7 +3215,7 @@
                     "y": 48
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -3238,7 +3239,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": "You Won!"
         },
@@ -3262,7 +3263,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3286,7 +3287,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3310,7 +3311,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3363,11 +3364,12 @@
                     "y": 8
                 }
             ],
-            "rank": {
-                "a": {
-                    "p": 10
+            "rank": [
+                {
+                    "p": 10,
+                    "r": "a"
                 }
-            },
+            ],
             "width": 20,
             "win": "You Won!"
         },
@@ -3391,7 +3393,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3415,7 +3417,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3439,7 +3441,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3459,7 +3461,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3479,7 +3481,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3499,7 +3501,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3519,7 +3521,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3539,7 +3541,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3559,7 +3561,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3579,7 +3581,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3683,7 +3685,7 @@
             "mingreen": 0,
             "name": "Tutorial #4: Symmetry",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 32,
             "win": "You Won!"
         },
@@ -3703,7 +3705,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3723,7 +3725,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3743,7 +3745,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3763,7 +3765,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3783,7 +3785,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3803,7 +3805,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3823,7 +3825,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3843,7 +3845,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3863,7 +3865,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 16,
             "win": ""
         },
@@ -3893,7 +3895,24 @@
                     "y": 12
                 }
             ],
-            "rank": null,
+            "rank": [
+                {
+                    "g": 45,
+                    "r": "a"
+                },
+                {
+                    "g": 44,
+                    "r": "b"
+                },
+                {
+                    "g": 43,
+                    "r": "c"
+                },
+                {
+                    "g": 42,
+                    "r": "d"
+                }
+            ],
             "width": 16,
             "win": "You Won!"
         },
@@ -4002,7 +4021,7 @@
             "mingreen": 0,
             "name": "Tutorial #6: Intro to Spaceship",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 32,
             "win": "You Won!"
         },
@@ -4039,7 +4058,7 @@
                     "y": 23
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 24,
             "win": "You Won!"
         },
@@ -4091,7 +4110,7 @@
             "mingreen": 0,
             "name": "Tutorial #8: Multum in Parvo",
             "playables": [],
-            "rank": null,
+            "rank": [],
             "width": 64,
             "win": "You Won!"
         },
@@ -4158,7 +4177,7 @@
                     "y": 24
                 }
             ],
-            "rank": null,
+            "rank": [],
             "width": 19,
             "win": "You Won!"
         }
@@ -4241,29 +4260,68 @@
     },
     "ranks": {
         "a": {
+            "code": "A",
+            "color": "#ffffff",
             "id": "a",
-            "name": "A"
+            "image": "images/ranks/a.png",
+            "name": "Expert",
+            "score": 5,
+            "type": "default"
         },
         "b": {
+            "code": "B",
+            "color": "#99ffff",
             "id": "b",
-            "name": "B"
+            "image": "images/ranks/b.png",
+            "name": "Professional",
+            "score": 4,
+            "type": ""
         },
         "c": {
+            "code": "C",
+            "color": "#ffff99",
             "id": "c",
-            "name": "C"
+            "image": "images/ranks/c.png",
+            "name": "Average",
+            "score": 3,
+            "type": ""
         },
         "d": {
+            "code": "D",
+            "color": "#ff9999",
             "id": "d",
-            "name": "D"
+            "image": "images/ranks/d.png",
+            "name": "Below Average",
+            "score": 2,
+            "type": ""
         },
         "e": {
+            "code": "E",
+            "color": "#999999",
             "id": "e",
-            "name": "E"
+            "image": "images/ranks/e.png",
+            "name": "Poor",
+            "score": 1,
+            "type": "worst"
         },
         "f": {
+            "code": "F",
+            "color": "#ff0000",
             "id": "f",
-            "name": "F"
+            "image": "images/ranks/f.png",
+            "name": "Failure",
+            "score": 0,
+            "type": "failure"
+        },
+        "x": {
+            "code": "X",
+            "color": "#666666",
+            "id": "x",
+            "image": "images/ranks/x.png",
+            "name": "Unplayed",
+            "score": 0,
+            "type": "unplayed"
         }
     },
-    "version": "20150607185944"
+    "version": "20150607210339"
 }

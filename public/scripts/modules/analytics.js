@@ -6,8 +6,8 @@ MODULE.Analytics = (function() {
     var Analytics = function() {
     };
 
-    Analytics.prototype.init = function() {
-        this.identifier = app.content.data.dictionary.mixpanel;
+    Analytics.prototype.init = function(identifier) {
+        this.identifier = identifier;
 
         window.mixpanel.init(this.identifier);
     };

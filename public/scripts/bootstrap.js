@@ -14,6 +14,7 @@ if (!MODULE) { var MODULE = {}; }
 		audio: new MODULE.Audio(),
 		content: new MODULE.Content(),
 		modal: new MODULE.Modal(),
+		rank: new MODULE.Rank(),
 		device: new MODULE.Device(),
 		reload: location.reload.bind(location),
 		screen: new MODULE.Screen({
@@ -32,9 +33,11 @@ if (!MODULE) { var MODULE = {}; }
 	app.screen.display('splash');
 
 	app.content.load(function() {
-		app.audio.init();
-		app.analytics.init();
-		app.advertisement.init();
+		app.audio.init(app.content.data.audio);
+		// TODO? app.audio = new MODULE.Audio(app.content.data.audio);
+		app.analytics.init(app.content.data.dictionary.mixpanel);
+		app.advertisement.init(app.content.data.dictionary.admob);
+		app.rank.init(app.content.data.ranks);
 		app.screen.get('splash').finish();
 	});
 })();

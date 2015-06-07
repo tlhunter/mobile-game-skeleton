@@ -14,11 +14,11 @@
 	text-align: center;
 	margin: 8px;
 	font-size: 16px;
+	outline-width: 2px;
+	outline-style: solid;
 }
 
 #screen-campaign .levels .level.available {
-	color: #fff;
-	outline: 2px solid #fff;
 	cursor: pointer;
 }
 
@@ -30,9 +30,3 @@
     -moz-animation: cycle 2s linear infinite;
     animation: cycle 2s linear infinite;
 }
-
-#screen-campaign .levels .level.unavailable {
-	color: #666;
-	outline: 2px solid #666;
-}
-

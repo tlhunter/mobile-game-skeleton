@@ -7,8 +7,8 @@ MODULE.Advertisement = (function() {
         this.identifier = identifier;
     };
 
-    Advertisement.prototype.init = function() {
-        this.identifier = app.content.data.dictionary.admob;
+    Advertisement.prototype.init = function(identifier) {
+        this.identifier = identifier;
     };
 
     Advertisement.prototype.fullscreen = function() {

@@ -20,9 +20,7 @@ MODULE.Audio = (function() {
         SOUND: 'mute-sound'
     };
 
-    Audio.prototype.init = function() {
-        var data = app.content.data.audio;
-
+    Audio.prototype.init = function(data) {
         Object.keys(data).forEach(function(audio_id) {
             var audio = data[audio_id];
 

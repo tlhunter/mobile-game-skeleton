@@ -112,20 +112,29 @@ MODULE.LevelScreen = (function() {
             if (data.level === my_level + 1) {
                 levelup = true;
                 app.storage.set('level', data.level);
-                console.log('levelup, calculate grade', data.generation, data.played);
                 self.displayAdIfNeeded(data.level);
             }
 
-            app.modal.show(
-                campaign.win, [{
-                    text: "Stay"
-                },{
-                    text: "Next Level",
-                    callback: function() {
-                        app.screen.display('level', self.level_id + 1);
-                    }
-                }], true
-            );
+            var rank = app.rank.get(data.level, data.generation, data.played);
+
+            var rank_up = app.rank.report(data.level, rank.id);
+
+            console.log('Rank up?', rank_up, rank);
+
+            var content = LevelScreen.resultModal(rank, campaign.win, data.generation, data.played);
+
+            if (levelup || rank_up) {
+                app.modal.show(
+                    content, [{
+                        text: "Stay"
+                    },{
+                        text: "Next Level",
+                        callback: function() {
+                            app.screen.display('level', self.level_id + 1);
+                        }
+                    }], true
+                );
+            }
 
             app.analytics.track('LEVEL-WIN', {
                 level: data.level,
@@ -134,9 +143,13 @@ MODULE.LevelScreen = (function() {
                 levelup: levelup
             });
         })
-        .on('lose', function() {
+        .on('lose', function(data) {
+            var rank = app.rank.getFailure();
+
+            var content = LevelScreen.resultModal(rank, campaign.lose, data.generation, data.played);
+
             app.modal.show(
-                campaign.lose, [{
+                content, [{
                     text: "Ok"
                 }], true
             );
@@ -225,6 +238,19 @@ MODULE.LevelScreen = (function() {
         if (level >= min && level % mod === 0) {
             app.advertisement.fullscreen();
         }
+    };
+
+    LevelScreen.resultModal = function(rank, flavor, gen, played) {
+        var html = "<div class='summary'>\n";
+            html += "<div class='ranking' style='background-image: url(\"" + rank.image + "\");'></div>\n";
+            html += "<div class='group'>\n";
+                html += "<div class='name' style='color: " + rank.color + "'>" + rank.name + "</div>\n";
+                html += "<div class='stats'>Gen: <span class='cycle'>" + gen + "</span> Played: <span class='cycle'>" + played + "</span></div>\n";
+            html += "</div>\n";
+        html += "</div>\n";
+        html += "<div class='flavor'>\n" + flavor + "</div>\n";
+
+        return html;
     };
 
     LevelScreen.prototype.setGenerationGoal = function(generation) {
