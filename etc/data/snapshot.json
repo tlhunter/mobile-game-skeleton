@@ -114,8 +114,9 @@
             "mingreen": 0,
             "name": "Tutorial #1: Hello Glider",
             "playables": [],
+            "rank": null,
             "width": 16,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "10": {
             "antigoal": {
@@ -152,7 +153,7 @@
             "height": 16,
             "id": 10,
             "library": 6,
-            "lose": "Hint: Try to cut off the glider and keep the Anti Goal from activating within 50 generations!",
+            "lose": "You Lost!<br /><br />Hint: Try to cut off the glider and keep the Anti Goal from activating within 50 generations!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -165,8 +166,22 @@
                     "y": 7
                 }
             ],
+            "rank": {
+                "a": {
+                    "g": 999,
+                    "p": 3
+                },
+                "b": {
+                    "g": 999,
+                    "p": 4
+                },
+                "c": {
+                    "g": 999,
+                    "p": 5
+                }
+            },
             "width": 16,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "11": {
             "antigoal": null,
@@ -192,8 +207,9 @@
             "mingreen": 0,
             "name": "asdf",
             "playables": [],
+            "rank": null,
             "width": 12,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "12": {
             "antigoal": null,
@@ -268,8 +284,9 @@
                     "y": 48
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "13": {
             "antigoal": null,
@@ -565,8 +582,9 @@
                     "y": 0
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "14": {
             "antigoal": null,
@@ -844,8 +862,9 @@
                     "y": 0
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "15": {
             "antigoal": null,
@@ -1066,8 +1085,9 @@
                     "y": 24
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "16": {
             "antigoal": null,
@@ -1433,8 +1453,9 @@
                     "y": 39
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "17": {
             "antigoal": null,
@@ -2032,8 +2053,9 @@
                     "y": 5
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "18": {
             "antigoal": null,
@@ -2112,8 +2134,9 @@
                     "y": 56
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "19": {
             "antigoal": null,
@@ -2217,8 +2240,9 @@
                     "y": 56
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "2": {
             "antigoal": null,
@@ -2246,8 +2270,13 @@
                     "y": 3
                 }
             ],
+            "rank": {
+                "a": {
+                    "p": 5
+                }
+            },
             "width": 16,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "20": {
             "antigoal": null,
@@ -2318,8 +2347,9 @@
                     "y": 48
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "21": {
             "antigoal": null,
@@ -2489,8 +2519,9 @@
                     "y": 4
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "22": {
             "antigoal": null,
@@ -2606,8 +2637,9 @@
                     "y": 0
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "23": {
             "antigoal": null,
@@ -3027,8 +3059,9 @@
                     "y": 56
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "24": {
             "antigoal": null,
@@ -3075,8 +3108,9 @@
                     "y": 48
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "25": {
             "antigoal": {
@@ -3180,8 +3214,9 @@
                     "y": 48
                 }
             ],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "26": {
             "antigoal": {
@@ -3203,8 +3238,9 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "27": {
             "antigoal": {
@@ -3226,6 +3262,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3249,6 +3286,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3272,6 +3310,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3324,8 +3363,13 @@
                     "y": 8
                 }
             ],
+            "rank": {
+                "a": {
+                    "p": 10
+                }
+            },
             "width": 20,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "30": {
             "antigoal": {
@@ -3347,6 +3391,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3370,6 +3415,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3393,6 +3439,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3412,6 +3459,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3431,6 +3479,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3450,6 +3499,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3469,6 +3519,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3488,6 +3539,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3507,6 +3559,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3526,6 +3579,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3629,8 +3683,9 @@
             "mingreen": 0,
             "name": "Tutorial #4: Symmetry",
             "playables": [],
+            "rank": null,
             "width": 32,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "40": {
             "antigoal": null,
@@ -3648,6 +3703,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3667,6 +3723,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3686,6 +3743,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3705,6 +3763,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3724,6 +3783,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3743,6 +3803,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3762,6 +3823,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3781,6 +3843,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3800,6 +3863,7 @@
             "mingreen": 0,
             "name": "Placeholder",
             "playables": [],
+            "rank": null,
             "width": 16,
             "win": ""
         },
@@ -3829,8 +3893,9 @@
                     "y": 12
                 }
             ],
+            "rank": null,
             "width": 16,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "6": {
             "antigoal": null,
@@ -3937,8 +4002,9 @@
             "mingreen": 0,
             "name": "Tutorial #6: Intro to Spaceship",
             "playables": [],
+            "rank": null,
             "width": 32,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "7": {
             "antigoal": null,
@@ -3973,8 +4039,9 @@
                     "y": 23
                 }
             ],
+            "rank": null,
             "width": 24,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "8": {
             "antigoal": null,
@@ -4024,8 +4091,9 @@
             "mingreen": 0,
             "name": "Tutorial #8: Multum in Parvo",
             "playables": [],
+            "rank": null,
             "width": 64,
-            "win": "Good Job!"
+            "win": "You Won!"
         },
         "9": {
             "antigoal": null,
@@ -4090,14 +4158,18 @@
                     "y": 24
                 }
             ],
+            "rank": null,
             "width": 19,
-            "win": "Good Job!"
+            "win": "You Won!"
         }
     },
     "dictionary": {
+        "ad_min_level": 12,
+        "ad_mod_level": 4,
+        "admob": "pub-3769178507272044",
         "confirm_reset": "Are you SURE you would like to destroy all your progress and start over?",
         "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green Playable Zone to toggle cells.</p>\n<p>No cells can be alive in the red Dead Zones.</p>\n<p>The rainbow tiles are Goal tiles and need to be activiated to beat levels.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n<li>Any live cell with fewer than two live neighbours dies.</li>\n<li>Any live cell with two or three live neighbours lives.</li>\n<li>Any live cell with more than three live neighbours dies.</li>\n<li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life on WikiPedia</a>.</p>",
-        "win_level": "Congratulations! You won the level."
+        "mixpanel": "f598ce903232263c47ca516bff05c18b"
     },
     "library": {
         "1": {
@@ -4166,5 +4238,32 @@
             "name": "Sparky",
             "url": "http://www.conwaylife.com/wiki/Sparky"
         }
-    }
+    },
+    "ranks": {
+        "a": {
+            "id": "a",
+            "name": "A"
+        },
+        "b": {
+            "id": "b",
+            "name": "B"
+        },
+        "c": {
+            "id": "c",
+            "name": "C"
+        },
+        "d": {
+            "id": "d",
+            "name": "D"
+        },
+        "e": {
+            "id": "e",
+            "name": "E"
+        },
+        "f": {
+            "id": "f",
+            "name": "F"
+        }
+    },
+    "version": "20150607185944"
 }
