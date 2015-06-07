@@ -98,10 +98,11 @@ MODULE.LevelScreen = (function() {
                 self.lose();
             }
         })
-        .on('win', function(old_level, new_level) {
+        .on('win', function(old_level, new_level, generation) {
             app.analytics.track('LEVEL-WIN', {
                 level: old_level,
-                new_level: new_level
+                new_level: new_level,
+                generation: generation
             });
 
             app.modal.show(
