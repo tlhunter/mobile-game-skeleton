@@ -68,15 +68,15 @@ MODULE.LevelScreen = (function() {
 
         this.level_id = level_id;
 
-        var raw_level = app.content.data.campaign[level_id];
-        this.$title.html(raw_level.name);
+        var campaign = app.content.data.campaign[level_id];
+        this.$title.html(campaign.name);
 
         var constraints = {
             width: app.device.viewport.width,
             height: app.device.viewport.height - (this.$footer.outerHeight() + this.$header.outerHeight())
         };
 
-        this.level = new MODULE.Level(raw_level, this.$level, constraints);
+        this.level = new MODULE.Level(campaign, this.$level, constraints);
 
         this.grid = new MODULE.Grid(
             this.level.dimensions.width,
@@ -99,15 +99,25 @@ MODULE.LevelScreen = (function() {
                 self.lose();
             }
         })
-        .on('levelup', function(old_level, new_level, generation) {
-            app.analytics.track('LEVEL-WIN', {
-                level: old_level,
-                new_level: new_level,
-                generation: generation
-            });
+        .on('win', function(data) {
+            var my_level = app.storage.get('level', 0);
+            var max_level = Object.keys(app.content.data.campaign).length;
+            var levelup = false;
+
+            if (data.level === max_level) {
+                // TODO: Congratulate user on winning
+                console.log("Beat the final level... Now what?");
+            }
+
+            if (data.level === my_level + 1) {
+                levelup = true;
+                app.storage.set('level', data.level);
+                console.log('levelup, calculate grade', data.generation, data.played);
+                self.displayAdIfNeeded(data.level);
+            }
 
             app.modal.show(
-                app.content.data.campaign[self.level_id].win, [{
+                campaign.win, [{
                     text: "Stay"
                 },{
                     text: "Next Level",
@@ -116,12 +126,17 @@ MODULE.LevelScreen = (function() {
                     }
                 }], true
             );
-        })
-        .on('win', function() {
+
+            app.analytics.track('LEVEL-WIN', {
+                level: data.level,
+                generation: data.generation,
+                played: data.played,
+                levelup: levelup
+            });
         })
         .on('lose', function() {
             app.modal.show(
-                app.content.data.campaign[self.level_id].lose, [{
+                campaign.lose, [{
                     text: "Ok"
                 }], true
             );
@@ -201,6 +216,15 @@ MODULE.LevelScreen = (function() {
         this.setGenerationGoal(0);
         this.setMaxPlay(0);
         this.$screen.hide();
+    };
+
+    LevelScreen.prototype.displayAdIfNeeded = function(level) {
+        var min = app.content.data.dictionary.ad_min_level;
+        var mod = app.content.data.dictionary.ad_mod_level;
+
+        if (level >= min && level % mod === 0) {
+            app.advertisement.fullscreen();
+        }
     };
 
     LevelScreen.prototype.setGenerationGoal = function(generation) {

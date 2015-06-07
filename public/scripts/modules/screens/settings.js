@@ -18,6 +18,8 @@ MODULE.SettingsScreen = (function() {
         this.$sound_mute = this.$buttons.sound.find('span');
         this.$music_mute = this.$buttons.music.find('span');
 
+        this.$version = this.$screen.find('.version');
+
         this.$buttons.back.on('click', this.onBack.bind(this));
         this.$buttons.reset.on('click', this.onReset.bind(this));
         this.$buttons.refresh.on('click', this.onRefresh.bind(this));
@@ -26,6 +28,8 @@ MODULE.SettingsScreen = (function() {
     };
 
     SettingsScreen.prototype.display = function() {
+        this.$version.text(app.content.data.version);
+
         this.$screen.show();
 
         app.analytics.track('SCREEN-SETTINGS');

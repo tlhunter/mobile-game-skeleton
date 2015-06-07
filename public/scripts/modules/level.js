@@ -373,19 +373,11 @@ MODULE.Level = (function() {
 		console.log("Game won in " + this.generation + " generations!");
 		this.generations_until_beaten = this.generation;
 
-		var my_level = app.storage.get('level', 0);
-		var max_level = Object.keys(app.content.data.campaign).length;
-
-		this.emit('win');
-
-		if (this.level_id === max_level) {
-			// TODO: Congratulate user on winning
-			console.log("Beat the final level... Now what?");
-		} else if (this.level_id === my_level + 1) {
-			this.emit('levelup', my_level, this.level_id, this.generations_until_beaten);
-			app.storage.set('level', this.level_id);
-			console.log("beat most recent level. unlocking next level");
-		}
+		this.emit('win', {
+			level: this.level_id,
+			generation: this.generations_until_beaten,
+			played: this.countPlayedPieces()
+		});
 	};
 
 	Level.prototype.loseLevel = function() {

@@ -8,7 +8,6 @@ MODULE.Grid = (function() {
         this.height = height;
         this.$container = $container.empty();
         this.size = size;
-        console.log(arguments);
 
 		var $grid = $('<canvas width="' + this.width * this.size + '" height="' + this.height * this.size + '"></canvas>');
 

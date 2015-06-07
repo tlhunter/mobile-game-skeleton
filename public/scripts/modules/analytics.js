@@ -3,10 +3,13 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Analytics = (function() {
-    var Analytics = function(mixpanel_id) {
-        this.mixpanel_id = mixpanel_id;
+    var Analytics = function() {
+    };
 
-        window.mixpanel.init(mixpanel_id);
+    Analytics.prototype.init = function() {
+        this.identifier = app.content.data.dictionary.mixpanel;
+
+        window.mixpanel.init(this.identifier);
     };
 
     Analytics.prototype.track = function(event, data) {
