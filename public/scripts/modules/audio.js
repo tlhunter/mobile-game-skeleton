@@ -48,7 +48,6 @@ MODULE.Audio = (function() {
         }
 
         if (app.storage.get(Audio.MUTE.MUSIC, false)) {
-            console.log('muted');
             return;
         }
 

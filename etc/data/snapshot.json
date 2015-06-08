@@ -108,15 +108,15 @@
             "height": 16,
             "id": 1,
             "library": 1,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Tutorial #1: Hello Glider",
+            "name": "Tutorial #1: Glider",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": "You Won!"
+            "win": "Every time you win you'll see a results screen like this one."
         },
         "10": {
             "antigoal": {
@@ -153,7 +153,7 @@
             "height": 16,
             "id": 10,
             "library": 6,
-            "lose": "You Lost!<br /><br />Hint: Try to cut off the glider and keep the Anti Goal from activating within 50 generations!",
+            "lose": "Try to cut off the glider and keep the Anti Goal from activating.",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -193,7 +193,7 @@
             ],
             "chapter": 2,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": {
                 "x": 1,
                 "y": 1
@@ -201,11 +201,11 @@
             "height": 12,
             "id": 11,
             "library": 6,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "asdf",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 12,
@@ -271,11 +271,11 @@
             "height": 64,
             "id": 12,
             "library": 6,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 10,
-            "name": "Hookshot",
+            "name": "TODO: Hookshot",
             "playables": [
                 {
                     "h": 16,
@@ -569,11 +569,11 @@
             "height": 64,
             "id": 13,
             "library": 6,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Flock of Gliders",
+            "name": "TODO: Flock of Gliders",
             "playables": [
                 {
                     "h": 16,
@@ -849,11 +849,11 @@
             "height": 64,
             "id": 14,
             "library": 7,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Pentadecathlon",
+            "name": "TODO: Pentadecathlon",
             "playables": [
                 {
                     "h": 64,
@@ -1072,11 +1072,11 @@
             "height": 64,
             "id": 15,
             "library": 8,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Abaddon: Destroyer of Worlds",
+            "name": "TODO: Abaddon",
             "playables": [
                 {
                     "h": 8,
@@ -1434,11 +1434,11 @@
             "height": 64,
             "id": 16,
             "library": 9,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Hey there Sparky!",
+            "name": "TODO: Hey there Sparky!",
             "playables": [
                 {
                     "h": 8,
@@ -2004,11 +2004,11 @@
             "height": 64,
             "id": 17,
             "library": 9,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
-            "name": "Gated Spaceship Depot",
+            "name": "TODO: Spaceship Depot",
             "playables": [
                 {
                     "h": 0,
@@ -2103,11 +2103,11 @@
             "height": 64,
             "id": 18,
             "library": 10,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
-            "name": "God Complex",
+            "name": "TODO: God Complex",
             "playables": [
                 {
                     "h": 8,
@@ -2209,11 +2209,11 @@
             "height": 64,
             "id": 19,
             "library": 10,
-            "lose": "N/A",
+            "lose": "Keep an eye on those Red cells!",
             "maxplay": 0,
             "maxred": 300,
             "mingreen": 20,
-            "name": "Complex God",
+            "name": "TODO: Complex God",
             "playables": [
                 {
                     "h": 8,
@@ -2257,7 +2257,7 @@
             "height": 16,
             "id": 2,
             "library": 1,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -2329,11 +2329,11 @@
             "height": 64,
             "id": 20,
             "library": 10,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
-            "name": "Fanblades II",
+            "name": "TODO: Fanblades II",
             "playables": [
                 {
                     "h": 16,
@@ -2507,11 +2507,11 @@
             "height": 64,
             "id": 21,
             "library": 11,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
-            "name": "Orion's Belt",
+            "name": "TODO: Orion's Belt",
             "playables": [
                 {
                     "h": 12,
@@ -2625,11 +2625,11 @@
             "height": 64,
             "id": 22,
             "library": 11,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
-            "name": "Many Hats",
+            "name": "TODO: Many Hats",
             "playables": [
                 {
                     "h": 12,
@@ -3047,11 +3047,11 @@
             "height": 64,
             "id": 23,
             "library": 11,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
-            "name": "<blink>&lt;blink&gt;blink&lt;/blink&gt;</blink>",
+            "name": "TODO: Blinkerton",
             "playables": [
                 {
                     "h": 8,
@@ -3096,11 +3096,11 @@
             "height": 64,
             "id": 24,
             "library": 11,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 20,
-            "name": "Getting Difficult",
+            "name": "TODO: Getting Difficult",
             "playables": [
                 {
                     "h": 16,
@@ -3114,11 +3114,7 @@
             "win": "You Won!"
         },
         "25": {
-            "antigoal": {
-                "g": 200,
-                "x": 64,
-                "y": 64
-            },
+            "antigoal": null,
             "arena": [
                 [
                     45,
@@ -3202,11 +3198,11 @@
             "height": 64,
             "id": 25,
             "library": 11,
-            "lose": "N/A",
+            "lose": "Careful with that Anti Goal!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Round the Bend",
+            "name": "TODO: Round the Bend",
             "playables": [
                 {
                     "h": 16,
@@ -3222,8 +3218,8 @@
         "26": {
             "antigoal": {
                 "g": 200,
-                "x": 64,
-                "y": 64
+                "x": 3,
+                "y": 3
             },
             "arena": [],
             "chapter": 4,
@@ -3233,11 +3229,11 @@
             "height": 16,
             "id": 26,
             "library": 1,
-            "lose": "N/A",
+            "lose": "Careful with that Anti Goal!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
@@ -3246,110 +3242,110 @@
         "27": {
             "antigoal": {
                 "g": 200,
-                "x": 64,
-                "y": 64
+                "x": 3,
+                "y": 3
             },
             "arena": [],
             "chapter": 4,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 27,
             "library": 1,
-            "lose": "",
+            "lose": "Careful with that Anti Goal!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "28": {
             "antigoal": {
                 "g": 200,
-                "x": 64,
-                "y": 64
+                "x": 3,
+                "y": 3
             },
             "arena": [],
             "chapter": 4,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 28,
             "library": 1,
-            "lose": "",
+            "lose": "Careful with that Anti Goal!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "29": {
             "antigoal": {
                 "g": 200,
-                "x": 64,
-                "y": 64
+                "x": 3,
+                "y": 3
             },
             "arena": [],
             "chapter": 4,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 29,
             "library": 1,
-            "lose": "",
+            "lose": "Careful with that Anti Goal!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "3": {
             "antigoal": null,
             "arena": [
                 [
-                    16,
-                    15
+                    12,
+                    11
                 ],
                 [
-                    16,
-                    16
+                    12,
+                    12
                 ],
                 [
-                    17,
-                    15
+                    13,
+                    11
                 ],
                 [
-                    17,
-                    16
+                    13,
+                    12
                 ]
             ],
             "chapter": 1,
             "deadzones": [],
             "description": "This time, there's something in the way of your <strong>Goal</strong>! This simple shape is called a <strong>Blinker</strong>, and will flip between being horizontal and vertical. Since there are two \\\"frames\\\" of this animation, it can be thought of as a <strong>Period 2 Oscillator</strong>.<br /><br />If you draw a <strong>Glider</strong> in the lower right corner of the playfield, then draw another one to the upper left of it, the first should destroy the barrier, and the second can activate the <strong>Goal</strong>.",
             "goal": {
-                "x": 19,
-                "y": 19
+                "x": 15,
+                "y": 15
             },
-            "height": 20,
+            "height": 16,
             "id": 3,
             "library": 2,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Tutorial #3: Build more Gliders",
+            "name": "Tutorial #3: Build Two Gliders",
             "playables": [
                 {
                     "h": 3,
@@ -3360,8 +3356,8 @@
                 {
                     "h": 3,
                     "w": 3,
-                    "x": 8,
-                    "y": 8
+                    "x": 5,
+                    "y": 5
                 }
             ],
             "rank": [
@@ -3370,207 +3366,207 @@
                     "r": "a"
                 }
             ],
-            "width": 20,
+            "width": 16,
             "win": "You Won!"
         },
         "30": {
             "antigoal": {
                 "g": 200,
-                "x": 64,
-                "y": 64
+                "x": 3,
+                "y": 3
             },
             "arena": [],
             "chapter": 4,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 30,
             "library": 1,
-            "lose": "",
+            "lose": "Careful with that Anti Goal!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "31": {
             "antigoal": {
                 "g": 200,
-                "x": 64,
-                "y": 64
+                "x": 3,
+                "y": 3
             },
             "arena": [],
             "chapter": 4,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 31,
             "library": 1,
-            "lose": "",
+            "lose": "Keep an eye on those Red cells!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "32": {
             "antigoal": {
                 "g": 200,
-                "x": 64,
-                "y": 64
+                "x": 3,
+                "y": 3
             },
             "arena": [],
             "chapter": 4,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 32,
             "library": 1,
-            "lose": "",
+            "lose": "Keep an eye on those Red cells!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "33": {
             "antigoal": null,
             "arena": [],
             "chapter": 5,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 33,
             "library": 1,
-            "lose": "",
+            "lose": "Keep an eye on those Red cells!",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "34": {
             "antigoal": null,
             "arena": [],
             "chapter": 5,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 34,
             "library": 1,
-            "lose": "",
+            "lose": "Keep an eye on those Red cells!",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "35": {
             "antigoal": null,
             "arena": [],
             "chapter": 5,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 35,
             "library": 1,
-            "lose": "",
+            "lose": "Keep an eye on those Red cells!",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "36": {
             "antigoal": null,
             "arena": [],
             "chapter": 5,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 36,
             "library": 1,
-            "lose": "",
+            "lose": "Keep an eye on those Red cells!",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "37": {
             "antigoal": null,
             "arena": [],
             "chapter": 5,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 37,
             "library": 1,
-            "lose": "",
+            "lose": "Keep an eye on those Red cells!",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "38": {
             "antigoal": null,
             "arena": [],
             "chapter": 5,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 38,
             "library": 1,
-            "lose": "",
+            "lose": "Keep an eye on those Red cells!",
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "39": {
             "antigoal": null,
             "arena": [],
             "chapter": 5,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 39,
@@ -3579,11 +3575,11 @@
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "4": {
             "antigoal": null,
@@ -3679,7 +3675,7 @@
             "height": 32,
             "id": 4,
             "library": 1,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3687,14 +3683,14 @@
             "playables": [],
             "rank": [],
             "width": 32,
-            "win": "You Won!"
+            "win": "Remember, flipping and rotating objects will flip and rotate what they do!"
         },
         "40": {
             "antigoal": null,
             "arena": [],
             "chapter": 5,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 40,
@@ -3703,18 +3699,18 @@
             "maxplay": 0,
             "maxred": 40,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "41": {
             "antigoal": null,
             "arena": [],
             "chapter": 6,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 41,
@@ -3723,18 +3719,18 @@
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "42": {
             "antigoal": null,
             "arena": [],
             "chapter": 6,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 42,
@@ -3743,18 +3739,18 @@
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "43": {
             "antigoal": null,
             "arena": [],
             "chapter": 6,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 43,
@@ -3763,18 +3759,18 @@
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "44": {
             "antigoal": null,
             "arena": [],
             "chapter": 6,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 44,
@@ -3783,18 +3779,18 @@
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "45": {
             "antigoal": null,
             "arena": [],
             "chapter": 6,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 45,
@@ -3803,18 +3799,18 @@
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "46": {
             "antigoal": null,
             "arena": [],
             "chapter": 6,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 46,
@@ -3823,18 +3819,18 @@
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "47": {
             "antigoal": null,
             "arena": [],
             "chapter": 6,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 47,
@@ -3843,18 +3839,18 @@
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "48": {
             "antigoal": null,
             "arena": [],
             "chapter": 6,
             "deadzones": [],
-            "description": "",
+            "description": "Placeholder",
             "goal": null,
             "height": 16,
             "id": 48,
@@ -3863,18 +3859,18 @@
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Placeholder",
+            "name": "TODO",
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "5": {
             "antigoal": null,
             "arena": [],
             "chapter": 1,
             "deadzones": [],
-            "description": "Goal in Upper Left",
+            "description": "Use your new found rotation ability to beat this level!",
             "goal": {
                 "x": 1,
                 "y": 1
@@ -3882,7 +3878,7 @@
             "height": 16,
             "id": 5,
             "library": 2,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3921,109 +3917,96 @@
             "arena": [
                 [
                     21,
-                    55
+                    23
                 ],
                 [
                     22,
-                    55
+                    23
                 ],
                 [
                     23,
-                    55
+                    23
                 ],
                 [
                     2,
-                    56
+                    24
                 ],
                 [
                     3,
-                    56
+                    24
                 ],
                 [
                     4,
-                    56
+                    24
                 ],
                 [
                     21,
-                    56
+                    24
                 ],
                 [
                     24,
-                    56
+                    24
                 ],
                 [
                     2,
-                    57
+                    25
                 ],
                 [
                     5,
-                    57
+                    25
                 ],
                 [
                     21,
-                    57
+                    25
                 ],
                 [
                     2,
-                    58
+                    26
                 ],
                 [
                     21,
-                    58
+                    26
                 ],
                 [
                     2,
-                    59
+                    27
                 ],
                 [
                     22,
-                    59
+                    27
                 ],
                 [
                     24,
-                    59
+                    27
                 ],
                 [
                     3,
-                    60
+                    28
                 ],
                 [
                     5,
-                    60
+                    28
                 ]
             ],
             "chapter": 1,
-            "deadzones": [
-                {
-                    "height": 1,
-                    "width": 13,
-                    "x": 7,
-                    "y": 56
-                },
-                {
-                    "height": 1,
-                    "width": 13,
-                    "x": 7,
-                    "y": 60
-                }
-            ],
+            "deadzones": [],
             "description": "In this level we have two Spaceships. Much like a Glider, a Spaceship can move across the playing field and retain its original shape.<br /><br />An interesting phenomenon happens when a spaceship collides with the edge of the field. Depending on it's distance from the edge, it will form a glider which will travel either right or left from the wall, depending on the distance.<br /><br />If you ever find yourself wanting to get around a corner be sure to try this technique, adjusting the distance if necessary.",
             "goal": {
                 "x": 15,
                 "y": 8
             },
-            "height": 64,
+            "height": 32,
             "id": 6,
             "library": 4,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Tutorial #6: Intro to Spaceship",
+            "name": "Tutorial #6: Spaceship",
             "playables": [],
             "rank": [],
             "width": 32,
-            "win": "You Won!"
+            "win": "Remember, moving a spaceship 1 unit from a wall changes the glider direction."
         },
         "7": {
             "antigoal": null,
@@ -4045,7 +4028,7 @@
             "height": 32,
             "id": 7,
             "library": 6,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -4058,7 +4041,28 @@
                     "y": 23
                 }
             ],
-            "rank": [],
+            "rank": [
+                {
+                    "g": 89,
+                    "r": "a"
+                },
+                {
+                    "g": 91,
+                    "r": "b"
+                },
+                {
+                    "g": 93,
+                    "r": "c"
+                },
+                {
+                    "g": 95,
+                    "r": "d"
+                },
+                {
+                    "g": 97,
+                    "r": "e"
+                }
+            ],
             "width": 24,
             "win": "You Won!"
         },
@@ -4096,7 +4100,7 @@
             ],
             "chapter": 1,
             "deadzones": [],
-            "description": "This is the final level of the Tutorial.<br /><br />Notice how simple the <strong>Multum in Parvo</strong> pattern in the middle of the arena is, and yet how unpredictabley complex it can become.",
+            "description": "This is the final level of the Tutorial.<br /><br />Notice how something simple can become incredibly complex and seemingly unpredicable.",
             "goal": {
                 "x": 32,
                 "y": 2
@@ -4104,7 +4108,7 @@
             "height": 64,
             "id": 8,
             "library": 6,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -4112,7 +4116,7 @@
             "playables": [],
             "rank": [],
             "width": 64,
-            "win": "You Won!"
+            "win": "If a level is too big you can always pinch and zoom."
         },
         "9": {
             "antigoal": null,
@@ -4156,7 +4160,7 @@
             ],
             "chapter": 2,
             "deadzones": [],
-            "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single tile, and the outcome can be completely different.<br /><br />Also, notice how this level is limited to playing a maximum of 10 cells in the green playable zone!",
+            "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single unit, and the outcome can be completely different.<br /><br />Also, notice how this level is limited to playing a maximum of 10 cells in the green playable zone!",
             "goal": {
                 "x": 9,
                 "y": 2
@@ -4164,7 +4168,7 @@
             "height": 32,
             "id": 9,
             "library": 6,
-            "lose": "N/A",
+            "lose": "",
             "maxplay": 10,
             "maxred": 0,
             "mingreen": 0,
@@ -4177,7 +4181,28 @@
                     "y": 24
                 }
             ],
-            "rank": [],
+            "rank": [
+                {
+                    "g": 60,
+                    "r": "a"
+                },
+                {
+                    "g": 61,
+                    "r": "b"
+                },
+                {
+                    "g": 62,
+                    "r": "c"
+                },
+                {
+                    "g": 63,
+                    "r": "d"
+                },
+                {
+                    "g": 64,
+                    "r": "e"
+                }
+            ],
             "width": 19,
             "win": "You Won!"
         }
@@ -4186,6 +4211,8 @@
         "ad_min_level": 12,
         "ad_mod_level": 4,
         "admob": "pub-3769178507272044",
+        "admob_android": "ca-app-pub-3769178507272044/5009054623",
+        "admob_ios": "ca-app-pub-3769178507272044/7962521020",
         "confirm_reset": "Are you SURE you would like to destroy all your progress and start over?",
         "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green Playable Zone to toggle cells.</p>\n<p>No cells can be alive in the red Dead Zones.</p>\n<p>The rainbow tiles are Goal tiles and need to be activiated to beat levels.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n<li>Any live cell with fewer than two live neighbours dies.</li>\n<li>Any live cell with two or three live neighbours lives.</li>\n<li>Any live cell with more than three live neighbours dies.</li>\n<li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life on WikiPedia</a>.</p>",
         "mixpanel": "f598ce903232263c47ca516bff05c18b"
@@ -4270,7 +4297,7 @@
         },
         "b": {
             "code": "B",
-            "color": "#99ffff",
+            "color": "#dddddd",
             "id": "b",
             "image": "images/ranks/b.png",
             "name": "Professional",
@@ -4279,7 +4306,7 @@
         },
         "c": {
             "code": "C",
-            "color": "#ffff99",
+            "color": "#bbbbbb",
             "id": "c",
             "image": "images/ranks/c.png",
             "name": "Average",
@@ -4288,16 +4315,16 @@
         },
         "d": {
             "code": "D",
-            "color": "#ff9999",
+            "color": "#999999",
             "id": "d",
             "image": "images/ranks/d.png",
-            "name": "Below Average",
+            "name": "Unremarkable",
             "score": 2,
             "type": ""
         },
         "e": {
             "code": "E",
-            "color": "#999999",
+            "color": "#777777",
             "id": "e",
             "image": "images/ranks/e.png",
             "name": "Poor",
@@ -4306,7 +4333,7 @@
         },
         "f": {
             "code": "F",
-            "color": "#ff0000",
+            "color": "#cc0000",
             "id": "f",
             "image": "images/ranks/f.png",
             "name": "Failure",
@@ -4315,7 +4342,7 @@
         },
         "x": {
             "code": "X",
-            "color": "#666666",
+            "color": "#555555",
             "id": "x",
             "image": "images/ranks/x.png",
             "name": "Unplayed",
@@ -4323,5 +4350,5 @@
             "type": "unplayed"
         }
     },
-    "version": "20150607210339"
+    "version": "20150608063429"
 }
