@@ -236,7 +236,7 @@ MODULE.LevelScreen = (function() {
         var mod = app.content.data.dictionary.ad_mod_level;
 
         if (level >= min && level % mod === 0) {
-            app.advertisement.fullscreen();
+            app.interstitial.show();
         }
     };
 

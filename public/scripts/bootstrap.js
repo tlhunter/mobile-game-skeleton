@@ -10,7 +10,7 @@ if (!MODULE) { var MODULE = {}; }
 		network: new MODULE.Network(url_prefix),
 		storage: new MODULE.Storage(storage_prefix),
 		analytics: new MODULE.Analytics(),
-		advertisement: new MODULE.Advertisement(),
+		interstitial: new MODULE.Interstitial(),
 		audio: new MODULE.Audio(),
 		content: new MODULE.Content(),
 		modal: new MODULE.Modal(),
@@ -36,7 +36,7 @@ if (!MODULE) { var MODULE = {}; }
 		app.audio.init(app.content.data.audio);
 		// TODO? app.audio = new MODULE.Audio(app.content.data.audio);
 		app.analytics.init(app.content.data.dictionary.mixpanel);
-		app.advertisement.init(app.content.data.dictionary.admob);
+		app.interstitial.init(app.content.data.dictionary.admob);
 		app.rank.init(app.content.data.ranks);
 		app.screen.get('splash').finish();
 	});
