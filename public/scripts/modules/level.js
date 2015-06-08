@@ -58,6 +58,8 @@ MODULE.Level = (function() {
 		this.lost = false;
 		this.won = false;
 
+		this.played_pieces = 0;
+
 		this.arena = this.buildArena(data.arena, true);
 		this.initial_arena = null;
 
@@ -145,6 +147,11 @@ MODULE.Level = (function() {
 	// TODO: Cache
 	// TODO: This will double count tiles if playables overlap
 	Level.prototype.countPlayedPieces = function() {
+		if (this.playing) {
+			console.error("Shouldn't run countPlayedPieces() while playing!");
+			return this.played_pieces;
+		}
+
 		var counter = 0;
 
 		for (var i in this.playables) {
@@ -208,9 +215,13 @@ MODULE.Level = (function() {
 
 		var self = this;
 
-		this.playing = true;
 		this.lost = false;
 		this.won = false;
+
+		this.played_pieces = this.countPlayedPieces();
+
+		this.playing = true;
+
 		this.initial_arena = this.arena.slice(0); // Clone
 
 		this.redraw_interval = setInterval(function() {
@@ -229,6 +240,7 @@ MODULE.Level = (function() {
 		this.playing = false;
 		this.lost = false;
 		this.won = false;
+		this.played_pieces = 0;
 		clearTimeout(this.redraw_interval);
 
 		this.generation = 0;
@@ -377,7 +389,7 @@ MODULE.Level = (function() {
 		this.emit('win', {
 			level: this.level_id,
 			generation: this.generation,
-			played: this.countPlayedPieces()
+			played: this.played_pieces
 		});
 	};
 
@@ -388,7 +400,7 @@ MODULE.Level = (function() {
 		this.emit('lose', {
 			level: this.level_id,
 			generation: this.generation,
-			played: this.countPlayedPieces()
+			played: this.played_pieces
 		});
 	};
 

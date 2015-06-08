@@ -39,9 +39,11 @@ app.get('/data/rebuild', function(req, res) {
   console.log('GET /data/rebuild');
   content.update(function(err) {
     if (err) {
+      console.log(err);
       return res.status(500).send(err);
     }
 
+    console.log('ok');
     res.status(200).send('ok');
   });
 });

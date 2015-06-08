@@ -275,6 +275,7 @@ MODULE.LevelScreen = (function() {
 
     LevelScreen.prototype.togglePlayedSegment = function(count) {
         this.$segment_played.toggle(!!count);
+        this.$buttons.clear.toggle(!!count);
     };
 
     LevelScreen.prototype.toggleRedSegment = function(count) {
