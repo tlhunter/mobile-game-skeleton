@@ -24,30 +24,6 @@
             "name": "Chapter 2 Music",
             "type": "music"
         },
-        "chapter-3": {
-            "file": "audio/Evasion.ogg",
-            "id": "chapter-3",
-            "name": "Chapter 3 Music",
-            "type": "music"
-        },
-        "chapter-4": {
-            "file": "audio/Evasion.ogg",
-            "id": "chapter-4",
-            "name": "Chapter 4 Music",
-            "type": "music"
-        },
-        "chapter-5": {
-            "file": "audio/Evasion.ogg",
-            "id": "chapter-5",
-            "name": "Chapter 5 Music",
-            "type": "music"
-        },
-        "chapter-6": {
-            "file": "audio/Evasion.ogg",
-            "id": "chapter-6",
-            "name": "Chapter 6 Music",
-            "type": "music"
-        },
         "clear": {
             "file": "audio/clear.wav",
             "id": "clear",
@@ -1825,7 +1801,7 @@
                     57
                 ]
             ],
-            "chapter": 3,
+            "chapter": 2,
             "deadzones": [
                 {
                     "h": 1,
@@ -2093,7 +2069,7 @@
                     31
                 ]
             ],
-            "chapter": 3,
+            "chapter": 2,
             "deadzones": [],
             "description": "This simple construct is called <strong>Gliders by the Dozen</strong>. If you watch the pretty symmetical animation it plays, you'll soon find out where it gets its name from.<br /><br />Good luck activating the <strong>Goal</strong> amidst all of the chaos!",
             "goal": {
@@ -2174,7 +2150,7 @@
                     31
                 ]
             ],
-            "chapter": 3,
+            "chapter": 2,
             "deadzones": [
                 {
                     "h": 2,
@@ -2319,7 +2295,7 @@
                     8
                 ]
             ],
-            "chapter": 3,
+            "chapter": 2,
             "deadzones": [],
             "description": "This mission is a lot like a previous one, except that the playable area has changed quite a bit.<br /><br />Remember that unpredictable things can happen when two objects collide.",
             "goal": {
@@ -2484,7 +2460,7 @@
                     63
                 ]
             ],
-            "chapter": 3,
+            "chapter": 2,
             "deadzones": [
                 {
                     "h": 12,
@@ -2608,7 +2584,7 @@
                     42
                 ]
             ],
-            "chapter": 3,
+            "chapter": 2,
             "deadzones": [
                 {
                     "h": 1,
@@ -3006,7 +2982,7 @@
                     17
                 ]
             ],
-            "chapter": 3,
+            "chapter": 2,
             "deadzones": [
                 {
                     "h": 3,
@@ -3067,7 +3043,7 @@
         "24": {
             "antigoal": null,
             "arena": [],
-            "chapter": 3,
+            "chapter": 2,
             "deadzones": [
                 {
                     "h": 4,
@@ -3181,7 +3157,7 @@
                     59
                 ]
             ],
-            "chapter": 4,
+            "chapter": 2,
             "deadzones": [
                 {
                     "h": 33,
@@ -3222,7 +3198,7 @@
                 "y": 3
             },
             "arena": [],
-            "chapter": 4,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3246,7 +3222,7 @@
                 "y": 3
             },
             "arena": [],
-            "chapter": 4,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3270,7 +3246,7 @@
                 "y": 3
             },
             "arena": [],
-            "chapter": 4,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3294,7 +3270,7 @@
                 "y": 3
             },
             "arena": [],
-            "chapter": 4,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3376,7 +3352,7 @@
                 "y": 3
             },
             "arena": [],
-            "chapter": 4,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3400,7 +3376,7 @@
                 "y": 3
             },
             "arena": [],
-            "chapter": 4,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3424,7 +3400,7 @@
                 "y": 3
             },
             "arena": [],
-            "chapter": 4,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3444,7 +3420,7 @@
         "33": {
             "antigoal": null,
             "arena": [],
-            "chapter": 5,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3464,7 +3440,7 @@
         "34": {
             "antigoal": null,
             "arena": [],
-            "chapter": 5,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3484,7 +3460,7 @@
         "35": {
             "antigoal": null,
             "arena": [],
-            "chapter": 5,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3504,7 +3480,7 @@
         "36": {
             "antigoal": null,
             "arena": [],
-            "chapter": 5,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3524,7 +3500,7 @@
         "37": {
             "antigoal": null,
             "arena": [],
-            "chapter": 5,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3544,7 +3520,7 @@
         "38": {
             "antigoal": null,
             "arena": [],
-            "chapter": 5,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3564,7 +3540,7 @@
         "39": {
             "antigoal": null,
             "arena": [],
-            "chapter": 5,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3688,7 +3664,7 @@
         "40": {
             "antigoal": null,
             "arena": [],
-            "chapter": 5,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3708,7 +3684,7 @@
         "41": {
             "antigoal": null,
             "arena": [],
-            "chapter": 6,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3728,7 +3704,7 @@
         "42": {
             "antigoal": null,
             "arena": [],
-            "chapter": 6,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3748,7 +3724,7 @@
         "43": {
             "antigoal": null,
             "arena": [],
-            "chapter": 6,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3768,7 +3744,7 @@
         "44": {
             "antigoal": null,
             "arena": [],
-            "chapter": 6,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3788,7 +3764,7 @@
         "45": {
             "antigoal": null,
             "arena": [],
-            "chapter": 6,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3808,7 +3784,7 @@
         "46": {
             "antigoal": null,
             "arena": [],
-            "chapter": 6,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3828,7 +3804,7 @@
         "47": {
             "antigoal": null,
             "arena": [],
-            "chapter": 6,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -3848,7 +3824,7 @@
         "48": {
             "antigoal": null,
             "arena": [],
-            "chapter": 6,
+            "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": null,
@@ -4350,5 +4326,5 @@
             "type": "unplayed"
         }
     },
-    "version": "20150608063429"
+    "version": "20150609083307"
 }

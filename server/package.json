@@ -1,6 +1,6 @@
 {
   "name": "strategic-game-of-life",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "",
   "main": "server.js",
   "directories": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/tlhunter/mobile-game-skeleton",
   "dependencies": {
-    "express": "^4.12.3",
+    "express": "^4.12.4",
     "grille": "^0.6.1",
     "redis": "^0.12.1"
   }
