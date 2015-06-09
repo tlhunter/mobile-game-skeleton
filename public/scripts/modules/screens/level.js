@@ -218,9 +218,6 @@ MODULE.LevelScreen = (function() {
         app.analytics.track('SCREEN-LEVEL', {
             level: level_id
         });
-
-        // TODO: Debug purposes only
-        window.level_handle = this.level;
     };
 
     LevelScreen.prototype.hide = function() {
