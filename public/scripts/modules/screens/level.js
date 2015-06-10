@@ -129,7 +129,7 @@ MODULE.LevelScreen = (function() {
             if (levelup || rank_up) {
                 app.modal.show(
                     content, [{
-                        text: "Stay"
+                        text: "Watch"
                     },{
                         text: "Next Level",
                         callback: function() {
@@ -153,7 +153,12 @@ MODULE.LevelScreen = (function() {
 
             app.modal.show(
                 content, [{
-                    text: "Ok"
+                    text: "Watch"
+                },{
+                    text: "Try Again",
+                    callback: function() {
+                        self.onStop();
+                    }
                 }], true
             );
         })
