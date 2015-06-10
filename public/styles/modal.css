@@ -102,3 +102,8 @@
 #modal .flavor {
 	margin-top: 8px;
 }
+
+#modal strong {
+    font-weight: normal;
+    color: #0f9;
+}
