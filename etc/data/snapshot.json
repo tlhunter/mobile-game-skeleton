@@ -51,7 +51,7 @@
     },
     "campaign": {
         "1": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     3,
@@ -77,11 +77,13 @@
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "Welcome to Strategic Game of Life! This is the first tutorial level and is non-interactive.<br /><br />Do you see that shape in the upper left corner of the screen? It's called a <strong>Glider</strong>. And that rainbow tile in the lower right is the <strong>Goal</strong>.<br /><br />Click play and watch what happens.",
-            "goal": {
-                "x": 13,
-                "y": 13
-            },
+            "description": "This is the first tutorial level and is not interactive.<br /><br />The shape in the upper left corner is a <strong>Glider</strong>.<br /><br />The <span class=\"cycle\">rainbow</span> square in the lower right is the <strong>Goal</strong>.<br /><br />Click play and watch what happens.",
+            "goal": [
+                {
+                    "x": 13,
+                    "y": 13
+                }
+            ],
             "height": 16,
             "id": 1,
             "library": 1,
@@ -93,13 +95,15 @@
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": "Every time you win you'll see a results screen like this one."
+            "win": "When you win you will be graded. Congratulations on an <strong>A</strong>!"
         },
         "10": {
-            "antigoal": {
-                "x": 13,
-                "y": 13
-            },
+            "antigoal": [
+                {
+                    "x": 13,
+                    "y": 13
+                }
+            ],
             "arena": [
                 [
                     3,
@@ -126,7 +130,7 @@
             "chapter": 2,
             "deadzones": [],
             "description": "This mission is a bit different than the ones you've played before. This time, instead of activating a goal, you're trying to NOT activate the blinking red <strong>Anti Goal</strong>!<br /><br />To win, you must survive 50 generations without the Anti Goal activating.",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 10,
             "library": 6,
@@ -158,10 +162,10 @@
                 }
             ],
             "width": 16,
-            "win": "You Won!"
+            "win": "Never let those pesky Anti Goals activate!"
         },
         "11": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     1,
@@ -172,10 +176,12 @@
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": {
-                "x": 1,
-                "y": 1
-            },
+            "goal": [
+                {
+                    "x": 1,
+                    "y": 1
+                }
+            ],
             "height": 12,
             "id": 11,
             "library": 6,
@@ -190,7 +196,7 @@
             "win": "You Won!"
         },
         "12": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     56,
@@ -246,7 +252,7 @@
                 }
             ],
             "description": "Notice the red zones. These are <strong>Dead Zones</strong>. No cells will become alive in these zones, so you'll have to find a way to get around them.<br /><br />As a hint, see what happens when that <strong>Spaceship</strong> crashes into a wall...<br /><br />Also, remember that everything in the library can be rotated and flipped, and if you move something by a single tile, the outcome can be completely different.",
-            "goal": null,
+            "goal": [],
             "height": 64,
             "id": 12,
             "library": 6,
@@ -268,7 +274,7 @@
             "win": "You Won!"
         },
         "13": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     27,
@@ -542,10 +548,12 @@
                 }
             ],
             "description": "This level can be beaten using the same method you beat the last level.",
-            "goal": {
-                "x": 59,
-                "y": 4
-            },
+            "goal": [
+                {
+                    "x": 59,
+                    "y": 4
+                }
+            ],
             "height": 64,
             "id": 13,
             "library": 6,
@@ -567,7 +575,7 @@
             "win": "You Won!"
         },
         "14": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     34,
@@ -823,10 +831,12 @@
                 }
             ],
             "description": "Lots of stuff going on here. Those two big connected shapes are called <strong>Pentadecathlon</strong>, and they go through a chain reaction before stabilizing into an animation.<br /><br />There are also some <strong>Blinkers</strong> and <strong>Still Lifes</strong> thrown into the mix for fun, as well as an annoying <strong>Dead Zone</strong> getting in your way.<br /><br />Remember that you can often just throw a <strong>Glider</strong> into the chaos and things work themselves out.",
-            "goal": {
-                "x": 34,
-                "y": 7
-            },
+            "goal": [
+                {
+                    "x": 34,
+                    "y": 7
+                }
+            ],
             "height": 64,
             "id": 14,
             "library": 7,
@@ -848,7 +858,7 @@
             "win": "You Won!"
         },
         "15": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     25,
@@ -1047,10 +1057,12 @@
             "chapter": 2,
             "deadzones": [],
             "description": "Remember that <strong>Glider Gun</strong> you saw a while ago? Well, it's back! Unfortunately, there's an <strong>Eater</strong> preventing any gliders from hitting the <strong>Goal</strong>.<br /><br />An <strong>Eater</strong>, when placed just right, will destroy a <strong>Glider</strong> and retain its shape.<br /><br />For them to work, a <strong>Glider</strong> needs to hit it at just the right angle. If the <strong>Eater</strong> oscillates, it needs to hit at the right frame of animation as well. Otherwise, if these strict conditions aren't met, it will be damaged or destroyed entirely.",
-            "goal": {
-                "x": 60,
-                "y": 46
-            },
+            "goal": [
+                {
+                    "x": 60,
+                    "y": 46
+                }
+            ],
             "height": 64,
             "id": 15,
             "library": 8,
@@ -1072,7 +1084,7 @@
             "win": "You Won!"
         },
         "16": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     49,
@@ -1410,10 +1422,12 @@
                 }
             ],
             "description": "Whoa! Look at that giant slow-moving ship moving towards the <strong>Goal</strong>! We call this thing <strong>Sparky</strong>.<br /><br />Unfortunately, it won't set off the <strong>Goal</strong>, and will even serve to get in your way.<br /><br />Try to activate the <strong>Goal</strong> even though that big thing is in your way!",
-            "goal": {
-                "x": 1,
-                "y": 27
-            },
+            "goal": [
+                {
+                    "x": 1,
+                    "y": 27
+                }
+            ],
             "height": 64,
             "id": 16,
             "library": 9,
@@ -1441,7 +1455,7 @@
             "win": "You Won!"
         },
         "17": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     2,
@@ -1981,10 +1995,12 @@
                 }
             ],
             "description": "The six <strong>Blinkers</strong> on the left can have their construction finished by playing a tile in the center of them, which will cause a horizontal <strong>Spaceship</strong> to collide.<br /><br />You don't want to cause every ship to collide with a Blinker though; some you just want to hit the far left wall.<br /><br />Find some combination of enabled <strong>Blinkers</strong> to set off the goal.",
-            "goal": {
-                "x": 13,
-                "y": 50
-            },
+            "goal": [
+                {
+                    "x": 13,
+                    "y": 50
+                }
+            ],
             "height": 64,
             "id": 17,
             "library": 9,
@@ -2042,7 +2058,7 @@
             "win": "You Won!"
         },
         "18": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     30,
@@ -2081,10 +2097,12 @@
             "chapter": 2,
             "deadzones": [],
             "description": "This simple construct is called <strong>Gliders by the Dozen</strong>. If you watch the pretty symmetical animation it plays, you'll soon find out where it gets its name from.<br /><br />Good luck activating the <strong>Goal</strong> amidst all of the chaos!",
-            "goal": {
-                "x": 32,
-                "y": 30
-            },
+            "goal": [
+                {
+                    "x": 32,
+                    "y": 30
+                }
+            ],
             "height": 64,
             "id": 18,
             "library": 10,
@@ -2124,7 +2142,7 @@
             "win": "You Won!"
         },
         "19": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     30,
@@ -2188,10 +2206,12 @@
                 }
             ],
             "description": "Sure, you just beat this level a moment ago, and if I had to guess, you probably sent some <strong>Gliders</strong> towards it at a 45&deg; angle.<br /><br />Can you beat the same level with these new <strong>Dead Zones</strong> in your way?",
-            "goal": {
-                "x": 32,
-                "y": 30
-            },
+            "goal": [
+                {
+                    "x": 32,
+                    "y": 30
+                }
+            ],
             "height": 64,
             "id": 19,
             "library": 10,
@@ -2231,16 +2251,18 @@
             "win": "You Won!"
         },
         "2": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "Now that you kinda have a feel for how the game works, and you've seen a simulation in action, try to recreate that same <strong>Glider</strong> pattern you saw in the previous level. For your convenience, its pattern has been added to your library.<br /><br />Every pattern you discover in the Game of Life can always be rotated 90&deg; or even flipped horizontally or vertically and will still work the same (although, if the patterns move, they will move in a different direction).<br /><br />You can only alter the state of cells within the green <strong>Playable Zone</strong>.",
-            "goal": {
-                "x": 13,
-                "y": 13
-            },
+            "description": "Try to recreate that same <strong>Glider</strong> pattern you saw in the previous level by tapping on the field.<br /><br />For your convenience, its pattern has been added to your <strong>Library</strong>.<br /><br />You can only alter the state of cells within the green <strong>Playable Zones</strong>.",
+            "goal": [
+                {
+                    "x": 13,
+                    "y": 13
+                }
+            ],
             "height": 16,
             "id": 2,
             "library": 1,
@@ -2264,10 +2286,10 @@
                 }
             ],
             "width": 16,
-            "win": "You Won!"
+            "win": "The Glider is your new best friend!"
         },
         "20": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     32,
@@ -2310,10 +2332,12 @@
             "chapter": 2,
             "deadzones": [],
             "description": "This mission is a lot like a previous one, except that the playable area has changed quite a bit.<br /><br />Remember that unpredictable things can happen when two objects collide.",
-            "goal": {
-                "x": 32,
-                "y": 2
-            },
+            "goal": [
+                {
+                    "x": 32,
+                    "y": 2
+                }
+            ],
             "height": 64,
             "id": 20,
             "library": 10,
@@ -2341,7 +2365,7 @@
             "win": "You Won!"
         },
         "21": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     52,
@@ -2489,10 +2513,12 @@
                 }
             ],
             "description": "This crazy three pronged spaceship is called an <strong>Orion 2</strong>, and is moving towards the upper left corner of the arena, which is where your playable zone is!<br /><br />Can you get past the ship and activate the <strong>Goal</strong>?",
-            "goal": {
-                "x": 59,
-                "y": 59
-            },
+            "goal": [
+                {
+                    "x": 59,
+                    "y": 59
+                }
+            ],
             "height": 64,
             "id": 21,
             "library": 11,
@@ -2514,7 +2540,7 @@
             "win": "You Won!"
         },
         "22": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     28,
@@ -2608,10 +2634,12 @@
                 }
             ],
             "description": "Here is another level with a simple pattern in the middle, which goes through a bunch of chaos before stabilizing into some <strong>Oscillators</strong> and <strong>Still Lifes</strong>.<br /><br />And, would you look at that? There's a <strong>Dead Zone</strong> right outside of the playable area!<br /><br />Try to activate the <strong>Goal</strong> even with these hassles in the way!",
-            "goal": {
-                "x": 28,
-                "y": 39
-            },
+            "goal": [
+                {
+                    "x": 28,
+                    "y": 39
+                }
+            ],
             "height": 64,
             "id": 22,
             "library": 11,
@@ -2633,7 +2661,7 @@
             "win": "You Won!"
         },
         "23": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     5,
@@ -3031,10 +3059,12 @@
                 }
             ],
             "description": "The backdrop of this level consists of a field of <strong>Blinkers</strong>, and the <strong>Goal</strong> is surrounded by several <strong>Dead Zones</strong>.",
-            "goal": {
-                "x": 31,
-                "y": 31
-            },
+            "goal": [
+                {
+                    "x": 31,
+                    "y": 31
+                }
+            ],
             "height": 64,
             "id": 23,
             "library": 11,
@@ -3056,7 +3086,7 @@
             "win": "You Won!"
         },
         "24": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
@@ -3081,10 +3111,12 @@
                 }
             ],
             "description": "This one looks pretty difficult. You can't simply send a <strong>Spaceship</strong> up and crash it into the wall and spawn a <strong>Glider</strong>, as the horizontal gap is too small.<br /><br />As a hint, I was able to beat this on Generation 432 with 20 Cells in Play.",
-            "goal": {
-                "x": 32,
-                "y": 4
-            },
+            "goal": [
+                {
+                    "x": 32,
+                    "y": 4
+                }
+            ],
             "height": 64,
             "id": 24,
             "library": 11,
@@ -3106,7 +3138,7 @@
             "win": "You Won!"
         },
         "25": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     45,
@@ -3184,10 +3216,12 @@
                 }
             ],
             "description": "Other than a few <strong>Still Lifes</strong> protecting the <strong>Goal</strong>, this isn't too interesting of a level. Unless, you consider, that there is no line of sight between you and the <strong>Goal</strong>, and you may need to play off of two separate walls to reach the <strong>Goal</strong>.<br /><br />This level was first beaten by @endeavourize with 18 Cells Played and 375 Generations.",
-            "goal": {
-                "x": 48,
-                "y": 56
-            },
+            "goal": [
+                {
+                    "x": 48,
+                    "y": 56
+                }
+            ],
             "height": 64,
             "id": 25,
             "library": 11,
@@ -3209,16 +3243,18 @@
             "win": "You Won!"
         },
         "26": {
-            "antigoal": {
-                "x": 3,
-                "y": 3
-            },
+            "antigoal": [
+                {
+                    "x": 3,
+                    "y": 3
+                }
+            ],
             "arena": [],
             "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 26,
             "library": 1,
@@ -3233,16 +3269,18 @@
             "win": "You Won!"
         },
         "27": {
-            "antigoal": {
-                "x": 3,
-                "y": 3
-            },
+            "antigoal": [
+                {
+                    "x": 3,
+                    "y": 3
+                }
+            ],
             "arena": [],
             "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 27,
             "library": 1,
@@ -3257,16 +3295,18 @@
             "win": "You Won!"
         },
         "28": {
-            "antigoal": {
-                "x": 3,
-                "y": 3
-            },
+            "antigoal": [
+                {
+                    "x": 3,
+                    "y": 3
+                }
+            ],
             "arena": [],
             "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 28,
             "library": 1,
@@ -3281,16 +3321,18 @@
             "win": "You Won!"
         },
         "29": {
-            "antigoal": {
-                "x": 3,
-                "y": 3
-            },
+            "antigoal": [
+                {
+                    "x": 3,
+                    "y": 3
+                }
+            ],
             "arena": [],
             "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 29,
             "library": 1,
@@ -3305,7 +3347,7 @@
             "win": "You Won!"
         },
         "3": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     12,
@@ -3327,11 +3369,13 @@
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "This time, there's something in the way of your <strong>Goal</strong>! This simple shape is called a <strong>Blinker</strong>, and will flip between being horizontal and vertical. Since there are two \\\"frames\\\" of this animation, it can be thought of as a <strong>Period 2 Oscillator</strong>.<br /><br />If you draw a <strong>Glider</strong> in the lower right corner of the playfield, then draw another one to the upper left of it, the first should destroy the barrier, and the second can activate the <strong>Goal</strong>.",
-            "goal": {
-                "x": 15,
-                "y": 15
-            },
+            "description": "There's something in the way of your <strong>Goal</strong>!<br /><br />If you draw a <strong>Glider</strong> in both boxes, one will destroy the barrier and the other will activate the <strong>Goal</strong>.",
+            "goal": [
+                {
+                    "x": 15,
+                    "y": 15
+                }
+            ],
             "height": 16,
             "id": 3,
             "library": 2,
@@ -3350,8 +3394,8 @@
                 {
                     "h": 3,
                     "w": 3,
-                    "x": 5,
-                    "y": 5
+                    "x": 6,
+                    "y": 6
                 }
             ],
             "rank": [
@@ -3361,19 +3405,21 @@
                 }
             ],
             "width": 16,
-            "win": "You Won!"
+            "win": "Breaking barriers is a useful technique."
         },
         "30": {
-            "antigoal": {
-                "x": 3,
-                "y": 3
-            },
+            "antigoal": [
+                {
+                    "x": 3,
+                    "y": 3
+                }
+            ],
             "arena": [],
             "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 30,
             "library": 1,
@@ -3388,16 +3434,18 @@
             "win": "You Won!"
         },
         "31": {
-            "antigoal": {
-                "x": 3,
-                "y": 3
-            },
+            "antigoal": [
+                {
+                    "x": 3,
+                    "y": 3
+                }
+            ],
             "arena": [],
             "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 31,
             "library": 1,
@@ -3412,16 +3460,18 @@
             "win": "You Won!"
         },
         "32": {
-            "antigoal": {
-                "x": 3,
-                "y": 3
-            },
+            "antigoal": [
+                {
+                    "x": 3,
+                    "y": 3
+                }
+            ],
             "arena": [],
             "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 32,
             "library": 1,
@@ -3436,13 +3486,13 @@
             "win": "You Won!"
         },
         "33": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 33,
             "library": 1,
@@ -3457,13 +3507,13 @@
             "win": "You Won!"
         },
         "34": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 34,
             "library": 1,
@@ -3478,13 +3528,13 @@
             "win": "You Won!"
         },
         "35": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 35,
             "library": 1,
@@ -3499,13 +3549,13 @@
             "win": "You Won!"
         },
         "36": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 36,
             "library": 1,
@@ -3520,13 +3570,13 @@
             "win": "You Won!"
         },
         "37": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 37,
             "library": 1,
@@ -3541,13 +3591,13 @@
             "win": "You Won!"
         },
         "38": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 38,
             "library": 1,
@@ -3562,13 +3612,13 @@
             "win": "You Won!"
         },
         "39": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 39,
             "library": 1,
@@ -3583,7 +3633,7 @@
             "win": "You Won!"
         },
         "4": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     11,
@@ -3669,11 +3719,25 @@
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "Anything you do in the Game of Life can always be flipped or roated and the effect will likewise be flipped or roated.<br /><br />Notice how the <strong>Glider</strong> you saw in the last level behaves differently depending on the direction it is pointed.",
-            "goal": {
-                "x": 28,
-                "y": 28
-            },
+            "description": "Flip or rotate anything you draw to flip or rotate the outcome.<br /><br /><br /><br />Tip: If you ever see <strong>multiple goals</strong>, you only need to <strong>activate one</strong> to win.",
+            "goal": [
+                {
+                    "x": 26,
+                    "y": 26
+                },
+                {
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "x": 27,
+                    "y": 12
+                },
+                {
+                    "x": 3,
+                    "y": 28
+                }
+            ],
             "height": 32,
             "id": 4,
             "library": 1,
@@ -3688,13 +3752,13 @@
             "win": "Remember, flipping and rotating objects will flip and rotate what they do!"
         },
         "40": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 40,
             "library": 1,
@@ -3709,13 +3773,13 @@
             "win": "You Won!"
         },
         "41": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 41,
             "library": 1,
@@ -3730,13 +3794,13 @@
             "win": "You Won!"
         },
         "42": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 42,
             "library": 1,
@@ -3751,13 +3815,13 @@
             "win": "You Won!"
         },
         "43": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 43,
             "library": 1,
@@ -3772,13 +3836,13 @@
             "win": "You Won!"
         },
         "44": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 44,
             "library": 1,
@@ -3793,13 +3857,13 @@
             "win": "You Won!"
         },
         "45": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 45,
             "library": 1,
@@ -3814,13 +3878,13 @@
             "win": "You Won!"
         },
         "46": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 46,
             "library": 1,
@@ -3835,13 +3899,13 @@
             "win": "You Won!"
         },
         "47": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 47,
             "library": 1,
@@ -3856,13 +3920,13 @@
             "win": "You Won!"
         },
         "48": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": null,
+            "goal": [],
             "height": 16,
             "id": 48,
             "library": 1,
@@ -3877,16 +3941,18 @@
             "win": "You Won!"
         },
         "5": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "Use your new found rotation ability to beat this level!",
-            "goal": {
-                "x": 1,
-                "y": 1
-            },
+            "description": "Make use of rotation to beat this level!",
+            "goal": [
+                {
+                    "x": 1,
+                    "y": 1
+                }
+            ],
             "height": 16,
             "id": 5,
             "library": 2,
@@ -3922,10 +3988,10 @@
                 }
             ],
             "width": 16,
-            "win": "You Won!"
+            "win": "Don't be afraid to experiment!"
         },
         "6": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     21,
@@ -4003,11 +4069,13 @@
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "In this level we have two Spaceships. Much like a Glider, a Spaceship can move across the playing field and retain its original shape.<br /><br />An interesting phenomenon happens when a spaceship collides with the edge of the field. Depending on it's distance from the edge, it will form a glider which will travel either right or left from the wall, depending on the distance.<br /><br />If you ever find yourself wanting to get around a corner be sure to try this technique, adjusting the distance if necessary.",
-            "goal": {
-                "x": 15,
-                "y": 8
-            },
+            "description": "This level has two <strong>Spaceships</strong>. Just like a Glider, a Spaceship can move across the playing field and retain its original shape.<br /><br />Depending on a Spaceships distance from a wall, it will <strong>release a Glider</strong> either to the right or the left when it crashes.",
+            "goal": [
+                {
+                    "x": 15,
+                    "y": 8
+                }
+            ],
             "height": 32,
             "id": 6,
             "library": 4,
@@ -4019,10 +4087,10 @@
             "playables": [],
             "rank": [],
             "width": 32,
-            "win": "Remember, moving a spaceship 1 unit from a wall changes the glider direction."
+            "win": "Moving a spaceship 1 unit from a wall changes the glider direction."
         },
         "7": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [],
             "autowin": 0,
             "chapter": 1,
@@ -4034,11 +4102,13 @@
                     "y": 16
                 }
             ],
-            "description": "Using your newfound knowledge of Spaceships, try to activate the goal in this level.<br /><br />Notice the red rectangle. This is called a deadzone, no cells will survive inside of it. These will have the same effect as the edge of a map when something collides with it.",
-            "goal": {
-                "x": 3,
-                "y": 12
-            },
+            "description": "Using your newfound knowledge of Spaceships, try to activate the goal in this level.<br /><br /><br /><br />Tip: Notice the red rectangle. This is called a <strong>Deadzone</strong>, no cells will survive inside of it. These will have the same effect as the edge of a map when something collides with it.",
+            "goal": [
+                {
+                    "x": 3,
+                    "y": 12
+                }
+            ],
             "height": 32,
             "id": 7,
             "library": 6,
@@ -4078,10 +4148,10 @@
                 }
             ],
             "width": 24,
-            "win": "You Won!"
+            "win": "Spaceships releasing Gliders can be very useful!"
         },
         "8": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     32,
@@ -4116,10 +4186,12 @@
             "chapter": 1,
             "deadzones": [],
             "description": "This is the final level of the Tutorial.<br /><br />Notice how something simple can become incredibly complex and seemingly unpredicable.",
-            "goal": {
-                "x": 32,
-                "y": 2
-            },
+            "goal": [
+                {
+                    "x": 32,
+                    "y": 2
+                }
+            ],
             "height": 64,
             "id": 8,
             "library": 6,
@@ -4134,7 +4206,7 @@
             "win": "If a level is too big you can always pinch and zoom."
         },
         "9": {
-            "antigoal": null,
+            "antigoal": [],
             "arena": [
                 [
                     9,
@@ -4177,10 +4249,12 @@
             "chapter": 2,
             "deadzones": [],
             "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single unit, and the outcome can be completely different.<br /><br />Also, notice how this level is limited to playing a maximum of 10 cells in the green playable zone!",
-            "goal": {
-                "x": 9,
-                "y": 2
-            },
+            "goal": [
+                {
+                    "x": 9,
+                    "y": 2
+                }
+            ],
             "height": 32,
             "id": 9,
             "library": 6,
@@ -4220,7 +4294,7 @@
                 }
             ],
             "width": 19,
-            "win": "You Won!"
+            "win": "You'll often need to \"jiggle\" your drawings by a tile."
         }
     },
     "dictionary": {
@@ -4366,5 +4440,5 @@
             "type": "unplayed"
         }
     },
-    "version": "20150610061207"
+    "version": "20150610072956"
 }
