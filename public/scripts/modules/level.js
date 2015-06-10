@@ -37,8 +37,8 @@ MODULE.Level = (function() {
 		this.playables = data.playables;
 
 		// Win Conditions
-		this.goal = data.goal || null;
-		this.antigoal = data.antigoal || null;
+		this.goal = data.goal || [];
+		this.antigoal = data.antigoal || [];
 		this.mingreen = data.mingreen || null;
 		this.maxred = data.maxred || null;
 		this.maxplay = data.maxplay || null;
@@ -361,8 +361,10 @@ MODULE.Level = (function() {
 		}
 
 		// If there is an Anti Goal and it is activated, trigger lose
-		if (this.antigoal && this.arena[this.antigoal.y][this.antigoal.x]) {
-			this.loseLevel();
+		for (var ag = 0; ag < this.antigoal.length; ag++) {
+			if (this.arena[this.antigoal[ag].y][this.antigoal[ag].x]) {
+				this.loseLevel();
+			}
 		}
 
 		// If there is an Auto Win and it's now, trigger win
@@ -371,8 +373,10 @@ MODULE.Level = (function() {
 		}
 
 		// If there is a Goal and it's activated, trigger win
-		if (this.goal && this.arena[this.goal.y][this.goal.x]) {
-			this.winLevel();
+		for (var goal = 0; goal < this.goal.length; goal++) {
+			if (this.arena[this.goal[goal].y][this.goal[goal].x]) {
+				this.winLevel();
+			}
 		}
 
 		var pieces = this.countPieces();
@@ -579,17 +583,17 @@ MODULE.Level = (function() {
 
 	Level.prototype.drawGoal = function() {
 		// Cycle through hue's like a rainbow
-		if (this.goal) {
+		for (var goal = 0; goal < this.goal.length; goal++) {
 			var hue = Math.floor((Math.sin(this.goalPhase/10)+1)/2*255);
 			this.gamefield.fillStyle = 'hsla(' + hue + ',50%,50%,0.75)';
-			this.gamefield.fillRect(this.goal.x * this.size, this.goal.y * this.size, 1 * this.size, 1 * this.size);
+			this.gamefield.fillRect(this.goal[goal].x * this.size, this.goal[goal].y * this.size, 1 * this.size, 1 * this.size);
 		}
 
 		// Cycle through saturations of red
-		if (this.antigoal) {
+		for (var ag = 0; ag < this.antigoal.length; ag++) {
 			var sat = Math.floor((Math.sin(this.goalPhase/4)+1)/2*100);
 			this.gamefield.fillStyle = 'hsla(0,' + sat + '%,50%,0.5)';
-			this.gamefield.fillRect(this.antigoal.x * this.size, this.antigoal.y * this.size, 1 * this.size, 1 * this.size);
+			this.gamefield.fillRect(this.antigoal[ag].x * this.size, this.antigoal[ag].y * this.size, 1 * this.size, 1 * this.size);
 		}
 
 		// Increment the goal phase value with each frame
