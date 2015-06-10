@@ -40,8 +40,13 @@
 	padding: 4px;
 }
 
-#screen-level footer button.stop {
+#screen-level footer .play-controls {
 	display: none;
+	padding: 0 10px;
+}
+
+#screen-level footer .play-controls .stop {
+	width: 100%;
 }
 
 #screen-level header {

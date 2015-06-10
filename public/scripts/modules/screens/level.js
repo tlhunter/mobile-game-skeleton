@@ -15,6 +15,9 @@ MODULE.LevelScreen = (function() {
         this.$header = this.$screen.find('header');
         this.$headerfooter = this.$screen.find('header, footer');
 
+        this.$playcontrols = this.$footer.find('.play-controls');
+        this.$stopcontrols = this.$footer.find('.stop-controls');
+
         this.$generation = this.$header.find('.generation');
         this.$played = this.$header.find('.played');
 
@@ -62,8 +65,8 @@ MODULE.LevelScreen = (function() {
     LevelScreen.prototype.display = function(level_id) {
         var self = this;
 
-        this.$buttons.play.show();
-        this.$buttons.stop.hide();
+        this.$playcontrols.hide();
+        this.$stopcontrols.show();
         this.$headerfooter.removeClass();
 
         this.level_id = level_id;
@@ -342,8 +345,8 @@ MODULE.LevelScreen = (function() {
 
     LevelScreen.prototype.onPlay = function() {
         app.audio.playSound('play');
-        this.$buttons.play.hide();
-        this.$buttons.stop.show();
+        this.$playcontrols.show();
+        this.$stopcontrols.hide();
 
         this.$headerfooter.addClass('playing');
 
@@ -356,8 +359,8 @@ MODULE.LevelScreen = (function() {
 
     LevelScreen.prototype.onStop = function() {
         app.audio.playSound('stop');
-        this.$buttons.play.show();
-        this.$buttons.stop.hide();
+        this.$playcontrols.hide();
+        this.$stopcontrols.show();
 
         this.$headerfooter.removeClass('playing');
         this.$headerfooter.removeClass('win');
