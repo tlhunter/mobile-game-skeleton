@@ -74,6 +74,7 @@
                     3
                 ]
             ],
+            "autowin": 0,
             "chapter": 1,
             "deadzones": [],
             "description": "Welcome to Strategic Game of Life! This is the first tutorial level and is non-interactive.<br /><br />Do you see that shape in the upper left corner of the screen? It's called a <strong>Glider</strong>. And that rainbow tile in the lower right is the <strong>Goal</strong>.<br /><br />Click play and watch what happens.",
@@ -96,7 +97,6 @@
         },
         "10": {
             "antigoal": {
-                "g": 50,
                 "x": 13,
                 "y": 13
             },
@@ -122,6 +122,7 @@
                     3
                 ]
             ],
+            "autowin": 50,
             "chapter": 2,
             "deadzones": [],
             "description": "This mission is a bit different than the ones you've played before. This time, instead of activating a goal, you're trying to NOT activate the blinking red <strong>Anti Goal</strong>!<br /><br />To win, you must survive 50 generations without the Anti Goal activating.",
@@ -167,6 +168,7 @@
                     1
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -227,6 +229,7 @@
                     30
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [
                 {
@@ -528,6 +531,7 @@
                     57
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [
                 {
@@ -802,6 +806,7 @@
                     20
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [
                 {
@@ -1038,6 +1043,7 @@
                     44
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Remember that <strong>Glider Gun</strong> you saw a while ago? Well, it's back! Unfortunately, there's an <strong>Eater</strong> preventing any gliders from hitting the <strong>Goal</strong>.<br /><br />An <strong>Eater</strong>, when placed just right, will destroy a <strong>Glider</strong> and retain its shape.<br /><br />For them to work, a <strong>Glider</strong> needs to hit it at just the right angle. If the <strong>Eater</strong> oscillates, it needs to hit at the right frame of animation as well. Otherwise, if these strict conditions aren't met, it will be damaged or destroyed entirely.",
@@ -1393,6 +1399,7 @@
                     33
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [
                 {
@@ -1801,6 +1808,7 @@
                     57
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [
                 {
@@ -2069,6 +2077,7 @@
                     31
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "This simple construct is called <strong>Gliders by the Dozen</strong>. If you watch the pretty symmetical animation it plays, you'll soon find out where it gets its name from.<br /><br />Good luck activating the <strong>Goal</strong> amidst all of the chaos!",
@@ -2150,6 +2159,7 @@
                     31
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [
                 {
@@ -2223,6 +2233,7 @@
         "2": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 1,
             "deadzones": [],
             "description": "Now that you kinda have a feel for how the game works, and you've seen a simulation in action, try to recreate that same <strong>Glider</strong> pattern you saw in the previous level. For your convenience, its pattern has been added to your library.<br /><br />Every pattern you discover in the Game of Life can always be rotated 90&deg; or even flipped horizontally or vertically and will still work the same (although, if the patterns move, they will move in a different direction).<br /><br />You can only alter the state of cells within the green <strong>Playable Zone</strong>.",
@@ -2295,6 +2306,7 @@
                     8
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "This mission is a lot like a previous one, except that the playable area has changed quite a bit.<br /><br />Remember that unpredictable things can happen when two objects collide.",
@@ -2460,6 +2472,7 @@
                     63
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [
                 {
@@ -2584,6 +2597,7 @@
                     42
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [
                 {
@@ -2982,6 +2996,7 @@
                     17
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [
                 {
@@ -3043,6 +3058,7 @@
         "24": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [
                 {
@@ -3157,6 +3173,7 @@
                     59
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [
                 {
@@ -3193,11 +3210,11 @@
         },
         "26": {
             "antigoal": {
-                "g": 200,
                 "x": 3,
                 "y": 3
             },
             "arena": [],
+            "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3217,11 +3234,11 @@
         },
         "27": {
             "antigoal": {
-                "g": 200,
                 "x": 3,
                 "y": 3
             },
             "arena": [],
+            "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3241,11 +3258,11 @@
         },
         "28": {
             "antigoal": {
-                "g": 200,
                 "x": 3,
                 "y": 3
             },
             "arena": [],
+            "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3265,11 +3282,11 @@
         },
         "29": {
             "antigoal": {
-                "g": 200,
                 "x": 3,
                 "y": 3
             },
             "arena": [],
+            "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3307,6 +3324,7 @@
                     12
                 ]
             ],
+            "autowin": 0,
             "chapter": 1,
             "deadzones": [],
             "description": "This time, there's something in the way of your <strong>Goal</strong>! This simple shape is called a <strong>Blinker</strong>, and will flip between being horizontal and vertical. Since there are two \\\"frames\\\" of this animation, it can be thought of as a <strong>Period 2 Oscillator</strong>.<br /><br />If you draw a <strong>Glider</strong> in the lower right corner of the playfield, then draw another one to the upper left of it, the first should destroy the barrier, and the second can activate the <strong>Goal</strong>.",
@@ -3347,11 +3365,11 @@
         },
         "30": {
             "antigoal": {
-                "g": 200,
                 "x": 3,
                 "y": 3
             },
             "arena": [],
+            "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3371,11 +3389,11 @@
         },
         "31": {
             "antigoal": {
-                "g": 200,
                 "x": 3,
                 "y": 3
             },
             "arena": [],
+            "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3395,11 +3413,11 @@
         },
         "32": {
             "antigoal": {
-                "g": 200,
                 "x": 3,
                 "y": 3
             },
             "arena": [],
+            "autowin": 200,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3420,6 +3438,7 @@
         "33": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3440,6 +3459,7 @@
         "34": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3460,6 +3480,7 @@
         "35": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3480,6 +3501,7 @@
         "36": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3500,6 +3522,7 @@
         "37": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3520,6 +3543,7 @@
         "38": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3540,6 +3564,7 @@
         "39": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3641,6 +3666,7 @@
                     18
                 ]
             ],
+            "autowin": 0,
             "chapter": 1,
             "deadzones": [],
             "description": "Anything you do in the Game of Life can always be flipped or roated and the effect will likewise be flipped or roated.<br /><br />Notice how the <strong>Glider</strong> you saw in the last level behaves differently depending on the direction it is pointed.",
@@ -3664,6 +3690,7 @@
         "40": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3684,6 +3711,7 @@
         "41": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3704,6 +3732,7 @@
         "42": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3724,6 +3753,7 @@
         "43": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3744,6 +3774,7 @@
         "44": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3764,6 +3795,7 @@
         "45": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3784,6 +3816,7 @@
         "46": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3804,6 +3837,7 @@
         "47": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3824,6 +3858,7 @@
         "48": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
@@ -3844,6 +3879,7 @@
         "5": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 1,
             "deadzones": [],
             "description": "Use your new found rotation ability to beat this level!",
@@ -3964,6 +4000,7 @@
                     28
                 ]
             ],
+            "autowin": 0,
             "chapter": 1,
             "deadzones": [],
             "description": "In this level we have two Spaceships. Much like a Glider, a Spaceship can move across the playing field and retain its original shape.<br /><br />An interesting phenomenon happens when a spaceship collides with the edge of the field. Depending on it's distance from the edge, it will form a glider which will travel either right or left from the wall, depending on the distance.<br /><br />If you ever find yourself wanting to get around a corner be sure to try this technique, adjusting the distance if necessary.",
@@ -3987,6 +4024,7 @@
         "7": {
             "antigoal": null,
             "arena": [],
+            "autowin": 0,
             "chapter": 1,
             "deadzones": [
                 {
@@ -4074,6 +4112,7 @@
                     32
                 ]
             ],
+            "autowin": 0,
             "chapter": 1,
             "deadzones": [],
             "description": "This is the final level of the Tutorial.<br /><br />Notice how something simple can become incredibly complex and seemingly unpredicable.",
@@ -4134,6 +4173,7 @@
                     8
                 ]
             ],
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single unit, and the outcome can be completely different.<br /><br />Also, notice how this level is limited to playing a maximum of 10 cells in the green playable zone!",
@@ -4326,5 +4366,5 @@
             "type": "unplayed"
         }
     },
-    "version": "20150610060538"
+    "version": "20150610061207"
 }

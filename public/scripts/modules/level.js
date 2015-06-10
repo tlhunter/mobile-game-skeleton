@@ -42,6 +42,7 @@ MODULE.Level = (function() {
 		this.mingreen = data.mingreen || null;
 		this.maxred = data.maxred || null;
 		this.maxplay = data.maxplay || null;
+		this.autowin = data.autowin || null;
 
 		// Use Green for owned cells and Red for enemy cells
 		this.color_cells = !!(this.mingreen || this.maxred);
@@ -349,29 +350,42 @@ MODULE.Level = (function() {
 			}
 		}
 
-		if (this.antigoal) {
-			if (this.arena[this.antigoal.y][this.antigoal.x] && this.generation < this.antigoal.g) {
-				this.loseLevel();
-			} else if (this.generation >= this.antigoal.g && !this.lost) {
-				this.winLevel();
-			}
+		this.checkWinLoseCondition();
+
+		this.arena = new_arena;
+	};
+
+	Level.prototype.checkWinLoseCondition = function() {
+		if (this.won || this.lost) {
+			return;
 		}
 
-		if (this.goal && this.arena[this.goal.y][this.goal.x] && !this.lost) {
+		// If there is an Anti Goal and it is activated, trigger lose
+		if (this.antigoal && this.arena[this.antigoal.y][this.antigoal.x]) {
+			this.loseLevel();
+		}
+
+		// If there is an Auto Win and it's now, trigger win
+		if (this.autowin && this.generation >= this.autowin) {
+			this.winLevel();
+		}
+
+		// If there is a Goal and it's activated, trigger win
+		if (this.goal && this.arena[this.goal.y][this.goal.x]) {
 			this.winLevel();
 		}
 
 		var pieces = this.countPieces();
 
-		if (this.mingreen && !this.lost && pieces.mine >= this.mingreen) {
+		// If there is a Min Green and the threshold is met, trigger win
+		if (this.mingreen && pieces.mine >= this.mingreen) {
 			this.winLevel();
 		}
 
-		if (this.maxred && !this.won && pieces.foe >= this.maxred) {
+		// If there is a Max Red and the threshold is met, trigger lose
+		if (this.maxred && pieces.foe >= this.maxred) {
 			this.loseLevel();
 		}
-
-		this.arena = new_arena;
 	};
 
 	Level.prototype.winLevel = function() {
@@ -397,6 +411,9 @@ MODULE.Level = (function() {
 		this.lost = true;
 
 		this.emit('status', Level.STATUS.LOSE);
+
+		console.log("Game lost in " + this.generation + " generations.");
+
 		this.emit('lose', {
 			level: this.level_id,
 			generation: this.generation,
@@ -580,14 +597,6 @@ MODULE.Level = (function() {
 		if (this.goalPhase++ >= 255) {
 			this.goalPhase = 0;
 		}
-	};
-
-	Level.prototype.getGenerationGoal = function() {
-		if (!this.antigoal || !this.antigoal.g) {
-			return null;
-		}
-
-		return this.antigoal.g;
 	};
 
     return Level;

@@ -20,8 +20,8 @@ MODULE.LevelScreen = (function() {
 
         this.$title = this.$header.find('.title');
 
-        this.$antigoal = this.$header.find('.antigoal');
-        this.$gengoal = this.$antigoal.find('.antigoal-gen');
+        this.$autowin = this.$header.find('.autowin');
+        this.$autowin_goal = this.$autowin.find('.autowin-gen');
 
         this.$maxplay = this.$header.find('.maxplay');
         this.$maxplayval = this.$maxplay.find('.maxplay-val');
@@ -170,7 +170,7 @@ MODULE.LevelScreen = (function() {
             this.complete();
         }
 
-        this.setGenerationGoal(this.level.getGenerationGoal());
+        this.setGenerationGoal(this.level.autowin);
         this.setMaxPlay(this.level.maxplay);
         this.togglePlayedSegment(!!this.level.playables.length);
         this.toggleRedSegment(this.level.maxred);
@@ -251,13 +251,13 @@ MODULE.LevelScreen = (function() {
     };
 
     LevelScreen.prototype.setGenerationGoal = function(generation) {
-        this.$gengoal.text(generation);
+        this.$autowin_goal.text(generation);
 
         if (generation) {
-            return this.$antigoal.show();
+            return this.$autowin.show();
         }
 
-        return this.$antigoal.hide();
+        return this.$autowin.hide();
     };
 
     LevelScreen.prototype.setMaxPlay = function(maxplay) {
