@@ -22,7 +22,7 @@
   "homepage": "https://github.com/tlhunter/mobile-game-skeleton",
   "dependencies": {
     "express": "^4.12.4",
-    "grille": "^0.6.1",
+    "grille": "^0.6.3",
     "redis": "^0.12.1"
   }
 }
