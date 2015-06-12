@@ -1,0 +1,114 @@
+#modal {
+  position: fixed;
+  z-index: 950;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+
+  .modal {
+    position: fixed;
+    z-index: 1000;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(0, 0, 0, 0.5);
+
+    &.small {
+      top: 30%;
+      bottom: 30%;
+      left: 32px;
+      right: 32px;
+    }
+
+    .buttons {
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      position: absolute;
+      text-align: center;
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 60px;
+      line-height: 60px;
+
+      button {
+        margin: 0 8px;
+        font-size: 14px;
+        padding: 6px 12px 6px 14px;
+      }
+    }
+
+    .content {
+      overflow-y: auto;
+      font-size: 14px;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      left: 16px;
+      bottom: 76px;
+
+      h3 {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      h3, p {
+        margin: 0 0 16px 0;
+        padding: 0px;
+      }
+    }
+
+    .library {
+      text-align: center;
+      font-size: 16px;
+
+      img {
+        margin-bottom: 8px;
+      }
+    }
+
+    .summary {
+      .ranking {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-size: 60px 60px;
+      }
+
+      .group {
+        display: inline-block;
+        height: 60px;
+        vertical-align: top;
+        line-height: 30px;
+      }
+    }
+
+    .flavor {
+      margin-top: 8px;
+    }
+
+    strong {
+        font-weight: normal;
+        color: #0f9;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  #modal .modal .buttons button {
+    font-size: 11px;
+  }
+  #modal .modal .content {
+    font-size: 12px;
+  }
+}
