@@ -40,6 +40,10 @@
         margin: 0 8px;
         font-size: 14px;
         padding: 6px 12px 6px 14px;
+
+        @media (max-width: 320px) {
+          font-size: 11px;
+        }
       }
     }
 
@@ -51,6 +55,10 @@
       right: 16px;
       left: 16px;
       bottom: 76px;
+
+      @media (max-width: 320px) {
+        font-size: 12px;
+      }
 
       h3 {
         font-size: 16px;
@@ -101,14 +109,5 @@
     img {
       max-width: 100%;
     }
-  }
-}
-
-@media (max-width: 320px) {
-  #modal .modal .buttons button {
-    font-size: 11px;
-  }
-  #modal .modal .content {
-    font-size: 12px;
   }
 }
