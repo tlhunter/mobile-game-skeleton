@@ -5,9 +5,13 @@
 var path = require('path');
 
 var express = require('express');
+var compression = require('compression');
+
 var app = express();
 var server = require('http').createServer(app);
 var content = require('./lib/content.js');
+
+app.use(compression());
 
 var port = process.env.SGOL_PORT || 1337;
 var host = process.env.SGOL_HOST || '0.0.0.0';
