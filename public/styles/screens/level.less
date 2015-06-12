@@ -1,0 +1,93 @@
+#screen-level {
+  .scrollable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .level {
+    margin: 48px 0;
+
+    .level-container {
+      position: relative;
+    }
+
+    .grid-container {
+      position: absolute;
+      opacity: 0.1;
+    }
+  }
+
+  footer, header {
+    position: fixed;
+    width: 100%;
+    background-color: #000;
+    height: 48px;
+    text-align: center;
+  }
+
+  footer {
+    bottom: 0px;
+    line-height: 48px;
+    border-top: 2px solid #111;
+
+    button {
+      font-size: 12px;
+      padding: 4px;
+
+      @media (max-width: 320px) {
+        font-size: 10px;
+      }
+    }
+
+    .play-controls {
+      display: none;
+      padding: 0 10px;
+
+      .stop {
+        width: 100%;
+        background-color: #f00;
+      }
+    }
+  }
+
+  header {
+    top: 0px;
+    line-height: 24px;
+    border-bottom: 2px solid #111;
+
+    .generation {
+      display: inline-block;
+    }
+
+    .antigoal, .segment-played, .segment-red, .segment-green {
+      display: none;
+    }
+
+    @media (max-width: 320px) {
+      font-size: 11px;
+    }
+  }
+
+  // TODO: Clean
+  header.done.playing,
+  footer.done.playing {
+    background-color: #000;
+  }
+
+  // TODO: Clean
+  header.done,
+  footer.done,
+  header.win,
+  footer.win,
+  header.win.playing,
+  footer.win.playing {
+    background-color: #060;
+  }
+
+  // TODO: Clean
+  header.lose,
+  footer.lose {
+    background-color: #600;
+  }
+}
