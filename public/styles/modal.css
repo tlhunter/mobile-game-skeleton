@@ -107,3 +107,7 @@
     font-weight: normal;
     color: #0f9;
 }
+
+#modal img {
+    max-width: 100%;
+}
