@@ -47,6 +47,7 @@
 
 #screen-level footer .play-controls .stop {
 	width: 100%;
+	background-color: #f00;
 }
 
 #screen-level header {

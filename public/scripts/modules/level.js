@@ -83,11 +83,12 @@ MODULE.Level = (function() {
 	};
 
 	Level.COLORS = {
-		playable:	'rgba(0,255,0,0.2)',
-		deadzone:	'rgba(255,0,0,0.2)',
-		alive:		'rgb(175,175,175)',
-		alive_self:	'rgb(0,175,0)',
-		alive_foe:	'rgb(175,0,0)'
+		playable: 'rgba(0,255,0,0.2)',
+		playable_in_play: 'rgba(0,255,0,0.05)',
+		deadzone: 'rgba(255,0,0,0.2)',
+		alive: 'rgb(175,175,175)',
+		alive_self: 'rgb(0,175,0)',
+		alive_foe: 'rgb(175,0,0)'
 	};
 
 	Level.STATUS = {
@@ -532,6 +533,11 @@ MODULE.Level = (function() {
 
 	Level.prototype.drawPlayables = function() {
 		this.gamefield.fillStyle = Level.COLORS.playable;
+
+		if (this.playing) {
+			this.gamefield.fillStyle = Level.COLORS.playable_in_play;
+		}
+
 		var playables = this.playables;
 		var size = this.size;
 
