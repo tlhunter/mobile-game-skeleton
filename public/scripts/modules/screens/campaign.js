@@ -4,15 +4,15 @@ if (!MODULE) { var MODULE = {}; }
 
 MODULE.CampaignScreen = (function() {
     var CampaignScreen = function() {
-        this.$screen = $('#screen-campaign');
-        this.$levels = this.$screen.find('.levels');
+        this.screen = document.getElementById('screen-campaign');
+        this.levels = this.screen.getElementsByClassName('levels')[0];
 
-        this.$buttons = {
-            back: this.$screen.find('.footer-buttons .back')
+        this.buttons = {
+            back: this.screen.querySelector('.footer-buttons .back')
         };
 
-        this.$buttons.back.on('click', this.onBack.bind(this));
-        this.$levels.delegate('.available', 'click', this.onLevel);
+        this.buttons.back.onclick = this.onBack.bind(this);
+        this.levels.onclick = this.onLevel.bind(this);
 
         this.rank_css = false;
     };
@@ -24,13 +24,13 @@ MODULE.CampaignScreen = (function() {
         // By not playing music, we keep the same song playing between levels within a chapter
         //app.audio.playMusic('background');
 
-        this.$screen.show();
+        this.screen.style.display = 'block';
 
         app.analytics.track('SCREEN-CAMPAIGN');
     };
 
     CampaignScreen.prototype.hide = function() {
-        this.$screen.hide();
+        this.screen.style.display = 'none';
     };
 
     /**
@@ -55,7 +55,7 @@ MODULE.CampaignScreen = (function() {
 
         css += "</style>\n";
 
-        this.$screen.append(css);
+        this.screen.insertAdjacentHTML('afterend', css);
 
         this.rank_css = true;
     };
@@ -85,7 +85,7 @@ MODULE.CampaignScreen = (function() {
             levels += "<div class='level " + c + "'>" + i + "</div>";
         }
 
-        this.$levels.html(levels);
+        this.levels.innerHTML = levels;
     };
 
     CampaignScreen.prototype.onBack = function() {
@@ -93,11 +93,12 @@ MODULE.CampaignScreen = (function() {
         app.screen.display('menu');
     };
 
-    CampaignScreen.prototype.onLevel = function() {
-        var level = Math.floor($(this).text());
-
-        app.audio.playSound('select');
-        app.screen.display('level', level);
+    CampaignScreen.prototype.onLevel = function(event) {
+        if (event.target.classList.contains('available')) {
+            var level = Math.floor(event.target.textContent);
+            app.audio.playSound('select');
+            app.screen.display('level', level);
+        }
     };
 
     return CampaignScreen;
