@@ -4,17 +4,25 @@ if (!MODULE) { var MODULE = {}; }
 
 MODULE.Grid = (function() {
     var Grid = function(width, height, size, $container) {
+
+        var container = $container[0]; // TODO: Temporary jQuery compat
+
         this.width = width;
         this.height = height;
-        this.$container = $container.empty();
+
+        container.innerHTML = '';
+        this.container = container;
+
         this.size = size;
 
-		var $grid = $('<canvas width="' + this.width * this.size + '" height="' + this.height * this.size + '"></canvas>');
+		var grid = '<canvas width="' + this.width * this.size + '" height="' + this.height * this.size + '"></canvas>';
 
-        this.$grid = $grid;
-		this.$container.empty().append($grid);
+		this.container.insertAdjacentHTML('beforeend', grid);
 
-		this.grid = this.$grid[0].getContext('2d');
+        this.canvas = this.container.getElementsByTagName('canvas')[0];
+		this.grid = this.canvas.getContext('2d');
+
+        console.log(this.grid);
 
         this.resize();
     };
@@ -39,11 +47,11 @@ MODULE.Grid = (function() {
 			height: this.height * this.size
 		};
 
-		this.$grid.attr('width', this.pixel_dimensions.width);
-		this.$grid.attr('height', this.pixel_dimensions.height);
+		this.canvas.setAttribute('width', this.pixel_dimensions.width);
+		this.canvas.setAttribute('height', this.pixel_dimensions.height);
 
-		this.grid.width = this.pixel_dimensions.width;
-		this.grid.height = this.pixel_dimensions.height;
+		this.canvas.width = this.pixel_dimensions.width;
+		this.canvas.height = this.pixel_dimensions.height;
 
         this.render();
 	};

@@ -4,23 +4,23 @@ if (!MODULE) { var MODULE = {}; }
 
 MODULE.OnlineScreen = (function() {
     var OnlineScreen = function() {
-        this.$screen = $('#screen-online');
+        this.screen = document.getElementById('screen-online');
 
-        this.$buttons = {
-            back: this.$screen.find('.footer-buttons .back')
+        this.buttons = {
+            back: this.screen.querySelector('.footer-buttons .back')
         };
 
-        this.$buttons.back.on('click', this.onBack.bind(this));
+        this.buttons.back.onclick = this.onBack.bind(this);
     };
 
     OnlineScreen.prototype.display = function() {
-        this.$screen.show();
+        this.screen.style.display = 'block';
 
         app.analytics.track('SCREEN-ONLINE');
     };
 
     OnlineScreen.prototype.hide = function() {
-        this.$screen.hide();
+        this.screen.style.display = 'none';
     };
 
     OnlineScreen.prototype.onBack = function() {

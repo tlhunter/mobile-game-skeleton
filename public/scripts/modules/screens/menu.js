@@ -4,31 +4,32 @@ if (!MODULE) { var MODULE = {}; }
 
 MODULE.MenuScreen = (function() {
     var MenuScreen = function() {
-        this.$screen = $('#screen-menu');
+        this.screen = document.getElementById('screen-menu');
+        var buttons = this.screen.getElementsByClassName('buttons')[0];
 
-        this.$buttons = {
-            campaign: this.$screen.find('button.campaign'),
-            online: this.$screen.find('button.online'),
-            settings: this.$screen.find('button.settings'),
-            help: this.$screen.find('button.help'),
+        this.buttons = {
+            campaign: buttons.getElementsByClassName('campaign')[0],
+            online: buttons.getElementsByClassName('online')[0],
+            settings: buttons.getElementsByClassName('settings')[0],
+            help: buttons.getElementsByClassName('help')[0]
         };
 
-        this.$buttons.campaign.on('click', this.onCampaign.bind(this));
-        this.$buttons.online.on('click', this.onOnline.bind(this));
-        this.$buttons.settings.on('click', this.onSettings.bind(this));
-        this.$buttons.help.on('click', this.onHelp.bind(this));
+        this.buttons.campaign.onclick = this.onCampaign.bind(this);
+        this.buttons.online.onclick = this.onOnline.bind(this);
+        this.buttons.settings.onclick = this.onSettings.bind(this);
+        this.buttons.help.onclick = this.onHelp.bind(this);
     };
 
     MenuScreen.prototype.display = function() {
         app.audio.playMusic('background');
 
-        this.$screen.show();
+        this.screen.style.display = 'block';
 
         app.analytics.track('SCREEN-MENU');
     };
 
     MenuScreen.prototype.hide = function() {
-        this.$screen.hide();
+        this.screen.style.display = 'none';
     };
 
     MenuScreen.prototype.onCampaign = function() {

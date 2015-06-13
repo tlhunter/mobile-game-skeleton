@@ -7,31 +7,37 @@ MODULE.SplashScreen = (function() {
     var BUTTONS_SHOW_TIME = 500;
 
     var SplashScreen = function() {
-        this.$screen = $('#screen-splash');
-        this.$actions = this.$screen.find('.actions');
-        this.$loading = this.$actions.find('.loading');
+        this.screen = document.getElementById('screen-splash');
+        this.actions = this.screen.getElementsByClassName('actions')[0];
+        this.loading = this.actions.getElementsByClassName('loading')[0];
 
-        this.$buttons = {
-            play: this.$actions.find('.play')
+        this.buttons = {
+            play: this.actions.getElementsByClassName('play')[0]
         };
 
-        this.$buttons.play.on('click', this.onPlay.bind(this));
+        this.buttons.play.onclick = this.onPlay.bind(this);
     };
 
     SplashScreen.prototype.finish = function() {
-        this.$loading.fadeOut(LOADING_HIDE_TIME, function() {
-            this.$buttons.play.fadeIn(BUTTONS_SHOW_TIME);
-        }.bind(this));
+        var self = this;
+
+        setTimeout(function() {
+            self.loading.classList.add('hide');
+
+            setTimeout(function() {
+                self.buttons.play.classList.add('show');
+            }, BUTTONS_SHOW_TIME);
+        }, LOADING_HIDE_TIME);
     };
 
     SplashScreen.prototype.display = function() {
-        this.$screen.show();
+        this.screen.style.display = 'block';
 
         //app.analytics.track('SCREEN-SPLASH');
     };
 
     SplashScreen.prototype.hide = function() {
-        this.$screen.hide();
+        this.screen.style.display = 'none';
     };
 
     SplashScreen.prototype.onPlay = function() {

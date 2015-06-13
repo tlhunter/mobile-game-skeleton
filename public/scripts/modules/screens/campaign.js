@@ -55,7 +55,7 @@ MODULE.CampaignScreen = (function() {
 
         css += "</style>\n";
 
-        this.screen.insertAdjacentHTML('afterend', css);
+        this.screen.insertAdjacentHTML('beforeend', css);
 
         this.rank_css = true;
     };
