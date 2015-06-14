@@ -8,8 +8,7 @@ MODULE.Device = (function() {
 
         this.viewport = {
             width: screen.availWidth,
-            //height: Math.min(screen.availHeight, $(window).height())
-            height: screen.availHeight // TODO, wrong on some devices
+            height: Math.min(screen.availHeight, window.innerHeight)
         };
 
         this.vendor = Device.getVendor();
