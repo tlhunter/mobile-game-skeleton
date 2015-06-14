@@ -5,8 +5,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 100ms;
+
+  &.visible {
+    transition: opacity 300ms;
+    opacity: 1;
+    pointer-events: all;
+  }
 
   .modal {
     position: fixed;
@@ -16,7 +24,7 @@
     right: 16px;
     bottom: 16px;
     border: 2px solid rgba(255, 255, 255, 0.25);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #000;
 
     &.small {
       top: 30%;

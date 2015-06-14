@@ -3,14 +3,13 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Modal = (function() {
-    var MODAL_SHOW_TIME = 250;
-    var MODAL_HIDE_TIME = 500;
+    var MODAL_HIDE_TIME = 300;
 
     var Modal = function() {
-        this.$background = $('#modal');
-        this.$modal = this.$background.find('.modal');
-        this.$content = this.$modal.find('.content');
-        this.$buttons = this.$modal.find('.buttons');
+        this.background = document.getElementById('modal');
+        this.modal = this.background.getElementsByClassName('modal')[0];
+        this.content = this.modal.getElementsByClassName('content')[0];
+        this.buttons = this.modal.getElementsByClassName('buttons')[0];
     };
 
     Modal.prototype.show = function(content, buttons, small) {
@@ -21,42 +20,45 @@ MODULE.Modal = (function() {
         }];
 
         this.empty();
-        this.$content.html(content);
+        this.content.innerHTML = content;
 
-        buttons.forEach(function(button) {
-            var $button = $('<button>' + button.text + '</button>');
+        buttons.forEach(function(data) {
+            var button = document.createElement('button');
+            var text = document.createTextNode(data.text);
+            button.appendChild(text);
 
-            $button.on('click', function() {
-                self.fadeOut(button.callback);
-            });
+            button.onclick = function() {
+                self.fadeOut(data.callback);
+            };
 
-            self.$buttons.append($button);
+            self.buttons.appendChild(button);
         });
 
-        this.$modal.toggleClass('small', !!small);
+        if (small) {
+            this.modal.classList.add('small');
+        } else {
+            this.modal.classList.remove('small');
+        }
 
-        this.$background.fadeIn(MODAL_SHOW_TIME);
+        this.background.classList.add('visible');
     };
 
     Modal.prototype.fadeOut = function(callback) {
-        this.$background.fadeOut(MODAL_HIDE_TIME, function() {
+        this.background.classList.remove('visible');
+        setTimeout(function() {
             this.empty();
-
-            if (callback) {
-                callback();
-            }
-        }.bind(this));
+            if (callback) callback();
+        }.bind(this), MODAL_HIDE_TIME);
     };
 
     Modal.prototype.hide = function() {
-        this.$background.hide();
+        this.background.classList.remove('visible');
         this.empty();
     };
 
     Modal.prototype.empty = function() {
-        this.$content.empty();
-        this.$buttons.find('button').off(); // Memory Leak
-        this.$buttons.empty();
+        this.content.innerHTML = '';
+        this.buttons.innerHTML = '';
     };
 
     return Modal;
