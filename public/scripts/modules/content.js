@@ -19,13 +19,5 @@ MODULE.Content = (function() {
         });
     };
 
-    Content.prototype.get = function(key) {
-        if (!this.ready) {
-            return null;
-        }
-
-        return this.data[key];
-    };
-
     return Content;
 }());

@@ -32,12 +32,16 @@ if (!MODULE) { var MODULE = {}; }
 
 	app.screen.display('splash');
 
-	app.content.load(function() {
-		app.audio.init(app.content.data.audio);
-		// TODO? app.audio = new MODULE.Audio(app.content.data.audio);
-		app.analytics.init(app.content.data.dictionary.mixpanel);
-		app.interstitial.init(app.content.data.dictionary.admob);
-		app.rank.init(app.content.data.ranks);
+	app.content.load(function(data) {
+		if (!data) {
+			return alert("Unable to load data");
+		}
+
+		app.audio.init(data.audio);
+		// TODO? app.audio = new MODULE.Audio(data.audio);
+		app.analytics.init(data.dictionary.mixpanel);
+		app.interstitial.init(data.dictionary.admob);
+		app.rank.init(data.ranks);
 		app.screen.get('splash').finish();
 	});
 })();
