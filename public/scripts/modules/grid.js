@@ -3,10 +3,7 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Grid = (function() {
-    var Grid = function(width, height, size, $container) {
-
-        var container = $container[0]; // TODO: Temporary jQuery compat
-
+    var Grid = function(width, height, size, container) {
         this.width = width;
         this.height = height;
 

@@ -79,13 +79,13 @@ MODULE.LevelScreen = (function() {
             height: app.device.viewport.height - (this.$footer.outerHeight() + this.$header.outerHeight())
         };
 
-        this.level = new MODULE.Level(campaign, this.$level, constraints);
+        this.level = new MODULE.Level(campaign, this.$level[0], constraints);
 
         this.grid = new MODULE.Grid(
             this.level.dimensions.width,
             this.level.dimensions.height,
             this.level.size,
-            this.$grid
+            this.$grid[0]
         );
 
         this.level
@@ -184,7 +184,7 @@ MODULE.LevelScreen = (function() {
         this.toggleRedSegment(this.level.maxred);
         this.toggleGreenSegment(this.level.mingreen);
 
-        var $gamefield = this.level.$gamefield;
+        var $gamefield = $(this.level.gamefield);
         var finger = new Hammer($gamefield[0]);
         finger.get('pinch').set({enable: true});
 

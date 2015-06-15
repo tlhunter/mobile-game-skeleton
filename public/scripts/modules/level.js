@@ -5,10 +5,12 @@ if (!MODULE) { var MODULE = {}; }
 MODULE.Level = (function() {
 	var noop = function() {};
 
-    var Level = function(data, $container, constraints) {
+    var Level = function(data, container, constraints) {
         EventEmitter.apply(this);
 		this.level_id = data.id;
-		this.$container = $container.empty();
+		this.container = container;
+
+		this.container.innerHTML = '';
 
 		this.dimensions = {
 			width: data.width,
@@ -24,12 +26,14 @@ MODULE.Level = (function() {
 
 		this.size = Math.min(max_size.w, max_size.h);
 
-		var $gamefield = $('<canvas width="' + this.dimensions.width * this.size + '" height="' + this.dimensions.height * this.size + '"></canvas>');
+		var gamefield = document.createElement('canvas');
+		gamefield.setAttribute('width', this.dimensions.width * this.size);
+		gamefield.setAttribute('height', this.dimensions.height * this.size);
 
-		this.$gamefield = $gamefield;
-		this.$container.empty().append($gamefield);
+		this.gamefield = gamefield;
+		this.container.appendChild(gamefield);
 
-		this.gamefield = this.$gamefield[0].getContext('2d');
+		this.context = this.gamefield.getContext('2d');
 
 		this.resize();
 
@@ -139,11 +143,10 @@ MODULE.Level = (function() {
 			height: this.dimensions.height * this.size
 		};
 
-		this.$gamefield.attr('width', this.pixel_dimensions.width);
-		this.$gamefield.attr('height', this.pixel_dimensions.height);
-
-		this.gamefield.width = this.pixel_dimensions.width;
-		this.gamefield.height = this.pixel_dimensions.height;
+		this.gamefield.setAttribute('width', this.pixel_dimensions.width);
+		this.gamefield.setAttribute('height', this.pixel_dimensions.height);
+		this.context.width = this.pixel_dimensions.width;
+		this.context.height = this.pixel_dimensions.height;
 	};
 
 	// TODO: Cache
@@ -279,7 +282,12 @@ MODULE.Level = (function() {
 	};
 
 	Level.prototype.eventPosition = function(event) {
-		var offset = this.$gamefield.offset();
+		var offset = this.gamefield.getBoundingClientRect();
+
+		offset = {
+			top: offset.top + document.body.scrollTop,
+			left: offset.left + document.body.scrollLeft
+		};
 
 		return {
 			x: Math.floor((event.pageX - offset.left) / this.size),
@@ -528,21 +536,21 @@ MODULE.Level = (function() {
 	};
 
 	Level.prototype.drawClear = function() {
-		this.gamefield.clearRect(0, 0, this.pixel_dimensions.width, this.pixel_dimensions.height);
+		this.context.clearRect(0, 0, this.pixel_dimensions.width, this.pixel_dimensions.height);
 	};
 
 	Level.prototype.drawPlayables = function() {
-		this.gamefield.fillStyle = Level.COLORS.playable;
+		this.context.fillStyle = Level.COLORS.playable;
 
 		if (this.playing) {
-			this.gamefield.fillStyle = Level.COLORS.playable_in_play;
+			this.context.fillStyle = Level.COLORS.playable_in_play;
 		}
 
 		var playables = this.playables;
 		var size = this.size;
 
 		for (var p in playables) {
-			this.gamefield.fillRect(
+			this.context.fillRect(
 				playables[p].x * size,
 				playables[p].y * size,
 				playables[p].w * size,
@@ -552,12 +560,12 @@ MODULE.Level = (function() {
 	};
 
 	Level.prototype.drawDeadzones = function() {
-		this.gamefield.fillStyle = Level.COLORS.deadzone;
+		this.context.fillStyle = Level.COLORS.deadzone;
 		var deadzones = this.deadzones;
 		var size = this.size;
 
 		for (var d in deadzones) {
-			this.gamefield.fillRect(
+			this.context.fillRect(
 				deadzones[d].x * size,
 				deadzones[d].y * size,
 				deadzones[d].w * size,
@@ -574,14 +582,14 @@ MODULE.Level = (function() {
 				var cell = this.arena[y][x];
 				if (cell) {
 					if (cell === Level.CELL.NORMAL) {
-						this.gamefield.fillStyle = Level.COLORS.alive;
+						this.context.fillStyle = Level.COLORS.alive;
 					} else if (cell === Level.CELL.MINE) {
-						this.gamefield.fillStyle = Level.COLORS.alive_self;
+						this.context.fillStyle = Level.COLORS.alive_self;
 					} else if (cell === Level.CELL.FOE) {
-						this.gamefield.fillStyle = Level.COLORS.alive_foe;
+						this.context.fillStyle = Level.COLORS.alive_foe;
 					}
 
-					this.gamefield.fillRect(x * size, y * size, size, size);
+					this.context.fillRect(x * size, y * size, size, size);
 				}
 			}
 		}
@@ -591,15 +599,15 @@ MODULE.Level = (function() {
 		// Cycle through hue's like a rainbow
 		for (var goal = 0; goal < this.goal.length; goal++) {
 			var hue = Math.floor((Math.sin(this.goalPhase/10)+1)/2*255);
-			this.gamefield.fillStyle = 'hsla(' + hue + ',50%,50%,0.75)';
-			this.gamefield.fillRect(this.goal[goal].x * this.size, this.goal[goal].y * this.size, 1 * this.size, 1 * this.size);
+			this.context.fillStyle = 'hsla(' + hue + ',50%,50%,0.75)';
+			this.context.fillRect(this.goal[goal].x * this.size, this.goal[goal].y * this.size, 1 * this.size, 1 * this.size);
 		}
 
 		// Cycle through saturations of red
 		for (var ag = 0; ag < this.antigoal.length; ag++) {
 			var sat = Math.floor((Math.sin(this.goalPhase/4)+1)/2*100);
-			this.gamefield.fillStyle = 'hsla(0,' + sat + '%,50%,0.5)';
-			this.gamefield.fillRect(this.antigoal[ag].x * this.size, this.antigoal[ag].y * this.size, 1 * this.size, 1 * this.size);
+			this.context.fillStyle = 'hsla(0,' + sat + '%,50%,0.5)';
+			this.context.fillRect(this.antigoal[ag].x * this.size, this.antigoal[ag].y * this.size, 1 * this.size, 1 * this.size);
 		}
 
 		// Increment the goal phase value with each frame
