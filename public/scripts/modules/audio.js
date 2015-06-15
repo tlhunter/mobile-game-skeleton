@@ -3,24 +3,13 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Audio = (function() {
-    var Audio = function() {
+    var Audio = function(data) {
         this.collection = {
             music: {},
             sound: {}
         };
 
         this.current = null;
-    };
-
-    Audio.MUSIC = 'music';
-    Audio.SOUND = 'sound';
-
-    Audio.MUTE = {
-        MUSIC: 'mute-music',
-        SOUND: 'mute-sound'
-    };
-
-    Audio.prototype.init = function(data) {
         Object.keys(data).forEach(function(audio_id) {
             var audio = data[audio_id];
 
@@ -40,6 +29,14 @@ MODULE.Audio = (function() {
         app.device.on('focus', function() {
             this.resumeMusic();
         }.bind(this));
+    };
+
+    Audio.MUSIC = 'music';
+    Audio.SOUND = 'sound';
+
+    Audio.MUTE = {
+        MUSIC: 'mute-music',
+        SOUND: 'mute-sound'
     };
 
     Audio.prototype.playMusic = function(id) {

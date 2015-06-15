@@ -3,10 +3,7 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Analytics = (function() {
-    var Analytics = function() {
-    };
-
-    Analytics.prototype.init = function(identifier) {
+    var Analytics = function(identifier) {
         this.identifier = identifier;
 
         window.mixpanel.init(this.identifier);

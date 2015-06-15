@@ -3,23 +3,13 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Rank = (function() {
-    var Rank = function() {
+    var Rank = function(ranks) {
         this.ranks = {};
 
         this.default_rank = {};
         this.failure_rank = {};
         this.unplayed_rank = {};
         this.worst_rank = {};
-    };
-
-    Rank.TYPE = {
-        DEFAULT: 'default',
-        FAILURE: 'failure',
-        UNPLAYED: 'unplayed',
-        WORST: 'worst'
-    };
-
-    Rank.prototype.init = function(ranks) {
         Object.keys(ranks).forEach(function(rank) {
             rank = ranks[rank];
 
@@ -35,6 +25,13 @@ MODULE.Rank = (function() {
         }, this);
 
         this.ranks = ranks;
+    };
+
+    Rank.TYPE = {
+        DEFAULT: 'default',
+        FAILURE: 'failure',
+        UNPLAYED: 'unplayed',
+        WORST: 'worst'
     };
 
     Rank.prototype.getFailure = function() {
