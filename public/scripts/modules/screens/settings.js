@@ -3,86 +3,86 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.SettingsScreen = (function() {
-    var SettingsScreen = function() {
-        this.screen = document.getElementById('screen-settings');
-        var buttons = this.screen.getElementsByClassName('footer-buttons')[0];
+  var SettingsScreen = function() {
+    this.screen = document.getElementById('screen-settings');
+    var buttons = this.screen.getElementsByClassName('footer-buttons')[0];
 
-        this.buttons = {
-            back: buttons.getElementsByClassName('back')[0],
-            reset: buttons.getElementsByClassName('reset')[0],
-            sound: buttons.getElementsByClassName('toggle-sfx')[0],
-            music: buttons.getElementsByClassName('toggle-bgm')[0],
-            refresh: buttons.getElementsByClassName('refresh')[0]
-        };
-
-        this.sound_mute = this.buttons.sound.getElementsByTagName('span')[0];
-        this.music_mute = this.buttons.music.getElementsByTagName('span')[0];
-
-        this.version = this.screen.getElementsByClassName('version')[0];
-
-        this.buttons.back.onclick = this.onBack.bind(this);
-        this.buttons.reset.onclick = this.onReset.bind(this);
-        this.buttons.refresh.onclick = this.onRefresh.bind(this);
-        this.buttons.sound.onclick = this.onSound.bind(this);
-        this.buttons.music.onclick = this.onMusic.bind(this);
+    this.buttons = {
+      back: buttons.getElementsByClassName('back')[0],
+      reset: buttons.getElementsByClassName('reset')[0],
+      sound: buttons.getElementsByClassName('toggle-sfx')[0],
+      music: buttons.getElementsByClassName('toggle-bgm')[0],
+      refresh: buttons.getElementsByClassName('refresh')[0]
     };
 
-    SettingsScreen.prototype.display = function() {
-        this.version.textContent = app.content.data.version;
+    this.sound_mute = this.buttons.sound.getElementsByTagName('span')[0];
+    this.music_mute = this.buttons.music.getElementsByTagName('span')[0];
 
-        this.screen.style.display = 'block';
+    this.version = this.screen.getElementsByClassName('version')[0];
 
-        app.analytics.track('SCREEN-SETTINGS');
+    this.buttons.back.onclick = this.onBack.bind(this);
+    this.buttons.reset.onclick = this.onReset.bind(this);
+    this.buttons.refresh.onclick = this.onRefresh.bind(this);
+    this.buttons.sound.onclick = this.onSound.bind(this);
+    this.buttons.music.onclick = this.onMusic.bind(this);
+  };
 
-        this.renderMuteButtons();
-    };
+  SettingsScreen.prototype.display = function() {
+    this.version.textContent = app.content.data.version;
 
-    SettingsScreen.prototype.renderMuteButtons = function() {
-        this.sound_mute.textContent = app.audio.isMuteSound() ? "Enable" : "Disable";
-        this.music_mute.textContent = app.audio.isMuteMusic() ? "Enable" : "Disable";
-    };
+    this.screen.style.display = 'block';
 
-    SettingsScreen.prototype.hide = function() {
-        this.screen.style.display = 'none';
-    };
+    app.analytics.track('SCREEN-SETTINGS');
 
-    SettingsScreen.prototype.onReset = function() {
-        app.modal.show(
-            app.content.data.dictionary.confirm_reset,
-            [{
-                text: "Destroy",
-                callback: function() {
-                    app.storage.clear();
-                    app.reload();
-                }
-            },
-            {
-                text: "Cancel"
-            }], true
-        );
-    };
+    this.renderMuteButtons();
+  };
 
-    SettingsScreen.prototype.onRefresh = function() {
-        app.reload();
-    };
+  SettingsScreen.prototype.renderMuteButtons = function() {
+    this.sound_mute.textContent = app.audio.isMuteSound() ? "Enable" : "Disable";
+    this.music_mute.textContent = app.audio.isMuteMusic() ? "Enable" : "Disable";
+  };
 
-    SettingsScreen.prototype.onSound = function() {
-        app.audio.muteSound();
+  SettingsScreen.prototype.hide = function() {
+    this.screen.style.display = 'none';
+  };
 
-        this.renderMuteButtons();
-    };
+  SettingsScreen.prototype.onReset = function() {
+    app.modal.show(
+      app.content.data.dictionary.confirm_reset,
+      [{
+        text: "Destroy",
+        callback: function() {
+          app.storage.clear();
+          app.reload();
+        }
+      },
+      {
+        text: "Cancel"
+      }], true
+    );
+  };
 
-    SettingsScreen.prototype.onMusic = function() {
-        app.audio.muteMusic();
-        app.audio.playMusic('background');
+  SettingsScreen.prototype.onRefresh = function() {
+    app.reload();
+  };
 
-        this.renderMuteButtons();
-    };
+  SettingsScreen.prototype.onSound = function() {
+    app.audio.muteSound();
 
-    SettingsScreen.prototype.onBack = function() {
-        app.audio.playSound('back');
-        app.screen.display('menu');
-    };
+    this.renderMuteButtons();
+  };
 
-    return SettingsScreen;
+  SettingsScreen.prototype.onMusic = function() {
+    app.audio.muteMusic();
+    app.audio.playMusic('background');
+
+    this.renderMuteButtons();
+  };
+
+  SettingsScreen.prototype.onBack = function() {
+    app.audio.playSound('back');
+    app.screen.display('menu');
+  };
+
+  return SettingsScreen;
 }());

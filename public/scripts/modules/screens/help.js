@@ -3,38 +3,38 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.HelpScreen = (function() {
-    var drawn = false;
+  var drawn = false;
 
-    var HelpScreen = function() {
-        this.screen = document.getElementById('screen-help');
-        this.content = this.screen.getElementsByClassName('content')[0];
+  var HelpScreen = function() {
+    this.screen = document.getElementById('screen-help');
+    this.content = this.screen.getElementsByClassName('content')[0];
 
-        this.buttons = {
-            back: this.screen.querySelector('.footer-buttons .back')
-        };
-
-        this.buttons.back.onclick = this.onBack.bind(this);
+    this.buttons = {
+      back: this.screen.querySelector('.footer-buttons .back')
     };
 
-    HelpScreen.prototype.display = function() {
-        if (!drawn) {
-            drawn = true;
-            this.content.innerHTML = app.content.data.dictionary.how_to_play;
-        }
+    this.buttons.back.onclick = this.onBack.bind(this);
+  };
 
-        this.screen.style.display='block';
+  HelpScreen.prototype.display = function() {
+    if (!drawn) {
+      drawn = true;
+      this.content.innerHTML = app.content.data.dictionary.how_to_play;
+    }
 
-        app.analytics.track('SCREEN-HELP');
-    };
+    this.screen.style.display='block';
 
-    HelpScreen.prototype.hide = function() {
-        this.screen.style.display = 'none';
-    };
+    app.analytics.track('SCREEN-HELP');
+  };
 
-    HelpScreen.prototype.onBack = function() {
-        app.audio.playSound('back');
-        app.screen.display('menu');
-    };
+  HelpScreen.prototype.hide = function() {
+    this.screen.style.display = 'none';
+  };
 
-    return HelpScreen;
+  HelpScreen.prototype.onBack = function() {
+    app.audio.playSound('back');
+    app.screen.display('menu');
+  };
+
+  return HelpScreen;
 }());

@@ -1,201 +1,190 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Strategic GoL</title>
-    <style>html { background-color: #000; }</style>
+  <title>Strategic GoL</title>
+  <style>html { background-color: #000; }</style>
 
 	<!-- Styles -->
-    <!--
-    <link href="styles/main.css" type="text/css" rel="stylesheet" />
-    <link href="styles/modal.css" type="text/css" rel="stylesheet" />
-    <link href="styles/screens/campaign.css" type="text/css" rel="stylesheet" />
-    <link href="styles/screens/help.css" type="text/css" rel="stylesheet" />
-    <link href="styles/screens/level.css" type="text/css" rel="stylesheet" />
-    <link href="styles/screens/menu.css" type="text/css" rel="stylesheet" />
-    <link href="styles/screens/online.css" type="text/css" rel="stylesheet" />
-    <link href="styles/screens/settings.css" type="text/css" rel="stylesheet" />
-    <link href="styles/screens/splash.css" type="text/css" rel="stylesheet" />
-    -->
-    <link href="dist/app.css" type="text/css" rel="stylesheet" />
+  <!--
+  <link href="styles/main.css" type="text/css" rel="stylesheet" />
+  <link href="styles/modal.css" type="text/css" rel="stylesheet" />
+  <link href="styles/screens/campaign.css" type="text/css" rel="stylesheet" />
+  <link href="styles/screens/help.css" type="text/css" rel="stylesheet" />
+  <link href="styles/screens/level.css" type="text/css" rel="stylesheet" />
+  <link href="styles/screens/menu.css" type="text/css" rel="stylesheet" />
+  <link href="styles/screens/online.css" type="text/css" rel="stylesheet" />
+  <link href="styles/screens/settings.css" type="text/css" rel="stylesheet" />
+  <link href="styles/screens/splash.css" type="text/css" rel="stylesheet" />
+  -->
+  <link href="dist/app.css" type="text/css" rel="stylesheet" />
 
 	<!-- Mobile Settings -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="apple-touch-startup-image" href="images/meta/splash.png" />
-    <link rel="apple-touch-icon" href="images/meta/app-66.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="images/meta/app-76.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="images/meta/app-120.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="images/meta/app-152.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-startup-image" href="images/meta/splash.png" />
+  <link rel="apple-touch-icon" href="images/meta/app-66.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/meta/app-76.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/meta/app-120.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/meta/app-152.png" />
 </head>
 
 <body>
 
 <div id="modal">
-    <div class="modal">
-        <div class="content"></div>
-        <div class="buttons">
-            <!--
-            <button class="accept">OK</button>
-            <button class="cancel">Cancel</button>
-            -->
-        </div>
-    </div>
+  <div class="modal">
+    <div class="content"></div>
+    <div class="buttons"></div>
+  </div>
 </div>
 
 <main id="screens">
-    <section id="screen-splash" class="screen screen-full">
-        <div class="common-header">
-            <h1 class="cycle"><span>Strategic</span></h1>
-            <h2 class="cycle"><span>Game of Life</span></h2>
-        </div>
+  <section id="screen-splash" class="screen screen-full">
+    <div class="common-header">
+      <h1 class="cycle"><span>Strategic</span></h1>
+      <h2 class="cycle"><span>Game of Life</span></h2>
+    </div>
 
-        <div class="footer">
-            <div class="actions">
-                <button class="full play">Play</button>
-                <div class='loading'><span>Loading...</span></div>
-            </div>
-            <div class="author"><span>A Game By <a href="https://twitter.com/tlhunter" target="_blank">Thomas Hunter II</a></span></div>
-        </div>
-    </section>
+    <div class="footer">
+      <div class="actions">
+        <button class="full play">Play</button>
+        <div class='loading'><span>Loading...</span></div>
+      </div>
+      <div class="author"><span>A Game By <a href="https://twitter.com/tlhunter" target="_blank">Thomas Hunter II</a></span></div>
+    </div>
+  </section>
 
-    <section id="screen-menu" class="screen screen-full">
-        <div class="common-header">
-            <h1 class="cycle"><span>Strategic</span></h1>
-            <h2 class="cycle"><span>Game of Life</span></h2>
-        </div>
+  <section id="screen-menu" class="screen screen-full">
+    <div class="common-header">
+      <h1 class="cycle"><span>Strategic</span></h1>
+      <h2 class="cycle"><span>Game of Life</span></h2>
+    </div>
 
-        <div class="buttons">
-            <button class="full campaign">Campaign</button>
-            <button class="full online" disabled="disabled">Online</button>
-            <button class="full settings">Settings</button>
-            <button class="full help">How to Play</button>
-        </div>
-    </section>
+    <div class="buttons">
+      <button class="full campaign">Campaign</button>
+      <button class="full online" disabled="disabled">Online</button>
+      <button class="full settings">Settings</button>
+      <button class="full help">How to Play</button>
+    </div>
+  </section>
 
-    <section id="screen-campaign" class="screen screen-full">
-        <div class="scrollable">
-            <div class="screen-wrap">
-                <h3>Campaign</h3>
+  <section id="screen-campaign" class="screen screen-full">
+    <div class="scrollable">
+      <div class="screen-wrap">
+        <h3>Campaign</h3>
 
-                <div class="levels">
-                    <!--
-                    <div class="level available">1</div>
-                    <div class="level available current">2</div>
-                    <div class="level unavailable">3</div>
-                    -->
-                </div>
-            </div>
+        <div class="levels"></div>
+      </div>
 
-            <div class="footer-buttons">
-                <button class="full back">Main Menu</button>
-            </div>
-        </div>
-    </section>
+      <div class="footer-buttons">
+        <button class="full back">Main Menu</button>
+      </div>
+    </div>
+  </section>
 
-    <section id="screen-online" class="screen screen-full">
-        <div class="screen-wrap">
-            <h3>Online</h3>
-        </div>
+  <section id="screen-online" class="screen screen-full">
+    <div class="screen-wrap">
+      <h3>Online</h3>
+    </div>
 
-        <div class="footer-buttons">
-            <button class="full back">Main Menu</button>
-        </div>
-    </section>
+    <div class="footer-buttons">
+      <button class="full back">Main Menu</button>
+    </div>
+  </section>
 
-    <section id="screen-settings" class="screen screen-full">
-        <div class="screen-wrap">
-            <h3>Settings</h3>
-            <h4>Version: <span class="version">0</span></h4>
-        </div>
+  <section id="screen-settings" class="screen screen-full">
+    <div class="screen-wrap">
+      <h3>Settings</h3>
+      <h4>Version: <span class="version">0</span></h4>
+    </div>
 
-        <div class="footer-buttons">
-            <button class="full toggle-sfx"><span>Toggle</span> SFX</button>
-            <button class="full toggle-bgm"><span>Toggle</span> BGM</button>
-            <button class="full refresh">Reload Game</button>
-            <button class="full reset">Reset Progress</button>
-            <button class="full back">Main Menu</button>
-        </div>
-    </section>
+    <div class="footer-buttons">
+      <button class="full toggle-sfx"><span>Toggle</span> SFX</button>
+      <button class="full toggle-bgm"><span>Toggle</span> BGM</button>
+      <button class="full refresh">Reload Game</button>
+      <button class="full reset">Reset Progress</button>
+      <button class="full back">Main Menu</button>
+    </div>
+  </section>
 
-    <section id="screen-help" class="screen screen-full">
-        <div class="scrollable">
-            <div class="screen-wrap">
-                <div class="content"></div>
-            </div>
+  <section id="screen-help" class="screen screen-full">
+    <div class="scrollable">
+      <div class="screen-wrap">
+        <div class="content"></div>
+      </div>
 
-            <div class="footer-buttons">
-                <button class="full back">Main Menu</button>
-            </div>
-        </div>
-    </section>
+      <div class="footer-buttons">
+        <button class="full back">Main Menu</button>
+      </div>
+    </div>
+  </section>
 
-    <section id="screen-level" class="screen">
-        <div class="scrollable">
-            <div class="level">
-                <div class="grid-container"></div>
-                <div class="level-container"></div>
-            </div>
-        </div>
+  <section id="screen-level" class="screen">
+    <div class="scrollable">
+      <div class="level">
+        <div class="grid-container"></div>
+        <div class="level-container"></div>
+      </div>
+    </div>
 
-        <header>
-            <div class="title">Loading...</div>
+    <header>
+      <div class="title">Loading...</div>
 
-            <div class="stats">
-                <span class="segment segment-gen">
-                    <!-- Always displayed -->
-                    GEN: <span class="generation cycle">0</span><span class="autowin">/<span class="autowin-gen cycle">0</span></span>
-                </span>
+      <div class="stats">
+        <span class="segment segment-gen">
+          <!-- Always displayed -->
+          GEN: <span class="generation cycle">0</span><span class="autowin">/<span class="autowin-gen cycle">0</span></span>
+        </span>
 
-                <span class="segment segment-played hide">
-                    <!-- Only displayed if there are playable fields -->
-                    PLAY: <span class="played cycle">0</span><span class="maxplay">/<span class="maxplay-val cycle">0</span></span>
-                </span>
+        <span class="segment segment-played hide">
+          <!-- Only displayed if there are playable fields -->
+          PLAY: <span class="played cycle">0</span><span class="maxplay">/<span class="maxplay-val cycle">0</span></span>
+        </span>
 
-                <span class="segment segment-red hide">
-                    <!-- Only displayed if there is a maxred -->
-                    RED: <span class="current cycle">0</span>/<span class="limit cycle">100</span>
-                </span>
+        <span class="segment segment-red hide">
+          <!-- Only displayed if there is a maxred -->
+          RED: <span class="current cycle">0</span>/<span class="limit cycle">100</span>
+        </span>
 
-                <span class="segment segment-green hide">
-                    <!-- Only displayed if there is a mingreen -->
-                    GREEN: <span class="current cycle">0</span>/<span class="limit cycle">100</span>
-                </span>
-            </div>
-        </header>
+        <span class="segment segment-green hide">
+          <!-- Only displayed if there is a mingreen -->
+          GREEN: <span class="current cycle">0</span>/<span class="limit cycle">100</span>
+        </span>
+      </div>
+    </header>
 
-        <footer>
-            <div class="play-controls hide">
-                <button class="stop">Stop</button>
-            </div>
-            <div class="stop-controls">
-                <button class="play">Play</button>
-                <button class="clear">Clear</button>
-                <button class="help">Help</button>
-                <button class="library">Library</button>
-                <button class="exit">Exit</button>
-            </div>
-        </footer>
-    </section>
+    <footer>
+      <div class="play-controls hide">
+        <button class="stop">Stop</button>
+      </div>
+      <div class="stop-controls">
+        <button class="play">Play</button>
+        <button class="clear">Clear</button>
+        <button class="help">Help</button>
+        <button class="library">Library</button>
+        <button class="exit">Exit</button>
+      </div>
+    </footer>
+  </section>
 </main>
 
 <!--
 <script src="scripts/lib/EventEmitter.js"></script>
+<script src="scripts/lib/hammer.js"></script>
 <script src="scripts/lib/mixpanel.js"></script>
 <script src="scripts/lib/overscroll.js"></script>
-<script src="scripts/lib/hammer.js"></script>
 <script src="scripts/modules/analytics.js"></script>
-<script src="scripts/modules/interstitial.js"></script>
-<script src="scripts/modules/device.js"></script>
 <script src="scripts/modules/audio.js"></script>
 <script src="scripts/modules/content.js"></script>
-<script src="scripts/modules/network.js"></script>
-<script src="scripts/modules/storage.js"></script>
-<script src="scripts/modules/level.js"></script>
-<script src="scripts/modules/rank.js"></script>
+<script src="scripts/modules/device.js"></script>
 <script src="scripts/modules/grid.js"></script>
+<script src="scripts/modules/interstitial.js"></script>
+<script src="scripts/modules/level.js"></script>
 <script src="scripts/modules/modal.js"></script>
+<script src="scripts/modules/network.js"></script>
+<script src="scripts/modules/rank.js"></script>
 <script src="scripts/modules/screen.js"></script>
+<script src="scripts/modules/storage.js"></script>
 <script src="scripts/modules/screens/campaign.js"></script>
 <script src="scripts/modules/screens/help.js"></script>
 <script src="scripts/modules/screens/level.js"></script>

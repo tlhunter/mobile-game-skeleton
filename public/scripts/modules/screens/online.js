@@ -3,30 +3,30 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.OnlineScreen = (function() {
-    var OnlineScreen = function() {
-        this.screen = document.getElementById('screen-online');
+  var OnlineScreen = function() {
+    this.screen = document.getElementById('screen-online');
 
-        this.buttons = {
-            back: this.screen.querySelector('.footer-buttons .back')
-        };
-
-        this.buttons.back.onclick = this.onBack.bind(this);
+    this.buttons = {
+      back: this.screen.querySelector('.footer-buttons .back')
     };
 
-    OnlineScreen.prototype.display = function() {
-        this.screen.style.display = 'block';
+    this.buttons.back.onclick = this.onBack.bind(this);
+  };
 
-        app.analytics.track('SCREEN-ONLINE');
-    };
+  OnlineScreen.prototype.display = function() {
+    this.screen.style.display = 'block';
 
-    OnlineScreen.prototype.hide = function() {
-        this.screen.style.display = 'none';
-    };
+    app.analytics.track('SCREEN-ONLINE');
+  };
 
-    OnlineScreen.prototype.onBack = function() {
-        app.audio.playSound('back');
-        app.screen.display('menu');
-    };
+  OnlineScreen.prototype.hide = function() {
+    this.screen.style.display = 'none';
+  };
 
-    return OnlineScreen;
+  OnlineScreen.prototype.onBack = function() {
+    app.audio.playSound('back');
+    app.screen.display('menu');
+  };
+
+  return OnlineScreen;
 }());

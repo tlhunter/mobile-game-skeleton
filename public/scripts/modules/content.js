@@ -3,21 +3,21 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Content = (function() {
-    var Content = function() {
-        this.data = null;
-        this.ready = false;
-    };
+  var Content = function() {
+    this.data = null;
+    this.ready = false;
+  };
 
-    Content.prototype.load = function(callback) {
-        var self = this;
+  Content.prototype.load = function(callback) {
+    var self = this;
 
-        app.network.get('data', function(data) {
-            self.data = Object.freeze(data);
-            self.ready = true;
+    app.network.get('data', function(data) {
+      self.data = Object.freeze(data);
+      self.ready = true;
 
-            callback(self.data);
-        });
-    };
+      callback(self.data);
+    });
+  };
 
-    return Content;
+  return Content;
 }());

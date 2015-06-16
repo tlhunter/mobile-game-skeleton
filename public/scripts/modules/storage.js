@@ -3,57 +3,57 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Storage = (function() {
-    var Storage = function(prefix) {
-		this.PREFIX = prefix || '';
-    };
+  var Storage = function(prefix) {
+    this.PREFIX = prefix || '';
+  };
 
-	Storage.prototype.set = function(key, value) {
-		var json = JSON.stringify(value);
+  Storage.prototype.set = function(key, value) {
+    var json = JSON.stringify(value);
 
-		key = this.PREFIX + key;
+    key = this.PREFIX + key;
 
-		localStorage.setItem(key, json);
-	};
+    localStorage.setItem(key, json);
+  };
 
-	Storage.prototype.get = function(key, fallback) {
-		key = this.PREFIX + key;
+  Storage.prototype.get = function(key, fallback) {
+    key = this.PREFIX + key;
 
-		var json = localStorage.getItem(key);
+    var json = localStorage.getItem(key);
 
-		if (json === null) {
-			return fallback || null;
-		}
+    if (json === null) {
+      return fallback || null;
+    }
 
-		var data = fallback;
+    var data = fallback;
 
-		try {
-			data = JSON.parse(json);
-		} catch(e) {
-			console.log("ERROR DECODING DATA", e);
-		}
+    try {
+      data = JSON.parse(json);
+    } catch(e) {
+      console.log("ERROR DECODING DATA", e);
+    }
 
-		return data;
-	};
+    return data;
+  };
 
-	Storage.prototype.remove = function(key) {
-		key = this.PREFIX + key;
+  Storage.prototype.remove = function(key) {
+    key = this.PREFIX + key;
 
-		localStorage.removeItem(key);
-	};
+    localStorage.removeItem(key);
+  };
 
-	Storage.prototype.clear = function() {
-		var self = this;
-		var removed = 0;
+  Storage.prototype.clear = function() {
+    var self = this;
+    var removed = 0;
 
-		Object.keys(localStorage).forEach(function(key) {
-			if (key.indexOf(self.PREFIX) === 0) {
-				localStorage.removeItem(key);
-				removed++;
-			}
-		});
+    Object.keys(localStorage).forEach(function(key) {
+      if (key.indexOf(self.PREFIX) === 0) {
+        localStorage.removeItem(key);
+        removed++;
+      }
+    });
 
-		return removed;
-	};
+    return removed;
+  };
 
     return Storage;
 }());

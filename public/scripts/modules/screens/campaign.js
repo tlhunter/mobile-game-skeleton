@@ -3,103 +3,103 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.CampaignScreen = (function() {
-    var CampaignScreen = function() {
-        this.screen = document.getElementById('screen-campaign');
-        this.levels = this.screen.getElementsByClassName('levels')[0];
+  var CampaignScreen = function() {
+    this.screen = document.getElementById('screen-campaign');
+    this.levels = this.screen.getElementsByClassName('levels')[0];
 
-        this.buttons = {
-            back: this.screen.querySelector('.footer-buttons .back')
-        };
-
-        this.buttons.back.onclick = this.onBack.bind(this);
-        this.levels.onclick = this.onLevel.bind(this);
-
-        this.rank_css = false;
+    this.buttons = {
+      back: this.screen.querySelector('.footer-buttons .back')
     };
 
-    CampaignScreen.prototype.display = function() {
-        this.drawRankCss();
-        this.drawLevels();
+    this.buttons.back.onclick = this.onBack.bind(this);
+    this.levels.onclick = this.onLevel.bind(this);
 
-        // By not playing music, we keep the same song playing between levels within a chapter
-        //app.audio.playMusic('background');
+    this.rank_css = false;
+  };
 
-        this.screen.style.display = 'block';
+  CampaignScreen.prototype.display = function() {
+    this.drawRankCss();
+    this.drawLevels();
 
-        app.analytics.track('SCREEN-CAMPAIGN');
-    };
+    // By not playing music, we keep the same song playing between levels within a chapter
+    //app.audio.playMusic('background');
 
-    CampaignScreen.prototype.hide = function() {
-        this.screen.style.display = 'none';
-    };
+    this.screen.style.display = 'block';
 
-    /**
-     * Normally we'd want to load color from static CSS documents
-     * However in this case we want to dynamically color from CMS
-     */
-    CampaignScreen.prototype.drawRankCss = function() {
-        if (this.rank_css) {
-            return;
-        }
+    app.analytics.track('SCREEN-CAMPAIGN');
+  };
 
-        var css = "<style>\n";
+  CampaignScreen.prototype.hide = function() {
+    this.screen.style.display = 'none';
+  };
 
-        Object.keys(app.content.data.ranks).forEach(function(rank) {
-            rank = app.content.data.ranks[rank];
+  /**
+   * Normally we'd want to load color from static CSS documents
+   * However in this case we want to dynamically color from CMS
+   */
+  CampaignScreen.prototype.drawRankCss = function() {
+    if (this.rank_css) {
+      return;
+    }
 
-            css += "#screen-campaign .levels .level.rank-" + rank.id + " {\n";
-                css += "color: " + rank.color + ";\n";
-                css += "outline-color: " + rank.color + ";\n";
-            css += "}\n";
-        });
+    var css = "<style>\n";
 
-        css += "</style>\n";
+    Object.keys(app.content.data.ranks).forEach(function(rank) {
+      rank = app.content.data.ranks[rank];
 
-        this.screen.insertAdjacentHTML('beforeend', css);
+      css += "#screen-campaign .levels .level.rank-" + rank.id + " {\n";
+        css += "color: " + rank.color + ";\n";
+        css += "outline-color: " + rank.color + ";\n";
+      css += "}\n";
+    });
 
-        this.rank_css = true;
-    };
+    css += "</style>\n";
 
-    CampaignScreen.prototype.drawLevels = function() {
-        var levels = "";
-        var current_level = app.storage.get('level', 0) + 1;
-        var rankings = app.storage.get('rankings', {});
-        var unplayed_rank = app.rank.getUnplayed().id;
-        var c;
+    this.screen.insertAdjacentHTML('beforeend', css);
 
-        var level_count = Object.keys(app.content.data.campaign).length;
+    this.rank_css = true;
+  };
 
-        for (var i = 1; i <= level_count; i++) {
-            if (i < current_level) {
-                c = "available";
-            } else if (i === current_level) {
-                c = "available current";
-            } else {
-                c = "unavailable";
-            }
+  CampaignScreen.prototype.drawLevels = function() {
+    var levels = "";
+    var current_level = app.storage.get('level', 0) + 1;
+    var rankings = app.storage.get('rankings', {});
+    var unplayed_rank = app.rank.getUnplayed().id;
+    var c;
 
-            c += ' rank-';
+    var level_count = Object.keys(app.content.data.campaign).length;
 
-            c += rankings[i] ? rankings[i] : unplayed_rank;
+    for (var i = 1; i <= level_count; i++) {
+      if (i < current_level) {
+        c = "available";
+      } else if (i === current_level) {
+        c = "available current";
+      } else {
+        c = "unavailable";
+      }
 
-            levels += "<div class='level " + c + "'>" + i + "</div>";
-        }
+      c += ' rank-';
 
-        this.levels.innerHTML = levels;
-    };
+      c += rankings[i] ? rankings[i] : unplayed_rank;
 
-    CampaignScreen.prototype.onBack = function() {
-        app.audio.playSound('back');
-        app.screen.display('menu');
-    };
+      levels += "<div class='level " + c + "'>" + i + "</div>";
+    }
 
-    CampaignScreen.prototype.onLevel = function(event) {
-        if (event.target.classList.contains('available')) {
-            var level = Math.floor(event.target.textContent);
-            app.audio.playSound('select');
-            app.screen.display('level', level);
-        }
-    };
+    this.levels.innerHTML = levels;
+  };
 
-    return CampaignScreen;
+  CampaignScreen.prototype.onBack = function() {
+    app.audio.playSound('back');
+    app.screen.display('menu');
+  };
+
+  CampaignScreen.prototype.onLevel = function(event) {
+    if (event.target.classList.contains('available')) {
+      var level = Math.floor(event.target.textContent);
+      app.audio.playSound('select');
+      app.screen.display('level', level);
+    }
+  };
+
+  return CampaignScreen;
 }());
