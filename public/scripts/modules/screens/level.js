@@ -216,6 +216,7 @@ MODULE.LevelScreen = (function() {
         // finger.on('pan', function(event) {});
 
         gamefield.onclick = function(event) {
+            console.log('click');
             self.level.onTap(event);
         };
 
