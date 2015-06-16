@@ -215,9 +215,9 @@ MODULE.LevelScreen = (function() {
 
         // finger.on('pan', function(event) {});
 
-        gamefield.onclick = function(event) {
+        finger.on('tap', function(event) {
             self.level.onTap(event);
-        };
+        });
 
         // But hammer, I don't want you to stop my panning!
         gamefield.setAttribute('style', '');

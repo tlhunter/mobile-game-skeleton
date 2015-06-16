@@ -290,8 +290,8 @@ MODULE.Level = (function() {
 		};
 
 		return {
-			x: Math.floor((event.pageX - offset.left) / this.size),
-			y: Math.floor((event.pageY - offset.top) / this.size),
+			x: Math.floor((event.center.x - offset.left) / this.size),
+			y: Math.floor((event.center.y - offset.top) / this.size),
 		};
 	};
 
