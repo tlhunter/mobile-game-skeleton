@@ -1,4 +1,8 @@
 #screen-level {
+  .hide {
+    display: none;
+  }
+
   .scrollable {
     display: flex;
     align-items: center;
@@ -29,6 +33,7 @@
   footer {
     bottom: 0px;
     line-height: 48px;
+    height: 48px;
     border-top: 2px solid #111;
 
     button {
@@ -41,7 +46,6 @@
     }
 
     .play-controls {
-      display: none;
       padding: 0 10px;
 
       .stop {
@@ -54,14 +58,11 @@
   header {
     top: 0px;
     line-height: 24px;
+    height: 48px;
     border-bottom: 2px solid #111;
 
     .generation {
       display: inline-block;
-    }
-
-    .antigoal, .segment-played, .segment-red, .segment-green {
-      display: none;
     }
 
     @media (max-width: 320px) {

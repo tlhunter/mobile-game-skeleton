@@ -6,47 +6,46 @@ MODULE.LevelScreen = (function() {
     var LevelScreen = function() {
         var self = this;
 
-        this.$screen = $('#screen-level');
+        this.screen = document.getElementById('screen-level');
 
-        this.$level = this.$screen.find('.level-container');
-        this.$grid = this.$screen.find('.grid-container');
+        this.level_el = this.screen.getElementsByClassName('level-container')[0];
+        this.grid_el = this.screen.getElementsByClassName('grid-container')[0];
 
-        this.$footer = this.$screen.find('footer');
-        this.$header = this.$screen.find('header');
-        this.$headerfooter = this.$screen.find('header, footer');
+        this.footer = this.screen.getElementsByTagName('footer')[0];
+        this.header = this.screen.getElementsByTagName('header')[0];
 
-        this.$playcontrols = this.$footer.find('.play-controls');
-        this.$stopcontrols = this.$footer.find('.stop-controls');
+        this.playcontrols = this.footer.getElementsByClassName('play-controls')[0];
+        this.stopcontrols = this.footer.getElementsByClassName('stop-controls')[0];
 
-        this.$generation = this.$header.find('.generation');
-        this.$played = this.$header.find('.played');
+        this.generation = this.header.getElementsByClassName('generation')[0];
+        this.played = this.header.getElementsByClassName('played')[0];
 
-        this.$title = this.$header.find('.title');
+        this.title = this.header.getElementsByClassName('title')[0];
 
-        this.$autowin = this.$header.find('.autowin');
-        this.$autowin_goal = this.$autowin.find('.autowin-gen');
+        this.autowin = this.header.getElementsByClassName('autowin')[0];
+        this.autowin_goal = this.autowin.getElementsByClassName('autowin-gen')[0];
 
-        this.$maxplay = this.$header.find('.maxplay');
-        this.$maxplayval = this.$maxplay.find('.maxplay-val');
+        this.maxplay = this.header.getElementsByClassName('maxplay')[0];
+        this.maxplayval = this.maxplay.getElementsByClassName('maxplay-val')[0];
 
-        this.$segment_generation = this.$header.find('.segment-gen');
-        this.$segment_played = this.$header.find('.segment-played');
-        this.$segment_red = this.$header.find('.segment-red');
-        this.$segment_green = this.$header.find('.segment-green');
+        this.segment_generation = this.header.getElementsByClassName('segment-gen')[0];
+        this.segment_played = this.header.getElementsByClassName('segment-played')[0];
+        this.segment_red = this.header.getElementsByClassName('segment-red')[0];
+        this.segment_green = this.header.getElementsByClassName('segment-green')[0];
 
-        this.$maxred_current = this.$segment_red.find('.current');
-        this.$maxred_limit = this.$segment_red.find('.limit');
+        this.maxred_current = this.segment_red.getElementsByClassName('current')[0];
+        this.maxred_limit = this.segment_red.getElementsByClassName('limit')[0];
 
-        this.$mingreen_current = this.$segment_green.find('.current');
-        this.$mingreen_limit = this.$segment_green.find('.limit');
+        this.mingreen_current = this.segment_green.getElementsByClassName('current')[0];
+        this.mingreen_limit = this.segment_green.getElementsByClassName('limit')[0];
 
-        this.$buttons = {
-            play: this.$footer.find('button.play'),
-            stop: this.$footer.find('button.stop'),
-            clear: this.$footer.find('button.clear'),
-            help: this.$footer.find('button.help'),
-            library: this.$footer.find('button.library'),
-            exit: this.$footer.find('button.exit')
+        this.buttons = {
+            play: this.footer.getElementsByClassName('play')[0],
+            stop: this.footer.getElementsByClassName('stop')[0],
+            clear: this.footer.getElementsByClassName('clear')[0],
+            help: this.footer.getElementsByClassName('help')[0],
+            library: this.footer.getElementsByClassName('library')[0],
+            exit: this.footer.getElementsByClassName('exit')[0]
         };
 
         this.level = null;
@@ -54,46 +53,52 @@ MODULE.LevelScreen = (function() {
         this.level_id = null;
         this.library = null;
 
-        this.$buttons.play.on('click', this.onPlay.bind(this));
-        this.$buttons.stop.on('click', this.onStop.bind(this));
-        this.$buttons.clear.on('click', this.onClear.bind(this));
-        this.$buttons.help.on('click', this.onHelp.bind(this));
-        this.$buttons.library.on('click', this.onLibrary.bind(this));
-        this.$buttons.exit.on('click', this.onExit.bind(this));
+        this.buttons.play.onclick = this.onPlay.bind(this);
+        this.buttons.stop.onclick = this.onStop.bind(this);
+        this.buttons.clear.onclick = this.onClear.bind(this);
+        this.buttons.help.onclick = this.onHelp.bind(this);
+        this.buttons.library.onclick = this.onLibrary.bind(this);
+        this.buttons.exit.onclick = this.onExit.bind(this);
     };
+
+    LevelScreen.HEADER_HEIGHT = 50;
+    LevelScreen.FOOTER_HEIGHT = 50;
 
     LevelScreen.prototype.display = function(level_id) {
         var self = this;
 
-        this.$playcontrols.hide();
-        this.$stopcontrols.show();
-        this.$headerfooter.removeClass();
+        this.playcontrols.classList.add('hide');
+        this.stopcontrols.classList.remove('hide');
+        this.header.className = '';
+        this.footer.className = '';
 
         this.level_id = level_id;
 
         var campaign = app.content.data.campaign[level_id];
-        this.$title.html(campaign.name);
+        this.title.innerHTML = campaign.name;
 
         var constraints = {
             width: app.device.viewport.width,
-            height: app.device.viewport.height - (this.$footer.outerHeight() + this.$header.outerHeight())
+            height: app.device.viewport.height - (LevelScreen.HEADER_HEIGHT + LevelScreen.FOOTER_HEIGHT)
         };
 
-        this.level = new MODULE.Level(campaign, this.$level[0], constraints);
+        console.log('constraints', constraints);
+
+        this.level = new MODULE.Level(campaign, this.level_el, constraints);
 
         this.grid = new MODULE.Grid(
             this.level.dimensions.width,
             this.level.dimensions.height,
             this.level.size,
-            this.$grid[0]
+            this.grid_el
         );
 
         this.level
         .on('generation', function(generation) {
-            self.$generation.text(generation);
+            self.generation.textContent = generation;
         })
         .on('play-count', function(played) {
-            self.$played.text(played);
+            self.played.textContent = played;
         })
         .on('status', function(status) {
             if (status === MODULE.Level.STATUS.DONE) {
@@ -163,10 +168,10 @@ MODULE.LevelScreen = (function() {
             );
         })
         .on('green-count', function(count) {
-            self.$mingreen_current.text(count);
+            self.mingreen_current.textContent = count;
         })
         .on('red-count', function(count) {
-            self.$maxred_current.text(count);
+            self.maxred_current.textContent = count;
         });
 
         this.level.initialize();
@@ -184,8 +189,8 @@ MODULE.LevelScreen = (function() {
         this.toggleRedSegment(this.level.maxred);
         this.toggleGreenSegment(this.level.mingreen);
 
-        var $gamefield = $(this.level.gamefield);
-        var finger = new Hammer($gamefield[0]);
+        var gamefield = this.level.gamefield;
+        var finger = new Hammer(gamefield);
         finger.get('pinch').set({enable: true});
 
         /*
@@ -210,16 +215,16 @@ MODULE.LevelScreen = (function() {
 
         // finger.on('pan', function(event) {});
 
-        $gamefield.on('click', function(event) {
+        gamefield.onclick = function(event) {
             self.level.onTap(event);
-        });
+        };
 
         // But hammer, I don't want you to stop my panning!
-        $gamefield.attr('style', '');
+        gamefield.setAttribute('style', '');
 
         app.audio.playMusic('chapter-' + this.level.chapter);
 
-        this.$screen.show();
+        this.screen.style.display = 'block';
 
         this.library = null;
 
@@ -233,7 +238,7 @@ MODULE.LevelScreen = (function() {
         this.level = null;
         this.setGenerationGoal(0);
         this.setMaxPlay(0);
-        this.$screen.hide();
+        this.screen.style.display = 'none';
     };
 
     LevelScreen.prototype.displayAdIfNeeded = function(level) {
@@ -259,57 +264,53 @@ MODULE.LevelScreen = (function() {
     };
 
     LevelScreen.prototype.setGenerationGoal = function(generation) {
-        this.$autowin_goal.text(generation);
+        this.autowin_goal.textContent = generation;
 
-        if (generation) {
-            return this.$autowin.show();
-        }
-
-        return this.$autowin.hide();
+        this.autowin.classList.toggle('hide', !generation);
     };
 
     LevelScreen.prototype.setMaxPlay = function(maxplay) {
-        this.$maxplayval.text(maxplay);
+        this.maxplayval.textContent = maxplay;
 
-        if (maxplay) {
-            return this.$maxplay.show();
-        }
-
-        return this.$maxplay.hide();
+        this.maxplay.classList.toggle('hide', !maxplay);
     };
 
     LevelScreen.prototype.togglePlayedSegment = function(count) {
-        this.$segment_played.toggle(!!count);
-        this.$buttons.clear.toggle(!!count);
+        this.segment_played.classList.toggle('hide', !count);
+        this.buttons.clear.classList.toggle('hide', !count);
     };
 
     LevelScreen.prototype.toggleRedSegment = function(count) {
-        this.$maxred_limit.text(count);
-        this.$segment_red.toggle(!!count);
+        this.maxred_limit.textContent = count;
+        this.segment_red.classList.toggle('hide', !count);
     };
 
     LevelScreen.prototype.toggleGreenSegment = function(count) {
-        this.$mingreen_limit.text(count);
-        this.$segment_green.toggle(!!count);
+        this.mingreen_limit.textContent = count;
+        this.segment_green.classList.toggle('hide', !count);
     };
 
     LevelScreen.prototype.complete = function() {
-        this.$headerfooter.addClass('done');
-        this.$buttons.exit.addClass('cycle');
+        this.header.classList.add('done');
+        this.footer.classList.add('done');
+        this.buttons.exit.classList.add('cycle');
     };
 
     LevelScreen.prototype.win = function() {
-        this.$headerfooter.addClass('win');
-        this.$buttons.exit.addClass('cycle');
+        this.header.classList.add('win');
+        this.footer.classList.add('win');
+        this.buttons.exit.classList.add('cycle');
     };
 
     LevelScreen.prototype.lose = function() {
-        this.$headerfooter.addClass('lose');
+        this.header.classList.add('lose');
+        this.footer.classList.add('lose');
     };
 
     LevelScreen.prototype.incomplete = function() {
-        this.$headerfooter.removeClass('done');
-        this.$buttons.exit.removeClass('cycle');
+        this.header.classList.remove('done');
+        this.footer.classList.remove('done');
+        this.buttons.exit.classList.remove('cycle');
     };
 
     LevelScreen.prototype.intro = function() {
@@ -350,10 +351,11 @@ MODULE.LevelScreen = (function() {
 
     LevelScreen.prototype.onPlay = function() {
         app.audio.playSound('play');
-        this.$playcontrols.show();
-        this.$stopcontrols.hide();
+        this.playcontrols.classList.remove('hide');
+        this.stopcontrols.classList.add('hide');
 
-        this.$headerfooter.addClass('playing');
+        this.header.classList.add('playing');
+        this.footer.classList.add('playing');
 
         app.analytics.track('LEVEL-START', {
             level: this.level_id
@@ -364,11 +366,13 @@ MODULE.LevelScreen = (function() {
 
     LevelScreen.prototype.onStop = function() {
         app.audio.playSound('stop');
-        this.$playcontrols.hide();
-        this.$stopcontrols.show();
+        this.playcontrols.classList.add('hide');
+        this.stopcontrols.classList.remove('hide');
 
-        this.$headerfooter.removeClass('playing');
-        this.$headerfooter.removeClass('win');
+        this.header.classList.remove('playing');
+        this.footer.classList.remove('playing');
+        //this.header.classList.add('win');
+        //this.footer.classList.add('win');
 
         app.analytics.track('LEVEL-STOP', {
             level: this.level_id,
@@ -380,7 +384,8 @@ MODULE.LevelScreen = (function() {
     };
 
     LevelScreen.prototype.unLose = function() {
-        this.$headerfooter.removeClass('lose');
+        this.header.classList.remove('lose');
+        this.footer.classList.remove('lose');
     };
 
     LevelScreen.prototype.onClear = function() {

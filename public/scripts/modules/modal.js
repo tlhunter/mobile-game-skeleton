@@ -34,11 +34,7 @@ MODULE.Modal = (function() {
             self.buttons.appendChild(button);
         });
 
-        if (small) {
-            this.modal.classList.add('small');
-        } else {
-            this.modal.classList.remove('small');
-        }
+        this.modal.classList.toggle('small', !!small);
 
         this.background.classList.add('visible');
     };
