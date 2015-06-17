@@ -278,6 +278,7 @@ MODULE.LevelScreen = (function() {
   LevelScreen.prototype.togglePlayedSegment = function(count) {
     this.segment_played.classList.toggle('hide', !count);
     this.buttons.clear.classList.toggle('hide', !count);
+    this.buttons.play.classList.toggle('cycle', !count);
   };
 
   LevelScreen.prototype.toggleRedSegment = function(count) {
@@ -294,12 +295,14 @@ MODULE.LevelScreen = (function() {
     this.header.classList.add('done');
     this.footer.classList.add('done');
     this.buttons.exit.classList.add('cycle');
+    this.buttons.play.classList.remove('cycle');
   };
 
   LevelScreen.prototype.win = function() {
     this.header.classList.add('win');
     this.footer.classList.add('win');
     this.buttons.exit.classList.add('cycle');
+    this.buttons.play.classList.remove('cycle');
   };
 
   LevelScreen.prototype.lose = function() {
