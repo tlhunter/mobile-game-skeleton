@@ -91,13 +91,270 @@
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Tutorial #1: Glider",
+            "name": "Tutorial 1: Glider",
             "playables": [],
             "rank": [],
             "width": 16,
             "win": "When you win you will be graded. Congratulations on an <strong>A</strong>!"
         },
         "10": {
+            "antigoal": [],
+            "arena": [
+                [
+                    9,
+                    6
+                ],
+                [
+                    9,
+                    7
+                ],
+                [
+                    9,
+                    8
+                ],
+                [
+                    6,
+                    6
+                ],
+                [
+                    6,
+                    7
+                ],
+                [
+                    6,
+                    8
+                ],
+                [
+                    12,
+                    6
+                ],
+                [
+                    12,
+                    7
+                ],
+                [
+                    12,
+                    8
+                ]
+            ],
+            "autowin": 0,
+            "chapter": 2,
+            "deadzones": [],
+            "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single unit, and the outcome can be completely different.<br /><br />Also, notice how this level is limited to playing a maximum of 10 cells in the green playable zone!",
+            "goal": [
+                {
+                    "x": 9,
+                    "y": 2
+                }
+            ],
+            "height": 32,
+            "id": 10,
+            "library": 4,
+            "lose": "",
+            "maxplay": 10,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "CH1E2: Fanblades II",
+            "playables": [
+                {
+                    "h": 8,
+                    "w": 19,
+                    "x": 0,
+                    "y": 24
+                }
+            ],
+            "rank": [
+                {
+                    "g": 60,
+                    "r": "a"
+                },
+                {
+                    "g": 61,
+                    "r": "b"
+                },
+                {
+                    "g": 62,
+                    "r": "c"
+                },
+                {
+                    "g": 63,
+                    "r": "d"
+                },
+                {
+                    "g": 64,
+                    "r": "e"
+                }
+            ],
+            "width": 19,
+            "win": "You'll often need to \"jiggle\" your drawings by a tile."
+        },
+        "11": {
+            "antigoal": [],
+            "arena": [
+                [
+                    7,
+                    3
+                ],
+                [
+                    8,
+                    3
+                ],
+                [
+                    7,
+                    4
+                ],
+                [
+                    8,
+                    4
+                ],
+                [
+                    7,
+                    6
+                ],
+                [
+                    8,
+                    6
+                ],
+                [
+                    7,
+                    7
+                ],
+                [
+                    8,
+                    7
+                ],
+                [
+                    4,
+                    9
+                ],
+                [
+                    5,
+                    9
+                ],
+                [
+                    10,
+                    9
+                ],
+                [
+                    11,
+                    9
+                ],
+                [
+                    5,
+                    10
+                ],
+                [
+                    10,
+                    10
+                ],
+                [
+                    2,
+                    11
+                ],
+                [
+                    13,
+                    11
+                ],
+                [
+                    2,
+                    12
+                ],
+                [
+                    3,
+                    12
+                ],
+                [
+                    12,
+                    12
+                ],
+                [
+                    13,
+                    12
+                ],
+                [
+                    0,
+                    14
+                ],
+                [
+                    1,
+                    14
+                ],
+                [
+                    2,
+                    14
+                ],
+                [
+                    3,
+                    14
+                ],
+                [
+                    12,
+                    14
+                ],
+                [
+                    13,
+                    14
+                ],
+                [
+                    14,
+                    14
+                ],
+                [
+                    15,
+                    14
+                ],
+                [
+                    0,
+                    15
+                ],
+                [
+                    3,
+                    15
+                ],
+                [
+                    12,
+                    15
+                ],
+                [
+                    15,
+                    15
+                ]
+            ],
+            "autowin": 0,
+            "chapter": 0,
+            "deadzones": [],
+            "description": "",
+            "goal": [
+                {
+                    "x": 7,
+                    "y": 1
+                },
+                {
+                    "x": 8,
+                    "y": 1
+                }
+            ],
+            "height": 24,
+            "id": 11,
+            "library": 4,
+            "lose": "",
+            "maxplay": 0,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "CH1E3: Tables",
+            "playables": [
+                {
+                    "h": 8,
+                    "w": 16,
+                    "x": 0,
+                    "y": 16
+                }
+            ],
+            "rank": [],
+            "width": 16,
+            "win": ""
+        },
+        "12": {
             "antigoal": [
                 {
                     "x": 13,
@@ -132,13 +389,13 @@
             "description": "This mission is a bit different than the ones you've played before. This time, instead of activating a goal, you're trying to NOT activate the blinking red <strong>Anti Goal</strong>!<br /><br />To win, you must survive 50 generations without the Anti Goal activating.",
             "goal": [],
             "height": 16,
-            "id": 10,
-            "library": 6,
+            "id": 12,
+            "library": 4,
             "lose": "Try to cut off the glider and keep the Anti Goal from activating.",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "The Antigoal",
+            "name": "CH1E4: The Antigoal",
             "playables": [
                 {
                     "h": 5,
@@ -164,12 +421,281 @@
             "width": 16,
             "win": "Never let those pesky Anti Goals activate!"
         },
-        "11": {
+        "13": {
             "antigoal": [],
             "arena": [
                 [
+                    2,
+                    2
+                ],
+                [
+                    4,
+                    2
+                ],
+                [
                     1,
+                    3
+                ],
+                [
+                    1,
+                    4
+                ],
+                [
+                    1,
+                    5
+                ],
+                [
+                    4,
+                    5
+                ],
+                [
+                    1,
+                    6
+                ],
+                [
+                    2,
+                    6
+                ],
+                [
+                    3,
+                    6
+                ],
+                [
+                    3,
+                    26
+                ],
+                [
+                    4,
+                    26
+                ],
+                [
+                    3,
+                    27
+                ],
+                [
+                    4,
+                    27
+                ]
+            ],
+            "autowin": 0,
+            "chapter": 2,
+            "deadzones": [
+                {
+                    "h": 5,
+                    "w": 1,
+                    "x": 6,
+                    "y": 26
+                }
+            ],
+            "description": "Placeholder",
+            "goal": [
+                {
+                    "x": 3,
+                    "y": 30
+                }
+            ],
+            "height": 31,
+            "id": 13,
+            "library": 4,
+            "lose": "",
+            "maxplay": 0,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "CH1E5: Interceptor A",
+            "playables": [
+                {
+                    "h": 5,
+                    "w": 5,
+                    "x": 8,
+                    "y": 20
+                }
+            ],
+            "rank": [
+                {
+                    "p": 5,
+                    "r": "a"
+                },
+                {
+                    "p": 7,
+                    "r": "b"
+                },
+                {
+                    "p": 9,
+                    "r": "c"
+                }
+            ],
+            "width": 13,
+            "win": "You Won!"
+        },
+        "14": {
+            "antigoal": [
+                {
+                    "x": 3,
+                    "y": 30
+                }
+            ],
+            "arena": [
+                [
+                    2,
+                    2
+                ],
+                [
+                    4,
+                    2
+                ],
+                [
+                    1,
+                    3
+                ],
+                [
+                    1,
+                    4
+                ],
+                [
+                    1,
+                    5
+                ],
+                [
+                    4,
+                    5
+                ],
+                [
+                    1,
+                    6
+                ],
+                [
+                    2,
+                    6
+                ],
+                [
+                    3,
+                    6
+                ]
+            ],
+            "autowin": 50,
+            "chapter": 2,
+            "deadzones": [
+                {
+                    "h": 5,
+                    "w": 1,
+                    "x": 6,
+                    "y": 26
+                }
+            ],
+            "description": "Placeholder",
+            "goal": [],
+            "height": 31,
+            "id": 14,
+            "library": 4,
+            "lose": "",
+            "maxplay": 0,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "CH1E6: Interceptor B",
+            "playables": [
+                {
+                    "h": 5,
+                    "w": 5,
+                    "x": 8,
+                    "y": 20
+                }
+            ],
+            "rank": [
+                {
+                    "p": 5,
+                    "r": "a"
+                },
+                {
+                    "p": 7,
+                    "r": "b"
+                },
+                {
+                    "p": 9,
+                    "r": "c"
+                }
+            ],
+            "width": 13,
+            "win": "You Won!"
+        },
+        "15": {
+            "antigoal": [
+                {
+                    "x": 10,
+                    "y": 10
+                }
+            ],
+            "arena": [
+                [
+                    16,
                     1
+                ],
+                [
+                    17,
+                    1
+                ],
+                [
+                    18,
+                    1
+                ],
+                [
+                    19,
+                    1
+                ],
+                [
+                    16,
+                    2
+                ],
+                [
+                    20,
+                    2
+                ],
+                [
+                    16,
+                    3
+                ],
+                [
+                    17,
+                    4
+                ],
+                [
+                    20,
+                    4
+                ],
+                [
+                    17,
+                    16
+                ],
+                [
+                    20,
+                    16
+                ],
+                [
+                    16,
+                    17
+                ],
+                [
+                    16,
+                    18
+                ],
+                [
+                    20,
+                    18
+                ],
+                [
+                    16,
+                    19
+                ],
+                [
+                    17,
+                    19
+                ],
+                [
+                    18,
+                    19
+                ],
+                [
+                    19,
+                    19
                 ]
             ],
             "autowin": 0,
@@ -178,13 +704,165 @@
             "description": "Placeholder",
             "goal": [
                 {
-                    "x": 1,
-                    "y": 1
+                    "x": 8,
+                    "y": 10
                 }
             ],
-            "height": 12,
-            "id": 11,
-            "library": 6,
+            "height": 21,
+            "id": 15,
+            "library": 4,
+            "lose": "",
+            "maxplay": 0,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "CH1E7: Interceptor C",
+            "playables": [
+                {
+                    "h": 9,
+                    "w": 5,
+                    "x": 16,
+                    "y": 6
+                }
+            ],
+            "rank": [
+                {
+                    "p": 3,
+                    "r": "a"
+                },
+                {
+                    "p": 4,
+                    "r": "b"
+                },
+                {
+                    "p": 5,
+                    "r": "c"
+                }
+            ],
+            "width": 21,
+            "win": "You Won!"
+        },
+        "16": {
+            "antigoal": [
+                {
+                    "x": 6,
+                    "y": 10
+                }
+            ],
+            "arena": [
+                [
+                    16,
+                    1
+                ],
+                [
+                    17,
+                    1
+                ],
+                [
+                    18,
+                    1
+                ],
+                [
+                    19,
+                    1
+                ],
+                [
+                    16,
+                    2
+                ],
+                [
+                    20,
+                    2
+                ],
+                [
+                    16,
+                    3
+                ],
+                [
+                    17,
+                    4
+                ],
+                [
+                    20,
+                    4
+                ],
+                [
+                    17,
+                    16
+                ],
+                [
+                    20,
+                    16
+                ],
+                [
+                    16,
+                    17
+                ],
+                [
+                    16,
+                    18
+                ],
+                [
+                    20,
+                    18
+                ],
+                [
+                    16,
+                    19
+                ],
+                [
+                    17,
+                    19
+                ],
+                [
+                    18,
+                    19
+                ],
+                [
+                    19,
+                    19
+                ]
+            ],
+            "autowin": 0,
+            "chapter": 2,
+            "deadzones": [],
+            "description": "Placeholder",
+            "goal": [
+                {
+                    "x": 8,
+                    "y": 10
+                }
+            ],
+            "height": 21,
+            "id": 16,
+            "library": 4,
+            "lose": "",
+            "maxplay": 0,
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "CH1E8: Interceptor D",
+            "playables": [
+                {
+                    "h": 9,
+                    "w": 5,
+                    "x": 0,
+                    "y": 6
+                }
+            ],
+            "rank": [],
+            "width": 21,
+            "win": "You Won!"
+        },
+        "17": {
+            "antigoal": [],
+            "arena": [],
+            "autowin": 0,
+            "chapter": 2,
+            "deadzones": [],
+            "description": "Placeholder",
+            "goal": [],
+            "height": 16,
+            "id": 17,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
@@ -192,2062 +870,49 @@
             "name": "TODO",
             "playables": [],
             "rank": [],
-            "width": 12,
-            "win": "You Won!"
-        },
-        "12": {
-            "antigoal": [],
-            "arena": [
-                [
-                    56,
-                    27
-                ],
-                [
-                    59,
-                    27
-                ],
-                [
-                    55,
-                    28
-                ],
-                [
-                    55,
-                    29
-                ],
-                [
-                    59,
-                    29
-                ],
-                [
-                    55,
-                    30
-                ],
-                [
-                    56,
-                    30
-                ],
-                [
-                    57,
-                    30
-                ],
-                [
-                    58,
-                    30
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 4,
-                    "w": 16,
-                    "x": 0,
-                    "y": 22
-                },
-                {
-                    "h": 4,
-                    "w": 16,
-                    "x": 48,
-                    "y": 22
-                }
-            ],
-            "description": "Notice the red zones. These are <strong>Dead Zones</strong>. No cells will become alive in these zones, so you'll have to find a way to get around them.<br /><br />As a hint, see what happens when that <strong>Spaceship</strong> crashes into a wall...<br /><br />Also, remember that everything in the library can be rotated and flipped, and if you move something by a single tile, the outcome can be completely different.",
-            "goal": [],
-            "height": 64,
-            "id": 12,
-            "library": 6,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 10,
-            "name": "TODO: Hookshot",
-            "playables": [
-                {
-                    "h": 16,
-                    "w": 32,
-                    "x": 0,
-                    "y": 48
-                }
-            ],
-            "rank": [],
-            "width": 64,
-            "win": "You Won!"
-        },
-        "13": {
-            "antigoal": [],
-            "arena": [
-                [
-                    27,
-                    18
-                ],
-                [
-                    28,
-                    18
-                ],
-                [
-                    29,
-                    18
-                ],
-                [
-                    29,
-                    19
-                ],
-                [
-                    28,
-                    20
-                ],
-                [
-                    8,
-                    23
-                ],
-                [
-                    9,
-                    23
-                ],
-                [
-                    10,
-                    23
-                ],
-                [
-                    10,
-                    24
-                ],
-                [
-                    9,
-                    25
-                ],
-                [
-                    12,
-                    28
-                ],
-                [
-                    13,
-                    28
-                ],
-                [
-                    14,
-                    28
-                ],
-                [
-                    1,
-                    29
-                ],
-                [
-                    2,
-                    29
-                ],
-                [
-                    3,
-                    29
-                ],
-                [
-                    14,
-                    29
-                ],
-                [
-                    21,
-                    29
-                ],
-                [
-                    22,
-                    29
-                ],
-                [
-                    23,
-                    29
-                ],
-                [
-                    3,
-                    30
-                ],
-                [
-                    13,
-                    30
-                ],
-                [
-                    23,
-                    30
-                ],
-                [
-                    2,
-                    31
-                ],
-                [
-                    22,
-                    31
-                ],
-                [
-                    27,
-                    31
-                ],
-                [
-                    28,
-                    31
-                ],
-                [
-                    29,
-                    31
-                ],
-                [
-                    29,
-                    32
-                ],
-                [
-                    28,
-                    33
-                ],
-                [
-                    6,
-                    36
-                ],
-                [
-                    7,
-                    36
-                ],
-                [
-                    8,
-                    36
-                ],
-                [
-                    20,
-                    36
-                ],
-                [
-                    21,
-                    36
-                ],
-                [
-                    22,
-                    36
-                ],
-                [
-                    8,
-                    37
-                ],
-                [
-                    22,
-                    37
-                ],
-                [
-                    30,
-                    37
-                ],
-                [
-                    31,
-                    37
-                ],
-                [
-                    32,
-                    37
-                ],
-                [
-                    7,
-                    38
-                ],
-                [
-                    21,
-                    38
-                ],
-                [
-                    32,
-                    38
-                ],
-                [
-                    31,
-                    39
-                ],
-                [
-                    26,
-                    44
-                ],
-                [
-                    27,
-                    44
-                ],
-                [
-                    28,
-                    44
-                ],
-                [
-                    28,
-                    45
-                ],
-                [
-                    27,
-                    46
-                ],
-                [
-                    7,
-                    47
-                ],
-                [
-                    8,
-                    47
-                ],
-                [
-                    9,
-                    47
-                ],
-                [
-                    9,
-                    48
-                ],
-                [
-                    40,
-                    48
-                ],
-                [
-                    41,
-                    48
-                ],
-                [
-                    42,
-                    48
-                ],
-                [
-                    8,
-                    49
-                ],
-                [
-                    42,
-                    49
-                ],
-                [
-                    41,
-                    50
-                ],
-                [
-                    19,
-                    55
-                ],
-                [
-                    20,
-                    55
-                ],
-                [
-                    21,
-                    55
-                ],
-                [
-                    21,
-                    56
-                ],
-                [
-                    20,
-                    57
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 5,
-                    "w": 2,
-                    "x": 51,
-                    "y": 2
-                }
-            ],
-            "description": "This level can be beaten using the same method you beat the last level.",
-            "goal": [
-                {
-                    "x": 59,
-                    "y": 4
-                }
-            ],
-            "height": 64,
-            "id": 13,
-            "library": 6,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO: Flock of Gliders",
-            "playables": [
-                {
-                    "h": 16,
-                    "w": 32,
-                    "x": 0,
-                    "y": 0
-                }
-            ],
-            "rank": [],
-            "width": 64,
-            "win": "You Won!"
-        },
-        "14": {
-            "antigoal": [],
-            "arena": [
-                [
-                    34,
-                    2
-                ],
-                [
-                    34,
-                    3
-                ],
-                [
-                    37,
-                    3
-                ],
-                [
-                    38,
-                    3
-                ],
-                [
-                    39,
-                    3
-                ],
-                [
-                    44,
-                    3
-                ],
-                [
-                    50,
-                    3
-                ],
-                [
-                    51,
-                    3
-                ],
-                [
-                    52,
-                    3
-                ],
-                [
-                    58,
-                    3
-                ],
-                [
-                    34,
-                    4
-                ],
-                [
-                    44,
-                    4
-                ],
-                [
-                    58,
-                    4
-                ],
-                [
-                    43,
-                    5
-                ],
-                [
-                    45,
-                    5
-                ],
-                [
-                    57,
-                    5
-                ],
-                [
-                    59,
-                    5
-                ],
-                [
-                    36,
-                    6
-                ],
-                [
-                    44,
-                    6
-                ],
-                [
-                    58,
-                    6
-                ],
-                [
-                    36,
-                    7
-                ],
-                [
-                    44,
-                    7
-                ],
-                [
-                    58,
-                    7
-                ],
-                [
-                    36,
-                    8
-                ],
-                [
-                    44,
-                    8
-                ],
-                [
-                    58,
-                    8
-                ],
-                [
-                    44,
-                    9
-                ],
-                [
-                    58,
-                    9
-                ],
-                [
-                    43,
-                    10
-                ],
-                [
-                    45,
-                    10
-                ],
-                [
-                    57,
-                    10
-                ],
-                [
-                    59,
-                    10
-                ],
-                [
-                    44,
-                    11
-                ],
-                [
-                    50,
-                    11
-                ],
-                [
-                    51,
-                    11
-                ],
-                [
-                    52,
-                    11
-                ],
-                [
-                    58,
-                    11
-                ],
-                [
-                    44,
-                    12
-                ],
-                [
-                    58,
-                    12
-                ],
-                [
-                    44,
-                    18
-                ],
-                [
-                    48,
-                    18
-                ],
-                [
-                    49,
-                    18
-                ],
-                [
-                    53,
-                    18
-                ],
-                [
-                    54,
-                    18
-                ],
-                [
-                    58,
-                    18
-                ],
-                [
-                    43,
-                    19
-                ],
-                [
-                    45,
-                    19
-                ],
-                [
-                    47,
-                    19
-                ],
-                [
-                    50,
-                    19
-                ],
-                [
-                    52,
-                    19
-                ],
-                [
-                    55,
-                    19
-                ],
-                [
-                    57,
-                    19
-                ],
-                [
-                    59,
-                    19
-                ],
-                [
-                    44,
-                    20
-                ],
-                [
-                    48,
-                    20
-                ],
-                [
-                    49,
-                    20
-                ],
-                [
-                    53,
-                    20
-                ],
-                [
-                    54,
-                    20
-                ],
-                [
-                    58,
-                    20
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 10,
-                    "w": 1,
-                    "x": 32,
-                    "y": 0
-                },
-                {
-                    "h": 1,
-                    "w": 2,
-                    "x": 33,
-                    "y": 9
-                }
-            ],
-            "description": "Lots of stuff going on here. Those two big connected shapes are called <strong>Pentadecathlon</strong>, and they go through a chain reaction before stabilizing into an animation.<br /><br />There are also some <strong>Blinkers</strong> and <strong>Still Lifes</strong> thrown into the mix for fun, as well as an annoying <strong>Dead Zone</strong> getting in your way.<br /><br />Remember that you can often just throw a <strong>Glider</strong> into the chaos and things work themselves out.",
-            "goal": [
-                {
-                    "x": 34,
-                    "y": 7
-                }
-            ],
-            "height": 64,
-            "id": 14,
-            "library": 7,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO: Pentadecathlon",
-            "playables": [
-                {
-                    "h": 64,
-                    "w": 8,
-                    "x": 0,
-                    "y": 0
-                }
-            ],
-            "rank": [],
-            "width": 64,
-            "win": "You Won!"
-        },
-        "15": {
-            "antigoal": [],
-            "arena": [
-                [
-                    25,
-                    1
-                ],
-                [
-                    23,
-                    2
-                ],
-                [
-                    25,
-                    2
-                ],
-                [
-                    13,
-                    3
-                ],
-                [
-                    14,
-                    3
-                ],
-                [
-                    21,
-                    3
-                ],
-                [
-                    22,
-                    3
-                ],
-                [
-                    35,
-                    3
-                ],
-                [
-                    36,
-                    3
-                ],
-                [
-                    12,
-                    4
-                ],
-                [
-                    16,
-                    4
-                ],
-                [
-                    21,
-                    4
-                ],
-                [
-                    22,
-                    4
-                ],
-                [
-                    35,
-                    4
-                ],
-                [
-                    36,
-                    4
-                ],
-                [
-                    1,
-                    5
-                ],
-                [
-                    2,
-                    5
-                ],
-                [
-                    11,
-                    5
-                ],
-                [
-                    17,
-                    5
-                ],
-                [
-                    21,
-                    5
-                ],
-                [
-                    22,
-                    5
-                ],
-                [
-                    1,
-                    6
-                ],
-                [
-                    2,
-                    6
-                ],
-                [
-                    11,
-                    6
-                ],
-                [
-                    15,
-                    6
-                ],
-                [
-                    17,
-                    6
-                ],
-                [
-                    18,
-                    6
-                ],
-                [
-                    23,
-                    6
-                ],
-                [
-                    25,
-                    6
-                ],
-                [
-                    11,
-                    7
-                ],
-                [
-                    17,
-                    7
-                ],
-                [
-                    25,
-                    7
-                ],
-                [
-                    12,
-                    8
-                ],
-                [
-                    16,
-                    8
-                ],
-                [
-                    13,
-                    9
-                ],
-                [
-                    14,
-                    9
-                ],
-                [
-                    45,
-                    39
-                ],
-                [
-                    46,
-                    39
-                ],
-                [
-                    45,
-                    40
-                ],
-                [
-                    46,
-                    40
-                ],
-                [
-                    50,
-                    40
-                ],
-                [
-                    49,
-                    41
-                ],
-                [
-                    51,
-                    41
-                ],
-                [
-                    50,
-                    42
-                ],
-                [
-                    52,
-                    42
-                ],
-                [
-                    52,
-                    43
-                ],
-                [
-                    52,
-                    44
-                ],
-                [
-                    53,
-                    44
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Remember that <strong>Glider Gun</strong> you saw a while ago? Well, it's back! Unfortunately, there's an <strong>Eater</strong> preventing any gliders from hitting the <strong>Goal</strong>.<br /><br />An <strong>Eater</strong>, when placed just right, will destroy a <strong>Glider</strong> and retain its shape.<br /><br />For them to work, a <strong>Glider</strong> needs to hit it at just the right angle. If the <strong>Eater</strong> oscillates, it needs to hit at the right frame of animation as well. Otherwise, if these strict conditions aren't met, it will be damaged or destroyed entirely.",
-            "goal": [
-                {
-                    "x": 60,
-                    "y": 46
-                }
-            ],
-            "height": 64,
-            "id": 15,
-            "library": 8,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO: Abaddon",
-            "playables": [
-                {
-                    "h": 8,
-                    "w": 8,
-                    "x": 0,
-                    "y": 24
-                }
-            ],
-            "rank": [],
-            "width": 64,
-            "win": "You Won!"
-        },
-        "16": {
-            "antigoal": [],
-            "arena": [
-                [
-                    49,
-                    21
-                ],
-                [
-                    49,
-                    22
-                ],
-                [
-                    45,
-                    23
-                ],
-                [
-                    46,
-                    23
-                ],
-                [
-                    48,
-                    23
-                ],
-                [
-                    50,
-                    23
-                ],
-                [
-                    51,
-                    23
-                ],
-                [
-                    52,
-                    23
-                ],
-                [
-                    39,
-                    24
-                ],
-                [
-                    41,
-                    24
-                ],
-                [
-                    42,
-                    24
-                ],
-                [
-                    44,
-                    24
-                ],
-                [
-                    45,
-                    24
-                ],
-                [
-                    47,
-                    24
-                ],
-                [
-                    48,
-                    24
-                ],
-                [
-                    51,
-                    24
-                ],
-                [
-                    53,
-                    24
-                ],
-                [
-                    57,
-                    24
-                ],
-                [
-                    58,
-                    24
-                ],
-                [
-                    39,
-                    25
-                ],
-                [
-                    43,
-                    25
-                ],
-                [
-                    44,
-                    25
-                ],
-                [
-                    47,
-                    25
-                ],
-                [
-                    49,
-                    25
-                ],
-                [
-                    50,
-                    25
-                ],
-                [
-                    53,
-                    25
-                ],
-                [
-                    54,
-                    25
-                ],
-                [
-                    55,
-                    25
-                ],
-                [
-                    58,
-                    25
-                ],
-                [
-                    39,
-                    26
-                ],
-                [
-                    41,
-                    26
-                ],
-                [
-                    42,
-                    26
-                ],
-                [
-                    47,
-                    26
-                ],
-                [
-                    48,
-                    26
-                ],
-                [
-                    49,
-                    26
-                ],
-                [
-                    51,
-                    26
-                ],
-                [
-                    53,
-                    26
-                ],
-                [
-                    54,
-                    26
-                ],
-                [
-                    55,
-                    26
-                ],
-                [
-                    47,
-                    27
-                ],
-                [
-                    48,
-                    27
-                ],
-                [
-                    50,
-                    27
-                ],
-                [
-                    39,
-                    28
-                ],
-                [
-                    41,
-                    28
-                ],
-                [
-                    42,
-                    28
-                ],
-                [
-                    47,
-                    28
-                ],
-                [
-                    48,
-                    28
-                ],
-                [
-                    49,
-                    28
-                ],
-                [
-                    51,
-                    28
-                ],
-                [
-                    53,
-                    28
-                ],
-                [
-                    54,
-                    28
-                ],
-                [
-                    55,
-                    28
-                ],
-                [
-                    39,
-                    29
-                ],
-                [
-                    43,
-                    29
-                ],
-                [
-                    44,
-                    29
-                ],
-                [
-                    47,
-                    29
-                ],
-                [
-                    49,
-                    29
-                ],
-                [
-                    50,
-                    29
-                ],
-                [
-                    53,
-                    29
-                ],
-                [
-                    54,
-                    29
-                ],
-                [
-                    55,
-                    29
-                ],
-                [
-                    58,
-                    29
-                ],
-                [
-                    39,
-                    30
-                ],
-                [
-                    41,
-                    30
-                ],
-                [
-                    42,
-                    30
-                ],
-                [
-                    44,
-                    30
-                ],
-                [
-                    45,
-                    30
-                ],
-                [
-                    47,
-                    30
-                ],
-                [
-                    48,
-                    30
-                ],
-                [
-                    51,
-                    30
-                ],
-                [
-                    53,
-                    30
-                ],
-                [
-                    57,
-                    30
-                ],
-                [
-                    58,
-                    30
-                ],
-                [
-                    45,
-                    31
-                ],
-                [
-                    46,
-                    31
-                ],
-                [
-                    48,
-                    31
-                ],
-                [
-                    50,
-                    31
-                ],
-                [
-                    51,
-                    31
-                ],
-                [
-                    52,
-                    31
-                ],
-                [
-                    49,
-                    32
-                ],
-                [
-                    49,
-                    33
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 9,
-                    "w": 64,
-                    "x": 0,
-                    "y": 55
-                }
-            ],
-            "description": "Whoa! Look at that giant slow-moving ship moving towards the <strong>Goal</strong>! We call this thing <strong>Sparky</strong>.<br /><br />Unfortunately, it won't set off the <strong>Goal</strong>, and will even serve to get in your way.<br /><br />Try to activate the <strong>Goal</strong> even though that big thing is in your way!",
-            "goal": [
-                {
-                    "x": 1,
-                    "y": 27
-                }
-            ],
-            "height": 64,
-            "id": 16,
-            "library": 9,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO: Hey there Sparky!",
-            "playables": [
-                {
-                    "h": 8,
-                    "w": 8,
-                    "x": 39,
-                    "y": 8
-                },
-                {
-                    "h": 8,
-                    "w": 8,
-                    "x": 39,
-                    "y": 39
-                }
-            ],
-            "rank": [],
-            "width": 64,
-            "win": "You Won!"
-        },
-        "17": {
-            "antigoal": [],
-            "arena": [
-                [
-                    2,
-                    1
-                ],
-                [
-                    4,
-                    1
-                ],
-                [
-                    1,
-                    2
-                ],
-                [
-                    1,
-                    3
-                ],
-                [
-                    1,
-                    4
-                ],
-                [
-                    4,
-                    4
-                ],
-                [
-                    11,
-                    4
-                ],
-                [
-                    14,
-                    4
-                ],
-                [
-                    15,
-                    4
-                ],
-                [
-                    16,
-                    4
-                ],
-                [
-                    17,
-                    4
-                ],
-                [
-                    58,
-                    4
-                ],
-                [
-                    59,
-                    4
-                ],
-                [
-                    60,
-                    4
-                ],
-                [
-                    61,
-                    4
-                ],
-                [
-                    1,
-                    5
-                ],
-                [
-                    2,
-                    5
-                ],
-                [
-                    3,
-                    5
-                ],
-                [
-                    14,
-                    5
-                ],
-                [
-                    18,
-                    5
-                ],
-                [
-                    58,
-                    5
-                ],
-                [
-                    62,
-                    5
-                ],
-                [
-                    11,
-                    6
-                ],
-                [
-                    14,
-                    6
-                ],
-                [
-                    58,
-                    6
-                ],
-                [
-                    15,
-                    7
-                ],
-                [
-                    18,
-                    7
-                ],
-                [
-                    59,
-                    7
-                ],
-                [
-                    62,
-                    7
-                ],
-                [
-                    57,
-                    13
-                ],
-                [
-                    58,
-                    13
-                ],
-                [
-                    59,
-                    13
-                ],
-                [
-                    60,
-                    13
-                ],
-                [
-                    61,
-                    13
-                ],
-                [
-                    11,
-                    14
-                ],
-                [
-                    57,
-                    14
-                ],
-                [
-                    62,
-                    14
-                ],
-                [
-                    57,
-                    15
-                ],
-                [
-                    11,
-                    16
-                ],
-                [
-                    58,
-                    16
-                ],
-                [
-                    62,
-                    16
-                ],
-                [
-                    57,
-                    23
-                ],
-                [
-                    58,
-                    23
-                ],
-                [
-                    59,
-                    23
-                ],
-                [
-                    60,
-                    23
-                ],
-                [
-                    61,
-                    23
-                ],
-                [
-                    62,
-                    23
-                ],
-                [
-                    11,
-                    24
-                ],
-                [
-                    57,
-                    24
-                ],
-                [
-                    63,
-                    24
-                ],
-                [
-                    57,
-                    25
-                ],
-                [
-                    11,
-                    26
-                ],
-                [
-                    58,
-                    26
-                ],
-                [
-                    63,
-                    26
-                ],
-                [
-                    60,
-                    27
-                ],
-                [
-                    41,
-                    33
-                ],
-                [
-                    42,
-                    33
-                ],
-                [
-                    43,
-                    33
-                ],
-                [
-                    44,
-                    33
-                ],
-                [
-                    11,
-                    34
-                ],
-                [
-                    41,
-                    34
-                ],
-                [
-                    45,
-                    34
-                ],
-                [
-                    41,
-                    35
-                ],
-                [
-                    11,
-                    36
-                ],
-                [
-                    42,
-                    36
-                ],
-                [
-                    45,
-                    36
-                ],
-                [
-                    11,
-                    44
-                ],
-                [
-                    17,
-                    44
-                ],
-                [
-                    18,
-                    44
-                ],
-                [
-                    19,
-                    44
-                ],
-                [
-                    20,
-                    44
-                ],
-                [
-                    21,
-                    44
-                ],
-                [
-                    22,
-                    44
-                ],
-                [
-                    17,
-                    45
-                ],
-                [
-                    23,
-                    45
-                ],
-                [
-                    11,
-                    46
-                ],
-                [
-                    17,
-                    46
-                ],
-                [
-                    18,
-                    47
-                ],
-                [
-                    23,
-                    47
-                ],
-                [
-                    20,
-                    48
-                ],
-                [
-                    11,
-                    54
-                ],
-                [
-                    58,
-                    54
-                ],
-                [
-                    59,
-                    54
-                ],
-                [
-                    60,
-                    54
-                ],
-                [
-                    61,
-                    54
-                ],
-                [
-                    58,
-                    55
-                ],
-                [
-                    62,
-                    55
-                ],
-                [
-                    11,
-                    56
-                ],
-                [
-                    58,
-                    56
-                ],
-                [
-                    59,
-                    57
-                ],
-                [
-                    62,
-                    57
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 52,
-                    "y": 10
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 52,
-                    "y": 20
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 52,
-                    "y": 0
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 52,
-                    "y": 30
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 52,
-                    "y": 40
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 52,
-                    "y": 50
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 52,
-                    "y": 60
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 40,
-                    "y": 60
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 40,
-                    "y": 50
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 40,
-                    "y": 40
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 40,
-                    "y": 30
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 40,
-                    "y": 20
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 40,
-                    "y": 10
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 40,
-                    "y": 0
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 28,
-                    "y": 60
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 28,
-                    "y": 50
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 28,
-                    "y": 40
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 28,
-                    "y": 30
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 28,
-                    "y": 20
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 28,
-                    "y": 10
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 28,
-                    "y": 0
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 16,
-                    "y": 60
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 16,
-                    "y": 50
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 16,
-                    "y": 40
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 16,
-                    "y": 30
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 16,
-                    "y": 20
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 16,
-                    "y": 10
-                },
-                {
-                    "h": 1,
-                    "w": 4,
-                    "x": 16,
-                    "y": 0
-                }
-            ],
-            "description": "The six <strong>Blinkers</strong> on the left can have their construction finished by playing a tile in the center of them, which will cause a horizontal <strong>Spaceship</strong> to collide.<br /><br />You don't want to cause every ship to collide with a Blinker though; some you just want to hit the far left wall.<br /><br />Find some combination of enabled <strong>Blinkers</strong> to set off the goal.",
-            "goal": [
-                {
-                    "x": 13,
-                    "y": 50
-                }
-            ],
-            "height": 64,
-            "id": 17,
-            "library": 9,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 20,
-            "name": "TODO: Spaceship Depot",
-            "playables": [
-                {
-                    "h": 0,
-                    "w": 0,
-                    "x": 24,
-                    "y": 24
-                },
-                {
-                    "h": 1,
-                    "w": 1,
-                    "x": 11,
-                    "y": 55
-                },
-                {
-                    "h": 1,
-                    "w": 1,
-                    "x": 11,
-                    "y": 45
-                },
-                {
-                    "h": 1,
-                    "w": 1,
-                    "x": 11,
-                    "y": 35
-                },
-                {
-                    "h": 1,
-                    "w": 1,
-                    "x": 11,
-                    "y": 25
-                },
-                {
-                    "h": 1,
-                    "w": 1,
-                    "x": 11,
-                    "y": 15
-                },
-                {
-                    "h": 1,
-                    "w": 1,
-                    "x": 11,
-                    "y": 5
-                }
-            ],
-            "rank": [],
-            "width": 64,
+            "width": 16,
             "win": "You Won!"
         },
         "18": {
             "antigoal": [],
-            "arena": [
-                [
-                    30,
-                    29
-                ],
-                [
-                    31,
-                    29
-                ],
-                [
-                    34,
-                    29
-                ],
-                [
-                    30,
-                    30
-                ],
-                [
-                    34,
-                    30
-                ],
-                [
-                    30,
-                    31
-                ],
-                [
-                    33,
-                    31
-                ],
-                [
-                    34,
-                    31
-                ]
-            ],
+            "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
-            "description": "This simple construct is called <strong>Gliders by the Dozen</strong>. If you watch the pretty symmetical animation it plays, you'll soon find out where it gets its name from.<br /><br />Good luck activating the <strong>Goal</strong> amidst all of the chaos!",
-            "goal": [
-                {
-                    "x": 32,
-                    "y": 30
-                }
-            ],
-            "height": 64,
+            "description": "Placeholder",
+            "goal": [],
+            "height": 16,
             "id": 18,
-            "library": 10,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
-            "mingreen": 20,
-            "name": "TODO: God Complex",
-            "playables": [
-                {
-                    "h": 8,
-                    "w": 8,
-                    "x": 0,
-                    "y": 0
-                },
-                {
-                    "h": 8,
-                    "w": 8,
-                    "x": 0,
-                    "y": 56
-                },
-                {
-                    "h": 8,
-                    "w": 8,
-                    "x": 56,
-                    "y": 0
-                },
-                {
-                    "h": 8,
-                    "w": 8,
-                    "x": 56,
-                    "y": 56
-                }
-            ],
+            "mingreen": 0,
+            "name": "TODO",
+            "playables": [],
             "rank": [],
-            "width": 64,
+            "width": 16,
             "win": "You Won!"
         },
         "19": {
             "antigoal": [],
-            "arena": [
-                [
-                    30,
-                    29
-                ],
-                [
-                    31,
-                    29
-                ],
-                [
-                    34,
-                    29
-                ],
-                [
-                    30,
-                    30
-                ],
-                [
-                    34,
-                    30
-                ],
-                [
-                    30,
-                    31
-                ],
-                [
-                    33,
-                    31
-                ],
-                [
-                    34,
-                    31
-                ]
-            ],
+            "arena": [],
             "autowin": 0,
             "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 2,
-                    "w": 2,
-                    "x": 8,
-                    "y": 8
-                },
-                {
-                    "h": 2,
-                    "w": 2,
-                    "x": 8,
-                    "y": 54
-                },
-                {
-                    "h": 2,
-                    "w": 2,
-                    "x": 54,
-                    "y": 8
-                },
-                {
-                    "h": 2,
-                    "w": 2,
-                    "x": 54,
-                    "y": 54
-                }
-            ],
-            "description": "Sure, you just beat this level a moment ago, and if I had to guess, you probably sent some <strong>Gliders</strong> towards it at a 45&deg; angle.<br /><br />Can you beat the same level with these new <strong>Dead Zones</strong> in your way?",
-            "goal": [
-                {
-                    "x": 32,
-                    "y": 30
-                }
-            ],
-            "height": 64,
+            "deadzones": [],
+            "description": "Placeholder",
+            "goal": [],
+            "height": 16,
             "id": 19,
-            "library": 10,
-            "lose": "Keep an eye on those Red cells!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
-            "maxred": 300,
-            "mingreen": 20,
-            "name": "TODO: Complex God",
-            "playables": [
-                {
-                    "h": 8,
-                    "w": 8,
-                    "x": 0,
-                    "y": 0
-                },
-                {
-                    "h": 8,
-                    "w": 8,
-                    "x": 0,
-                    "y": 56
-                },
-                {
-                    "h": 8,
-                    "w": 8,
-                    "x": 56,
-                    "y": 0
-                },
-                {
-                    "h": 8,
-                    "w": 8,
-                    "x": 56,
-                    "y": 56
-                }
-            ],
+            "maxred": 0,
+            "mingreen": 0,
+            "name": "TODO",
+            "playables": [],
             "rank": [],
-            "width": 64,
+            "width": 16,
             "win": "You Won!"
         },
         "2": {
@@ -2270,7 +935,7 @@
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Tutorial #2: Build a Glider",
+            "name": "Tutorial 2: Build a Glider",
             "playables": [
                 {
                     "h": 3,
@@ -2290,799 +955,86 @@
         },
         "20": {
             "antigoal": [],
-            "arena": [
-                [
-                    32,
-                    6
-                ],
-                [
-                    32,
-                    7
-                ],
-                [
-                    32,
-                    8
-                ],
-                [
-                    29,
-                    6
-                ],
-                [
-                    29,
-                    7
-                ],
-                [
-                    29,
-                    8
-                ],
-                [
-                    35,
-                    6
-                ],
-                [
-                    35,
-                    7
-                ],
-                [
-                    35,
-                    8
-                ]
-            ],
+            "arena": [],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
-            "description": "This mission is a lot like a previous one, except that the playable area has changed quite a bit.<br /><br />Remember that unpredictable things can happen when two objects collide.",
-            "goal": [
-                {
-                    "x": 32,
-                    "y": 2
-                }
-            ],
-            "height": 64,
+            "description": "Placeholder",
+            "goal": [],
+            "height": 16,
             "id": 20,
-            "library": 10,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
-            "mingreen": 20,
-            "name": "TODO: Fanblades II",
-            "playables": [
-                {
-                    "h": 16,
-                    "w": 16,
-                    "x": 0,
-                    "y": 48
-                },
-                {
-                    "h": 16,
-                    "w": 16,
-                    "x": 48,
-                    "y": 48
-                }
-            ],
+            "mingreen": 0,
+            "name": "TODO",
+            "playables": [],
             "rank": [],
-            "width": 64,
+            "width": 16,
             "win": "You Won!"
         },
         "21": {
             "antigoal": [],
-            "arena": [
-                [
-                    52,
-                    51
-                ],
-                [
-                    53,
-                    51
-                ],
-                [
-                    51,
-                    52
-                ],
-                [
-                    52,
-                    52
-                ],
-                [
-                    53,
-                    53
-                ],
-                [
-                    55,
-                    54
-                ],
-                [
-                    60,
-                    54
-                ],
-                [
-                    61,
-                    54
-                ],
-                [
-                    62,
-                    54
-                ],
-                [
-                    55,
-                    55
-                ],
-                [
-                    56,
-                    55
-                ],
-                [
-                    57,
-                    55
-                ],
-                [
-                    62,
-                    55
-                ],
-                [
-                    63,
-                    55
-                ],
-                [
-                    56,
-                    56
-                ],
-                [
-                    57,
-                    56
-                ],
-                [
-                    58,
-                    56
-                ],
-                [
-                    60,
-                    56
-                ],
-                [
-                    62,
-                    56
-                ],
-                [
-                    63,
-                    57
-                ],
-                [
-                    56,
-                    58
-                ],
-                [
-                    58,
-                    58
-                ],
-                [
-                    55,
-                    59
-                ],
-                [
-                    56,
-                    59
-                ],
-                [
-                    58,
-                    59
-                ],
-                [
-                    56,
-                    60
-                ],
-                [
-                    54,
-                    61
-                ],
-                [
-                    55,
-                    61
-                ],
-                [
-                    57,
-                    61
-                ],
-                [
-                    57,
-                    62
-                ],
-                [
-                    55,
-                    63
-                ],
-                [
-                    56,
-                    63
-                ]
-            ],
+            "arena": [],
             "autowin": 0,
             "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 12,
-                    "w": 12,
-                    "x": 4,
-                    "y": 48
-                },
-                {
-                    "h": 12,
-                    "w": 12,
-                    "x": 48,
-                    "y": 4
-                }
-            ],
-            "description": "This crazy three pronged spaceship is called an <strong>Orion 2</strong>, and is moving towards the upper left corner of the arena, which is where your playable zone is!<br /><br />Can you get past the ship and activate the <strong>Goal</strong>?",
-            "goal": [
-                {
-                    "x": 59,
-                    "y": 59
-                }
-            ],
-            "height": 64,
+            "deadzones": [],
+            "description": "Placeholder",
+            "goal": [],
+            "height": 16,
             "id": 21,
-            "library": 11,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
-            "mingreen": 20,
-            "name": "TODO: Orion's Belt",
-            "playables": [
-                {
-                    "h": 12,
-                    "w": 12,
-                    "x": 4,
-                    "y": 4
-                }
-            ],
+            "mingreen": 0,
+            "name": "TODO",
+            "playables": [],
             "rank": [],
-            "width": 64,
+            "width": 16,
             "win": "You Won!"
         },
         "22": {
             "antigoal": [],
-            "arena": [
-                [
-                    28,
-                    28
-                ],
-                [
-                    27,
-                    29
-                ],
-                [
-                    29,
-                    29
-                ],
-                [
-                    27,
-                    30
-                ],
-                [
-                    29,
-                    30
-                ],
-                [
-                    26,
-                    31
-                ],
-                [
-                    27,
-                    31
-                ],
-                [
-                    29,
-                    31
-                ],
-                [
-                    30,
-                    31
-                ],
-                [
-                    26,
-                    38
-                ],
-                [
-                    27,
-                    38
-                ],
-                [
-                    29,
-                    38
-                ],
-                [
-                    30,
-                    38
-                ],
-                [
-                    27,
-                    39
-                ],
-                [
-                    29,
-                    39
-                ],
-                [
-                    27,
-                    40
-                ],
-                [
-                    29,
-                    40
-                ],
-                [
-                    27,
-                    41
-                ],
-                [
-                    29,
-                    41
-                ],
-                [
-                    28,
-                    42
-                ]
-            ],
+            "arena": [],
             "autowin": 0,
             "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 1,
-                    "w": 13,
-                    "x": 22,
-                    "y": 12
-                }
-            ],
-            "description": "Here is another level with a simple pattern in the middle, which goes through a bunch of chaos before stabilizing into some <strong>Oscillators</strong> and <strong>Still Lifes</strong>.<br /><br />And, would you look at that? There's a <strong>Dead Zone</strong> right outside of the playable area!<br /><br />Try to activate the <strong>Goal</strong> even with these hassles in the way!",
-            "goal": [
-                {
-                    "x": 28,
-                    "y": 39
-                }
-            ],
-            "height": 64,
+            "deadzones": [],
+            "description": "Placeholder",
+            "goal": [],
+            "height": 16,
             "id": 22,
-            "library": 11,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
-            "mingreen": 20,
-            "name": "TODO: Many Hats",
-            "playables": [
-                {
-                    "h": 12,
-                    "w": 13,
-                    "x": 22,
-                    "y": 0
-                }
-            ],
+            "mingreen": 0,
+            "name": "TODO",
+            "playables": [],
             "rank": [],
-            "width": 64,
+            "width": 16,
             "win": "You Won!"
         },
         "23": {
             "antigoal": [],
-            "arena": [
-                [
-                    5,
-                    0
-                ],
-                [
-                    13,
-                    0
-                ],
-                [
-                    21,
-                    0
-                ],
-                [
-                    29,
-                    0
-                ],
-                [
-                    34,
-                    0
-                ],
-                [
-                    42,
-                    0
-                ],
-                [
-                    50,
-                    0
-                ],
-                [
-                    58,
-                    0
-                ],
-                [
-                    0,
-                    1
-                ],
-                [
-                    1,
-                    1
-                ],
-                [
-                    2,
-                    1
-                ],
-                [
-                    5,
-                    1
-                ],
-                [
-                    8,
-                    1
-                ],
-                [
-                    9,
-                    1
-                ],
-                [
-                    10,
-                    1
-                ],
-                [
-                    13,
-                    1
-                ],
-                [
-                    16,
-                    1
-                ],
-                [
-                    17,
-                    1
-                ],
-                [
-                    18,
-                    1
-                ],
-                [
-                    21,
-                    1
-                ],
-                [
-                    24,
-                    1
-                ],
-                [
-                    25,
-                    1
-                ],
-                [
-                    26,
-                    1
-                ],
-                [
-                    29,
-                    1
-                ],
-                [
-                    34,
-                    1
-                ],
-                [
-                    37,
-                    1
-                ],
-                [
-                    38,
-                    1
-                ],
-                [
-                    39,
-                    1
-                ],
-                [
-                    42,
-                    1
-                ],
-                [
-                    45,
-                    1
-                ],
-                [
-                    46,
-                    1
-                ],
-                [
-                    47,
-                    1
-                ],
-                [
-                    50,
-                    1
-                ],
-                [
-                    53,
-                    1
-                ],
-                [
-                    54,
-                    1
-                ],
-                [
-                    55,
-                    1
-                ],
-                [
-                    58,
-                    1
-                ],
-                [
-                    61,
-                    1
-                ],
-                [
-                    62,
-                    1
-                ],
-                [
-                    63,
-                    1
-                ],
-                [
-                    5,
-                    2
-                ],
-                [
-                    13,
-                    2
-                ],
-                [
-                    21,
-                    2
-                ],
-                [
-                    29,
-                    2
-                ],
-                [
-                    34,
-                    2
-                ],
-                [
-                    42,
-                    2
-                ],
-                [
-                    50,
-                    2
-                ],
-                [
-                    58,
-                    2
-                ],
-                [
-                    1,
-                    4
-                ],
-                [
-                    9,
-                    4
-                ],
-                [
-                    54,
-                    4
-                ],
-                [
-                    62,
-                    4
-                ],
-                [
-                    1,
-                    5
-                ],
-                [
-                    4,
-                    5
-                ],
-                [
-                    5,
-                    5
-                ],
-                [
-                    6,
-                    5
-                ],
-                [
-                    9,
-                    5
-                ],
-                [
-                    54,
-                    5
-                ],
-                [
-                    57,
-                    5
-                ],
-                [
-                    58,
-                    5
-                ],
-                [
-                    59,
-                    5
-                ],
-                [
-                    62,
-                    5
-                ],
-                [
-                    1,
-                    6
-                ],
-                [
-                    9,
-                    6
-                ],
-                [
-                    54,
-                    6
-                ],
-                [
-                    62,
-                    6
-                ],
-                [
-                    5,
-                    8
-                ],
-                [
-                    58,
-                    8
-                ],
-                [
-                    0,
-                    9
-                ],
-                [
-                    1,
-                    9
-                ],
-                [
-                    2,
-                    9
-                ],
-                [
-                    5,
-                    9
-                ],
-                [
-                    58,
-                    9
-                ],
-                [
-                    61,
-                    9
-                ],
-                [
-                    62,
-                    9
-                ],
-                [
-                    63,
-                    9
-                ],
-                [
-                    5,
-                    10
-                ],
-                [
-                    58,
-                    10
-                ],
-                [
-                    1,
-                    12
-                ],
-                [
-                    62,
-                    12
-                ],
-                [
-                    1,
-                    13
-                ],
-                [
-                    62,
-                    13
-                ],
-                [
-                    1,
-                    14
-                ],
-                [
-                    62,
-                    14
-                ],
-                [
-                    0,
-                    17
-                ],
-                [
-                    1,
-                    17
-                ],
-                [
-                    2,
-                    17
-                ],
-                [
-                    61,
-                    17
-                ],
-                [
-                    62,
-                    17
-                ],
-                [
-                    63,
-                    17
-                ]
-            ],
+            "arena": [],
             "autowin": 0,
             "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 3,
-                    "w": 3,
-                    "x": 25,
-                    "y": 25
-                },
-                {
-                    "h": 3,
-                    "w": 3,
-                    "x": 35,
-                    "y": 25
-                },
-                {
-                    "h": 3,
-                    "w": 3,
-                    "x": 25,
-                    "y": 35
-                },
-                {
-                    "h": 3,
-                    "w": 3,
-                    "x": 35,
-                    "y": 35
-                },
-                {
-                    "h": 3,
-                    "w": 3,
-                    "x": 30,
-                    "y": 41
-                }
-            ],
-            "description": "The backdrop of this level consists of a field of <strong>Blinkers</strong>, and the <strong>Goal</strong> is surrounded by several <strong>Dead Zones</strong>.",
-            "goal": [
-                {
-                    "x": 31,
-                    "y": 31
-                }
-            ],
-            "height": 64,
+            "deadzones": [],
+            "description": "Placeholder",
+            "goal": [],
+            "height": 16,
             "id": 23,
-            "library": 11,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
-            "mingreen": 20,
-            "name": "TODO: Blinkerton",
-            "playables": [
-                {
-                    "h": 8,
-                    "w": 17,
-                    "x": 23,
-                    "y": 56
-                }
-            ],
+            "mingreen": 0,
+            "name": "TODO",
+            "playables": [],
             "rank": [],
-            "width": 64,
+            "width": 16,
             "win": "You Won!"
         },
         "24": {
@@ -3090,175 +1042,55 @@
             "arena": [],
             "autowin": 0,
             "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 4,
-                    "w": 20,
-                    "x": 0,
-                    "y": 34
-                },
-                {
-                    "h": 4,
-                    "w": 20,
-                    "x": 44,
-                    "y": 34
-                },
-                {
-                    "h": 4,
-                    "w": 16,
-                    "x": 24,
-                    "y": 16
-                }
-            ],
-            "description": "This one looks pretty difficult. You can't simply send a <strong>Spaceship</strong> up and crash it into the wall and spawn a <strong>Glider</strong>, as the horizontal gap is too small.<br /><br />As a hint, I was able to beat this on Generation 432 with 20 Cells in Play.",
-            "goal": [
-                {
-                    "x": 32,
-                    "y": 4
-                }
-            ],
-            "height": 64,
+            "deadzones": [],
+            "description": "Placeholder",
+            "goal": [],
+            "height": 16,
             "id": 24,
-            "library": 11,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
-            "mingreen": 20,
-            "name": "TODO: Getting Difficult",
-            "playables": [
-                {
-                    "h": 16,
-                    "w": 64,
-                    "x": 0,
-                    "y": 48
-                }
-            ],
+            "mingreen": 0,
+            "name": "TODO",
+            "playables": [],
             "rank": [],
-            "width": 64,
+            "width": 16,
             "win": "You Won!"
         },
         "25": {
             "antigoal": [],
-            "arena": [
-                [
-                    45,
-                    53
-                ],
-                [
-                    46,
-                    53
-                ],
-                [
-                    50,
-                    53
-                ],
-                [
-                    51,
-                    53
-                ],
-                [
-                    45,
-                    54
-                ],
-                [
-                    46,
-                    54
-                ],
-                [
-                    50,
-                    54
-                ],
-                [
-                    51,
-                    54
-                ],
-                [
-                    45,
-                    58
-                ],
-                [
-                    46,
-                    58
-                ],
-                [
-                    50,
-                    58
-                ],
-                [
-                    51,
-                    58
-                ],
-                [
-                    45,
-                    59
-                ],
-                [
-                    46,
-                    59
-                ],
-                [
-                    50,
-                    59
-                ],
-                [
-                    51,
-                    59
-                ]
-            ],
+            "arena": [],
             "autowin": 0,
             "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 33,
-                    "w": 4,
-                    "x": 31,
-                    "y": 31
-                }
-            ],
-            "description": "Other than a few <strong>Still Lifes</strong> protecting the <strong>Goal</strong>, this isn't too interesting of a level. Unless, you consider, that there is no line of sight between you and the <strong>Goal</strong>, and you may need to play off of two separate walls to reach the <strong>Goal</strong>.<br /><br />This level was first beaten by @endeavourize with 18 Cells Played and 375 Generations.",
-            "goal": [
-                {
-                    "x": 48,
-                    "y": 56
-                }
-            ],
-            "height": 64,
+            "deadzones": [],
+            "description": "Placeholder",
+            "goal": [],
+            "height": 16,
             "id": 25,
-            "library": 11,
-            "lose": "Careful with that Anti Goal!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "TODO: Round the Bend",
-            "playables": [
-                {
-                    "h": 16,
-                    "w": 31,
-                    "x": 0,
-                    "y": 48
-                }
-            ],
+            "name": "TODO",
+            "playables": [],
             "rank": [],
-            "width": 64,
+            "width": 16,
             "win": "You Won!"
         },
         "26": {
-            "antigoal": [
-                {
-                    "x": 3,
-                    "y": 3
-                }
-            ],
+            "antigoal": [],
             "arena": [],
-            "autowin": 200,
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": [],
             "height": 16,
             "id": 26,
-            "library": 1,
-            "lose": "Careful with that Anti Goal!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3269,22 +1101,17 @@
             "win": "You Won!"
         },
         "27": {
-            "antigoal": [
-                {
-                    "x": 3,
-                    "y": 3
-                }
-            ],
+            "antigoal": [],
             "arena": [],
-            "autowin": 200,
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": [],
             "height": 16,
             "id": 27,
-            "library": 1,
-            "lose": "Careful with that Anti Goal!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3295,22 +1122,17 @@
             "win": "You Won!"
         },
         "28": {
-            "antigoal": [
-                {
-                    "x": 3,
-                    "y": 3
-                }
-            ],
+            "antigoal": [],
             "arena": [],
-            "autowin": 200,
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": [],
             "height": 16,
             "id": 28,
-            "library": 1,
-            "lose": "Careful with that Anti Goal!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3321,22 +1143,17 @@
             "win": "You Won!"
         },
         "29": {
-            "antigoal": [
-                {
-                    "x": 3,
-                    "y": 3
-                }
-            ],
+            "antigoal": [],
             "arena": [],
-            "autowin": 200,
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": [],
             "height": 16,
             "id": 29,
-            "library": 1,
-            "lose": "Careful with that Anti Goal!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3383,7 +1200,7 @@
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Tutorial #3: Build Two Gliders",
+            "name": "Tutorial 3: Build Two Gliders",
             "playables": [
                 {
                     "h": 3,
@@ -3408,22 +1225,17 @@
             "win": "Breaking barriers is a useful technique."
         },
         "30": {
-            "antigoal": [
-                {
-                    "x": 3,
-                    "y": 3
-                }
-            ],
+            "antigoal": [],
             "arena": [],
-            "autowin": 200,
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": [],
             "height": 16,
             "id": 30,
-            "library": 1,
-            "lose": "Careful with that Anti Goal!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3434,22 +1246,17 @@
             "win": "You Won!"
         },
         "31": {
-            "antigoal": [
-                {
-                    "x": 3,
-                    "y": 3
-                }
-            ],
+            "antigoal": [],
             "arena": [],
-            "autowin": 200,
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": [],
             "height": 16,
             "id": 31,
-            "library": 1,
-            "lose": "Keep an eye on those Red cells!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3460,22 +1267,17 @@
             "win": "You Won!"
         },
         "32": {
-            "antigoal": [
-                {
-                    "x": 3,
-                    "y": 3
-                }
-            ],
+            "antigoal": [],
             "arena": [],
-            "autowin": 200,
+            "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": [],
             "height": 16,
             "id": 32,
-            "library": 1,
-            "lose": "Keep an eye on those Red cells!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -3495,10 +1297,10 @@
             "goal": [],
             "height": 16,
             "id": 33,
-            "library": 1,
-            "lose": "Keep an eye on those Red cells!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
-            "maxred": 40,
+            "maxred": 0,
             "mingreen": 0,
             "name": "TODO",
             "playables": [],
@@ -3516,10 +1318,10 @@
             "goal": [],
             "height": 16,
             "id": 34,
-            "library": 1,
-            "lose": "Keep an eye on those Red cells!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
-            "maxred": 40,
+            "maxred": 0,
             "mingreen": 0,
             "name": "TODO",
             "playables": [],
@@ -3537,10 +1339,10 @@
             "goal": [],
             "height": 16,
             "id": 35,
-            "library": 1,
-            "lose": "Keep an eye on those Red cells!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
-            "maxred": 40,
+            "maxred": 0,
             "mingreen": 0,
             "name": "TODO",
             "playables": [],
@@ -3558,10 +1360,10 @@
             "goal": [],
             "height": 16,
             "id": 36,
-            "library": 1,
-            "lose": "Keep an eye on those Red cells!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
-            "maxred": 40,
+            "maxred": 0,
             "mingreen": 0,
             "name": "TODO",
             "playables": [],
@@ -3579,10 +1381,10 @@
             "goal": [],
             "height": 16,
             "id": 37,
-            "library": 1,
-            "lose": "Keep an eye on those Red cells!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
-            "maxred": 40,
+            "maxred": 0,
             "mingreen": 0,
             "name": "TODO",
             "playables": [],
@@ -3600,10 +1402,10 @@
             "goal": [],
             "height": 16,
             "id": 38,
-            "library": 1,
-            "lose": "Keep an eye on those Red cells!",
+            "library": 4,
+            "lose": "",
             "maxplay": 0,
-            "maxred": 40,
+            "maxred": 0,
             "mingreen": 0,
             "name": "TODO",
             "playables": [],
@@ -3621,10 +1423,10 @@
             "goal": [],
             "height": 16,
             "id": 39,
-            "library": 1,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
-            "maxred": 40,
+            "maxred": 0,
             "mingreen": 0,
             "name": "TODO",
             "playables": [],
@@ -3740,12 +1542,12 @@
             ],
             "height": 32,
             "id": 4,
-            "library": 1,
+            "library": 2,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Tutorial #4: Symmetry",
+            "name": "Tutorial 4: Symmetry",
             "playables": [],
             "rank": [],
             "width": 32,
@@ -3761,10 +1563,10 @@
             "goal": [],
             "height": 16,
             "id": 40,
-            "library": 1,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
-            "maxred": 40,
+            "maxred": 0,
             "mingreen": 0,
             "name": "TODO",
             "playables": [],
@@ -3782,7 +1584,7 @@
             "goal": [],
             "height": 16,
             "id": 41,
-            "library": 1,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
@@ -3803,7 +1605,7 @@
             "goal": [],
             "height": 16,
             "id": 42,
-            "library": 1,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
@@ -3824,7 +1626,7 @@
             "goal": [],
             "height": 16,
             "id": 43,
-            "library": 1,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
@@ -3845,7 +1647,7 @@
             "goal": [],
             "height": 16,
             "id": 44,
-            "library": 1,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
@@ -3866,7 +1668,7 @@
             "goal": [],
             "height": 16,
             "id": 45,
-            "library": 1,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
@@ -3887,7 +1689,7 @@
             "goal": [],
             "height": 16,
             "id": 46,
-            "library": 1,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
@@ -3903,41 +1705,156 @@
             "arena": [],
             "autowin": 0,
             "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
+            "deadzones": [
+                {
+                    "h": 4,
+                    "w": 20,
+                    "x": 0,
+                    "y": 34
+                },
+                {
+                    "h": 4,
+                    "w": 20,
+                    "x": 44,
+                    "y": 34
+                },
+                {
+                    "h": 4,
+                    "w": 16,
+                    "x": 24,
+                    "y": 16
+                }
+            ],
+            "description": "This one looks pretty difficult. You can't simply send a <strong>Spaceship</strong> up and crash it into the wall and spawn a <strong>Glider</strong>, as the horizontal gap is too small.<br /><br />As a hint, I was able to beat this on Generation 432 with 20 Cells in Play.",
+            "goal": [
+                {
+                    "x": 32,
+                    "y": 4
+                }
+            ],
+            "height": 64,
             "id": 47,
-            "library": 1,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
+            "name": "Getting Difficult",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 64,
+                    "x": 0,
+                    "y": 48
+                }
+            ],
             "rank": [],
-            "width": 16,
+            "width": 64,
             "win": "You Won!"
         },
         "48": {
             "antigoal": [],
-            "arena": [],
+            "arena": [
+                [
+                    45,
+                    53
+                ],
+                [
+                    46,
+                    53
+                ],
+                [
+                    50,
+                    53
+                ],
+                [
+                    51,
+                    53
+                ],
+                [
+                    45,
+                    54
+                ],
+                [
+                    46,
+                    54
+                ],
+                [
+                    50,
+                    54
+                ],
+                [
+                    51,
+                    54
+                ],
+                [
+                    45,
+                    58
+                ],
+                [
+                    46,
+                    58
+                ],
+                [
+                    50,
+                    58
+                ],
+                [
+                    51,
+                    58
+                ],
+                [
+                    45,
+                    59
+                ],
+                [
+                    46,
+                    59
+                ],
+                [
+                    50,
+                    59
+                ],
+                [
+                    51,
+                    59
+                ]
+            ],
             "autowin": 0,
             "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
+            "deadzones": [
+                {
+                    "h": 33,
+                    "w": 4,
+                    "x": 31,
+                    "y": 31
+                }
+            ],
+            "description": "Other than a few <strong>Still Lifes</strong> protecting the <strong>Goal</strong>, this isn't too interesting of a level. Unless, you consider, that there is no line of sight between you and the <strong>Goal</strong>, and you may need to play off of two separate walls to reach the <strong>Goal</strong>.<br /><br />This level was first beaten by @endeavourize with 18 Cells Played and 375 Generations.",
+            "goal": [
+                {
+                    "x": 48,
+                    "y": 56
+                }
+            ],
+            "height": 64,
             "id": 48,
-            "library": 1,
+            "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
+            "name": "Round the Bend",
+            "playables": [
+                {
+                    "h": 16,
+                    "w": 31,
+                    "x": 0,
+                    "y": 48
+                }
+            ],
             "rank": [],
-            "width": 16,
+            "width": 64,
             "win": "You Won!"
         },
         "5": {
@@ -3960,7 +1877,7 @@
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Tutorial #5: Flip your Glider",
+            "name": "Tutorial 5: Flip your Glider",
             "playables": [
                 {
                     "h": 4,
@@ -4078,12 +1995,12 @@
             ],
             "height": 32,
             "id": 6,
-            "library": 4,
+            "library": 3,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Tutorial #6: Spaceship",
+            "name": "Tutorial 6: Spaceship",
             "playables": [],
             "rank": [],
             "width": 32,
@@ -4111,12 +2028,12 @@
             ],
             "height": 32,
             "id": 7,
-            "library": 6,
+            "library": 3,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Tutorial #7: Build a Spaceship",
+            "name": "Tutorial 7: Build a Spaceship",
             "playables": [
                 {
                     "h": 7,
@@ -4185,7 +2102,7 @@
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "This is the final level of the Tutorial.<br /><br />Notice how something simple can become incredibly complex and seemingly unpredicable.",
+            "description": "This is the final level of the Tutorial.<br /><br />The shape on this screen is called the <strong>Multum in Parvo</strong>.<br /><br />Notice how something simple can become incredibly complex and seemingly unpredicable.",
             "goal": [
                 {
                     "x": 32,
@@ -4194,12 +2111,12 @@
             ],
             "height": 64,
             "id": 8,
-            "library": 6,
-            "lose": "",
+            "library": 4,
+            "lose": "Multum in Parvo",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Tutorial #8: Multum in Parvo",
+            "name": "Tutorial 8: Chaos from Order",
             "playables": [],
             "rank": [],
             "width": 64,
@@ -4209,92 +2126,87 @@
             "antigoal": [],
             "arena": [
                 [
-                    9,
+                    5,
                     6
+                ],
+                [
+                    10,
+                    6
+                ],
+                [
+                    3,
+                    7
+                ],
+                [
+                    4,
+                    7
+                ],
+                [
+                    6,
+                    7
+                ],
+                [
+                    7,
+                    7
+                ],
+                [
+                    8,
+                    7
                 ],
                 [
                     9,
                     7
                 ],
                 [
-                    9,
+                    11,
+                    7
+                ],
+                [
+                    12,
+                    7
+                ],
+                [
+                    5,
                     8
                 ],
                 [
-                    6,
-                    6
-                ],
-                [
-                    6,
-                    7
-                ],
-                [
-                    6,
-                    8
-                ],
-                [
-                    12,
-                    6
-                ],
-                [
-                    12,
-                    7
-                ],
-                [
-                    12,
+                    10,
                     8
                 ]
             ],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
-            "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single unit, and the outcome can be completely different.<br /><br />Also, notice how this level is limited to playing a maximum of 10 cells in the green playable zone!",
+            "description": "",
             "goal": [
                 {
-                    "x": 9,
-                    "y": 2
+                    "x": 2,
+                    "y": 5
+                },
+                {
+                    "x": 13,
+                    "y": 5
                 }
             ],
-            "height": 32,
+            "height": 24,
             "id": 9,
-            "library": 6,
+            "library": 4,
             "lose": "",
-            "maxplay": 10,
+            "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "Fanblades I",
+            "name": "CH1E1: Fanblades I",
             "playables": [
                 {
-                    "h": 8,
-                    "w": 19,
+                    "h": 5,
+                    "w": 16,
                     "x": 0,
-                    "y": 24
+                    "y": 19
                 }
             ],
-            "rank": [
-                {
-                    "g": 60,
-                    "r": "a"
-                },
-                {
-                    "g": 61,
-                    "r": "b"
-                },
-                {
-                    "g": 62,
-                    "r": "c"
-                },
-                {
-                    "g": 63,
-                    "r": "d"
-                },
-                {
-                    "g": 64,
-                    "r": "e"
-                }
-            ],
-            "width": 19,
-            "win": "You'll often need to \"jiggle\" your drawings by a tile."
+            "rank": [],
+            "width": 16,
+            "win": ""
         }
     },
     "dictionary": {
@@ -4304,7 +2216,7 @@
         "admob_android": "ca-app-pub-3769178507272044/5009054623",
         "admob_ios": "ca-app-pub-3769178507272044/7962521020",
         "confirm_reset": "Are you SURE you would like to destroy all your progress and start over?",
-        "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green Playable Zone to toggle cells.</p>\n<p>No cells can be alive in the red Dead Zones.</p>\n<p>The rainbow tiles are Goal tiles and need to be activiated to beat levels.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n<li>Any live cell with fewer than two live neighbours dies.</li>\n<li>Any live cell with two or three live neighbours lives.</li>\n<li>Any live cell with more than three live neighbours dies.</li>\n<li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life on WikiPedia</a>.</p>",
+        "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green <strong>Playable Zone</strong> to toggle cells.</p>\n<p>No cells can be alive in the red <strong>Dead Zones</strong>.</p>\n<p>The rainbow tiles are <strong>Goal</strong> tiles and need to be activiated to beat levels.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n  <li>Any live cell with fewer than two live neighbours dies.</li>\n  <li>Any live cell with two or three live neighbours lives.</li>\n  <li>Any live cell with more than three live neighbours dies.</li>\n  <li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life on WikiPedia</a>.</p>",
         "mixpanel": "f598ce903232263c47ca516bff05c18b"
     },
     "library": {
@@ -4328,9 +2240,9 @@
         },
         "2": {
             "id": 2,
-            "image": "images/library/pulsar.png",
-            "name": "Blinker",
-            "url": "http://www.conwaylife.com/wiki/Blinker"
+            "image": "images/library/still-lifes.png",
+            "name": "Still Lifes",
+            "url": "http://www.conwaylife.com/wiki/Still_life"
         },
         "3": {
             "id": 3,
@@ -4340,21 +2252,21 @@
         },
         "4": {
             "id": 4,
-            "image": "images/library/still-lifes.png",
-            "name": "Still Lifes",
-            "url": "http://www.conwaylife.com/wiki/Still_life"
-        },
-        "5": {
-            "id": 5,
-            "image": "images/library/glider-gun.png",
-            "name": "Glider Gun",
-            "url": "http://www.conwaylife.com/wiki/Gun"
-        },
-        "6": {
-            "id": 6,
             "image": "images/library/multum-in-parvo.png",
             "name": "Multum in Parvo",
             "url": "http://www.conwaylife.com/wiki/Multum_in_parvo"
+        },
+        "5": {
+            "id": 5,
+            "image": "images/library/pulsar.png",
+            "name": "Blinker",
+            "url": "http://www.conwaylife.com/wiki/Blinker"
+        },
+        "6": {
+            "id": 6,
+            "image": "images/library/glider-gun.png",
+            "name": "Glider Gun",
+            "url": "http://www.conwaylife.com/wiki/Gun"
         },
         "7": {
             "id": 7,
@@ -4440,5 +2352,5 @@
             "type": "unplayed"
         }
     },
-    "version": "20150610072956"
+    "version": "20150617054130"
 }
