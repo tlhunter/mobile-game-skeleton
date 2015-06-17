@@ -5,8 +5,8 @@ if (!MODULE) { var MODULE = {}; }
 MODULE.Level = (function() {
   var noop = function() {};
 
-    var Level = function(data, container, constraints) {
-        EventEmitter.apply(this);
+  var Level = function(data, container, constraints) {
+    EventEmitter.apply(this);
     this.level_id = data.id;
     this.container = container;
 
@@ -71,9 +71,9 @@ MODULE.Level = (function() {
     this.playing = false;
 
     this.redraw_interval = null;
-    };
+  };
 
-    Level.prototype = Object.create(EventEmitter.prototype);
+  Level.prototype = Object.create(EventEmitter.prototype);
 
   Level.DEFAULT_SIZE = 8;
   Level.MIN_SIZE = 2;
