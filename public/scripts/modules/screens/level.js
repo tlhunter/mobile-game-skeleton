@@ -137,6 +137,7 @@ MODULE.LevelScreen = (function() {
             text: "Watch"
           },{
             text: "Next Level",
+            highlight: true,
             callback: function() {
               app.screen.display('level', self.level_id + 1);
             }
@@ -161,6 +162,7 @@ MODULE.LevelScreen = (function() {
           text: "Watch"
         },{
           text: "Try Again",
+          highlight: true,
           callback: function() {
             self.onStop();
           }
@@ -318,7 +320,8 @@ MODULE.LevelScreen = (function() {
 
   LevelScreen.prototype.intro = function() {
     app.modal.show("<h3 class='cycle'>" + this.level.name + "</h3>" + this.level.description, [{
-      text: "Ok"
+      text: "Play Level",
+      highlight: true
     }]);
   };
 
@@ -411,7 +414,8 @@ MODULE.LevelScreen = (function() {
 
   LevelScreen.prototype.onLibrary = function() {
     app.modal.show(this.getLibrary(), [{
-      text: 'Ok'
+      text: 'Dismiss',
+      highlight: true
     }]);
 
     app.analytics.track('LEVEL-LIBRARY', {

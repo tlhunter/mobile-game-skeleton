@@ -16,7 +16,8 @@ MODULE.Modal = (function() {
     var self = this;
 
     buttons = buttons || [{
-      text: 'Ok'
+      text: 'Ok',
+      highlight: true
     }];
 
     this.empty();
@@ -26,6 +27,10 @@ MODULE.Modal = (function() {
       var button = document.createElement('button');
       var text = document.createTextNode(data.text);
       button.appendChild(text);
+
+      if (data.highlight) {
+          button.classList.add('cycle');
+      }
 
       button.onclick = function() {
         self.fadeOut(data.callback);

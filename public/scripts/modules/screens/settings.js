@@ -57,7 +57,8 @@ MODULE.SettingsScreen = (function() {
         }
       },
       {
-        text: "Cancel"
+        text: "Cancel",
+        highlight: true
       }], true
     );
   };
