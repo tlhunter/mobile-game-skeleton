@@ -34,6 +34,12 @@ app.get('/', function (req, res) {
   res.sendFile(public_dir + '/index.html');
 });
 
+app.get('/manifest.webapp', function(req, res) {
+  console.log('GET /manifest.webapp');
+  res.type('application/x-web-app-manifest+json');
+  res.sendFile(public_dir + '/manifest.webapp');
+});
+
 app.get('/data', function (req, res) {
   console.log('GET /data');
   res.send(content);
