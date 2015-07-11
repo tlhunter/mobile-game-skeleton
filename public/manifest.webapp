@@ -4,7 +4,7 @@
   "description": "Strategic Game of Life: Conway's Game of Life reimagined as a strategic campaign of levels to beat.",
   "launch_path": "/index.html",
   "icons": {
-    "512": "/images/meta/app-512.png"
+    "128": "/images/meta/app-128.png"
   },
   "developer": {
     "name": "Thomas Hunter II (@tlhunter)",
