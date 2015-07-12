@@ -22,6 +22,8 @@ MODULE.Device = (function() {
         self.emit('focus');
       }
     });
+
+    this.fullscreen = new MODULE.Fullscreen();
   };
 
   Device.prototype = Object.create(EventEmitter.prototype);
@@ -46,6 +48,10 @@ MODULE.Device = (function() {
     } else if (navigator.userAgent.match(/IEMobile/i)) {
       return Device.VENDORS.windows;
     }
+  };
+
+  Device.prototype.reload = function() {
+    location.reload();
   };
 
   return Device;

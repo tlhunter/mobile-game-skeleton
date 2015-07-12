@@ -53,7 +53,7 @@ MODULE.SettingsScreen = (function() {
         text: "Destroy",
         callback: function() {
           app.storage.clear();
-          app.reload();
+          app.device.reload();
         }
       },
       {
@@ -64,7 +64,7 @@ MODULE.SettingsScreen = (function() {
   };
 
   SettingsScreen.prototype.onRefresh = function() {
-    app.reload();
+    app.device.reload();
   };
 
   SettingsScreen.prototype.onSound = function() {

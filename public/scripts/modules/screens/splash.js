@@ -43,6 +43,7 @@ MODULE.SplashScreen = (function() {
   SplashScreen.prototype.onPlay = function() {
     app.audio.playSound('select');
     app.screen.display('menu');
+    app.device.fullscreen.request();
   };
 
   return SplashScreen;
