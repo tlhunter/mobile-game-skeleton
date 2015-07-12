@@ -490,9 +490,12 @@ MODULE.Level = (function() {
   Level.prototype.buildArena = function(data) {
     var new_arena = [];
 
-    for (var y = 0; y < this.dimensions.height; y++) {
+    var height = this.dimensions.height;
+    var width = this.dimensions.width;
+
+    for (var y = 0; y < height; y++) {
       new_arena[y] = [];
-      for (var x = 0; x < this.dimensions.width; x++) {
+      for (var x = 0; x < width; x++) {
         new_arena[y][x] = false;
       }
     }
@@ -510,6 +513,11 @@ MODULE.Level = (function() {
       var n = Level.CELL.NORMAL;
 
       for (coord in data) {
+        if (data[coord][1] >= height || data[coord][0] >= width) {
+          console.error("Coordinate outside of boundary!", data);
+          continue;
+        }
+
         new_arena[data[coord][1]][data[coord][0]] = n;
       }
     }
