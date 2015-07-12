@@ -111,9 +111,11 @@ MODULE.LevelScreen = (function() {
       var my_level = app.storage.get('level', 0);
       var max_level = Object.keys(app.content.data.campaign).length;
       var levelup = false;
+      var end_game = false;
 
       if (data.level === max_level) {
         // TODO: Congratulate user on winning
+        end_game = true;
         console.log("Beat the final level... Now what?");
       }
 
@@ -131,18 +133,22 @@ MODULE.LevelScreen = (function() {
 
       var content = LevelScreen.resultModal(rank, campaign.win, data.generation, data.played);
 
+      var buttons = [{
+        text: "Watch"
+      }];
+
+      if (!end_game) {
+        buttons.push({
+          text: "Next Level",
+          highlight: true,
+          callback: function() {
+            app.screen.display('level', self.level_id + 1);
+          }
+        });
+      }
+
       if (levelup || rank_up) {
-        app.modal.show(
-          content, [{
-            text: "Watch"
-          },{
-            text: "Next Level",
-            highlight: true,
-            callback: function() {
-              app.screen.display('level', self.level_id + 1);
-            }
-          }], true
-        );
+        app.modal.show(content, buttons, true);
       }
 
       app.analytics.track('LEVEL-WIN', {
