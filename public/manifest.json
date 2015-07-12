@@ -1,0 +1,30 @@
+{
+  "name": "Strategic Game of Life",
+  "short_name": "Strategic GoL",
+  "version": "1.0.0",
+  "description": "Strategic Game of Life: Conway's Game of Life reimagined as a strategic campaign of levels to beat.",
+  "icons": [
+    {
+      "src": "/images/meta/app-66.png",
+      "sizes": "66x66",
+      "type": "image/png"
+    },{
+      "src": "/images/meta/app-76.png",
+      "sizes": "76x76",
+      "type": "image/png"
+    },{
+      "src": "/images/meta/app-120.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },{
+      "src": "/images/meta/app-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "author": "Thomas Hunter II (@tlhunter)",
+  "default_locale": "en",
+  "manifest_version": 2
+}
