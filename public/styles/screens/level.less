@@ -4,10 +4,13 @@
   }
 
   .scrollable {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
+    display: -webkit-box; // Safari Mobile
+    display: -webkit-flex; // Safari Desktop
+    display: flex; // Sane Browsers
+    -webkit-box-align: center; // Safari Mobile
+    -webkit-flex-align: center; // Safari Desktop
+    -webkit-align-items: center; // Chrome
+    align-items: center; // Sane Browsers
     -webkit-justify-content: center;
     justify-content: center;
   }
