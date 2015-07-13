@@ -37,7 +37,8 @@ MODULE.Device = (function() {
     IOS: 'ios',
     BB: 'blackberry',
     OPERA: 'opera',
-    WINDOWS: 'windows'
+    WINDOWS: 'windows',
+    FIREFOXOS: 'firefoxos'
   };
 
   Device.getVendor = function() {
@@ -48,9 +49,11 @@ MODULE.Device = (function() {
     } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
       return Device.VENDORS.IOS;
     } else if (navigator.userAgent.match(/Opera Mini/i)) {
-      return Device.VENDORS.opera;
+      return Device.VENDORS.OPERA;
     } else if (navigator.userAgent.match(/IEMobile/i)) {
-      return Device.VENDORS.windows;
+      return Device.VENDORS.WINDOWS;
+    } else if (navigator.userAgent.match(/Mozilla.*Mobile/)) {
+      return Device.VENDORS.FIREFOXOS;
     }
   };
 

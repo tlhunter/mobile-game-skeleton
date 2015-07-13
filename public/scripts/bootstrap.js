@@ -4,14 +4,13 @@ if (!MODULE) { var MODULE = {}; }
 
 (function() {
   var storage_prefix = "sgol-";
-  var url_prefix = location.origin;
 
   var app = {
     analytics: null,
     audio: null,
     interstitial: null,
     rank: null,
-    network: new MODULE.Network(url_prefix),
+    network: new MODULE.Network(),
     storage: new MODULE.Storage(storage_prefix),
     content: new MODULE.Content(),
     modal: new MODULE.Modal(),

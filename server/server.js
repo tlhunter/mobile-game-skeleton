@@ -42,6 +42,7 @@ app.get('/manifest.webapp', function(req, res) {
 
 app.get('/data', function (req, res) {
   console.log('GET /data');
+  res.header("Access-Control-Allow-Origin", "*");
   res.send(content);
 });
 

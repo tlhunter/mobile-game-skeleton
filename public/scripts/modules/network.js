@@ -4,23 +4,40 @@ if (!MODULE) { var MODULE = {}; }
 
 MODULE.Network = (function() {
   var URLS = {
-    data: '/data'
+    'local-data': {
+      url: './dist/data.json',
+      local: true
+    },
+    'remote-data-production': {
+      // url: 'http://static.zyu.me/games/strategic-game-of-life/data.json',
+      url: 'http://zyu.me:1337/data',
+      local: false
+    },
+    'remote-data-development': {
+      url: location.origin + '/data',
+      local: false
+    }
   };
 
-  var Network = function(url_prefix) {
-    this.url_prefix = url_prefix;
-  };
+  var Network = function() {};
 
-  Network.prototype.get = function(item, callback) {
-    var url = URLS[item];
+  Network.prototype.get = function(name, callback) {
+    var item = URLS[name];
+    var url = item.url;
 
     if (!url) {
       return callback(null);
     }
 
-    url = this.url_prefix + url;
+    var ajax_settings;
 
-    var request = new XMLHttpRequest();
+    if (app.device.vendor === 'firefoxos' && item.remote) {
+      ajax_settings = {
+        mozSystem: true
+      };
+    }
+
+    var request = new XMLHttpRequest(ajax_settings);
 
     request.open('GET', url, true);
 
