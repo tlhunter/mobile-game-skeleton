@@ -7,8 +7,12 @@ MODULE.Device = (function() {
     EventEmitter.apply(this);
 
     this.viewport = {
-      width: screen.availWidth,
-      height: Math.min(screen.availHeight, window.innerHeight)
+      get width() {
+        return screen.availWidth;
+      },
+      get height() {
+        return Math.min(screen.availHeight, window.innerHeight);
+      }
     };
 
     this.vendor = Device.getVendor();
