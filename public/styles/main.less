@@ -133,8 +133,8 @@ a {
 .cycle {
   outline-width: 0px;
   -webkit-animation: cycle 2s linear infinite;
-    -moz-animation: cycle 2s linear infinite;
-    animation: cycle 2s linear infinite;
+  -moz-animation: cycle 2s linear infinite;
+  animation: cycle 2s linear infinite;
 }
 
 @-webkit-keyframes cycle {
@@ -220,5 +220,42 @@ a {
   100% {
     color: hsl(360, 50%, 50%);
     outline-color: hsl(360, 50%, 50%);
+  }
+}
+
+.red-cycle {
+  outline-width: 0px;
+  -webkit-animation: red-cycle 1s linear infinite;
+  -moz-animation: red-cycle 1s linear infinite;
+  animation: red-cycle 1s linear infinite;
+}
+
+@-webkit-keyframes red-cycle {
+  0% {
+    color: hsl(0, 0%, 50%);
+    outline-color: hsl(0, 0%, 50%);
+  }
+  50% {
+    color: hsl(0, 100%, 50%);
+    outline-color: hsl(0, 100%, 50%);
+  }
+  100% {
+    color: hsl(0, 0%, 50%);
+    outline-color: hsl(0, 0%, 50%);
+  }
+}
+
+@-moz-keyframes red-cycle {
+  0% {
+    color: hsl(0, 0%, 50%);
+    outline-color: hsl(0, 0%, 50%);
+  }
+  50% {
+    color: hsl(0, 100%, 50%);
+    outline-color: hsl(0, 100%, 50%);
+  }
+  100% {
+    color: hsl(0, 0%, 50%);
+    outline-color: hsl(0, 0%, 50%);
   }
 }
