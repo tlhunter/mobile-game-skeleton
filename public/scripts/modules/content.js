@@ -80,7 +80,7 @@ MODULE.Content = (function() {
    * This loads data from a local cache (e.g. localStorage) (middle)
    */
   Content.prototype.loadCachedData = function() {
-    var data = app.storage.get('dev');
+    var data = app.storage.get('data');
 
     if (data) {
       console.log("Loaded data from cache", data.version);
@@ -95,7 +95,7 @@ MODULE.Content = (function() {
   Content.prototype.loadLiveData = function(callback) {
     var item = 'remote-data-production';
 
-    if (app.storage.get('debug')) {
+    if (app.storage.get('dev')) {
       item = 'remote-data-development';
     }
 
