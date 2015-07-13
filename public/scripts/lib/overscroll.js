@@ -5,6 +5,7 @@
  */
 if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
 	(function(){
+		return;
 	  // Declare variables
 		var touch_x, touch_y, obj_x, obj_y, speed_x=0, speed_y=0, scrollanim;
 		
