@@ -13,5 +13,5 @@
   "default_locale": "en",
   "type": "privileged",
   "chrome": { "navigation": false },
-  "fullscreen": true
+  "fullscreen": "true"
 }
