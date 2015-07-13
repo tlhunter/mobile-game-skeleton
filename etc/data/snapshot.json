@@ -87,7 +87,7 @@
             "height": 16,
             "id": 1,
             "library": 1,
-            "lose": "",
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -147,20 +147,20 @@
                     "y": 2
                 }
             ],
-            "height": 32,
+            "height": 24,
             "id": 10,
             "library": 4,
-            "lose": "",
+            "lose": "N/A",
             "maxplay": 10,
             "maxred": 0,
             "mingreen": 0,
-            "name": "CH1E2: Fanblades II",
+            "name": "Level 10: Fanblades II",
             "playables": [
                 {
-                    "h": 8,
+                    "h": 5,
                     "w": 19,
                     "x": 0,
-                    "y": 24
+                    "y": 19
                 }
             ],
             "rank": [
@@ -186,7 +186,7 @@
                 }
             ],
             "width": 19,
-            "win": "You'll often need to \"jiggle\" your drawings by a tile."
+            "win": "You Won!"
         },
         "11": {
             "antigoal": [],
@@ -321,7 +321,7 @@
                 ]
             ],
             "autowin": 0,
-            "chapter": 0,
+            "chapter": 2,
             "deadzones": [],
             "description": "",
             "goal": [
@@ -337,11 +337,11 @@
             "height": 24,
             "id": 11,
             "library": 4,
-            "lose": "",
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "CH1E3: Tables",
+            "name": "Level 11: Tables",
             "playables": [
                 {
                     "h": 8,
@@ -352,7 +352,7 @@
             ],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         },
         "12": {
             "antigoal": [
@@ -391,11 +391,11 @@
             "height": 16,
             "id": 12,
             "library": 4,
-            "lose": "Try to cut off the glider and keep the Anti Goal from activating.",
+            "lose": "You Lose!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "CH1E4: The Antigoal",
+            "name": "Level 12: The Antigoal",
             "playables": [
                 {
                     "h": 5,
@@ -462,19 +462,19 @@
                 ],
                 [
                     3,
-                    26
+                    19
                 ],
                 [
                     4,
-                    26
+                    19
                 ],
                 [
                     3,
-                    27
+                    20
                 ],
                 [
                     4,
-                    27
+                    20
                 ]
             ],
             "autowin": 0,
@@ -484,30 +484,30 @@
                     "h": 5,
                     "w": 1,
                     "x": 6,
-                    "y": 26
+                    "y": 19
                 }
             ],
             "description": "Placeholder",
             "goal": [
                 {
                     "x": 3,
-                    "y": 30
+                    "y": 23
                 }
             ],
-            "height": 31,
+            "height": 24,
             "id": 13,
             "library": 4,
-            "lose": "",
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "CH1E5: Interceptor A",
+            "name": "Level 13: Interceptor I",
             "playables": [
                 {
                     "h": 5,
                     "w": 5,
                     "x": 8,
-                    "y": 20
+                    "y": 13
                 }
             ],
             "rank": [
@@ -531,7 +531,7 @@
             "antigoal": [
                 {
                     "x": 3,
-                    "y": 30
+                    "y": 23
                 }
             ],
             "arena": [
@@ -572,32 +572,32 @@
                     6
                 ]
             ],
-            "autowin": 50,
+            "autowin": 40,
             "chapter": 2,
             "deadzones": [
                 {
                     "h": 5,
                     "w": 1,
                     "x": 6,
-                    "y": 26
+                    "y": 19
                 }
             ],
             "description": "Placeholder",
             "goal": [],
-            "height": 31,
+            "height": 24,
             "id": 14,
             "library": 4,
-            "lose": "",
+            "lose": "You Lose!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "CH1E6: Interceptor B",
+            "name": "Level 14: Interceptor II",
             "playables": [
                 {
                     "h": 5,
                     "w": 5,
                     "x": 8,
-                    "y": 20
+                    "y": 13
                 }
             ],
             "rank": [
@@ -711,11 +711,11 @@
             "height": 21,
             "id": 15,
             "library": 4,
-            "lose": "",
+            "lose": "You Lose!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "CH1E7: Interceptor C",
+            "name": "Level 15: Interceptor III",
             "playables": [
                 {
                     "h": 9,
@@ -835,11 +835,11 @@
             "height": 21,
             "id": 16,
             "library": 4,
-            "lose": "",
+            "lose": "You Lose!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "CH1E8: Interceptor D",
+            "name": "Level 16: Interceptor IV",
             "playables": [
                 {
                     "h": 9,
@@ -853,66 +853,382 @@
             "win": "You Won!"
         },
         "17": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
+            "antigoal": [
+                {
+                    "x": 10,
+                    "y": 14
+                }
+            ],
+            "arena": [
+                [
+                    3,
+                    6
+                ],
+                [
+                    1,
+                    7
+                ],
+                [
+                    3,
+                    7
+                ],
+                [
+                    2,
+                    8
+                ],
+                [
+                    3,
+                    8
+                ],
+                [
+                    9,
+                    9
+                ],
+                [
+                    8,
+                    10
+                ],
+                [
+                    10,
+                    10
+                ],
+                [
+                    12,
+                    10
+                ],
+                [
+                    13,
+                    10
+                ],
+                [
+                    8,
+                    11
+                ],
+                [
+                    10,
+                    11
+                ],
+                [
+                    11,
+                    11
+                ],
+                [
+                    13,
+                    11
+                ],
+                [
+                    6,
+                    12
+                ],
+                [
+                    7,
+                    12
+                ],
+                [
+                    9,
+                    12
+                ],
+                [
+                    7,
+                    13
+                ],
+                [
+                    9,
+                    13
+                ],
+                [
+                    10,
+                    13
+                ],
+                [
+                    11,
+                    13
+                ],
+                [
+                    12,
+                    13
+                ],
+                [
+                    7,
+                    14
+                ],
+                [
+                    9,
+                    14
+                ],
+                [
+                    12,
+                    14
+                ],
+                [
+                    8,
+                    15
+                ],
+                [
+                    11,
+                    15
+                ],
+                [
+                    9,
+                    16
+                ],
+                [
+                    10,
+                    16
+                ]
+            ],
+            "autowin": 20,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": [],
-            "height": 16,
+            "height": 18,
             "id": 17,
             "library": 4,
-            "lose": "",
+            "lose": "Stop that Stillater destroying Glider!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
+            "name": "Level 17: Interrupt",
+            "playables": [
+                {
+                    "h": 6,
+                    "w": 18,
+                    "x": 0,
+                    "y": 0
+                }
+            ],
+            "rank": [
+                {
+                    "p": 1,
+                    "r": "a"
+                }
+            ],
+            "width": 18,
+            "win": "You protected the Stillater!"
         },
         "18": {
-            "antigoal": [],
-            "arena": [],
+            "antigoal": [
+                {
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "x": 8,
+                    "y": 1
+                }
+            ],
+            "arena": [
+                [
+                    1,
+                    0
+                ],
+                [
+                    8,
+                    0
+                ],
+                [
+                    0,
+                    1
+                ],
+                [
+                    2,
+                    1
+                ],
+                [
+                    7,
+                    1
+                ],
+                [
+                    9,
+                    1
+                ],
+                [
+                    1,
+                    2
+                ],
+                [
+                    3,
+                    2
+                ],
+                [
+                    6,
+                    2
+                ],
+                [
+                    8,
+                    2
+                ],
+                [
+                    3,
+                    3
+                ],
+                [
+                    6,
+                    3
+                ],
+                [
+                    3,
+                    4
+                ],
+                [
+                    6,
+                    4
+                ],
+                [
+                    4,
+                    5
+                ],
+                [
+                    5,
+                    5
+                ]
+            ],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
-            "goal": [],
-            "height": 16,
+            "goal": [
+                {
+                    "x": 4,
+                    "y": 4
+                },
+                {
+                    "x": 5,
+                    "y": 4
+                }
+            ],
+            "height": 14,
             "id": 18,
             "library": 4,
-            "lose": "",
+            "lose": "You Lose!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
+            "name": "Level 18: Tub Test Tube Baby",
+            "playables": [
+                {
+                    "h": 5,
+                    "w": 10,
+                    "x": 0,
+                    "y": 9
+                }
+            ],
+            "rank": [
+                {
+                    "g": 10,
+                    "p": 5,
+                    "r": "a"
+                }
+            ],
+            "width": 10,
             "win": "You Won!"
         },
         "19": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
+            "antigoal": [
+                {
+                    "x": 12,
+                    "y": 9
+                }
+            ],
+            "arena": [
+                [
+                    10,
+                    0
+                ],
+                [
+                    11,
+                    1
+                ],
+                [
+                    9,
+                    2
+                ],
+                [
+                    10,
+                    2
+                ],
+                [
+                    11,
+                    2
+                ],
+                [
+                    10,
+                    9
+                ],
+                [
+                    11,
+                    9
+                ],
+                [
+                    10,
+                    10
+                ],
+                [
+                    11,
+                    10
+                ],
+                [
+                    15,
+                    10
+                ],
+                [
+                    14,
+                    11
+                ],
+                [
+                    16,
+                    11
+                ],
+                [
+                    15,
+                    12
+                ],
+                [
+                    17,
+                    12
+                ],
+                [
+                    17,
+                    13
+                ],
+                [
+                    17,
+                    14
+                ],
+                [
+                    18,
+                    14
+                ]
+            ],
+            "autowin": 30,
             "chapter": 2,
             "deadzones": [],
             "description": "Placeholder",
             "goal": [],
-            "height": 16,
+            "height": 15,
             "id": 19,
             "library": 4,
             "lose": "",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
+            "name": "Level 19: Glider Eater",
+            "playables": [
+                {
+                    "h": 6,
+                    "w": 8,
+                    "x": 0,
+                    "y": 9
+                }
+            ],
+            "rank": [
+                {
+                    "p": 3,
+                    "r": "a"
+                }
+            ],
+            "width": 19,
             "win": "You Won!"
         },
         "2": {
@@ -931,7 +1247,7 @@
             "height": 16,
             "id": 2,
             "library": 1,
-            "lose": "",
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -955,212 +1271,142 @@
         },
         "20": {
             "antigoal": [],
-            "arena": [],
+            "arena": [
+                [
+                    9,
+                    9
+                ],
+                [
+                    10,
+                    9
+                ],
+                [
+                    12,
+                    9
+                ],
+                [
+                    9,
+                    10
+                ],
+                [
+                    12,
+                    10
+                ],
+                [
+                    9,
+                    11
+                ],
+                [
+                    11,
+                    11
+                ],
+                [
+                    12,
+                    11
+                ]
+            ],
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
-            "description": "Placeholder",
+            "description": "In this level you'll need to get a certain number of green cells.",
             "goal": [],
-            "height": 16,
+            "height": 21,
             "id": 20,
             "library": 4,
             "lose": "",
-            "maxplay": 0,
+            "maxplay": 10,
             "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
+            "mingreen": 40,
+            "name": "Level 20: Fill in The Gap",
+            "playables": [
+                {
+                    "h": 2,
+                    "w": 4,
+                    "x": 9,
+                    "y": 12
+                },
+                {
+                    "h": 2,
+                    "w": 4,
+                    "x": 9,
+                    "y": 7
+                }
+            ],
+            "rank": [
+                {
+                    "g": 13,
+                    "p": 10,
+                    "r": "a"
+                }
+            ],
+            "width": 22,
             "win": "You Won!"
         },
         "21": {
             "antigoal": [],
-            "arena": [],
-            "autowin": 0,
+            "arena": [
+                [
+                    9,
+                    9
+                ],
+                [
+                    10,
+                    9
+                ],
+                [
+                    12,
+                    9
+                ],
+                [
+                    9,
+                    10
+                ],
+                [
+                    12,
+                    10
+                ],
+                [
+                    9,
+                    11
+                ],
+                [
+                    11,
+                    11
+                ],
+                [
+                    12,
+                    11
+                ]
+            ],
+            "autowin": 20,
             "chapter": 2,
             "deadzones": [],
-            "description": "Placeholder",
+            "description": "Prevent the reds from achieving a higher population!",
             "goal": [],
-            "height": 16,
+            "height": 21,
             "id": 21,
             "library": 4,
             "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
+            "maxplay": 10,
+            "maxred": 20,
             "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
+            "name": "Level 21: Defensiveness",
+            "playables": [
+                {
+                    "h": 3,
+                    "w": 4,
+                    "x": 9,
+                    "y": 14
+                },
+                {
+                    "h": 3,
+                    "w": 4,
+                    "x": 9,
+                    "y": 4
+                }
+            ],
             "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "22": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 22,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "23": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 23,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "24": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 24,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "25": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 25,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "26": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 26,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "27": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 27,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "28": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 28,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "29": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 29,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
+            "width": 22,
             "win": "You Won!"
         },
         "3": {
@@ -1196,7 +1442,7 @@
             "height": 16,
             "id": 3,
             "library": 2,
-            "lose": "",
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -1205,14 +1451,14 @@
                 {
                     "h": 3,
                     "w": 3,
-                    "x": 0,
-                    "y": 0
+                    "x": 1,
+                    "y": 1
                 },
                 {
                     "h": 3,
                     "w": 3,
-                    "x": 6,
-                    "y": 6
+                    "x": 7,
+                    "y": 7
                 }
             ],
             "rank": [
@@ -1224,298 +1470,88 @@
             "width": 16,
             "win": "Breaking barriers is a useful technique."
         },
-        "30": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 30,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "31": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 31,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "32": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 32,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "33": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 33,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "34": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 34,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "35": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 35,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "36": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 36,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "37": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 37,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "38": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 38,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "39": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 39,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
         "4": {
             "antigoal": [],
             "arena": [
                 [
-                    11,
-                    11
+                    7,
+                    7
+                ],
+                [
+                    8,
+                    7
+                ],
+                [
+                    9,
+                    7
                 ],
                 [
                     12,
-                    11
+                    7
                 ],
                 [
                     13,
-                    11
+                    7
                 ],
                 [
-                    16,
-                    11
+                    14,
+                    7
                 ],
                 [
-                    17,
-                    11
+                    7,
+                    8
                 ],
                 [
-                    18,
-                    11
+                    14,
+                    8
                 ],
                 [
-                    11,
-                    12
-                ],
-                [
-                    18,
-                    12
-                ],
-                [
-                    12,
-                    13
-                ],
-                [
-                    17,
-                    13
-                ],
-                [
-                    12,
-                    16
-                ],
-                [
-                    17,
-                    16
-                ],
-                [
-                    11,
-                    17
-                ],
-                [
-                    18,
-                    17
-                ],
-                [
-                    11,
-                    18
-                ],
-                [
-                    12,
-                    18
+                    8,
+                    9
                 ],
                 [
                     13,
-                    18
+                    9
                 ],
                 [
-                    16,
-                    18
+                    8,
+                    12
                 ],
                 [
-                    17,
-                    18
+                    13,
+                    12
                 ],
                 [
-                    18,
-                    18
+                    7,
+                    13
+                ],
+                [
+                    14,
+                    13
+                ],
+                [
+                    7,
+                    14
+                ],
+                [
+                    8,
+                    14
+                ],
+                [
+                    9,
+                    14
+                ],
+                [
+                    12,
+                    14
+                ],
+                [
+                    13,
+                    14
+                ],
+                [
+                    14,
+                    14
                 ]
             ],
             "autowin": 0,
@@ -1524,338 +1560,34 @@
             "description": "Flip or rotate anything you draw to flip or rotate the outcome.<br /><br /><br /><br />Tip: If you ever see <strong>multiple goals</strong>, you only need to <strong>activate one</strong> to win.",
             "goal": [
                 {
-                    "x": 26,
-                    "y": 26
+                    "x": 22,
+                    "y": 22
                 },
                 {
                     "x": 1,
                     "y": 1
                 },
                 {
-                    "x": 27,
-                    "y": 12
+                    "x": 22,
+                    "y": 1
                 },
                 {
-                    "x": 3,
-                    "y": 28
+                    "x": 1,
+                    "y": 22
                 }
             ],
-            "height": 32,
+            "height": 24,
             "id": 4,
             "library": 2,
-            "lose": "",
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Tutorial 4: Symmetry",
             "playables": [],
             "rank": [],
-            "width": 32,
+            "width": 24,
             "win": "Remember, flipping and rotating objects will flip and rotate what they do!"
-        },
-        "40": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 40,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "41": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 41,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "42": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 42,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "43": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 43,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "44": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 44,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "45": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 45,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "46": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Placeholder",
-            "goal": [],
-            "height": 16,
-            "id": 46,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "TODO",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "You Won!"
-        },
-        "47": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 4,
-                    "w": 20,
-                    "x": 0,
-                    "y": 34
-                },
-                {
-                    "h": 4,
-                    "w": 20,
-                    "x": 44,
-                    "y": 34
-                },
-                {
-                    "h": 4,
-                    "w": 16,
-                    "x": 24,
-                    "y": 16
-                }
-            ],
-            "description": "This one looks pretty difficult. You can't simply send a <strong>Spaceship</strong> up and crash it into the wall and spawn a <strong>Glider</strong>, as the horizontal gap is too small.<br /><br />As a hint, I was able to beat this on Generation 432 with 20 Cells in Play.",
-            "goal": [
-                {
-                    "x": 32,
-                    "y": 4
-                }
-            ],
-            "height": 64,
-            "id": 47,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Getting Difficult",
-            "playables": [
-                {
-                    "h": 16,
-                    "w": 64,
-                    "x": 0,
-                    "y": 48
-                }
-            ],
-            "rank": [],
-            "width": 64,
-            "win": "You Won!"
-        },
-        "48": {
-            "antigoal": [],
-            "arena": [
-                [
-                    45,
-                    53
-                ],
-                [
-                    46,
-                    53
-                ],
-                [
-                    50,
-                    53
-                ],
-                [
-                    51,
-                    53
-                ],
-                [
-                    45,
-                    54
-                ],
-                [
-                    46,
-                    54
-                ],
-                [
-                    50,
-                    54
-                ],
-                [
-                    51,
-                    54
-                ],
-                [
-                    45,
-                    58
-                ],
-                [
-                    46,
-                    58
-                ],
-                [
-                    50,
-                    58
-                ],
-                [
-                    51,
-                    58
-                ],
-                [
-                    45,
-                    59
-                ],
-                [
-                    46,
-                    59
-                ],
-                [
-                    50,
-                    59
-                ],
-                [
-                    51,
-                    59
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 33,
-                    "w": 4,
-                    "x": 31,
-                    "y": 31
-                }
-            ],
-            "description": "Other than a few <strong>Still Lifes</strong> protecting the <strong>Goal</strong>, this isn't too interesting of a level. Unless, you consider, that there is no line of sight between you and the <strong>Goal</strong>, and you may need to play off of two separate walls to reach the <strong>Goal</strong>.<br /><br />This level was first beaten by @endeavourize with 18 Cells Played and 375 Generations.",
-            "goal": [
-                {
-                    "x": 48,
-                    "y": 56
-                }
-            ],
-            "height": 64,
-            "id": 48,
-            "library": 4,
-            "lose": "",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Round the Bend",
-            "playables": [
-                {
-                    "h": 16,
-                    "w": 31,
-                    "x": 0,
-                    "y": 48
-                }
-            ],
-            "rank": [],
-            "width": 64,
-            "win": "You Won!"
         },
         "5": {
             "antigoal": [],
@@ -1873,7 +1605,7 @@
             "height": 16,
             "id": 5,
             "library": 2,
-            "lose": "",
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -1911,76 +1643,76 @@
             "antigoal": [],
             "arena": [
                 [
-                    21,
-                    23
+                    17,
+                    15
                 ],
                 [
-                    22,
-                    23
+                    18,
+                    15
                 ],
                 [
-                    23,
-                    23
+                    19,
+                    15
                 ],
                 [
                     2,
-                    24
+                    16
                 ],
                 [
                     3,
-                    24
+                    16
                 ],
                 [
                     4,
-                    24
+                    16
                 ],
                 [
-                    21,
-                    24
+                    17,
+                    16
                 ],
                 [
-                    24,
-                    24
+                    20,
+                    16
                 ],
                 [
                     2,
-                    25
+                    17
                 ],
                 [
                     5,
-                    25
+                    17
                 ],
                 [
-                    21,
-                    25
-                ],
-                [
-                    2,
-                    26
-                ],
-                [
-                    21,
-                    26
+                    17,
+                    17
                 ],
                 [
                     2,
-                    27
+                    18
                 ],
                 [
-                    22,
-                    27
+                    17,
+                    18
                 ],
                 [
-                    24,
-                    27
+                    2,
+                    19
+                ],
+                [
+                    18,
+                    19
+                ],
+                [
+                    20,
+                    19
                 ],
                 [
                     3,
-                    28
+                    20
                 ],
                 [
                     5,
-                    28
+                    20
                 ]
             ],
             "autowin": 0,
@@ -1989,21 +1721,21 @@
             "description": "This level has two <strong>Spaceships</strong>. Just like a Glider, a Spaceship can move across the playing field and retain its original shape.<br /><br />Depending on a Spaceships distance from a wall, it will <strong>release a Glider</strong> either to the right or the left when it crashes.",
             "goal": [
                 {
-                    "x": 15,
+                    "x": 11,
                     "y": 8
                 }
             ],
-            "height": 32,
+            "height": 24,
             "id": 6,
             "library": 3,
-            "lose": "",
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Tutorial 6: Spaceship",
             "playables": [],
             "rank": [],
-            "width": 32,
+            "width": 24,
             "win": "Moving a spaceship 1 unit from a wall changes the glider direction."
         },
         "7": {
@@ -2014,32 +1746,32 @@
             "deadzones": [
                 {
                     "h": 2,
-                    "w": 12,
+                    "w": 8,
                     "x": 0,
-                    "y": 16
+                    "y": 8
                 }
             ],
             "description": "Using your newfound knowledge of Spaceships, try to activate the goal in this level.<br /><br /><br /><br />Tip: Notice the red rectangle. This is called a <strong>Deadzone</strong>, no cells will survive inside of it. These will have the same effect as the edge of a map when something collides with it.",
             "goal": [
                 {
                     "x": 3,
-                    "y": 12
+                    "y": 7
                 }
             ],
-            "height": 32,
+            "height": 16,
             "id": 7,
             "library": 3,
-            "lose": "",
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Tutorial 7: Build a Spaceship",
             "playables": [
                 {
-                    "h": 7,
-                    "w": 16,
-                    "x": 4,
-                    "y": 23
+                    "h": 5,
+                    "w": 4,
+                    "x": 9,
+                    "y": 11
                 }
             ],
             "rank": [
@@ -2064,39 +1796,39 @@
                     "r": "e"
                 }
             ],
-            "width": 24,
+            "width": 16,
             "win": "Spaceships releasing Gliders can be very useful!"
         },
         "8": {
             "antigoal": [],
             "arena": [
                 [
-                    32,
-                    29
+                    12,
+                    17
                 ],
                 [
-                    33,
-                    29
+                    13,
+                    17
                 ],
                 [
-                    34,
-                    29
+                    14,
+                    17
                 ],
                 [
-                    31,
-                    30
+                    11,
+                    18
                 ],
                 [
-                    34,
-                    30
+                    14,
+                    18
                 ],
                 [
-                    30,
-                    31
+                    10,
+                    19
                 ],
                 [
-                    29,
-                    32
+                    9,
+                    20
                 ]
             ],
             "autowin": 0,
@@ -2105,22 +1837,22 @@
             "description": "This is the final level of the Tutorial.<br /><br />The shape on this screen is called the <strong>Multum in Parvo</strong>.<br /><br />Notice how something simple can become incredibly complex and seemingly unpredicable.",
             "goal": [
                 {
-                    "x": 32,
-                    "y": 2
+                    "x": 22,
+                    "y": 1
                 }
             ],
-            "height": 64,
+            "height": 24,
             "id": 8,
             "library": 4,
-            "lose": "Multum in Parvo",
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
             "name": "Tutorial 8: Chaos from Order",
             "playables": [],
             "rank": [],
-            "width": 64,
-            "win": "If a level is too big you can always pinch and zoom."
+            "width": 24,
+            "win": "Crazy, eh?"
         },
         "9": {
             "antigoal": [],
@@ -2191,11 +1923,11 @@
             "height": 24,
             "id": 9,
             "library": 4,
-            "lose": "",
+            "lose": "N/A",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
-            "name": "CH1E1: Fanblades I",
+            "name": "Level 9: Fanblades I",
             "playables": [
                 {
                     "h": 5,
@@ -2206,7 +1938,7 @@
             ],
             "rank": [],
             "width": 16,
-            "win": ""
+            "win": "You Won!"
         }
     },
     "dictionary": {
@@ -2215,8 +1947,8 @@
         "admob": "pub-3769178507272044",
         "admob_android": "ca-app-pub-3769178507272044/5009054623",
         "admob_ios": "ca-app-pub-3769178507272044/7962521020",
-        "confirm_reset": "Are you SURE you would like to destroy all your progress and start over?",
-        "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green <strong>Playable Zone</strong> to toggle cells.</p>\n<p>No cells can be alive in the red <strong>Dead Zones</strong>.</p>\n<p>The rainbow tiles are <strong>Goal</strong> tiles and need to be activiated to beat levels.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n  <li>Any live cell with fewer than two live neighbours dies.</li>\n  <li>Any live cell with two or three live neighbours lives.</li>\n  <li>Any live cell with more than three live neighbours dies.</li>\n  <li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life on WikiPedia</a>.</p>",
+        "confirm_reset": "Are you SURE you would like to <strong>destroy</strong> all your progress and settings and start over?",
+        "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green <strong>Playable Zone</strong> to toggle cells.</p>\n<p>No cells can be alive in the red <strong>Dead Zones</strong>.</p>\n<p>The rainbow tiles are <strong class='cycle'>Goal</strong> tiles and need to be activiated to beat levels.</p>\n<p>The strobing red tiles are <strong class='red-cycle'>Anti Goal</strong> tiles and if activated you lose.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n  <li>Any live cell with fewer than two live neighbours dies.</li>\n  <li>Any live cell with two or three live neighbours lives.</li>\n  <li>Any live cell with more than three live neighbours dies.</li>\n  <li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life</a> on WikiPedia.</p>",
         "mixpanel": "f598ce903232263c47ca516bff05c18b"
     },
     "library": {
@@ -2352,5 +2084,5 @@
             "type": "unplayed"
         }
     },
-    "version": "20150617054130"
+    "version": "20150712203000"
 }

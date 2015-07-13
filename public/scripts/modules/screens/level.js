@@ -197,39 +197,6 @@ MODULE.LevelScreen = (function() {
     this.toggleRedSegment(this.level.maxred);
     this.toggleGreenSegment(this.level.mingreen);
 
-    var gamefield = this.level.gamefield;
-    var finger = new Hammer(gamefield);
-    finger.get('pinch').set({enable: true});
-
-    /*
-    finger.add(new Hammer.Pan({
-      direction: Hammer.DIRECTION_ALL,
-      threshold: 0
-    }));
-    */
-
-    finger.on('pinchstart', function() {
-      self.level.scaleStart();
-    });
-
-    finger.on('pinch', function(event) {
-      self.level.scale(event.scale);
-      self.grid.scale(self.level.size);
-    });
-
-    finger.on('pinchend', function() {
-      self.level.scaleEnd();
-    });
-
-    // finger.on('pan', function(event) {});
-
-    finger.on('tap', function(event) {
-      self.level.onTap(event);
-    });
-
-    // But hammer, I don't want you to stop my panning!
-    gamefield.setAttribute('style', '');
-
     app.audio.playMusic('chapter-' + this.level.chapter);
 
     this.screen.style.display = 'block';

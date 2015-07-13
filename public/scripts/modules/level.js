@@ -35,6 +35,8 @@ MODULE.Level = (function() {
 
     this.context = this.gamefield.getContext('2d');
 
+    this.gamefield.onclick = this.onTap.bind(this);
+
     this.resize();
 
     this.deadzones = data.deadzones;
@@ -277,22 +279,10 @@ MODULE.Level = (function() {
   };
 
   Level.prototype.onTap = function(event) {
-    var position = this.eventPosition(event);
-    this.setTile(position);
-  };
-
-  Level.prototype.eventPosition = function(event) {
-    var offset = this.gamefield.getBoundingClientRect();
-
-    offset = {
-      top: offset.top + document.body.scrollTop,
-      left: offset.left + document.body.scrollLeft
-    };
-
-    return {
-      x: Math.floor((event.center.x - offset.left) / this.size),
-      y: Math.floor((event.center.y - offset.top) / this.size),
-    };
+    this.setTile({
+      x: Math.floor((event.offsetX) / this.size),
+      y: Math.floor((event.offsetY) / this.size),
+    });
   };
 
   Level.prototype.setTile = function(tile) {
