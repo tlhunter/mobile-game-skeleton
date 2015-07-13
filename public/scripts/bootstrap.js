@@ -41,6 +41,15 @@ if (!MODULE) { var MODULE = {}; }
     app.interstitial = new MODULE.Interstitial(data.dictionary.admob);
     app.rank = new MODULE.Rank(data.ranks);
 
+    if (app.device.vendor === 'ios') {
+      console.log("Loading FastClick library for iOS user");
+      FastClick.attach(document.body);
+
+      document.ontouchmove = function(event) {
+        event.preventDefault();
+      };
+    }
+
     app.screen.get('splash').finish();
   });
 })();

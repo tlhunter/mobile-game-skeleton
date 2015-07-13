@@ -8,6 +8,7 @@
 	"globals": {
 		"app": true,
 		"MODULE": true,
-		"EventEmitter": true
+		"EventEmitter": true,
+		"FastClick": true
 	}
 }
