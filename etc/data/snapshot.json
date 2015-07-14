@@ -13,7 +13,7 @@
             "type": "music"
         },
         "chapter-1": {
-            "file": "audio/AmbientalExperience.mp3",
+            "file": "audio/AmbientalExperience.ogg",
             "id": "chapter-1",
             "name": "Chapter 1 Music",
             "type": "music"
@@ -386,7 +386,7 @@
             "autowin": 50,
             "chapter": 2,
             "deadzones": [],
-            "description": "This mission is a bit different than the ones you've played before. This time, instead of activating a goal, you're trying to NOT activate the blinking red <strong>Anti Goal</strong>!<br /><br />To win, you must survive 50 generations without the Anti Goal activating.",
+            "description": "This mission is a bit different than the ones you've played before. This time, instead of activating a goal, you're trying to NOT activate the blinking red <strong class=\"red-cycle\">Anti Goal</strong>!<br /><br />To win, you must survive 50 generations without the Anti Goal activating.",
             "goal": [],
             "height": 16,
             "id": 12,
@@ -2084,5 +2084,5 @@
             "type": "unplayed"
         }
     },
-    "version": "20150712203000"
+    "version": "20150714055903"
 }
