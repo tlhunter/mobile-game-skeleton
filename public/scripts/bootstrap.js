@@ -44,9 +44,18 @@ if (!MODULE) { var MODULE = {}; }
       console.log("Loading FastClick library for iOS user");
       FastClick.attach(document.body);
 
+      console.log("Preventing overscrolling of body element");
       document.ontouchmove = function(event) {
         event.preventDefault();
       };
+
+      console.log("Preventing .scrollable elements from bubbling to body");
+      var scrollables = document.getElementsByClassName('scrollable');
+      for (var i = 0; i < scrollables.length; i++) {
+        scrollables[i].ontouchmove = function(event) {
+          event.stopPropagation();
+        };
+      }
     }
 
     app.screen.get('splash').finish();
