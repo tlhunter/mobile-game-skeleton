@@ -31,13 +31,18 @@ main#screens {
   > section.screen {
     display: none;
 
-    > .scrollable {
+    > .scrollable,
+    > .full-container {
       overflow: auto;
       top: 0px;
       bottom: 0px;
       left: 0px;
       right: 0px;
       position: absolute;
+    }
+
+    > .scrollable {
+      -webkit-overflow-scrolling: touch;
     }
   }
 }
