@@ -73,6 +73,8 @@ MODULE.Level = (function() {
     this.playing = false;
 
     this.redraw_interval = null;
+
+    this.destroying = false;
   };
 
   Level.prototype = Object.create(EventEmitter.prototype);
@@ -107,6 +109,14 @@ MODULE.Level = (function() {
   Level.prototype.initialize = function() {
     this.countPlayedPieces();
     this.render();
+  };
+
+  Level.prototype.destroy = function() {
+    this.destroying = true;
+    this.gamefield.onclick = null;
+    delete this.gamefield;
+    delete this.container;
+    delete this.arena;
   };
 
   /**
@@ -519,6 +529,10 @@ MODULE.Level = (function() {
     var self = this;
 
     requestAnimationFrame(function() {
+      if (self.destroying) {
+        return;
+      }
+
       self.render();
     });
 

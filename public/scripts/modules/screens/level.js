@@ -4,8 +4,6 @@ if (!MODULE) { var MODULE = {}; }
 
 MODULE.LevelScreen = (function() {
   var LevelScreen = function() {
-    var self = this;
-
     this.screen = document.getElementById('screen-level');
 
     this.level_el = this.screen.getElementsByClassName('level-container')[0];
@@ -210,6 +208,7 @@ MODULE.LevelScreen = (function() {
 
   LevelScreen.prototype.hide = function() {
     this.level.onStop();
+    this.level.destroy();
     this.level = null;
     this.setGenerationGoal(0);
     this.setMaxPlay(0);
