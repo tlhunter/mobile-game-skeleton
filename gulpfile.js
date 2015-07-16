@@ -32,6 +32,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('public/dist'));
 });
 
+// TODO: https://github.com/postcss/autoprefixer
 gulp.task('styles', function() {
   return gulp
     .src(paths.styles)
