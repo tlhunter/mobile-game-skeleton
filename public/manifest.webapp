@@ -1,17 +1,17 @@
 {
-  "name": "Game of Life",
+  "name": "Strategic GoL",
   "version": "1.0.0",
   "description": "Strategic Game of Life: Conway's Game of Life reimagined as a strategic campaign of levels to beat.",
-  "launch_path": "/index.html",
+  "launch_path": "/apps/sgol/index.html",
   "icons": {
-    "128": "/images/meta/app-128.png"
+    "128": "/apps/sgol/images/meta/app-128.png"
   },
   "developer": {
     "name": "Thomas Hunter II (@tlhunter)",
     "url": "https://thomashunter.name"
   },
   "default_locale": "en",
-  "type": "privileged",
+  "type": "web",
   "chrome": { "navigation": false },
   "fullscreen": "true"
 }
