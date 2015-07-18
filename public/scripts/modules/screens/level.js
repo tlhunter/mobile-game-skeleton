@@ -120,7 +120,7 @@ MODULE.LevelScreen = (function() {
       if (data.level === my_level + 1) {
         levelup = true;
         app.storage.set('level', data.level);
-        self.displayAdIfNeeded(data.level);
+        app.interstitial.displayAdIfNeeded(data.level);
       }
 
       var rank = app.rank.get(data.level, data.generation, data.played);
@@ -213,15 +213,6 @@ MODULE.LevelScreen = (function() {
     this.setGenerationGoal(0);
     this.setMaxPlay(0);
     this.screen.style.display = 'none';
-  };
-
-  LevelScreen.prototype.displayAdIfNeeded = function(level) {
-    var min = app.content.data.dictionary.ad_min_level;
-    var mod = app.content.data.dictionary.ad_mod_level;
-
-    if (level >= min && level % mod === 0) {
-      app.interstitial.show();
-    }
   };
 
   LevelScreen.resultModal = function(rank, flavor, gen, played) {
