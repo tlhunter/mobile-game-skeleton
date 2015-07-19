@@ -5,6 +5,7 @@ if (!MODULE) { var MODULE = {}; }
 MODULE.Device = (function() {
   var Device = function() {
     EventEmitter.apply(this);
+    var self = this;
 
     this.viewport = {
       get width() {
@@ -17,15 +18,27 @@ MODULE.Device = (function() {
 
     this.vendor = Device.getVendor();
 
-    var self = this;
-    document.addEventListener('visibilitychange', function() {
-      console.log("VISIBILITY CHANGE, hidden:", document.hidden);
-      if (document.hidden) {
+    this.cordova = "cordova" in window;
+
+    if (this.cordova) {
+      document.addEventListener('pause', function() {
+        console.log("VISIBILITY CHANGE, hidden:", true);
         self.emit('blur');
-      } else {
+      });
+      document.addEventListener('resume', function() {
+        console.log("VISIBILITY CHANGE, hidden:", false);
         self.emit('focus');
-      }
-    });
+      });
+    } else {
+      document.addEventListener('visibilitychange', function() {
+        console.log("VISIBILITY CHANGE, hidden:", document.hidden);
+        if (document.hidden) {
+          self.emit('blur');
+        } else {
+          self.emit('focus');
+        }
+      });
+    }
 
     this.fullscreen = new MODULE.Fullscreen();
   };

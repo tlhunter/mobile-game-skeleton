@@ -3,6 +3,8 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Network = (function() {
+  var TIMEOUT = 8 * 1000;
+
   var URLS = {
     'local-data': {
       url: './dist/data.json',
@@ -37,11 +39,13 @@ MODULE.Network = (function() {
       };
     }
 
-    var request = new XMLHttpRequest(ajax_settings);
+    var xhr = new XMLHttpRequest(ajax_settings);
 
-    request.open('GET', url, true);
+    xhr.timeout = TIMEOUT;
 
-    request.onload = function() {
+    xhr.open('GET', url, true);
+
+    xhr.onload = function() {
       if (this.status >= 200 && this.status < 400) {
         try {
           var data = JSON.parse(this.response);
@@ -54,11 +58,15 @@ MODULE.Network = (function() {
       callback(null);
     };
 
-    request.onerror = function() {
+    xhr.onerror = function() {
       callback(null);
     };
 
-    request.send();
+    xhr.ontimeout = function() {
+      callback(null);
+    };
+
+    xhr.send();
   };
 
   // Placeholder for Socket

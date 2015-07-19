@@ -3,8 +3,6 @@
 if (!MODULE) { var MODULE = {}; }
 
 MODULE.Content = (function() {
-  var TIMEOUT = 8 * 1000;
-
   var Content = function() {
     this.data = null;
     this.ready = false;
@@ -105,13 +103,8 @@ MODULE.Content = (function() {
 
     console.log("Attempting to download latest content...");
 
-    var execs = 0;
-
-    var handler = function(data) {
-      if (execs++ >= 1) {
-        return;
-      }
-
+    // Download Data
+    app.network.get(item, function(data) {
       if (!data) {
         console.warn("Unable to get remote data.");
 
@@ -121,13 +114,7 @@ MODULE.Content = (function() {
       console.log("Received latest data!", data.version);
 
       callback(data);
-    };
-
-    // Download Data
-    app.network.get(item, handler.bind(this));
-
-    // If download hangs forever (e.g. request HTTP over HTTPS) we go on
-    setTimeout(handler.bind(this), TIMEOUT);
+    });
   };
 
   return Content;
