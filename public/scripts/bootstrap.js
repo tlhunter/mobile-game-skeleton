@@ -49,6 +49,7 @@ if (!MODULE) { var MODULE = {}; }
       app.interstitial = new MODULE.Interstitial(data.dictionary.admob);
       app.rank = new MODULE.Rank(data.ranks);
 
+      // TODO: Migrate to another file
       if (app.device.vendor === 'ios') {
         console.log("Loading FastClick library for iOS user");
         FastClick.attach(document.body);
@@ -65,6 +66,11 @@ if (!MODULE) { var MODULE = {}; }
             event.stopPropagation();
           };
         }
+      }
+
+      // TODO: Migrate to another file
+      if (app.device.cordova) {
+        document.addEventListener("backbutton", app.screen.onBack.bind(app.screen), false);
       }
 
       app.screen.get('splash').finish();

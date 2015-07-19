@@ -44,7 +44,7 @@ MODULE.SplashScreen = (function() {
     app.audio.playSound('select');
     app.screen.display('menu');
 
-    if (!app.device.fullscreen.isFullscreen()) {
+    if (!app.device.cordova && !app.device.fullscreen.isFullscreen()) {
       app.device.fullscreen.request();
     }
   };

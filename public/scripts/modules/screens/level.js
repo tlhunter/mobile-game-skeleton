@@ -56,7 +56,7 @@ MODULE.LevelScreen = (function() {
     this.buttons.clear.onclick = this.onClear.bind(this);
     this.buttons.help.onclick = this.onHelp.bind(this);
     this.buttons.library.onclick = this.onLibrary.bind(this);
-    this.buttons.exit.onclick = this.onExit.bind(this);
+    this.buttons.exit.onclick = this.onBack.bind(this);
   };
 
   LevelScreen.HEADER_HEIGHT = 50;
@@ -386,7 +386,7 @@ MODULE.LevelScreen = (function() {
     });
   };
 
-  LevelScreen.prototype.onExit = function() {
+  LevelScreen.prototype.onBack = function() {
     app.audio.playSound('back');
     app.screen.display('campaign');
   };

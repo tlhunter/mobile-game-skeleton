@@ -10,6 +10,8 @@ MODULE.Modal = (function() {
     this.modal = this.background.getElementsByClassName('modal')[0];
     this.content = this.modal.getElementsByClassName('content')[0];
     this.buttons = this.modal.getElementsByClassName('buttons')[0];
+
+    this.visible = false;
   };
 
   Modal.prototype.show = function(content, buttons, small) {
@@ -42,10 +44,12 @@ MODULE.Modal = (function() {
     this.modal.classList.toggle('small', !!small);
 
     this.background.classList.add('visible');
+    this.visible = true;
   };
 
   Modal.prototype.fadeOut = function(callback) {
     this.background.classList.remove('visible');
+    this.visible = false;
     setTimeout(function() {
       this.empty();
       if (callback) callback();
@@ -54,6 +58,7 @@ MODULE.Modal = (function() {
 
   Modal.prototype.hide = function() {
     this.background.classList.remove('visible');
+    this.visible = false;
     this.empty();
   };
 

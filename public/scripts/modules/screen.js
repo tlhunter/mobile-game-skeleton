@@ -43,5 +43,20 @@ MODULE.Screen = (function() {
     return Object.keys(screens);
   };
 
+  // Universal Back handler
+  Screen.prototype.onBack = function() {
+    // If the Modal window is open, close it and return
+    if (app.modal.visible) {
+      return app.modal.fadeOut();
+    }
+
+    var current_screen = screens[this.current];
+
+    // If the currently displayed screen has an .onBack(), run that
+    if (this.current && "onBack" in current_screen) {
+      current_screen.onBack();
+    }
+  };
+
   return Screen;
 }());
