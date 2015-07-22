@@ -46,7 +46,7 @@ MODULE.Network = (function() {
     xhr.open('GET', url, true);
 
     xhr.onload = function() {
-      if (this.status >= 200 && this.status < 400) {
+      if (Network.isRequestSuccessful(this.status)) {
         try {
           var data = JSON.parse(this.response);
           return callback(data);
@@ -72,6 +72,19 @@ MODULE.Network = (function() {
   // Placeholder for Socket
   Network.prototype.on = function(event, callback) {
     throw new Error("Not Yet Implemented");
+  };
+
+  Network.isRequestSuccessful = function(status) {
+    // In Cordova for iOS local XHR requests have an HTTP status of 0
+    if (status === 0 && app.device.vendor === 'ios' && app.device.cordova) {
+      return true;
+    }
+
+    if (status >= 200 && status < 400) {
+      return true;
+    }
+
+    return false;
   };
 
   return Network;
