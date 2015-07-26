@@ -65,24 +65,26 @@ MODULE.CampaignScreen = (function() {
     var current_level = app.storage.get('level', 0) + 1;
     var rankings = app.storage.get('rankings', {});
     var unplayed_rank = app.rank.getUnplayed().id;
-    var c;
+    var c, d;
 
     var level_count = Object.keys(app.content.data.campaign).length;
 
     for (var i = 1; i <= level_count; i++) {
+      c = "";
+      d = "";
       if (i < current_level) {
         c = "available";
       } else if (i === current_level) {
         c = "available current";
       } else {
-        c = "unavailable";
+        d = "disabled='disabled'";
       }
 
       c += ' rank-';
 
       c += rankings[i] ? rankings[i] : unplayed_rank;
 
-      levels += "<div class='level " + c + "'>" + i + "</div>";
+      levels += "<button " + d + " class='" + c + "'>" + i + "</button>";
     }
 
     this.levels.innerHTML = levels;
