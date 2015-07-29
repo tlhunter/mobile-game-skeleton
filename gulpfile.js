@@ -42,7 +42,7 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('public/dist'));
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', ['scripts', 'styles'], function() {
   gulp.watch(paths.scripts, [
     'scripts'
   ]);
