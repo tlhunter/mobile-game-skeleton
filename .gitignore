@@ -1,3 +1,8 @@
-public/dist/
+build/android/*
+build/ios/*
+build/firefoxos/*
+build/web/*
+platforms/*
+www/*
 node_modules
-firefoxos.zip
+tmp/*

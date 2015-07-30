@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{title}}</title>
+  <style>html { background-color: #000; }</style>
+  <link href="dist/app.css" type="text/css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-startup-image" href="images/meta/splash.png" />
+  <link rel="apple-touch-icon" href="images/meta/app-66.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/meta/app-76.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/meta/app-120.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/meta/app-152.png" />
+</head>
+
+<body>
+<div id="modal">
+  <div class="modal">
+    <div class="content"></div>
+    <div class="buttons"></div>
+  </div>
+</div>
+
+<main id="screens">
+{{#each screens}}
+{{{this}}}
+{{/each}}
+</main>
+
+{{#if cordova}}
+<script type="text/javascript" src="cordova.js"></script>
+{{/if}}
+<script type="text/javascript" src="dist/app.js"></script>
+
+</body>
+</html>

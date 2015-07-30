@@ -1,0 +1,47 @@
+<section id="screen-level" class="screen">
+  <div class="full-container">
+    <div class="level">
+      <div class="grid-container"></div>
+      <div class="level-container"></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="title">Loading...</div>
+
+    <div class="stats">
+      <span class="segment segment-gen">
+        <!-- Always displayed -->
+        GEN: <span class="generation cycle">0</span><span class="autowin">/<span class="autowin-gen cycle">0</span></span>
+      </span>
+
+      <span class="segment segment-played hide">
+        <!-- Only displayed if there are playable fields -->
+        PLAY: <span class="played cycle">0</span><span class="maxplay">/<span class="maxplay-val cycle">0</span></span>
+      </span>
+
+      <span class="segment segment-red hide">
+        <!-- Only displayed if there is a maxred -->
+        RED: <span class="current cycle">0</span>/<span class="limit cycle">100</span>
+      </span>
+
+      <span class="segment segment-green hide">
+        <!-- Only displayed if there is a mingreen -->
+        GREEN: <span class="current cycle">0</span>/<span class="limit cycle">100</span>
+      </span>
+    </div>
+  </header>
+
+  <footer>
+    <div class="play-controls hide">
+      <button class="stop">Stop</button>
+    </div>
+    <div class="stop-controls">
+      <button class="play">Play</button>
+      <button class="clear">Clear</button>
+      <button class="help">Help</button>
+      <button class="library">Library</button>
+      <button class="exit">Exit</button>
+    </div>
+  </footer>
+</section>
