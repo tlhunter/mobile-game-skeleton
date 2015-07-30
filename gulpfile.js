@@ -3,6 +3,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var less = require('gulp-less');
 var minifyCss = require('gulp-minify-css');
+var exec = require('child_process').exec;
 
 var paths = {
   scripts: [
@@ -49,4 +50,12 @@ gulp.task('watch', ['scripts', 'styles'], function() {
   gulp.watch(paths.styles, [
     'styles'
   ]);
+});
+
+gulp.task('build', function(done) {
+  console.log('start');
+  exec('cordova build', function() {
+    console.log('fin');
+    done();
+  });
 });
