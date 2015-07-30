@@ -15,6 +15,7 @@ var minifyCss = require('gulp-minify-css');
 var Handlebars = require('handlebars');
 
 // Constants
+var WWW = 'www';
 var DIST = 'www/dist';
 var CSS_FILENAME = 'app.css';
 var JS_FILENAME = 'app.js';
@@ -90,6 +91,9 @@ gulp.task('html', function() {
   fs.writeFileSync(HTML_OUTPUT, template(data));
 });
 
+/**
+ * Tracks the filesystem for changes and recompiles necessary files
+ */
 gulp.task('watch', ['scripts', 'styles', 'html'], function() {
   gulp.watch(PATHS.scripts, [
     'scripts'
@@ -104,29 +108,73 @@ gulp.task('watch', ['scripts', 'styles', 'html'], function() {
   ]);
 });
 
-// TODO: Download data to tmp/data.json
+/**
+ * Downloads data from the CMS and writes it to disk
+ *
+ * TODO: make this work
+ */
 gulp.task('data', function() {
   return console.error("need to configure gulp data command");
 });
 
+/**
+ * Moves all static assets to the cordova www/ directory
+ *
+ * TODO: Should this all be implemented via Cordova hooks?
+ * @see http://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html
+ */
+gulp.task('static', function() {
+  var files = [
+    'src/audio',
+    'src/fonts',
+    'src/images'
+  ];
+
+  var dist_files = [
+    'tmp/data.json'
+  ];
+
+  gulp.src(files, { base: 'src/' }).pipe(gulp.dest(WWW));
+  gulp.src(dist_files, { base: 'tmp/' }).pipe(gulp.dest(DIST));
+});
+
+/**
+ * These tasks are required before performing any cordova builds
+ */
+gulp.task('prebuild', [
+  'static',
+  'scripts',
+  'styles',
+  'html',
+  'data'
+]);
+
+/**
+ * Builds all platforms
+ */
+gulp.task('build', ['prebuild'], function(done) {
+  exec('cordova build', done);
+});
+
+/**
+ * Only builds Android
+ */
+gulp.task('build-android', ['prebuild'], function(done) {
+  exec('cordova build android', done);
+});
+
+/**
+ * Only builds iOS
+ */
+gulp.task('build-ios', ['prebuild'], function(done) {
+  exec('cordova build ios', done);
+});
+
 // TODO
-gulp.task('build', ['scripts', 'styles', 'html', 'data'], function(done) {
-  console.log('start');
-  // src/audio to www
-  // src/fonts to www
-  // src/images to www
-  // tmp/data.json to www/dist/data.json
-  exec('cordova build', function() { // TODO: Divvy tasks for each platform
-    console.log('fin');
-    done();
-  });
+gulp.task('build-web', ['prebuild'], function(done) {
+  return console.error("NOT YET IMPLEMENTED");
 });
 
-gulp.task('build-android', function() {
-});
-
-gulp.task('build-ios', function() {
-});
-
-gulp.task('build-web', function() {
+// TODO
+gulp.task('build-firefoxos', ['prebuild'], function(done) {
 });
