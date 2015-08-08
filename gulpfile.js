@@ -125,9 +125,9 @@ gulp.task('data', function() {
  */
 gulp.task('static', function() {
   var files = [
-    'src/audio',
-    'src/fonts',
-    'src/images'
+    'src/audio/**',
+    'src/fonts/**',
+    'src/images/**'
   ];
 
   var dist_files = [
