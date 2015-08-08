@@ -9,7 +9,7 @@ MODULE.Device = (function() {
 
     this.viewport = {
       get width() {
-        return screen.availWidth;
+        return Math.min(screen.availWidth, window.innerWidth);
       },
       get height() {
         return Math.min(screen.availHeight, window.innerHeight);
