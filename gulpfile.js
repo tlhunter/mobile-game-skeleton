@@ -19,8 +19,10 @@ var WWW = 'www';
 var DIST = 'www/dist';
 var CSS_FILENAME = 'app.css';
 var JS_FILENAME = 'app.js';
-
 var HTML_OUTPUT = 'www/index.html';
+
+// TODO: Read this from config.xml
+var APP_TITLE = "Game of Life";
 
 // TODO: There's some way to clean this up with /**/...
 var PATHS = {
@@ -43,7 +45,7 @@ var PATHS = {
 gulp.task('default', [
   'scripts',
   'styles',
-  'html'
+  'html-cordova'
 ]);
 
 // TODO: Generate Sourcemaps
@@ -66,16 +68,23 @@ gulp.task('styles', function() {
     .pipe(gulp.dest(DIST));
 });
 
-// TODO: ASYNC
-gulp.task('html', function() {
+gulp.task('html-cordova', function() {
+  return buildHTML(true);
+});
+
+gulp.task('html-web', function() {
+  return buildHTML(false);
+});
+
+// TODO: Async
+function buildHTML(cordova) {
   var screens = fs.readdirSync('src/html/screens/');
   var index = fs.readFileSync('src/html/index.html').toString();
   var template = Handlebars.compile(index);
 
   var data = {
-      // TODO: Read this from config.xml
-      title: "Game of Life",
-      cordova: true, // TODO: Make this dynamic
+      title: APP_TITLE,
+      cordova: cordova,
       screens: []
   };
 
@@ -89,12 +98,12 @@ gulp.task('html', function() {
   }
 
   fs.writeFileSync(HTML_OUTPUT, template(data));
-});
+}
 
 /**
  * Tracks the filesystem for changes and recompiles necessary files
  */
-gulp.task('watch', ['scripts', 'styles', 'html'], function() {
+gulp.task('watch', ['scripts', 'styles', 'html-web'], function() {
   gulp.watch(PATHS.scripts, [
     'scripts'
   ]);
@@ -104,7 +113,7 @@ gulp.task('watch', ['scripts', 'styles', 'html'], function() {
   ]);
 
   gulp.watch(PATHS.html, [
-    'html'
+    'html-web'
   ]);
 });
 
@@ -123,58 +132,86 @@ gulp.task('data', function() {
  * TODO: Should this all be implemented via Cordova hooks?
  * @see http://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html
  */
-gulp.task('static', function() {
+gulp.task('static-cordova', function() {
+  return moveStatic(true);
+});
+
+gulp.task('static-web', function() {
+  return moveStatic(false);
+});
+
+function moveStatic(cordova) {
   var files = [
     'src/audio/**',
     'src/fonts/**',
     'src/images/**'
   ];
 
+  // TODO: Data command should handle this
   var dist_files = [
     'tmp/data.json'
   ];
 
+  var manifests = [
+    'src/manifest.json',
+    'src/manifest.webapp'
+  ];
+
+  if (!cordova) {
+    gulp.src(manifests, { base: 'src/' }).pipe(gulp.dest(WWW));
+  }
+
   gulp.src(files, { base: 'src/' }).pipe(gulp.dest(WWW));
   gulp.src(dist_files, { base: 'tmp/' }).pipe(gulp.dest(DIST));
-});
+}
 
 /**
  * These tasks are required before performing any cordova builds
  */
-gulp.task('prebuild', [
-  'static',
+gulp.task('prebuild-cordova', [
+  'static-cordova',
   'scripts',
   'styles',
-  'html',
+  'html-cordova',
+  'data'
+]);
+
+gulp.task('prebuild-web', [
+  'static-web',
+  'scripts',
+  'styles',
+  'html-web',
   'data'
 ]);
 
 /**
  * Builds all platforms
  */
-gulp.task('build', ['prebuild'], function(done) {
-  exec('cordova build', done);
+gulp.task('build', function(done) {
+  //exec('cordova build', done);
+  return console.error("TODO: Figure out how everything can be built at once");
 });
 
 /**
  * Only builds Android
  */
-gulp.task('build-android', ['prebuild'], function(done) {
+gulp.task('build-android', ['prebuild-cordova'], function(done) {
   exec('cordova build android', done);
 });
 
 /**
  * Only builds iOS
  */
-gulp.task('build-ios', ['prebuild'], function(done) {
+gulp.task('build-ios', ['prebuild-cordova'], function(done) {
   exec('cordova build ios', done);
 });
 
 // TODO
-gulp.task('build-web', ['prebuild'], function(done) {
-  return console.error("NOT YET IMPLEMENTED");
+gulp.task('build-web', ['prebuild-web'], function(done) {
+  return console.error("TODO");
 });
 
 // TODO
-gulp.task('build-firefoxos', ['prebuild'], function(done) {
+gulp.task('build-firefoxos', ['prebuild-web'], function(done) {
+  return console.error("TODO");
 });
