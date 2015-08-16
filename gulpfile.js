@@ -20,6 +20,7 @@ var DIST = 'www/dist';
 var CSS_FILENAME = 'app.css';
 var JS_FILENAME = 'app.js';
 var HTML_OUTPUT = 'www/index.html';
+var WEB_BUILD = 'platforms/web/build';
 
 // TODO: Read this from config.xml
 var APP_TITLE = "Game of Life";
@@ -207,12 +208,7 @@ gulp.task('build-ios', ['prebuild-cordova'], function(done) {
   exec('cordova build ios', done);
 });
 
-// TODO
 gulp.task('build-web', ['prebuild-web'], function(done) {
-  return console.error("TODO");
-});
-
-// TODO
-gulp.task('build-firefoxos', ['prebuild-web'], function(done) {
-  return console.error("TODO");
+  console.log("Building for FirefoxOS and Web...");
+  return gulp.src('www/**', { base: 'www/' }).pipe(gulp.dest(WEB_BUILD));
 });
