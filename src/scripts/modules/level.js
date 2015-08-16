@@ -289,9 +289,24 @@ MODULE.Level = (function() {
   };
 
   Level.prototype.onTap = function(event) {
+    var raw_x, raw_y;
+
+    if ('offsetX' in event && 'offsetY' in event) {
+      // WebKit and Firefox Desktop 42.0a2 do have .offsetXY attributes
+      raw_x = event.offsetX;
+      raw_y = event.offsetY;
+    } else if ('clientX' in event && 'clientY' in event) {
+      // FirefoxOS 42.0a1 does not have .offsetXY attributes
+      var rect = this.gamefield.getBoundingClientRect();
+      raw_x = event.clientX - rect.left;
+      raw_y = event.clientY - rect.top;
+    } else {
+      return alert("ERROR: UNABLE TO DETERMINE CLICK COORDINATE!");
+    }
+
     this.setTile({
-      x: Math.floor((event.offsetX) / this.size),
-      y: Math.floor((event.offsetY) / this.size),
+      x: Math.floor(raw_x / this.size),
+      y: Math.floor(raw_y / this.size)
     });
   };
 
