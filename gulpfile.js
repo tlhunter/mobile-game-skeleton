@@ -152,13 +152,14 @@ function moveStatic(cordova) {
     'tmp/data.json'
   ];
 
-  var manifests = [
+  var web_only_files = [
     'src/manifest.json',
-    'src/manifest.webapp'
+    'src/manifest.webapp',
+    'src/favicon.ico'
   ];
 
   if (!cordova) {
-    gulp.src(manifests, { base: 'src/' }).pipe(gulp.dest(WWW));
+    gulp.src(web_only_files, { base: 'src/' }).pipe(gulp.dest(WWW));
   }
 
   gulp.src(files, { base: 'src/' }).pipe(gulp.dest(WWW));

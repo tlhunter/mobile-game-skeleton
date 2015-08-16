@@ -16,7 +16,7 @@ app.use(compression());
 var port = process.env.SGOL_PORT || 1337;
 var host = process.env.SGOL_HOST || '0.0.0.0';
 
-var public_dir = path.normalize(__dirname + '/../public');
+var public_dir = path.normalize(__dirname + '/../www');
 
 content.load(function(err) {
   if (err) {
