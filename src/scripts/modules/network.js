@@ -11,8 +11,8 @@ MODULE.Network = (function() {
       local: true
     },
     'remote-data-production': {
-      // url: 'http://static.zyu.me/games/strategic-game-of-life/data.json',
-      url: 'http://zyu.me:1337/data',
+      // http://zyu.me/apps/sgol/dist/data.json
+      url: 'http://zyu.me/apps/sgol/dist/data.json',
       local: false
     },
     'remote-data-development': {
