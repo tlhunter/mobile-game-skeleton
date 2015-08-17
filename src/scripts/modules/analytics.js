@@ -12,6 +12,9 @@ MODULE.Analytics = (function() {
   Analytics.prototype.track = function(event, data) {
     data = data || {};
 
+    data.vendor = app.device.vendor;
+    data.cordova = app.device.cordova;
+
     window.mixpanel.track(event, data);
 
     console.log("ANALYTIC", event, data);

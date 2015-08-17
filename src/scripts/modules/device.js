@@ -51,7 +51,8 @@ MODULE.Device = (function() {
     BB: 'blackberry',
     OPERA: 'opera',
     WINDOWS: 'windows',
-    FIREFOXOS: 'firefoxos'
+    FIREFOXOS: 'firefoxos',
+    UNKNOWN: 'unknown'
   };
 
   Device.getVendor = function() {
@@ -68,6 +69,8 @@ MODULE.Device = (function() {
     } else if (navigator.userAgent.match(/Mozilla.*Mobile/)) {
       return Device.VENDORS.FIREFOXOS;
     }
+
+    return Device.VENDORS.UNKNOWN;
   };
 
   Device.prototype.reload = function() {
