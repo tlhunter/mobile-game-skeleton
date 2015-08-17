@@ -6,7 +6,9 @@ MODULE.Analytics = (function() {
   var Analytics = function(identifier) {
     this.identifier = identifier;
 
-    window.mixpanel.init(this.identifier);
+    window.mixpanel.init(this.identifier, {
+      persistence: 'localStorage'
+    });
   };
 
   Analytics.prototype.track = function(event, data) {
