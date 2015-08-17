@@ -201,6 +201,15 @@ gulp.task('build-android', ['prebuild-cordova'], function(done) {
   exec('cordova build android', done);
 });
 
+gulp.task('sign-android', function(done) {
+  // First step done once
+  // keytool -genkey -v -keystore NAME-mobileapps.keystore -alias NAMEmobileapps -keyalg RSA -keysize 2048 -validity 10000
+
+  // Done by sign task
+  // jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore <keystorename> <Unsigned APK file> <Keystore Alias name>
+  // zipalign -v 4 Example-release-unsigned.apk Example.apk
+});
+
 /**
  * Only builds iOS
  */
