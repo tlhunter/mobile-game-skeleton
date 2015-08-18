@@ -198,7 +198,7 @@ gulp.task('build', function(done) {
  * Only builds Android
  */
 gulp.task('build-android', ['prebuild-cordova'], function(done) {
-  exec('cordova build android', done);
+  exec('cordova build android --release', done);
 });
 
 gulp.task('sign-android', function(done) {
