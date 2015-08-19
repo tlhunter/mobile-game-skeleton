@@ -41,3 +41,18 @@ Add the following inside of `MainViewController`:
     return YES;
 }
 ```
+
+## Android Notes
+
+To debug the app in Chrome inspector, you'll need to do the following:
+
+```
+edit platforms/android/AndroidManifest.xml
+
+# Add this debuggable attribute
+# <application android:debuggable="true" ...
+```
+
+You'll want to build the android app _without_ the --release flag.
+
+Then run the app, and visit `chrome://inspect/#devices` from your desktop Chrome instance. In the listing this app should be available.

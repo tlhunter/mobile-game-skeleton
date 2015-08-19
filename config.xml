@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="name.thomashunter.strategicgol" version="0.6.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="name.thomashunter.strategicgol" version="0.6.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Game of Life</name>
     <description>
         Strategic Game of Life: Conway's Game of Life reimagined as a strategic campaign of levels to beat.
@@ -18,6 +18,9 @@
     <allow-intent href="geo:*" />
     <allow-navigation href="zyu.me" />
     <allow-navigation href="zyu.me:1337" />
+    <allow-navigation href="http://zyu.me/*" />
+    <allow-navigation href="http://zyu.me:1337/*" />
+    <allow-navigation href="https://cdn.mxpnl.com/*" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
