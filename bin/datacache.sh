@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # Remove old cached data
-rm public/dist/data.json
+rm tmp/data.json
 
 # Rebuild new data
-curl http://zyu.me:1337/data/rebuild
+curl http://localhost:1337/data/rebuild
 echo ""
 
 # Download new data
-curl http://zyu.me:1337/data > public/dist/data.json
+curl http://localhost:1337/data > tmp/data.json

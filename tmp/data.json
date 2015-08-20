@@ -77,7 +77,7 @@
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "This is the first tutorial level and is not interactive.<br /><br />The shape in the upper left corner is a <strong>Glider</strong>.<br /><br />The <span class=\"cycle\">rainbow</span> square in the lower right is the <strong>Goal</strong>.<br /><br />Click play and watch what happens.",
+            "description": "This is the first tutorial level and is not interactive.<br /><br />The shape in the upper left corner is a <strong>Glider</strong>.<br /><img src=\"images/content/glider-se.png\" /><br />The <span class=\"cycle\">rainbow</span> square in the lower right is the <strong>Goal</strong>.<br /><br />Click play and watch what happens.",
             "goal": [
                 {
                     "x": 13,
@@ -95,7 +95,7 @@
             "playables": [],
             "rank": [],
             "width": 16,
-            "win": "When you win you will be graded. Congratulations on an <strong>A</strong>!"
+            "win": "Congratulations on your first <strong>A</strong>!"
         },
         "10": {
             "antigoal": [],
@@ -140,7 +140,7 @@
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
-            "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single unit, and the outcome can be completely different.<br /><br />Also, notice how this level is limited to playing a maximum of 10 cells in the green playable zone!",
+            "description": "This level is pretty similar to the previous one. Activate that goal!<br /><br />Tip: Notice how this level is limited to playing a maximum of 10 cells in the green playable zone.",
             "goal": [
                 {
                     "x": 9,
@@ -186,7 +186,7 @@
                 }
             ],
             "width": 19,
-            "win": "You Won!"
+            "win": "You did it!"
         },
         "11": {
             "antigoal": [],
@@ -323,7 +323,7 @@
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
-            "description": "",
+            "description": "There's some fun stuff going on in this level.<br /><br />Tip: Some levels can be completed by activating a single tile!",
             "goal": [
                 {
                     "x": 7,
@@ -352,7 +352,7 @@
             ],
             "rank": [],
             "width": 16,
-            "win": "You Won!"
+            "win": "If you didn't get an <strong>A</strong> be sure to retry!"
         },
         "12": {
             "antigoal": [
@@ -391,7 +391,7 @@
             "height": 16,
             "id": 12,
             "library": 4,
-            "lose": "You Lose!",
+            "lose": "Intercept the Glider to win.",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -487,7 +487,7 @@
                     "y": 19
                 }
             ],
-            "description": "Placeholder",
+            "description": "Destroy the Still Life so the Spaceship can get to the Goal!",
             "goal": [
                 {
                     "x": 3,
@@ -582,12 +582,12 @@
                     "y": 19
                 }
             ],
-            "description": "Placeholder",
+            "description": "This level may look similar to the previous one, but your mission is differen. This time stop the Spaceship from getting to the Anti Goal!",
             "goal": [],
             "height": 24,
             "id": 14,
             "library": 4,
-            "lose": "You Lose!",
+            "lose": "Kill that Spaceship!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -701,7 +701,7 @@
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
-            "description": "Placeholder",
+            "description": "Those two space ships will create gliders which cancel each other out and prevent the Goal from activating.<br /><br />Can you figure out how to activate the goal?",
             "goal": [
                 {
                     "x": 8,
@@ -711,7 +711,7 @@
             "height": 21,
             "id": 15,
             "library": 4,
-            "lose": "You Lose!",
+            "lose": "The Anti Goal was activated :(",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -825,7 +825,7 @@
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
-            "description": "Placeholder",
+            "description": "Much like the previous level the two Spaceships will generate Gliders which cancel each other out.<br /><br />Depending on your approach last level, you may be able to use it again.",
             "goal": [
                 {
                     "x": 8,
@@ -835,7 +835,7 @@
             "height": 21,
             "id": 16,
             "library": 4,
-            "lose": "You Lose!",
+            "lose": "The Anti Goal was activated :(",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -980,7 +980,7 @@
             "autowin": 20,
             "chapter": 2,
             "deadzones": [],
-            "description": "Placeholder",
+            "description": "Stop the Glider from colliding with that complex structure and activating the Anti Goal.",
             "goal": [],
             "height": 18,
             "id": 17,
@@ -1087,7 +1087,7 @@
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
-            "description": "Placeholder",
+            "description": "This is a goofy looking level, but could be a little tricky. Activate the Goal before an Anti Goal is activated.",
             "goal": [
                 {
                     "x": 4,
@@ -1101,7 +1101,7 @@
             "height": 14,
             "id": 18,
             "library": 4,
-            "lose": "You Lose!",
+            "lose": "I can't believe you activated an Anti Goal!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -1122,7 +1122,7 @@
                 }
             ],
             "width": 10,
-            "win": "You Won!"
+            "win": "Take that, Baby face!"
         },
         "19": {
             "antigoal": [
@@ -1204,12 +1204,12 @@
             "autowin": 30,
             "chapter": 2,
             "deadzones": [],
-            "description": "Placeholder",
+            "description": "This level has a Glider Eater, and when it eats the Glider it will cause the Anti Goal to activate. Can you disrupt the Glider Eater in time?",
             "goal": [],
             "height": 15,
             "id": 19,
             "library": 4,
-            "lose": "",
+            "lose": "It's tricky, but you can do it!",
             "maxplay": 0,
             "maxred": 0,
             "mingreen": 0,
@@ -1229,7 +1229,7 @@
                 }
             ],
             "width": 19,
-            "win": "You Won!"
+            "win": "Take that, Glider Eater!"
         },
         "2": {
             "antigoal": [],
@@ -1237,7 +1237,7 @@
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "Try to recreate that same <strong>Glider</strong> pattern you saw in the previous level by tapping on the field.<br /><br />For your convenience, its pattern has been added to your <strong>Library</strong>.<br /><br />You can only alter the state of cells within the green <strong>Playable Zones</strong>.",
+            "description": "Try to recreate that same <strong>Glider</strong> pattern you saw in the previous level by tapping on the field.<br /><img src=\"images/content/glider-se.png\" /><br />For your convenience, its pattern has been added to your <strong>Library</strong>.<br /><br />You can only alter the state of cells within the green <strong>Playable Zones</strong>.",
             "goal": [
                 {
                     "x": 13,
@@ -1267,7 +1267,7 @@
                 }
             ],
             "width": 16,
-            "win": "The Glider is your new best friend!"
+            "win": "The Glider is your new best friend."
         },
         "20": {
             "antigoal": [],
@@ -1308,12 +1308,12 @@
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
-            "description": "In this level you'll need to get a certain number of green cells.",
+            "description": "In this level you'll need to get 40 Green Cells to win.<br /><br />Green Cells are created by you in green Playable Zones, and breed from mostly Green cells.<br /><br />Red Cells breed from other Red Cells.",
             "goal": [],
             "height": 21,
             "id": 20,
             "library": 4,
-            "lose": "",
+            "lose": "N/A",
             "maxplay": 10,
             "maxred": 0,
             "mingreen": 40,
@@ -1340,7 +1340,7 @@
                 }
             ],
             "width": 22,
-            "win": "You Won!"
+            "win": "Way to breed those Green Cells!"
         },
         "21": {
             "antigoal": [],
@@ -1381,12 +1381,12 @@
             "autowin": 20,
             "chapter": 2,
             "deadzones": [],
-            "description": "Prevent the reds from achieving a higher population!",
+            "description": "Prevent the Red Cells from achieving a population of 20! You will win once the 20th generation is met. Be careful, you can only play 10 Green Cells.",
             "goal": [],
             "height": 21,
             "id": 21,
             "library": 4,
-            "lose": "",
+            "lose": "Try drawing a symmetical pattern.",
             "maxplay": 10,
             "maxred": 20,
             "mingreen": 0,
@@ -1407,7 +1407,7 @@
             ],
             "rank": [],
             "width": 22,
-            "win": "You Won!"
+            "win": "Who's awesome? You're awesome!"
         },
         "3": {
             "antigoal": [],
@@ -1468,7 +1468,7 @@
                 }
             ],
             "width": 16,
-            "win": "Breaking barriers is a useful technique."
+            "win": "Breaking structures can save you."
         },
         "4": {
             "antigoal": [],
@@ -1557,7 +1557,7 @@
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "Flip or rotate anything you draw to flip or rotate the outcome.<br /><br /><br /><br />Tip: If you ever see <strong>multiple goals</strong>, you only need to <strong>activate one</strong> to win.",
+            "description": "Flip or rotate anything you draw to flip or rotate the outcome.<br /><img src=\"images/library/glider.png\" /><br />Tip: If you ever see <strong>multiple goals</strong>, you only need to <strong>activate one</strong> to win.",
             "goal": [
                 {
                     "x": 22,
@@ -1587,7 +1587,7 @@
             "playables": [],
             "rank": [],
             "width": 24,
-            "win": "Remember, flipping and rotating objects will flip and rotate what they do!"
+            "win": "Flipping and Rotating can be very useful."
         },
         "5": {
             "antigoal": [],
@@ -1595,7 +1595,7 @@
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "Make use of rotation to beat this level!",
+            "description": "Make use of rotation to beat this level!<br /><img src=\"images/content/glider-nw.png\" /><br />",
             "goal": [
                 {
                     "x": 1,
@@ -1718,7 +1718,7 @@
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "This level has two <strong>Spaceships</strong>. Just like a Glider, a Spaceship can move across the playing field and retain its original shape.<br /><br />Depending on a Spaceships distance from a wall, it will <strong>release a Glider</strong> either to the right or the left when it crashes.",
+            "description": "This level has two <strong>Spaceships</strong>. Just like a Glider, a Spaceship can move across the playing field and retain its original shape.<br /><img src=\"images/content/spaceship-n.png\" /><br />Depending on a Spaceships distance from a wall, it will <strong>release a Glider</strong> either to the right or the left when it crashes.",
             "goal": [
                 {
                     "x": 11,
@@ -1736,7 +1736,7 @@
             "playables": [],
             "rank": [],
             "width": 24,
-            "win": "Moving a spaceship 1 unit from a wall changes the glider direction."
+            "win": "Move a Spaceship by one tile to change Glider direction."
         },
         "7": {
             "antigoal": [],
@@ -1751,7 +1751,7 @@
                     "y": 8
                 }
             ],
-            "description": "Using your newfound knowledge of Spaceships, try to activate the goal in this level.<br /><br /><br /><br />Tip: Notice the red rectangle. This is called a <strong>Deadzone</strong>, no cells will survive inside of it. These will have the same effect as the edge of a map when something collides with it.",
+            "description": "Using your newfound knowledge of Spaceships, try to activate the goal in this level.<br /><img src=\"images/content/spaceship-n.png\" /><br />Tip: Notice the red rectangle. This is called a <strong>Deadzone</strong>, no cells will survive inside of it. These will have the same effect as the edge of a map when something collides with it.",
             "goal": [
                 {
                     "x": 3,
@@ -1834,7 +1834,7 @@
             "autowin": 0,
             "chapter": 1,
             "deadzones": [],
-            "description": "This is the final level of the Tutorial.<br /><br />The shape on this screen is called the <strong>Multum in Parvo</strong>.<br /><br />Notice how something simple can become incredibly complex and seemingly unpredicable.",
+            "description": "This is the final level of the Tutorial.<br /><br />The shape on this screen is called the <strong>Multum in Parvo</strong>.<br /><img src=\"images/library/multum-in-parvo.png\" /><br />Notice how something simple can become incredibly complex and seemingly unpredicable.",
             "goal": [
                 {
                     "x": 22,
@@ -1852,7 +1852,7 @@
             "playables": [],
             "rank": [],
             "width": 24,
-            "win": "Crazy, eh?"
+            "win": "Wasn't that fun to watch?"
         },
         "9": {
             "antigoal": [],
@@ -1909,7 +1909,7 @@
             "autowin": 0,
             "chapter": 2,
             "deadzones": [],
-            "description": "",
+            "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single unit, and the outcome can be completely different.",
             "goal": [
                 {
                     "x": 2,
@@ -1938,17 +1938,20 @@
             ],
             "rank": [],
             "width": 16,
-            "win": "You Won!"
+            "win": "Congrats! Your solution might be useful again..."
         }
     },
     "dictionary": {
         "ad_min_level": 12,
-        "ad_mod_level": 4,
+        "ad_mod_level": 3,
         "admob": "pub-3769178507272044",
         "admob_android": "ca-app-pub-3769178507272044/5009054623",
         "admob_ios": "ca-app-pub-3769178507272044/7962521020",
+        "adsense": "TODO",
         "confirm_reset": "Are you SURE you would like to <strong>destroy</strong> all your progress and settings and start over?",
         "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green <strong>Playable Zone</strong> to toggle cells.</p>\n<p>No cells can be alive in the red <strong>Dead Zones</strong>.</p>\n<p>The rainbow tiles are <strong class='cycle'>Goal</strong> tiles and need to be activiated to beat levels.</p>\n<p>The strobing red tiles are <strong class='red-cycle'>Anti Goal</strong> tiles and if activated you lose.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n  <li>Any live cell with fewer than two live neighbours dies.</li>\n  <li>Any live cell with two or three live neighbours lives.</li>\n  <li>Any live cell with more than three live neighbours dies.</li>\n  <li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life</a> on WikiPedia.</p>",
+        "last_level_complete": "<h3>You Won!</h3>\n\n<p>Congratulations on beating the final level of Strategic Game of Life!</p>\n<p>You've successfully beaten every level with a rank of <span class='cycle'>A</span>!</p>\n<p>If enough people enjoy this game I'll add more levels.</p>",
+        "last_level_incomplete": "<h3>You Won!</h3>\n\n<p>Congratulations on beating the final level of Strategic Game of Life!</p>\n<p>Be sure to go back and play each level and achieve an <span class='cycle'>A</span> ranking!</p>\n<p>If enough people enjoy this game I'll add more levels.</p>",
         "mixpanel": "f598ce903232263c47ca516bff05c18b"
     },
     "library": {
@@ -2084,5 +2087,5 @@
             "type": "unplayed"
         }
     },
-    "version": "20150714055903"
+    "version": "20150820214413"
 }
