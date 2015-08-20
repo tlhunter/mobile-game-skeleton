@@ -1,6 +1,6 @@
 {
   "name": "Strategic GoL",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Strategic Game of Life: Conway's Game of Life reimagined as a strategic campaign of levels to beat.",
   "launch_path": "/apps/sgol/index.html",
   "icons": {
