@@ -16,7 +16,10 @@ app.use(compression());
 var port = process.env.SGOL_PORT || 1337;
 var host = process.env.SGOL_HOST || '0.0.0.0';
 
-var public_dir = path.normalize(__dirname + '/../platforms/web/build');
+console.log("Remember to run `gulp prebuild-web` beforehand!");
+
+// Technically this should point to ../platforms/web/build, but then gulp watch is useless
+var public_dir = path.normalize(__dirname + '/../www');
 
 content.load(function(err) {
   if (err) {
