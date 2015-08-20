@@ -47,7 +47,7 @@ MODULE.CampaignScreen = (function() {
     Object.keys(app.content.data.ranks).forEach(function(rank) {
       rank = app.content.data.ranks[rank];
 
-      css += "#screen-campaign .levels .level.rank-" + rank.id + " {\n";
+      css += "#screen-campaign .levels .rank-" + rank.id + " {\n";
         css += "color: " + rank.color + ";\n";
         css += "outline-color: " + rank.color + ";\n";
       css += "}\n";

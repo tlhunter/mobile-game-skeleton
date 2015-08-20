@@ -121,8 +121,6 @@ gulp.task('watch', ['scripts', 'styles', 'html-web'], function() {
 
 /**
  * Downloads data from the CMS and writes it to disk
- *
- * TODO: make this work
  */
 gulp.task('data', function(done) {
   var dataDownload = spawn('./bin/datacache.sh');
