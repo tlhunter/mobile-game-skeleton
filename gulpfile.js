@@ -1,7 +1,7 @@
 'use strict';
 
 // System
-var exec = require('child_process').exec;
+var spawn = require('child_process').spawn;
 var fs = require('fs');
 
 // Local Gulp
@@ -187,34 +187,41 @@ gulp.task('prebuild-web', [
 ]);
 
 /**
- * Builds all platforms
- */
-gulp.task('build', function(done) {
-  //exec('cordova build', done);
-  return console.error("TODO: Figure out how everything can be built at once");
-});
-
-/**
  * Only builds Android
  */
 gulp.task('build-android', ['prebuild-cordova'], function(done) {
-  exec('cordova build android --release', done);
+  var build = spawn('cordova', ['build', 'android', '--release']);
+
+  build.stdout.on('data', function(data) {
+    console.log(data.toString());
+  });
+
+  build.stderr.on('data', function(data) {
+    console.error(data.toString());
+  });
+
+  build.on('exit', done);
 });
 
 gulp.task('sign-android', function(done) {
-  // First step done once
-  // keytool -genkey -v -keystore NAME-mobileapps.keystore -alias NAMEmobileapps -keyalg RSA -keysize 2048 -validity 10000
-
-  // Done by sign task
-  // jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore <keystorename> <Unsigned APK file> <Keystore Alias name>
-  // zipalign -v 4 Example-release-unsigned.apk Example.apk
+  return console.error("Run ./bin/sign-android.sh instead");
 });
 
 /**
  * Only builds iOS
  */
 gulp.task('build-ios', ['prebuild-cordova'], function(done) {
-  exec('cordova build ios', done);
+  var build = spawn('cordova', ['build', 'ios']);
+
+  build.stdout.on('data', function(data) {
+    console.log(data.toString());
+  });
+
+  build.stderr.on('data', function(data) {
+    console.error(data.toString());
+  });
+
+  build.on('exit', done);
 });
 
 gulp.task('build-web', ['prebuild-web'], function(done) {
