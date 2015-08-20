@@ -204,6 +204,8 @@ MODULE.LevelScreen = (function() {
     app.analytics.track('SCREEN-LEVEL', {
       level: level_id
     });
+
+    app.interstitial.prepareAdIfNeeded(level_id);
   };
 
   LevelScreen.prototype.hide = function() {

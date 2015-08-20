@@ -46,7 +46,11 @@ if (!MODULE) { var MODULE = {}; }
 
       app.audio = new MODULE.Audio(data.audio);
       app.analytics = new MODULE.Analytics(data.dictionary.mixpanel);
-      app.interstitial = new MODULE.Interstitial(data.dictionary.admob);
+      app.interstitial = new MODULE.Interstitial({
+        android: data.dictionary.admob_android,
+        ios: data.dictionary.admob_ios,
+        web: data.dictionary.adsense
+      });
       app.rank = new MODULE.Rank(data.ranks);
 
       // TODO: Migrate to another file

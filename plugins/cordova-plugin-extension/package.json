@@ -1,0 +1,26 @@
+{
+  "name": "cordova-plugin-extension",
+  "version": "1.1.4",
+  "description": "Cordova Plugin common extension with adapter interface",
+  "cordova": {
+    "id": "cordova-plugin-extension",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/floatinghotpot/cordova-extension.git"
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "extension",
+    "rjfun"
+  ],
+  "author": {
+    "name": "Liming Xie"
+  },
+  "license": "MIT"
+}

@@ -9,7 +9,14 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "name.thomashunter.strategicgol"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "name.thomashunter.strategicgol"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "name.thomashunter.strategicgol"
+        }
+    }
 }
