@@ -21,6 +21,7 @@ var CSS_FILENAME = 'app.css';
 var JS_FILENAME = 'app.js';
 var HTML_OUTPUT = 'www/index.html';
 var WEB_BUILD = 'platforms/web/build';
+var DATA_FILE = 'tmp/data.json';
 
 // TODO: Read this from config.xml
 var APP_TITLE = "Game of Life";
@@ -123,8 +124,28 @@ gulp.task('watch', ['scripts', 'styles', 'html-web'], function() {
  *
  * TODO: make this work
  */
-gulp.task('data', function() {
-  return console.error("need to configure gulp data command");
+gulp.task('data', function(done) {
+  var dataDownload = spawn('./bin/datacache.sh');
+
+  dataDownload.stdout.on('data', function(data) {
+    console.log(data.toString());
+  });
+
+  dataDownload.stderr.on('data', function(data) {
+    console.error(data.toString());
+  });
+
+  dataDownload.on('exit', jsonCleanup);
+
+  function jsonCleanup() {
+    fs.readFile(DATA_FILE, function(err, data) {
+      var json = JSON.parse(data);
+
+      var text = JSON.stringify(json, null, 2);
+
+      fs.writeFile(DATA_FILE, text, done);
+    });
+  }
 });
 
 /**
@@ -150,7 +171,7 @@ function moveStatic(cordova) {
 
   // TODO: Data command should handle this
   var dist_files = [
-    'tmp/data.json'
+    DATA_FILE
   ];
 
   var web_only_files = [

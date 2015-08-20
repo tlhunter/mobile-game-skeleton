@@ -1,2091 +1,2091 @@
 {
-    "audio": {
-        "back": {
-            "file": "audio/back.wav",
-            "id": "back",
-            "name": "Back",
-            "type": "sound"
-        },
-        "background": {
-            "file": "audio/OutThere.ogg",
-            "id": "background",
-            "name": "Menu Music",
-            "type": "music"
-        },
-        "chapter-1": {
-            "file": "audio/AmbientalExperience.ogg",
-            "id": "chapter-1",
-            "name": "Chapter 1 Music",
-            "type": "music"
-        },
-        "chapter-2": {
-            "file": "audio/Evasion.ogg",
-            "id": "chapter-2",
-            "name": "Chapter 2 Music",
-            "type": "music"
-        },
-        "clear": {
-            "file": "audio/clear.wav",
-            "id": "clear",
-            "name": "Clear",
-            "type": "sound"
-        },
-        "play": {
-            "file": "audio/play.wav",
-            "id": "play",
-            "name": "Play",
-            "type": "sound"
-        },
-        "select": {
-            "file": "audio/select.wav",
-            "id": "select",
-            "name": "Select",
-            "type": "sound"
-        },
-        "stop": {
-            "file": "audio/stop.wav",
-            "id": "stop",
-            "name": "Stop",
-            "type": "sound"
+  "dictionary": {
+    "ad_min_level": 12,
+    "ad_mod_level": 3,
+    "mixpanel": "f598ce903232263c47ca516bff05c18b",
+    "admob": "pub-3769178507272044",
+    "admob_android": "ca-app-pub-3769178507272044/5009054623",
+    "admob_ios": "ca-app-pub-3769178507272044/7962521020",
+    "adsense": "TODO",
+    "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green <strong>Playable Zone</strong> to toggle cells.</p>\n<p>No cells can be alive in the red <strong>Dead Zones</strong>.</p>\n<p>The rainbow tiles are <strong class='cycle'>Goal</strong> tiles and need to be activiated to beat levels.</p>\n<p>The strobing red tiles are <strong class='red-cycle'>Anti Goal</strong> tiles and if activated you lose.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n  <li>Any live cell with fewer than two live neighbours dies.</li>\n  <li>Any live cell with two or three live neighbours lives.</li>\n  <li>Any live cell with more than three live neighbours dies.</li>\n  <li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life</a> on WikiPedia.</p>",
+    "confirm_reset": "Are you SURE you would like to <strong>destroy</strong> all your progress and settings and start over?",
+    "last_level_incomplete": "<h3>You Won!</h3>\n\n<p>Congratulations on beating the final level of Strategic Game of Life!</p>\n<p>Be sure to go back and play each level and achieve an <span class='cycle'>A</span> ranking!</p>\n<p>If enough people enjoy this game I'll add more levels.</p>",
+    "last_level_complete": "<h3>You Won!</h3>\n\n<p>Congratulations on beating the final level of Strategic Game of Life!</p>\n<p>You've successfully beaten every level with a rank of <span class='cycle'>A</span>!</p>\n<p>If enough people enjoy this game I'll add more levels.</p>"
+  },
+  "audio": {
+    "background": {
+      "id": "background",
+      "type": "music",
+      "name": "Menu Music",
+      "file": "audio/OutThere.ogg"
+    },
+    "chapter-1": {
+      "id": "chapter-1",
+      "type": "music",
+      "name": "Chapter 1 Music",
+      "file": "audio/AmbientalExperience.ogg"
+    },
+    "chapter-2": {
+      "id": "chapter-2",
+      "type": "music",
+      "name": "Chapter 2 Music",
+      "file": "audio/Evasion.ogg"
+    },
+    "select": {
+      "id": "select",
+      "type": "sound",
+      "name": "Select",
+      "file": "audio/select.wav"
+    },
+    "back": {
+      "id": "back",
+      "type": "sound",
+      "name": "Back",
+      "file": "audio/back.wav"
+    },
+    "clear": {
+      "id": "clear",
+      "type": "sound",
+      "name": "Clear",
+      "file": "audio/clear.wav"
+    },
+    "play": {
+      "id": "play",
+      "type": "sound",
+      "name": "Play",
+      "file": "audio/play.wav"
+    },
+    "stop": {
+      "id": "stop",
+      "type": "sound",
+      "name": "Stop",
+      "file": "audio/stop.wav"
+    }
+  },
+  "campaign": {
+    "1": {
+      "id": 1,
+      "name": "Tutorial 1: Glider",
+      "chapter": 1,
+      "width": 16,
+      "height": 16,
+      "library": 1,
+      "goal": [
+        {
+          "x": 13,
+          "y": 13
         }
+      ],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [],
+      "playables": [],
+      "deadzones": [],
+      "arena": [
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "win": "Congratulations on your first <strong>A</strong>!",
+      "lose": "N/A",
+      "description": "This is the first tutorial level and is not interactive.<br /><br />The shape in the upper left corner is a <strong>Glider</strong>.<br /><img src=\"images/content/glider-se.png\" /><br />The <span class=\"cycle\">rainbow</span> square in the lower right is the <strong>Goal</strong>.<br /><br />Click play and watch what happens."
     },
-    "campaign": {
-        "1": {
-            "antigoal": [],
-            "arena": [
-                [
-                    3,
-                    1
-                ],
-                [
-                    4,
-                    2
-                ],
-                [
-                    2,
-                    3
-                ],
-                [
-                    3,
-                    3
-                ],
-                [
-                    4,
-                    3
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 1,
-            "deadzones": [],
-            "description": "This is the first tutorial level and is not interactive.<br /><br />The shape in the upper left corner is a <strong>Glider</strong>.<br /><img src=\"images/content/glider-se.png\" /><br />The <span class=\"cycle\">rainbow</span> square in the lower right is the <strong>Goal</strong>.<br /><br />Click play and watch what happens.",
-            "goal": [
-                {
-                    "x": 13,
-                    "y": 13
-                }
-            ],
-            "height": 16,
-            "id": 1,
-            "library": 1,
-            "lose": "N/A",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Tutorial 1: Glider",
-            "playables": [],
-            "rank": [],
-            "width": 16,
-            "win": "Congratulations on your first <strong>A</strong>!"
-        },
-        "10": {
-            "antigoal": [],
-            "arena": [
-                [
-                    9,
-                    6
-                ],
-                [
-                    9,
-                    7
-                ],
-                [
-                    9,
-                    8
-                ],
-                [
-                    6,
-                    6
-                ],
-                [
-                    6,
-                    7
-                ],
-                [
-                    6,
-                    8
-                ],
-                [
-                    12,
-                    6
-                ],
-                [
-                    12,
-                    7
-                ],
-                [
-                    12,
-                    8
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "This level is pretty similar to the previous one. Activate that goal!<br /><br />Tip: Notice how this level is limited to playing a maximum of 10 cells in the green playable zone.",
-            "goal": [
-                {
-                    "x": 9,
-                    "y": 2
-                }
-            ],
-            "height": 24,
-            "id": 10,
-            "library": 4,
-            "lose": "N/A",
-            "maxplay": 10,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Level 10: Fanblades II",
-            "playables": [
-                {
-                    "h": 5,
-                    "w": 19,
-                    "x": 0,
-                    "y": 19
-                }
-            ],
-            "rank": [
-                {
-                    "g": 60,
-                    "r": "a"
-                },
-                {
-                    "g": 61,
-                    "r": "b"
-                },
-                {
-                    "g": 62,
-                    "r": "c"
-                },
-                {
-                    "g": 63,
-                    "r": "d"
-                },
-                {
-                    "g": 64,
-                    "r": "e"
-                }
-            ],
-            "width": 19,
-            "win": "You did it!"
-        },
-        "11": {
-            "antigoal": [],
-            "arena": [
-                [
-                    7,
-                    3
-                ],
-                [
-                    8,
-                    3
-                ],
-                [
-                    7,
-                    4
-                ],
-                [
-                    8,
-                    4
-                ],
-                [
-                    7,
-                    6
-                ],
-                [
-                    8,
-                    6
-                ],
-                [
-                    7,
-                    7
-                ],
-                [
-                    8,
-                    7
-                ],
-                [
-                    4,
-                    9
-                ],
-                [
-                    5,
-                    9
-                ],
-                [
-                    10,
-                    9
-                ],
-                [
-                    11,
-                    9
-                ],
-                [
-                    5,
-                    10
-                ],
-                [
-                    10,
-                    10
-                ],
-                [
-                    2,
-                    11
-                ],
-                [
-                    13,
-                    11
-                ],
-                [
-                    2,
-                    12
-                ],
-                [
-                    3,
-                    12
-                ],
-                [
-                    12,
-                    12
-                ],
-                [
-                    13,
-                    12
-                ],
-                [
-                    0,
-                    14
-                ],
-                [
-                    1,
-                    14
-                ],
-                [
-                    2,
-                    14
-                ],
-                [
-                    3,
-                    14
-                ],
-                [
-                    12,
-                    14
-                ],
-                [
-                    13,
-                    14
-                ],
-                [
-                    14,
-                    14
-                ],
-                [
-                    15,
-                    14
-                ],
-                [
-                    0,
-                    15
-                ],
-                [
-                    3,
-                    15
-                ],
-                [
-                    12,
-                    15
-                ],
-                [
-                    15,
-                    15
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "There's some fun stuff going on in this level.<br /><br />Tip: Some levels can be completed by activating a single tile!",
-            "goal": [
-                {
-                    "x": 7,
-                    "y": 1
-                },
-                {
-                    "x": 8,
-                    "y": 1
-                }
-            ],
-            "height": 24,
-            "id": 11,
-            "library": 4,
-            "lose": "N/A",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Level 11: Tables",
-            "playables": [
-                {
-                    "h": 8,
-                    "w": 16,
-                    "x": 0,
-                    "y": 16
-                }
-            ],
-            "rank": [],
-            "width": 16,
-            "win": "If you didn't get an <strong>A</strong> be sure to retry!"
-        },
-        "12": {
-            "antigoal": [
-                {
-                    "x": 13,
-                    "y": 13
-                }
-            ],
-            "arena": [
-                [
-                    3,
-                    1
-                ],
-                [
-                    4,
-                    2
-                ],
-                [
-                    2,
-                    3
-                ],
-                [
-                    3,
-                    3
-                ],
-                [
-                    4,
-                    3
-                ]
-            ],
-            "autowin": 50,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "This mission is a bit different than the ones you've played before. This time, instead of activating a goal, you're trying to NOT activate the blinking red <strong class=\"red-cycle\">Anti Goal</strong>!<br /><br />To win, you must survive 50 generations without the Anti Goal activating.",
-            "goal": [],
-            "height": 16,
-            "id": 12,
-            "library": 4,
-            "lose": "Intercept the Glider to win.",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Level 12: The Antigoal",
-            "playables": [
-                {
-                    "h": 5,
-                    "w": 5,
-                    "x": 0,
-                    "y": 7
-                }
-            ],
-            "rank": [
-                {
-                    "p": 3,
-                    "r": "a"
-                },
-                {
-                    "p": 4,
-                    "r": "b"
-                },
-                {
-                    "p": 5,
-                    "r": "c"
-                }
-            ],
-            "width": 16,
-            "win": "Never let those pesky Anti Goals activate!"
-        },
-        "13": {
-            "antigoal": [],
-            "arena": [
-                [
-                    2,
-                    2
-                ],
-                [
-                    4,
-                    2
-                ],
-                [
-                    1,
-                    3
-                ],
-                [
-                    1,
-                    4
-                ],
-                [
-                    1,
-                    5
-                ],
-                [
-                    4,
-                    5
-                ],
-                [
-                    1,
-                    6
-                ],
-                [
-                    2,
-                    6
-                ],
-                [
-                    3,
-                    6
-                ],
-                [
-                    3,
-                    19
-                ],
-                [
-                    4,
-                    19
-                ],
-                [
-                    3,
-                    20
-                ],
-                [
-                    4,
-                    20
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 5,
-                    "w": 1,
-                    "x": 6,
-                    "y": 19
-                }
-            ],
-            "description": "Destroy the Still Life so the Spaceship can get to the Goal!",
-            "goal": [
-                {
-                    "x": 3,
-                    "y": 23
-                }
-            ],
-            "height": 24,
-            "id": 13,
-            "library": 4,
-            "lose": "N/A",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Level 13: Interceptor I",
-            "playables": [
-                {
-                    "h": 5,
-                    "w": 5,
-                    "x": 8,
-                    "y": 13
-                }
-            ],
-            "rank": [
-                {
-                    "p": 5,
-                    "r": "a"
-                },
-                {
-                    "p": 7,
-                    "r": "b"
-                },
-                {
-                    "p": 9,
-                    "r": "c"
-                }
-            ],
-            "width": 13,
-            "win": "You Won!"
-        },
-        "14": {
-            "antigoal": [
-                {
-                    "x": 3,
-                    "y": 23
-                }
-            ],
-            "arena": [
-                [
-                    2,
-                    2
-                ],
-                [
-                    4,
-                    2
-                ],
-                [
-                    1,
-                    3
-                ],
-                [
-                    1,
-                    4
-                ],
-                [
-                    1,
-                    5
-                ],
-                [
-                    4,
-                    5
-                ],
-                [
-                    1,
-                    6
-                ],
-                [
-                    2,
-                    6
-                ],
-                [
-                    3,
-                    6
-                ]
-            ],
-            "autowin": 40,
-            "chapter": 2,
-            "deadzones": [
-                {
-                    "h": 5,
-                    "w": 1,
-                    "x": 6,
-                    "y": 19
-                }
-            ],
-            "description": "This level may look similar to the previous one, but your mission is differen. This time stop the Spaceship from getting to the Anti Goal!",
-            "goal": [],
-            "height": 24,
-            "id": 14,
-            "library": 4,
-            "lose": "Kill that Spaceship!",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Level 14: Interceptor II",
-            "playables": [
-                {
-                    "h": 5,
-                    "w": 5,
-                    "x": 8,
-                    "y": 13
-                }
-            ],
-            "rank": [
-                {
-                    "p": 5,
-                    "r": "a"
-                },
-                {
-                    "p": 7,
-                    "r": "b"
-                },
-                {
-                    "p": 9,
-                    "r": "c"
-                }
-            ],
-            "width": 13,
-            "win": "You Won!"
-        },
-        "15": {
-            "antigoal": [
-                {
-                    "x": 10,
-                    "y": 10
-                }
-            ],
-            "arena": [
-                [
-                    16,
-                    1
-                ],
-                [
-                    17,
-                    1
-                ],
-                [
-                    18,
-                    1
-                ],
-                [
-                    19,
-                    1
-                ],
-                [
-                    16,
-                    2
-                ],
-                [
-                    20,
-                    2
-                ],
-                [
-                    16,
-                    3
-                ],
-                [
-                    17,
-                    4
-                ],
-                [
-                    20,
-                    4
-                ],
-                [
-                    17,
-                    16
-                ],
-                [
-                    20,
-                    16
-                ],
-                [
-                    16,
-                    17
-                ],
-                [
-                    16,
-                    18
-                ],
-                [
-                    20,
-                    18
-                ],
-                [
-                    16,
-                    19
-                ],
-                [
-                    17,
-                    19
-                ],
-                [
-                    18,
-                    19
-                ],
-                [
-                    19,
-                    19
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Those two space ships will create gliders which cancel each other out and prevent the Goal from activating.<br /><br />Can you figure out how to activate the goal?",
-            "goal": [
-                {
-                    "x": 8,
-                    "y": 10
-                }
-            ],
-            "height": 21,
-            "id": 15,
-            "library": 4,
-            "lose": "The Anti Goal was activated :(",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Level 15: Interceptor III",
-            "playables": [
-                {
-                    "h": 9,
-                    "w": 5,
-                    "x": 16,
-                    "y": 6
-                }
-            ],
-            "rank": [
-                {
-                    "p": 3,
-                    "r": "a"
-                },
-                {
-                    "p": 4,
-                    "r": "b"
-                },
-                {
-                    "p": 5,
-                    "r": "c"
-                }
-            ],
-            "width": 21,
-            "win": "You Won!"
-        },
-        "16": {
-            "antigoal": [
-                {
-                    "x": 6,
-                    "y": 10
-                }
-            ],
-            "arena": [
-                [
-                    16,
-                    1
-                ],
-                [
-                    17,
-                    1
-                ],
-                [
-                    18,
-                    1
-                ],
-                [
-                    19,
-                    1
-                ],
-                [
-                    16,
-                    2
-                ],
-                [
-                    20,
-                    2
-                ],
-                [
-                    16,
-                    3
-                ],
-                [
-                    17,
-                    4
-                ],
-                [
-                    20,
-                    4
-                ],
-                [
-                    17,
-                    16
-                ],
-                [
-                    20,
-                    16
-                ],
-                [
-                    16,
-                    17
-                ],
-                [
-                    16,
-                    18
-                ],
-                [
-                    20,
-                    18
-                ],
-                [
-                    16,
-                    19
-                ],
-                [
-                    17,
-                    19
-                ],
-                [
-                    18,
-                    19
-                ],
-                [
-                    19,
-                    19
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Much like the previous level the two Spaceships will generate Gliders which cancel each other out.<br /><br />Depending on your approach last level, you may be able to use it again.",
-            "goal": [
-                {
-                    "x": 8,
-                    "y": 10
-                }
-            ],
-            "height": 21,
-            "id": 16,
-            "library": 4,
-            "lose": "The Anti Goal was activated :(",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Level 16: Interceptor IV",
-            "playables": [
-                {
-                    "h": 9,
-                    "w": 5,
-                    "x": 0,
-                    "y": 6
-                }
-            ],
-            "rank": [],
-            "width": 21,
-            "win": "You Won!"
-        },
-        "17": {
-            "antigoal": [
-                {
-                    "x": 10,
-                    "y": 14
-                }
-            ],
-            "arena": [
-                [
-                    3,
-                    6
-                ],
-                [
-                    1,
-                    7
-                ],
-                [
-                    3,
-                    7
-                ],
-                [
-                    2,
-                    8
-                ],
-                [
-                    3,
-                    8
-                ],
-                [
-                    9,
-                    9
-                ],
-                [
-                    8,
-                    10
-                ],
-                [
-                    10,
-                    10
-                ],
-                [
-                    12,
-                    10
-                ],
-                [
-                    13,
-                    10
-                ],
-                [
-                    8,
-                    11
-                ],
-                [
-                    10,
-                    11
-                ],
-                [
-                    11,
-                    11
-                ],
-                [
-                    13,
-                    11
-                ],
-                [
-                    6,
-                    12
-                ],
-                [
-                    7,
-                    12
-                ],
-                [
-                    9,
-                    12
-                ],
-                [
-                    7,
-                    13
-                ],
-                [
-                    9,
-                    13
-                ],
-                [
-                    10,
-                    13
-                ],
-                [
-                    11,
-                    13
-                ],
-                [
-                    12,
-                    13
-                ],
-                [
-                    7,
-                    14
-                ],
-                [
-                    9,
-                    14
-                ],
-                [
-                    12,
-                    14
-                ],
-                [
-                    8,
-                    15
-                ],
-                [
-                    11,
-                    15
-                ],
-                [
-                    9,
-                    16
-                ],
-                [
-                    10,
-                    16
-                ]
-            ],
-            "autowin": 20,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Stop the Glider from colliding with that complex structure and activating the Anti Goal.",
-            "goal": [],
-            "height": 18,
-            "id": 17,
-            "library": 4,
-            "lose": "Stop that Stillater destroying Glider!",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Level 17: Interrupt",
-            "playables": [
-                {
-                    "h": 6,
-                    "w": 18,
-                    "x": 0,
-                    "y": 0
-                }
-            ],
-            "rank": [
-                {
-                    "p": 1,
-                    "r": "a"
-                }
-            ],
-            "width": 18,
-            "win": "You protected the Stillater!"
-        },
-        "18": {
-            "antigoal": [
-                {
-                    "x": 1,
-                    "y": 1
-                },
-                {
-                    "x": 8,
-                    "y": 1
-                }
-            ],
-            "arena": [
-                [
-                    1,
-                    0
-                ],
-                [
-                    8,
-                    0
-                ],
-                [
-                    0,
-                    1
-                ],
-                [
-                    2,
-                    1
-                ],
-                [
-                    7,
-                    1
-                ],
-                [
-                    9,
-                    1
-                ],
-                [
-                    1,
-                    2
-                ],
-                [
-                    3,
-                    2
-                ],
-                [
-                    6,
-                    2
-                ],
-                [
-                    8,
-                    2
-                ],
-                [
-                    3,
-                    3
-                ],
-                [
-                    6,
-                    3
-                ],
-                [
-                    3,
-                    4
-                ],
-                [
-                    6,
-                    4
-                ],
-                [
-                    4,
-                    5
-                ],
-                [
-                    5,
-                    5
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "This is a goofy looking level, but could be a little tricky. Activate the Goal before an Anti Goal is activated.",
-            "goal": [
-                {
-                    "x": 4,
-                    "y": 4
-                },
-                {
-                    "x": 5,
-                    "y": 4
-                }
-            ],
-            "height": 14,
-            "id": 18,
-            "library": 4,
-            "lose": "I can't believe you activated an Anti Goal!",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Level 18: Tub Test Tube Baby",
-            "playables": [
-                {
-                    "h": 5,
-                    "w": 10,
-                    "x": 0,
-                    "y": 9
-                }
-            ],
-            "rank": [
-                {
-                    "g": 10,
-                    "p": 5,
-                    "r": "a"
-                }
-            ],
-            "width": 10,
-            "win": "Take that, Baby face!"
-        },
-        "19": {
-            "antigoal": [
-                {
-                    "x": 12,
-                    "y": 9
-                }
-            ],
-            "arena": [
-                [
-                    10,
-                    0
-                ],
-                [
-                    11,
-                    1
-                ],
-                [
-                    9,
-                    2
-                ],
-                [
-                    10,
-                    2
-                ],
-                [
-                    11,
-                    2
-                ],
-                [
-                    10,
-                    9
-                ],
-                [
-                    11,
-                    9
-                ],
-                [
-                    10,
-                    10
-                ],
-                [
-                    11,
-                    10
-                ],
-                [
-                    15,
-                    10
-                ],
-                [
-                    14,
-                    11
-                ],
-                [
-                    16,
-                    11
-                ],
-                [
-                    15,
-                    12
-                ],
-                [
-                    17,
-                    12
-                ],
-                [
-                    17,
-                    13
-                ],
-                [
-                    17,
-                    14
-                ],
-                [
-                    18,
-                    14
-                ]
-            ],
-            "autowin": 30,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "This level has a Glider Eater, and when it eats the Glider it will cause the Anti Goal to activate. Can you disrupt the Glider Eater in time?",
-            "goal": [],
-            "height": 15,
-            "id": 19,
-            "library": 4,
-            "lose": "It's tricky, but you can do it!",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Level 19: Glider Eater",
-            "playables": [
-                {
-                    "h": 6,
-                    "w": 8,
-                    "x": 0,
-                    "y": 9
-                }
-            ],
-            "rank": [
-                {
-                    "p": 3,
-                    "r": "a"
-                }
-            ],
-            "width": 19,
-            "win": "Take that, Glider Eater!"
-        },
-        "2": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 1,
-            "deadzones": [],
-            "description": "Try to recreate that same <strong>Glider</strong> pattern you saw in the previous level by tapping on the field.<br /><img src=\"images/content/glider-se.png\" /><br />For your convenience, its pattern has been added to your <strong>Library</strong>.<br /><br />You can only alter the state of cells within the green <strong>Playable Zones</strong>.",
-            "goal": [
-                {
-                    "x": 13,
-                    "y": 13
-                }
-            ],
-            "height": 16,
-            "id": 2,
-            "library": 1,
-            "lose": "N/A",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Tutorial 2: Build a Glider",
-            "playables": [
-                {
-                    "h": 3,
-                    "w": 3,
-                    "x": 3,
-                    "y": 3
-                }
-            ],
-            "rank": [
-                {
-                    "p": 5,
-                    "r": "a"
-                }
-            ],
-            "width": 16,
-            "win": "The Glider is your new best friend."
-        },
-        "20": {
-            "antigoal": [],
-            "arena": [
-                [
-                    9,
-                    9
-                ],
-                [
-                    10,
-                    9
-                ],
-                [
-                    12,
-                    9
-                ],
-                [
-                    9,
-                    10
-                ],
-                [
-                    12,
-                    10
-                ],
-                [
-                    9,
-                    11
-                ],
-                [
-                    11,
-                    11
-                ],
-                [
-                    12,
-                    11
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "In this level you'll need to get 40 Green Cells to win.<br /><br />Green Cells are created by you in green Playable Zones, and breed from mostly Green cells.<br /><br />Red Cells breed from other Red Cells.",
-            "goal": [],
-            "height": 21,
-            "id": 20,
-            "library": 4,
-            "lose": "N/A",
-            "maxplay": 10,
-            "maxred": 0,
-            "mingreen": 40,
-            "name": "Level 20: Fill in The Gap",
-            "playables": [
-                {
-                    "h": 2,
-                    "w": 4,
-                    "x": 9,
-                    "y": 12
-                },
-                {
-                    "h": 2,
-                    "w": 4,
-                    "x": 9,
-                    "y": 7
-                }
-            ],
-            "rank": [
-                {
-                    "g": 13,
-                    "p": 10,
-                    "r": "a"
-                }
-            ],
-            "width": 22,
-            "win": "Way to breed those Green Cells!"
-        },
-        "21": {
-            "antigoal": [],
-            "arena": [
-                [
-                    9,
-                    9
-                ],
-                [
-                    10,
-                    9
-                ],
-                [
-                    12,
-                    9
-                ],
-                [
-                    9,
-                    10
-                ],
-                [
-                    12,
-                    10
-                ],
-                [
-                    9,
-                    11
-                ],
-                [
-                    11,
-                    11
-                ],
-                [
-                    12,
-                    11
-                ]
-            ],
-            "autowin": 20,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Prevent the Red Cells from achieving a population of 20! You will win once the 20th generation is met. Be careful, you can only play 10 Green Cells.",
-            "goal": [],
-            "height": 21,
-            "id": 21,
-            "library": 4,
-            "lose": "Try drawing a symmetical pattern.",
-            "maxplay": 10,
-            "maxred": 20,
-            "mingreen": 0,
-            "name": "Level 21: Defensiveness",
-            "playables": [
-                {
-                    "h": 3,
-                    "w": 4,
-                    "x": 9,
-                    "y": 14
-                },
-                {
-                    "h": 3,
-                    "w": 4,
-                    "x": 9,
-                    "y": 4
-                }
-            ],
-            "rank": [],
-            "width": 22,
-            "win": "Who's awesome? You're awesome!"
-        },
-        "3": {
-            "antigoal": [],
-            "arena": [
-                [
-                    12,
-                    11
-                ],
-                [
-                    12,
-                    12
-                ],
-                [
-                    13,
-                    11
-                ],
-                [
-                    13,
-                    12
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 1,
-            "deadzones": [],
-            "description": "There's something in the way of your <strong>Goal</strong>!<br /><br />If you draw a <strong>Glider</strong> in both boxes, one will destroy the barrier and the other will activate the <strong>Goal</strong>.",
-            "goal": [
-                {
-                    "x": 15,
-                    "y": 15
-                }
-            ],
-            "height": 16,
-            "id": 3,
-            "library": 2,
-            "lose": "N/A",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Tutorial 3: Build Two Gliders",
-            "playables": [
-                {
-                    "h": 3,
-                    "w": 3,
-                    "x": 1,
-                    "y": 1
-                },
-                {
-                    "h": 3,
-                    "w": 3,
-                    "x": 7,
-                    "y": 7
-                }
-            ],
-            "rank": [
-                {
-                    "p": 10,
-                    "r": "a"
-                }
-            ],
-            "width": 16,
-            "win": "Breaking structures can save you."
-        },
-        "4": {
-            "antigoal": [],
-            "arena": [
-                [
-                    7,
-                    7
-                ],
-                [
-                    8,
-                    7
-                ],
-                [
-                    9,
-                    7
-                ],
-                [
-                    12,
-                    7
-                ],
-                [
-                    13,
-                    7
-                ],
-                [
-                    14,
-                    7
-                ],
-                [
-                    7,
-                    8
-                ],
-                [
-                    14,
-                    8
-                ],
-                [
-                    8,
-                    9
-                ],
-                [
-                    13,
-                    9
-                ],
-                [
-                    8,
-                    12
-                ],
-                [
-                    13,
-                    12
-                ],
-                [
-                    7,
-                    13
-                ],
-                [
-                    14,
-                    13
-                ],
-                [
-                    7,
-                    14
-                ],
-                [
-                    8,
-                    14
-                ],
-                [
-                    9,
-                    14
-                ],
-                [
-                    12,
-                    14
-                ],
-                [
-                    13,
-                    14
-                ],
-                [
-                    14,
-                    14
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 1,
-            "deadzones": [],
-            "description": "Flip or rotate anything you draw to flip or rotate the outcome.<br /><img src=\"images/library/glider.png\" /><br />Tip: If you ever see <strong>multiple goals</strong>, you only need to <strong>activate one</strong> to win.",
-            "goal": [
-                {
-                    "x": 22,
-                    "y": 22
-                },
-                {
-                    "x": 1,
-                    "y": 1
-                },
-                {
-                    "x": 22,
-                    "y": 1
-                },
-                {
-                    "x": 1,
-                    "y": 22
-                }
-            ],
-            "height": 24,
-            "id": 4,
-            "library": 2,
-            "lose": "N/A",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Tutorial 4: Symmetry",
-            "playables": [],
-            "rank": [],
-            "width": 24,
-            "win": "Flipping and Rotating can be very useful."
-        },
-        "5": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 1,
-            "deadzones": [],
-            "description": "Make use of rotation to beat this level!<br /><img src=\"images/content/glider-nw.png\" /><br />",
-            "goal": [
-                {
-                    "x": 1,
-                    "y": 1
-                }
-            ],
-            "height": 16,
-            "id": 5,
-            "library": 2,
-            "lose": "N/A",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Tutorial 5: Flip your Glider",
-            "playables": [
-                {
-                    "h": 4,
-                    "w": 4,
-                    "x": 12,
-                    "y": 12
-                }
-            ],
-            "rank": [
-                {
-                    "g": 45,
-                    "r": "a"
-                },
-                {
-                    "g": 44,
-                    "r": "b"
-                },
-                {
-                    "g": 43,
-                    "r": "c"
-                },
-                {
-                    "g": 42,
-                    "r": "d"
-                }
-            ],
-            "width": 16,
-            "win": "Don't be afraid to experiment!"
-        },
-        "6": {
-            "antigoal": [],
-            "arena": [
-                [
-                    17,
-                    15
-                ],
-                [
-                    18,
-                    15
-                ],
-                [
-                    19,
-                    15
-                ],
-                [
-                    2,
-                    16
-                ],
-                [
-                    3,
-                    16
-                ],
-                [
-                    4,
-                    16
-                ],
-                [
-                    17,
-                    16
-                ],
-                [
-                    20,
-                    16
-                ],
-                [
-                    2,
-                    17
-                ],
-                [
-                    5,
-                    17
-                ],
-                [
-                    17,
-                    17
-                ],
-                [
-                    2,
-                    18
-                ],
-                [
-                    17,
-                    18
-                ],
-                [
-                    2,
-                    19
-                ],
-                [
-                    18,
-                    19
-                ],
-                [
-                    20,
-                    19
-                ],
-                [
-                    3,
-                    20
-                ],
-                [
-                    5,
-                    20
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 1,
-            "deadzones": [],
-            "description": "This level has two <strong>Spaceships</strong>. Just like a Glider, a Spaceship can move across the playing field and retain its original shape.<br /><img src=\"images/content/spaceship-n.png\" /><br />Depending on a Spaceships distance from a wall, it will <strong>release a Glider</strong> either to the right or the left when it crashes.",
-            "goal": [
-                {
-                    "x": 11,
-                    "y": 8
-                }
-            ],
-            "height": 24,
-            "id": 6,
-            "library": 3,
-            "lose": "N/A",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Tutorial 6: Spaceship",
-            "playables": [],
-            "rank": [],
-            "width": 24,
-            "win": "Move a Spaceship by one tile to change Glider direction."
-        },
-        "7": {
-            "antigoal": [],
-            "arena": [],
-            "autowin": 0,
-            "chapter": 1,
-            "deadzones": [
-                {
-                    "h": 2,
-                    "w": 8,
-                    "x": 0,
-                    "y": 8
-                }
-            ],
-            "description": "Using your newfound knowledge of Spaceships, try to activate the goal in this level.<br /><img src=\"images/content/spaceship-n.png\" /><br />Tip: Notice the red rectangle. This is called a <strong>Deadzone</strong>, no cells will survive inside of it. These will have the same effect as the edge of a map when something collides with it.",
-            "goal": [
-                {
-                    "x": 3,
-                    "y": 7
-                }
-            ],
-            "height": 16,
-            "id": 7,
-            "library": 3,
-            "lose": "N/A",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Tutorial 7: Build a Spaceship",
-            "playables": [
-                {
-                    "h": 5,
-                    "w": 4,
-                    "x": 9,
-                    "y": 11
-                }
-            ],
-            "rank": [
-                {
-                    "g": 89,
-                    "r": "a"
-                },
-                {
-                    "g": 91,
-                    "r": "b"
-                },
-                {
-                    "g": 93,
-                    "r": "c"
-                },
-                {
-                    "g": 95,
-                    "r": "d"
-                },
-                {
-                    "g": 97,
-                    "r": "e"
-                }
-            ],
-            "width": 16,
-            "win": "Spaceships releasing Gliders can be very useful!"
-        },
-        "8": {
-            "antigoal": [],
-            "arena": [
-                [
-                    12,
-                    17
-                ],
-                [
-                    13,
-                    17
-                ],
-                [
-                    14,
-                    17
-                ],
-                [
-                    11,
-                    18
-                ],
-                [
-                    14,
-                    18
-                ],
-                [
-                    10,
-                    19
-                ],
-                [
-                    9,
-                    20
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 1,
-            "deadzones": [],
-            "description": "This is the final level of the Tutorial.<br /><br />The shape on this screen is called the <strong>Multum in Parvo</strong>.<br /><img src=\"images/library/multum-in-parvo.png\" /><br />Notice how something simple can become incredibly complex and seemingly unpredicable.",
-            "goal": [
-                {
-                    "x": 22,
-                    "y": 1
-                }
-            ],
-            "height": 24,
-            "id": 8,
-            "library": 4,
-            "lose": "N/A",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Tutorial 8: Chaos from Order",
-            "playables": [],
-            "rank": [],
-            "width": 24,
-            "win": "Wasn't that fun to watch?"
-        },
-        "9": {
-            "antigoal": [],
-            "arena": [
-                [
-                    5,
-                    6
-                ],
-                [
-                    10,
-                    6
-                ],
-                [
-                    3,
-                    7
-                ],
-                [
-                    4,
-                    7
-                ],
-                [
-                    6,
-                    7
-                ],
-                [
-                    7,
-                    7
-                ],
-                [
-                    8,
-                    7
-                ],
-                [
-                    9,
-                    7
-                ],
-                [
-                    11,
-                    7
-                ],
-                [
-                    12,
-                    7
-                ],
-                [
-                    5,
-                    8
-                ],
-                [
-                    10,
-                    8
-                ]
-            ],
-            "autowin": 0,
-            "chapter": 2,
-            "deadzones": [],
-            "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single unit, and the outcome can be completely different.",
-            "goal": [
-                {
-                    "x": 2,
-                    "y": 5
-                },
-                {
-                    "x": 13,
-                    "y": 5
-                }
-            ],
-            "height": 24,
-            "id": 9,
-            "library": 4,
-            "lose": "N/A",
-            "maxplay": 0,
-            "maxred": 0,
-            "mingreen": 0,
-            "name": "Level 9: Fanblades I",
-            "playables": [
-                {
-                    "h": 5,
-                    "w": 16,
-                    "x": 0,
-                    "y": 19
-                }
-            ],
-            "rank": [],
-            "width": 16,
-            "win": "Congrats! Your solution might be useful again..."
+    "2": {
+      "id": 2,
+      "name": "Tutorial 2: Build a Glider",
+      "chapter": 1,
+      "width": 16,
+      "height": 16,
+      "library": 1,
+      "goal": [
+        {
+          "x": 13,
+          "y": 13
         }
-    },
-    "dictionary": {
-        "ad_min_level": 12,
-        "ad_mod_level": 3,
-        "admob": "pub-3769178507272044",
-        "admob_android": "ca-app-pub-3769178507272044/5009054623",
-        "admob_ios": "ca-app-pub-3769178507272044/7962521020",
-        "adsense": "TODO",
-        "confirm_reset": "Are you SURE you would like to <strong>destroy</strong> all your progress and settings and start over?",
-        "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green <strong>Playable Zone</strong> to toggle cells.</p>\n<p>No cells can be alive in the red <strong>Dead Zones</strong>.</p>\n<p>The rainbow tiles are <strong class='cycle'>Goal</strong> tiles and need to be activiated to beat levels.</p>\n<p>The strobing red tiles are <strong class='red-cycle'>Anti Goal</strong> tiles and if activated you lose.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n  <li>Any live cell with fewer than two live neighbours dies.</li>\n  <li>Any live cell with two or three live neighbours lives.</li>\n  <li>Any live cell with more than three live neighbours dies.</li>\n  <li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life</a> on WikiPedia.</p>",
-        "last_level_complete": "<h3>You Won!</h3>\n\n<p>Congratulations on beating the final level of Strategic Game of Life!</p>\n<p>You've successfully beaten every level with a rank of <span class='cycle'>A</span>!</p>\n<p>If enough people enjoy this game I'll add more levels.</p>",
-        "last_level_incomplete": "<h3>You Won!</h3>\n\n<p>Congratulations on beating the final level of Strategic Game of Life!</p>\n<p>Be sure to go back and play each level and achieve an <span class='cycle'>A</span> ranking!</p>\n<p>If enough people enjoy this game I'll add more levels.</p>",
-        "mixpanel": "f598ce903232263c47ca516bff05c18b"
-    },
-    "library": {
-        "1": {
-            "id": 1,
-            "image": "images/library/glider.png",
-            "name": "Glider (45&deg;)",
-            "url": "http://www.conwaylife.com/wiki/Glider"
-        },
-        "10": {
-            "id": 10,
-            "image": "images/library/gliders-by-the-dozen.png",
-            "name": "Gliders by the Dozen",
-            "url": "http://www.conwaylife.com/wiki/Gliders_by_the_dozen"
-        },
-        "11": {
-            "id": 11,
-            "image": "images/library/orion-2.png",
-            "name": "Orion 2",
-            "url": "http://www.conwaylife.com/wiki/Orion_2"
-        },
-        "2": {
-            "id": 2,
-            "image": "images/library/still-lifes.png",
-            "name": "Still Lifes",
-            "url": "http://www.conwaylife.com/wiki/Still_life"
-        },
-        "3": {
-            "id": 3,
-            "image": "images/library/spaceship.png",
-            "name": "Spaceship (90&deg;)",
-            "url": "http://www.conwaylife.com/wiki/Spaceship"
-        },
-        "4": {
-            "id": 4,
-            "image": "images/library/multum-in-parvo.png",
-            "name": "Multum in Parvo",
-            "url": "http://www.conwaylife.com/wiki/Multum_in_parvo"
-        },
-        "5": {
-            "id": 5,
-            "image": "images/library/pulsar.png",
-            "name": "Blinker",
-            "url": "http://www.conwaylife.com/wiki/Blinker"
-        },
-        "6": {
-            "id": 6,
-            "image": "images/library/glider-gun.png",
-            "name": "Glider Gun",
-            "url": "http://www.conwaylife.com/wiki/Gun"
-        },
-        "7": {
-            "id": 7,
-            "image": "images/library/pentadecathlon.png",
-            "name": "Pentadecathlon",
-            "url": "http://www.conwaylife.com/wiki/Pentadecathlon"
-        },
-        "8": {
-            "id": 8,
-            "image": "images/library/eater.png",
-            "name": "Eater",
-            "url": "http://www.conwaylife.com/wiki/Eater"
-        },
-        "9": {
-            "id": 9,
-            "image": "images/library/sparky.png",
-            "name": "Sparky",
-            "url": "http://www.conwaylife.com/wiki/Sparky"
+      ],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [
+        {
+          "r": "a",
+          "p": 5
         }
-    },
-    "ranks": {
-        "a": {
-            "code": "A",
-            "color": "#ffffff",
-            "id": "a",
-            "image": "images/ranks/a.png",
-            "name": "Expert",
-            "score": 5,
-            "type": "default"
-        },
-        "b": {
-            "code": "B",
-            "color": "#dddddd",
-            "id": "b",
-            "image": "images/ranks/b.png",
-            "name": "Professional",
-            "score": 4,
-            "type": ""
-        },
-        "c": {
-            "code": "C",
-            "color": "#bbbbbb",
-            "id": "c",
-            "image": "images/ranks/c.png",
-            "name": "Average",
-            "score": 3,
-            "type": ""
-        },
-        "d": {
-            "code": "D",
-            "color": "#999999",
-            "id": "d",
-            "image": "images/ranks/d.png",
-            "name": "Unremarkable",
-            "score": 2,
-            "type": ""
-        },
-        "e": {
-            "code": "E",
-            "color": "#777777",
-            "id": "e",
-            "image": "images/ranks/e.png",
-            "name": "Poor",
-            "score": 1,
-            "type": "worst"
-        },
-        "f": {
-            "code": "F",
-            "color": "#cc0000",
-            "id": "f",
-            "image": "images/ranks/f.png",
-            "name": "Failure",
-            "score": 0,
-            "type": "failure"
-        },
-        "x": {
-            "code": "X",
-            "color": "#555555",
-            "id": "x",
-            "image": "images/ranks/x.png",
-            "name": "Unplayed",
-            "score": 0,
-            "type": "unplayed"
+      ],
+      "playables": [
+        {
+          "x": 3,
+          "y": 3,
+          "w": 3,
+          "h": 3
         }
+      ],
+      "deadzones": [],
+      "arena": [],
+      "win": "The Glider is your new best friend.",
+      "lose": "N/A",
+      "description": "Try to recreate that same <strong>Glider</strong> pattern you saw in the previous level by tapping on the field.<br /><img src=\"images/content/glider-se.png\" /><br />For your convenience, its pattern has been added to your <strong>Library</strong>.<br /><br />You can only alter the state of cells within the green <strong>Playable Zones</strong>."
     },
-    "version": "20150820214413"
+    "3": {
+      "id": 3,
+      "name": "Tutorial 3: Build Two Gliders",
+      "chapter": 1,
+      "width": 16,
+      "height": 16,
+      "library": 2,
+      "goal": [
+        {
+          "x": 15,
+          "y": 15
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [
+        {
+          "r": "a",
+          "p": 10
+        }
+      ],
+      "playables": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 3,
+          "h": 3
+        },
+        {
+          "x": 7,
+          "y": 7,
+          "w": 3,
+          "h": 3
+        }
+      ],
+      "deadzones": [],
+      "arena": [
+        [
+          12,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          11
+        ],
+        [
+          13,
+          12
+        ]
+      ],
+      "win": "Breaking structures can save you.",
+      "lose": "N/A",
+      "description": "There's something in the way of your <strong>Goal</strong>!<br /><br />If you draw a <strong>Glider</strong> in both boxes, one will destroy the barrier and the other will activate the <strong>Goal</strong>."
+    },
+    "4": {
+      "id": 4,
+      "name": "Tutorial 4: Symmetry",
+      "chapter": 1,
+      "width": 24,
+      "height": 24,
+      "library": 2,
+      "goal": [
+        {
+          "x": 22,
+          "y": 22
+        },
+        {
+          "x": 1,
+          "y": 1
+        },
+        {
+          "x": 22,
+          "y": 1
+        },
+        {
+          "x": 1,
+          "y": 22
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [],
+      "playables": [],
+      "deadzones": [],
+      "arena": [
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          13,
+          7
+        ],
+        [
+          14,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          14,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          13,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          13,
+          12
+        ],
+        [
+          7,
+          13
+        ],
+        [
+          14,
+          13
+        ],
+        [
+          7,
+          14
+        ],
+        [
+          8,
+          14
+        ],
+        [
+          9,
+          14
+        ],
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          14
+        ]
+      ],
+      "win": "Flipping and Rotating can be very useful.",
+      "lose": "N/A",
+      "description": "Flip or rotate anything you draw to flip or rotate the outcome.<br /><img src=\"images/library/glider.png\" /><br />Tip: If you ever see <strong>multiple goals</strong>, you only need to <strong>activate one</strong> to win."
+    },
+    "5": {
+      "id": 5,
+      "name": "Tutorial 5: Flip your Glider",
+      "chapter": 1,
+      "width": 16,
+      "height": 16,
+      "library": 2,
+      "goal": [
+        {
+          "x": 1,
+          "y": 1
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [
+        {
+          "r": "a",
+          "g": 45
+        },
+        {
+          "r": "b",
+          "g": 44
+        },
+        {
+          "r": "c",
+          "g": 43
+        },
+        {
+          "r": "d",
+          "g": 42
+        }
+      ],
+      "playables": [
+        {
+          "x": 12,
+          "y": 12,
+          "w": 4,
+          "h": 4
+        }
+      ],
+      "deadzones": [],
+      "arena": [],
+      "win": "Don't be afraid to experiment!",
+      "lose": "N/A",
+      "description": "Make use of rotation to beat this level!<br /><img src=\"images/content/glider-nw.png\" /><br />"
+    },
+    "6": {
+      "id": 6,
+      "name": "Tutorial 6: Spaceship",
+      "chapter": 1,
+      "width": 24,
+      "height": 24,
+      "library": 3,
+      "goal": [
+        {
+          "x": 11,
+          "y": 8
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [],
+      "playables": [],
+      "deadzones": [],
+      "arena": [
+        [
+          17,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          19,
+          15
+        ],
+        [
+          2,
+          16
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          17,
+          16
+        ],
+        [
+          20,
+          16
+        ],
+        [
+          2,
+          17
+        ],
+        [
+          5,
+          17
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          2,
+          18
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          2,
+          19
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          20,
+          19
+        ],
+        [
+          3,
+          20
+        ],
+        [
+          5,
+          20
+        ]
+      ],
+      "win": "Move a Spaceship by one tile to change Glider direction.",
+      "lose": "N/A",
+      "description": "This level has two <strong>Spaceships</strong>. Just like a Glider, a Spaceship can move across the playing field and retain its original shape.<br /><img src=\"images/content/spaceship-n.png\" /><br />Depending on a Spaceships distance from a wall, it will <strong>release a Glider</strong> either to the right or the left when it crashes."
+    },
+    "7": {
+      "id": 7,
+      "name": "Tutorial 7: Build a Spaceship",
+      "chapter": 1,
+      "width": 16,
+      "height": 16,
+      "library": 3,
+      "goal": [
+        {
+          "x": 3,
+          "y": 7
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [
+        {
+          "r": "a",
+          "g": 89
+        },
+        {
+          "r": "b",
+          "g": 91
+        },
+        {
+          "r": "c",
+          "g": 93
+        },
+        {
+          "r": "d",
+          "g": 95
+        },
+        {
+          "r": "e",
+          "g": 97
+        }
+      ],
+      "playables": [
+        {
+          "x": 9,
+          "y": 11,
+          "w": 4,
+          "h": 5
+        }
+      ],
+      "deadzones": [
+        {
+          "x": 0,
+          "y": 8,
+          "w": 8,
+          "h": 2
+        }
+      ],
+      "arena": [],
+      "win": "Spaceships releasing Gliders can be very useful!",
+      "lose": "N/A",
+      "description": "Using your newfound knowledge of Spaceships, try to activate the goal in this level.<br /><img src=\"images/content/spaceship-n.png\" /><br />Tip: Notice the red rectangle. This is called a <strong>Deadzone</strong>, no cells will survive inside of it. These will have the same effect as the edge of a map when something collides with it."
+    },
+    "8": {
+      "id": 8,
+      "name": "Tutorial 8: Chaos from Order",
+      "chapter": 1,
+      "width": 24,
+      "height": 24,
+      "library": 4,
+      "goal": [
+        {
+          "x": 22,
+          "y": 1
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [],
+      "playables": [],
+      "deadzones": [],
+      "arena": [
+        [
+          12,
+          17
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          11,
+          18
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          9,
+          20
+        ]
+      ],
+      "win": "Wasn't that fun to watch?",
+      "lose": "N/A",
+      "description": "This is the final level of the Tutorial.<br /><br />The shape on this screen is called the <strong>Multum in Parvo</strong>.<br /><img src=\"images/library/multum-in-parvo.png\" /><br />Notice how something simple can become incredibly complex and seemingly unpredicable."
+    },
+    "9": {
+      "id": 9,
+      "name": "Level 9: Fanblades I",
+      "chapter": 2,
+      "width": 16,
+      "height": 24,
+      "library": 4,
+      "goal": [
+        {
+          "x": 2,
+          "y": 5
+        },
+        {
+          "x": 13,
+          "y": 5
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [],
+      "playables": [
+        {
+          "x": 0,
+          "y": 19,
+          "w": 16,
+          "h": 5
+        }
+      ],
+      "deadzones": [],
+      "arena": [
+        [
+          5,
+          6
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          10,
+          8
+        ]
+      ],
+      "win": "Congrats! Your solution might be useful again...",
+      "lose": "N/A",
+      "description": "Alright, it's time for your first real mission! Try to tear your way through the barrier and get to the <strong>Goal</strong>!<br /><br />If your first attempt fails, remember that you can move something you build by a single unit, and the outcome can be completely different."
+    },
+    "10": {
+      "id": 10,
+      "name": "Level 10: Fanblades II",
+      "chapter": 2,
+      "width": 19,
+      "height": 24,
+      "library": 4,
+      "goal": [
+        {
+          "x": 9,
+          "y": 2
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 10,
+      "rank": [
+        {
+          "r": "a",
+          "g": 60
+        },
+        {
+          "r": "b",
+          "g": 61
+        },
+        {
+          "r": "c",
+          "g": 62
+        },
+        {
+          "r": "d",
+          "g": 63
+        },
+        {
+          "r": "e",
+          "g": 64
+        }
+      ],
+      "playables": [
+        {
+          "x": 0,
+          "y": 19,
+          "w": 19,
+          "h": 5
+        }
+      ],
+      "deadzones": [],
+      "arena": [
+        [
+          9,
+          6
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          12,
+          6
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ]
+      ],
+      "win": "You did it!",
+      "lose": "N/A",
+      "description": "This level is pretty similar to the previous one. Activate that goal!<br /><br />Tip: Notice how this level is limited to playing a maximum of 10 cells in the green playable zone."
+    },
+    "11": {
+      "id": 11,
+      "name": "Level 11: Tables",
+      "chapter": 2,
+      "width": 16,
+      "height": 24,
+      "library": 4,
+      "goal": [
+        {
+          "x": 7,
+          "y": 1
+        },
+        {
+          "x": 8,
+          "y": 1
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [],
+      "playables": [
+        {
+          "x": 0,
+          "y": 16,
+          "w": 16,
+          "h": 8
+        }
+      ],
+      "deadzones": [],
+      "arena": [
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          13,
+          11
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          12
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          15,
+          15
+        ]
+      ],
+      "win": "If you didn't get an <strong>A</strong> be sure to retry!",
+      "lose": "N/A",
+      "description": "There's some fun stuff going on in this level.<br /><br />Tip: Some levels can be completed by activating a single tile!"
+    },
+    "12": {
+      "id": 12,
+      "name": "Level 12: The Antigoal",
+      "chapter": 2,
+      "width": 16,
+      "height": 16,
+      "library": 4,
+      "goal": [],
+      "autowin": 50,
+      "antigoal": [
+        {
+          "x": 13,
+          "y": 13
+        }
+      ],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [
+        {
+          "r": "a",
+          "p": 3
+        },
+        {
+          "r": "b",
+          "p": 4
+        },
+        {
+          "r": "c",
+          "p": 5
+        }
+      ],
+      "playables": [
+        {
+          "x": 0,
+          "y": 7,
+          "w": 5,
+          "h": 5
+        }
+      ],
+      "deadzones": [],
+      "arena": [
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "win": "Never let those pesky Anti Goals activate!",
+      "lose": "Intercept the Glider to win.",
+      "description": "This mission is a bit different than the ones you've played before. This time, instead of activating a goal, you're trying to NOT activate the blinking red <strong class=\"red-cycle\">Anti Goal</strong>!<br /><br />To win, you must survive 50 generations without the Anti Goal activating."
+    },
+    "13": {
+      "id": 13,
+      "name": "Level 13: Interceptor I",
+      "chapter": 2,
+      "width": 13,
+      "height": 24,
+      "library": 4,
+      "goal": [
+        {
+          "x": 3,
+          "y": 23
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [
+        {
+          "r": "a",
+          "p": 5
+        },
+        {
+          "r": "b",
+          "p": 7
+        },
+        {
+          "r": "c",
+          "p": 9
+        }
+      ],
+      "playables": [
+        {
+          "x": 8,
+          "y": 13,
+          "w": 5,
+          "h": 5
+        }
+      ],
+      "deadzones": [
+        {
+          "x": 6,
+          "y": 19,
+          "w": 1,
+          "h": 5
+        }
+      ],
+      "arena": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          19
+        ],
+        [
+          4,
+          19
+        ],
+        [
+          3,
+          20
+        ],
+        [
+          4,
+          20
+        ]
+      ],
+      "win": "You Won!",
+      "lose": "N/A",
+      "description": "Destroy the Still Life so the Spaceship can get to the Goal!"
+    },
+    "14": {
+      "id": 14,
+      "name": "Level 14: Interceptor II",
+      "chapter": 2,
+      "width": 13,
+      "height": 24,
+      "library": 4,
+      "goal": [],
+      "autowin": 40,
+      "antigoal": [
+        {
+          "x": 3,
+          "y": 23
+        }
+      ],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [
+        {
+          "r": "a",
+          "p": 5
+        },
+        {
+          "r": "b",
+          "p": 7
+        },
+        {
+          "r": "c",
+          "p": 9
+        }
+      ],
+      "playables": [
+        {
+          "x": 8,
+          "y": 13,
+          "w": 5,
+          "h": 5
+        }
+      ],
+      "deadzones": [
+        {
+          "x": 6,
+          "y": 19,
+          "w": 1,
+          "h": 5
+        }
+      ],
+      "arena": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "win": "You Won!",
+      "lose": "Kill that Spaceship!",
+      "description": "This level may look similar to the previous one, but your mission is differen. This time stop the Spaceship from getting to the Anti Goal!"
+    },
+    "15": {
+      "id": 15,
+      "name": "Level 15: Interceptor III",
+      "chapter": 2,
+      "width": 21,
+      "height": 21,
+      "library": 4,
+      "goal": [
+        {
+          "x": 8,
+          "y": 10
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [
+        {
+          "x": 10,
+          "y": 10
+        }
+      ],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [
+        {
+          "r": "a",
+          "p": 3
+        },
+        {
+          "r": "b",
+          "p": 4
+        },
+        {
+          "r": "c",
+          "p": 5
+        }
+      ],
+      "playables": [
+        {
+          "x": 16,
+          "y": 6,
+          "w": 5,
+          "h": 9
+        }
+      ],
+      "deadzones": [],
+      "arena": [
+        [
+          16,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          19,
+          1
+        ],
+        [
+          16,
+          2
+        ],
+        [
+          20,
+          2
+        ],
+        [
+          16,
+          3
+        ],
+        [
+          17,
+          4
+        ],
+        [
+          20,
+          4
+        ],
+        [
+          17,
+          16
+        ],
+        [
+          20,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          16,
+          18
+        ],
+        [
+          20,
+          18
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          17,
+          19
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          19,
+          19
+        ]
+      ],
+      "win": "You Won!",
+      "lose": "The Anti Goal was activated :(",
+      "description": "Those two space ships will create gliders which cancel each other out and prevent the Goal from activating.<br /><br />Can you figure out how to activate the goal?"
+    },
+    "16": {
+      "id": 16,
+      "name": "Level 16: Interceptor IV",
+      "chapter": 2,
+      "width": 21,
+      "height": 21,
+      "library": 4,
+      "goal": [
+        {
+          "x": 8,
+          "y": 10
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [
+        {
+          "x": 6,
+          "y": 10
+        }
+      ],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [],
+      "playables": [
+        {
+          "x": 0,
+          "y": 6,
+          "w": 5,
+          "h": 9
+        }
+      ],
+      "deadzones": [],
+      "arena": [
+        [
+          16,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          19,
+          1
+        ],
+        [
+          16,
+          2
+        ],
+        [
+          20,
+          2
+        ],
+        [
+          16,
+          3
+        ],
+        [
+          17,
+          4
+        ],
+        [
+          20,
+          4
+        ],
+        [
+          17,
+          16
+        ],
+        [
+          20,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          16,
+          18
+        ],
+        [
+          20,
+          18
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          17,
+          19
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          19,
+          19
+        ]
+      ],
+      "win": "You Won!",
+      "lose": "The Anti Goal was activated :(",
+      "description": "Much like the previous level the two Spaceships will generate Gliders which cancel each other out.<br /><br />Depending on your approach last level, you may be able to use it again."
+    },
+    "17": {
+      "id": 17,
+      "name": "Level 17: Interrupt",
+      "chapter": 2,
+      "width": 18,
+      "height": 18,
+      "library": 4,
+      "goal": [],
+      "autowin": 20,
+      "antigoal": [
+        {
+          "x": 10,
+          "y": 14
+        }
+      ],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [
+        {
+          "r": "a",
+          "p": 1
+        }
+      ],
+      "playables": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 18,
+          "h": 6
+        }
+      ],
+      "deadzones": [],
+      "arena": [
+        [
+          3,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          13,
+          11
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          7,
+          13
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          7,
+          14
+        ],
+        [
+          9,
+          14
+        ],
+        [
+          12,
+          14
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          10,
+          16
+        ]
+      ],
+      "win": "You protected the Stillater!",
+      "lose": "Stop that Stillater destroying Glider!",
+      "description": "Stop the Glider from colliding with that complex structure and activating the Anti Goal."
+    },
+    "18": {
+      "id": 18,
+      "name": "Level 18: Tub Test Tube Baby",
+      "chapter": 2,
+      "width": 10,
+      "height": 14,
+      "library": 4,
+      "goal": [
+        {
+          "x": 4,
+          "y": 4
+        },
+        {
+          "x": 5,
+          "y": 4
+        }
+      ],
+      "autowin": 0,
+      "antigoal": [
+        {
+          "x": 1,
+          "y": 1
+        },
+        {
+          "x": 8,
+          "y": 1
+        }
+      ],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [
+        {
+          "r": "a",
+          "p": 5,
+          "g": 10
+        }
+      ],
+      "playables": [
+        {
+          "x": 0,
+          "y": 9,
+          "w": 10,
+          "h": 5
+        }
+      ],
+      "deadzones": [],
+      "arena": [
+        [
+          1,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "win": "Take that, Baby face!",
+      "lose": "I can't believe you activated an Anti Goal!",
+      "description": "This is a goofy looking level, but could be a little tricky. Activate the Goal before an Anti Goal is activated."
+    },
+    "19": {
+      "id": 19,
+      "name": "Level 19: Glider Eater",
+      "chapter": 2,
+      "width": 19,
+      "height": 15,
+      "library": 4,
+      "goal": [],
+      "autowin": 30,
+      "antigoal": [
+        {
+          "x": 12,
+          "y": 9
+        }
+      ],
+      "mingreen": 0,
+      "maxred": 0,
+      "maxplay": 0,
+      "rank": [
+        {
+          "r": "a",
+          "p": 3
+        }
+      ],
+      "playables": [
+        {
+          "x": 0,
+          "y": 9,
+          "w": 8,
+          "h": 6
+        }
+      ],
+      "deadzones": [],
+      "arena": [
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          14,
+          11
+        ],
+        [
+          16,
+          11
+        ],
+        [
+          15,
+          12
+        ],
+        [
+          17,
+          12
+        ],
+        [
+          17,
+          13
+        ],
+        [
+          17,
+          14
+        ],
+        [
+          18,
+          14
+        ]
+      ],
+      "win": "Take that, Glider Eater!",
+      "lose": "It's tricky, but you can do it!",
+      "description": "This level has a Glider Eater, and when it eats the Glider it will cause the Anti Goal to activate. Can you disrupt the Glider Eater in time?"
+    },
+    "20": {
+      "id": 20,
+      "name": "Level 20: Fill in The Gap",
+      "chapter": 2,
+      "width": 22,
+      "height": 21,
+      "library": 4,
+      "goal": [],
+      "autowin": 0,
+      "antigoal": [],
+      "mingreen": 40,
+      "maxred": 0,
+      "maxplay": 10,
+      "rank": [
+        {
+          "r": "a",
+          "p": 10,
+          "g": 13
+        }
+      ],
+      "playables": [
+        {
+          "x": 9,
+          "y": 12,
+          "w": 4,
+          "h": 2
+        },
+        {
+          "x": 9,
+          "y": 7,
+          "w": 4,
+          "h": 2
+        }
+      ],
+      "deadzones": [],
+      "arena": [
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          11
+        ]
+      ],
+      "win": "Way to breed those Green Cells!",
+      "lose": "N/A",
+      "description": "In this level you'll need to get 40 Green Cells to win.<br /><br />Green Cells are created by you in green Playable Zones, and breed from mostly Green cells.<br /><br />Red Cells breed from other Red Cells."
+    },
+    "21": {
+      "id": 21,
+      "name": "Level 21: Defensiveness",
+      "chapter": 2,
+      "width": 22,
+      "height": 21,
+      "library": 4,
+      "goal": [],
+      "autowin": 20,
+      "antigoal": [],
+      "mingreen": 0,
+      "maxred": 20,
+      "maxplay": 10,
+      "rank": [],
+      "playables": [
+        {
+          "x": 9,
+          "y": 14,
+          "w": 4,
+          "h": 3
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "w": 4,
+          "h": 3
+        }
+      ],
+      "deadzones": [],
+      "arena": [
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          11
+        ]
+      ],
+      "win": "Who's awesome? You're awesome!",
+      "lose": "Try drawing a symmetical pattern.",
+      "description": "Prevent the Red Cells from achieving a population of 20! You will win once the 20th generation is met. Be careful, you can only play 10 Green Cells."
+    }
+  },
+  "library": {
+    "1": {
+      "id": 1,
+      "name": "Glider (45&deg;)",
+      "image": "images/library/glider.png",
+      "url": "http://www.conwaylife.com/wiki/Glider"
+    },
+    "2": {
+      "id": 2,
+      "name": "Still Lifes",
+      "image": "images/library/still-lifes.png",
+      "url": "http://www.conwaylife.com/wiki/Still_life"
+    },
+    "3": {
+      "id": 3,
+      "name": "Spaceship (90&deg;)",
+      "image": "images/library/spaceship.png",
+      "url": "http://www.conwaylife.com/wiki/Spaceship"
+    },
+    "4": {
+      "id": 4,
+      "name": "Multum in Parvo",
+      "image": "images/library/multum-in-parvo.png",
+      "url": "http://www.conwaylife.com/wiki/Multum_in_parvo"
+    },
+    "5": {
+      "id": 5,
+      "name": "Blinker",
+      "image": "images/library/pulsar.png",
+      "url": "http://www.conwaylife.com/wiki/Blinker"
+    },
+    "6": {
+      "id": 6,
+      "name": "Glider Gun",
+      "image": "images/library/glider-gun.png",
+      "url": "http://www.conwaylife.com/wiki/Gun"
+    },
+    "7": {
+      "id": 7,
+      "name": "Pentadecathlon",
+      "image": "images/library/pentadecathlon.png",
+      "url": "http://www.conwaylife.com/wiki/Pentadecathlon"
+    },
+    "8": {
+      "id": 8,
+      "name": "Eater",
+      "image": "images/library/eater.png",
+      "url": "http://www.conwaylife.com/wiki/Eater"
+    },
+    "9": {
+      "id": 9,
+      "name": "Sparky",
+      "image": "images/library/sparky.png",
+      "url": "http://www.conwaylife.com/wiki/Sparky"
+    },
+    "10": {
+      "id": 10,
+      "name": "Gliders by the Dozen",
+      "image": "images/library/gliders-by-the-dozen.png",
+      "url": "http://www.conwaylife.com/wiki/Gliders_by_the_dozen"
+    },
+    "11": {
+      "id": 11,
+      "name": "Orion 2",
+      "image": "images/library/orion-2.png",
+      "url": "http://www.conwaylife.com/wiki/Orion_2"
+    }
+  },
+  "ranks": {
+    "a": {
+      "id": "a",
+      "name": "Expert",
+      "code": "A",
+      "image": "images/ranks/a.png",
+      "color": "#ffffff",
+      "type": "default",
+      "score": 5
+    },
+    "b": {
+      "id": "b",
+      "name": "Professional",
+      "code": "B",
+      "image": "images/ranks/b.png",
+      "color": "#dddddd",
+      "type": "",
+      "score": 4
+    },
+    "c": {
+      "id": "c",
+      "name": "Average",
+      "code": "C",
+      "image": "images/ranks/c.png",
+      "color": "#bbbbbb",
+      "type": "",
+      "score": 3
+    },
+    "d": {
+      "id": "d",
+      "name": "Unremarkable",
+      "code": "D",
+      "image": "images/ranks/d.png",
+      "color": "#999999",
+      "type": "",
+      "score": 2
+    },
+    "e": {
+      "id": "e",
+      "name": "Poor",
+      "code": "E",
+      "image": "images/ranks/e.png",
+      "color": "#777777",
+      "type": "worst",
+      "score": 1
+    },
+    "f": {
+      "id": "f",
+      "name": "Failure",
+      "code": "F",
+      "image": "images/ranks/f.png",
+      "color": "#cc0000",
+      "type": "failure",
+      "score": 0
+    },
+    "x": {
+      "id": "x",
+      "name": "Unplayed",
+      "code": "X",
+      "image": "images/ranks/x.png",
+      "color": "#555555",
+      "type": "unplayed",
+      "score": 0
+    }
+  },
+  "version": "20150820220146"
 }
