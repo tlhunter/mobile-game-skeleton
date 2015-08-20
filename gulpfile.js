@@ -139,11 +139,21 @@ gulp.task('data', function(done) {
 
   function jsonCleanup() {
     fs.readFile(DATA_FILE, function(err, data) {
+      if (err) {
+        throw err;
+      }
+
       var json = JSON.parse(data);
 
       var text = JSON.stringify(json, null, 2);
 
-      fs.writeFile(DATA_FILE, text, done);
+      fs.writeFile(DATA_FILE, text, function(err) {
+        if (err) {
+          throw err;
+        }
+
+        done();
+      });
     });
   }
 });
@@ -192,19 +202,19 @@ function moveStatic(cordova) {
  * These tasks are required before performing any cordova builds
  */
 gulp.task('prebuild-cordova', [
+  'data',
   'static-cordova',
   'scripts',
   'styles',
-  'html-cordova',
-  'data'
+  'html-cordova'
 ]);
 
 gulp.task('prebuild-web', [
+  'data',
   'static-web',
   'scripts',
   'styles',
-  'html-web',
-  'data'
+  'html-web'
 ]);
 
 /**
