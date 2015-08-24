@@ -12,10 +12,16 @@
         },
         "cordova-plugin-admobpro": {
             "PACKAGE_NAME": "name.thomashunter.strategicgol"
+        },
+        "org.apache.cordova.media": {
+            "PACKAGE_NAME": "name.thomashunter.strategicgol"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-extension": {
+            "PACKAGE_NAME": "name.thomashunter.strategicgol"
+        },
+        "org.apache.cordova.file": {
             "PACKAGE_NAME": "name.thomashunter.strategicgol"
         }
     }

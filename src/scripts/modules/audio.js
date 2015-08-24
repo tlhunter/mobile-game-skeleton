@@ -48,7 +48,7 @@ MODULE.Audio = (function() {
   };
 
   Audio.getPlatform = function() {
-    if (app.device.cordova && window.Media) {
+    if (app.device.cordova && 'Media' in window) {
       return Audio.PLATFORM.CORDOVA;
     } else {
       return Audio.PLATFORM.WEB;

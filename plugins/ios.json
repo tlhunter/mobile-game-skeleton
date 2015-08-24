@@ -90,6 +90,18 @@
                             "xml": false,
                             "count": 1
                         }
+                    ],
+                    "AssetsLibrary.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "MobileCoreServices.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
                     ]
                 }
             },
@@ -98,6 +110,14 @@
                     "/*": [
                         {
                             "xml": "<feature name=\"AdMob\"><param name=\"ios-package\" value=\"CDVAdMobPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"File\"><param name=\"ios-package\" value=\"CDVFile\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Media\"><param name=\"ios-package\" value=\"CDVSound\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -111,10 +131,16 @@
         },
         "cordova-plugin-admobpro": {
             "PACKAGE_NAME": "name.thomashunter.strategicgol"
+        },
+        "org.apache.cordova.media": {
+            "PACKAGE_NAME": "name.thomashunter.strategicgol"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-extension": {
+            "PACKAGE_NAME": "name.thomashunter.strategicgol"
+        },
+        "org.apache.cordova.file": {
             "PACKAGE_NAME": "name.thomashunter.strategicgol"
         }
     }
