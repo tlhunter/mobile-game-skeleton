@@ -17,7 +17,7 @@ MODULE.AudioWeb = (function() {
     Object.keys(data).forEach(function(audio_id) {
       var audio = data[audio_id];
 
-      var audio_tag = new window.Audio(audio.file);
+      var audio_tag = new Audio(audio.file);
 
       if (audio.type === MODULE.Audio.MUSIC) {
         audio_tag.loop = 'loop';
