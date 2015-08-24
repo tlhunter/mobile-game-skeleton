@@ -6,7 +6,7 @@
     "admob": "pub-3769178507272044",
     "admob_android": "ca-app-pub-3769178507272044/5009054623",
     "admob_ios": "ca-app-pub-3769178507272044/7962521020",
-    "adsense": "TODO",
+    "adsense": "ca-pub-3769178507272044/8012451824",
     "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green <strong>Playable Zone</strong> to toggle cells.</p>\n<p>No cells can be alive in the red <strong>Dead Zones</strong>.</p>\n<p>The rainbow tiles are <strong class='cycle'>Goal</strong> tiles and need to be activiated to beat levels.</p>\n<p>The strobing red tiles are <strong class='red-cycle'>Anti Goal</strong> tiles and if activated you lose.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n  <li>Any live cell with fewer than two live neighbours dies.</li>\n  <li>Any live cell with two or three live neighbours lives.</li>\n  <li>Any live cell with more than three live neighbours dies.</li>\n  <li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life</a> on WikiPedia.</p>",
     "confirm_reset": "Are you SURE you would like to <strong>destroy</strong> all your progress and settings and start over?",
     "last_level_incomplete": "<h3>You Won!</h3>\n\n<p>Congratulations on beating the final level of Strategic Game of Life!</p>\n<p>Be sure to go back and play each level and achieve an <span class='cycle'>A</span> ranking!</p>\n<p>If enough people enjoy this game I'll add more levels.</p>",
@@ -2087,5 +2087,5 @@
       "score": 0
     }
   },
-  "version": "20150820230610"
+  "version": "20150824212500"
 }

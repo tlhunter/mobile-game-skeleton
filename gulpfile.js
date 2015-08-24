@@ -150,6 +150,7 @@ gulp.task('data', function(done) {
           throw err;
         }
 
+        gulp.src(DATA_FILE, { base: 'tmp/' }).pipe(gulp.dest(DIST));
         done();
       });
     });
@@ -177,11 +178,6 @@ function moveStatic(cordova) {
     'src/images/**'
   ];
 
-  // TODO: Data command should handle this
-  var dist_files = [
-    DATA_FILE
-  ];
-
   var web_only_files = [
     'src/manifest.json',
     'src/manifest.webapp',
@@ -193,7 +189,6 @@ function moveStatic(cordova) {
   }
 
   gulp.src(files, { base: 'src/' }).pipe(gulp.dest(WWW));
-  gulp.src(dist_files, { base: 'tmp/' }).pipe(gulp.dest(DIST));
 }
 
 /**
