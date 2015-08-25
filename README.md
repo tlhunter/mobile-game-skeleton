@@ -26,6 +26,12 @@ TODO: Where is this data downloaded from?
 
 ### Fixing the Status Bar
 
+#### Symptom
+
+The status bar is visible on the top of the screen and occludes some of the content
+
+#### Solution
+
 Patch the following file:
 
 ```
@@ -41,6 +47,39 @@ Add the following inside of `MainViewController`:
     return YES;
 }
 ```
+
+### Fixing Audio Playback
+
+#### Symptom
+
+Music does not play in the game. The following error is also visible in the Xcode debug log:
+
+```
+Deactivating an audio session that has running I/O.
+All I/O should be stopped or paused prior to deactivating the audio session.
+```
+
+#### Solution
+
+Patch the following file:
+
+```
+/platforms/ios/Game of Life/Plugins/org.apache.cordova.media/CDVSound.m
+```
+
+Then, you'll want to comment out part of the `audioPlayerDidFinishPlaying` function:
+
+```objc
+/*
+if (self.avSession) {
+    [self.avSession setActive:NO error:nil];
+}
+*/
+```
+
+#### Further Reading
+
+https://issues.apache.org/jira/browse/CB-7599
 
 ## Android Notes
 

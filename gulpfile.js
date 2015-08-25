@@ -2,6 +2,7 @@
 
 // System
 var spawn = require('child_process').spawn;
+var exec = require('child_process').exec;
 var fs = require('fs');
 
 // Local Gulp
@@ -43,6 +44,24 @@ var PATHS = {
     'src/html/screens/*.html'
   ]
 };
+
+/**
+ * Deletes everything in the www directory.
+ * If you're editing files in there you're doing something wrong!
+ */
+gulp.task('empty', function(done) {
+  exec('rm -rf ./www/*', function(err, output) {
+    if (err) {
+      console.error(err);
+      throw new Error(err);
+    }
+
+    console.log(output);
+    console.log("Empty Task Completed");
+
+    done();
+  });
+});
 
 gulp.task('default', [
   'scripts',
@@ -163,17 +182,29 @@ gulp.task('data', function(done) {
  * TODO: Should this all be implemented via Cordova hooks?
  * @see http://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html
  */
-gulp.task('static-cordova', function() {
-  return moveStatic(true);
+gulp.task('static-android', function() {
+  return moveStatic(true, false);
+});
+
+gulp.task('static-ios', function() {
+  return moveStatic(true, true);
 });
 
 gulp.task('static-web', function() {
-  return moveStatic(false);
+  return moveStatic(false, false);
 });
 
-function moveStatic(cordova) {
+function moveStatic(cordova, ios) {
   var files = [
-    'src/audio/**',
+    'src/audio/**/*.wav',
+    'src/audio/**/*.ogg',
+    'src/fonts/**',
+    'src/images/**'
+  ];
+
+  var files_ios = [
+    'src/audio/**/*.wav',
+    'src/audio/**/*.mp3',
     'src/fonts/**',
     'src/images/**'
   ];
@@ -188,21 +219,36 @@ function moveStatic(cordova) {
     gulp.src(web_only_files, { base: 'src/' }).pipe(gulp.dest(WWW));
   }
 
-  gulp.src(files, { base: 'src/' }).pipe(gulp.dest(WWW));
+  if (!ios) {
+    gulp.src(files, { base: 'src/' }).pipe(gulp.dest(WWW));
+  } else {
+    gulp.src(files_ios, { base: 'src/' }).pipe(gulp.dest(WWW));
+  }
 }
 
 /**
  * These tasks are required before performing any cordova builds
  */
-gulp.task('prebuild-cordova', [
+gulp.task('prebuild-ios', [
+  'empty', // TODO: Possible race condition of empty finishes after other tasks begin
   'data',
-  'static-cordova',
+  'static-ios',
+  'scripts',
+  'styles',
+  'html-cordova'
+]);
+
+gulp.task('prebuild-android', [
+  'empty', // TODO: Possible race condition of empty finishes after other tasks begin
+  'data',
+  'static-android',
   'scripts',
   'styles',
   'html-cordova'
 ]);
 
 gulp.task('prebuild-web', [
+  'empty', // TODO: Possible race condition of empty finishes after other tasks begin
   'data',
   'static-web',
   'scripts',
@@ -213,7 +259,7 @@ gulp.task('prebuild-web', [
 /**
  * Only builds Android
  */
-gulp.task('build-android', ['prebuild-cordova'], function(done) {
+gulp.task('build-android', ['prebuild-android'], function(done) {
   var build = spawn('cordova', ['build', 'android', '--release']);
 
   build.stdout.on('data', function(data) {
@@ -234,7 +280,7 @@ gulp.task('sign-android', function(done) {
 /**
  * Only builds iOS
  */
-gulp.task('build-ios', ['prebuild-cordova'], function(done) {
+gulp.task('build-ios', ['prebuild-ios'], function(done) {
   var build = spawn('cordova', ['build', 'ios']);
 
   build.stdout.on('data', function(data) {
