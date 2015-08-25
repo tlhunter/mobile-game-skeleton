@@ -17,49 +17,57 @@
       "id": "background",
       "type": "music",
       "name": "Menu Music",
-      "file": "audio/OutThere.ogg"
+      "file": "audio/OutThere.ogg",
+      "fileios": "audio/OutThere.mp3"
     },
     "chapter-1": {
       "id": "chapter-1",
       "type": "music",
       "name": "Chapter 1 Music",
-      "file": "audio/AmbientalExperience.ogg"
+      "file": "audio/AmbientalExperience.ogg",
+      "fileios": "audio/AmbientalExperience.mp3"
     },
     "chapter-2": {
       "id": "chapter-2",
       "type": "music",
       "name": "Chapter 2 Music",
-      "file": "audio/Evasion.ogg"
+      "file": "audio/Evasion.ogg",
+      "fileios": "audio/Evasion.mp3"
     },
     "select": {
       "id": "select",
       "type": "sound",
       "name": "Select",
-      "file": "audio/select.wav"
+      "file": "audio/select.wav",
+      "fileios": "audio/select.wav"
     },
     "back": {
       "id": "back",
       "type": "sound",
       "name": "Back",
-      "file": "audio/back.wav"
+      "file": "audio/back.wav",
+      "fileios": "audio/back.wav"
     },
     "clear": {
       "id": "clear",
       "type": "sound",
       "name": "Clear",
-      "file": "audio/clear.wav"
+      "file": "audio/clear.wav",
+      "fileios": "audio/clear.wav"
     },
     "play": {
       "id": "play",
       "type": "sound",
       "name": "Play",
-      "file": "audio/play.wav"
+      "file": "audio/play.wav",
+      "fileios": "audio/play.wav"
     },
     "stop": {
       "id": "stop",
       "type": "sound",
       "name": "Stop",
-      "file": "audio/stop.wav"
+      "file": "audio/stop.wav",
+      "fileios": "audio/stop.wav"
     }
   },
   "campaign": {
@@ -2087,5 +2095,5 @@
       "score": 0
     }
   },
-  "version": "20150824221725"
+  "version": "20150824235051"
 }

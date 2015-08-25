@@ -12,7 +12,9 @@ MODULE.AudioCordova = (function() {
   var AudioCordova = function(data) {
     var Media = window.Media; // JSLint ;)
     var self = this;
+
     var prefix = app.device.vendor === MODULE.Device.VENDORS.ANDROID ? ANDROID_PREFIX : '';
+    var filename_key = app.device.vendor === MODULE.Device.VENDORS.IOS ? 'fileios' : 'file';
 
     this.collection = {
       music: {},
@@ -24,7 +26,7 @@ MODULE.AudioCordova = (function() {
     Object.keys(data).forEach(function(audio_id) {
       var audio = data[audio_id];
 
-      var filename = prefix + audio.file;
+      var filename = prefix + audio[filename_key];
 
       var audio_obj;
       if (audio.type === MODULE.Audio.MUSIC) {
