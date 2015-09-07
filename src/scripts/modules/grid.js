@@ -12,12 +12,12 @@ MODULE.Grid = (function() {
 
     this.size = size;
 
-		var grid = '<canvas width="' + this.width * this.size + '" height="' + this.height * this.size + '"></canvas>';
+    var grid = '<canvas width="' + this.width * this.size + '" height="' + this.height * this.size + '"></canvas>';
 
-		this.container.insertAdjacentHTML('beforeend', grid);
+    this.container.insertAdjacentHTML('beforeend', grid);
 
     this.canvas = this.container.getElementsByTagName('canvas')[0];
-		this.grid = this.canvas.getContext('2d');
+        this.grid = this.canvas.getContext('2d');
 
     console.log(this.grid);
 
@@ -38,20 +38,20 @@ MODULE.Grid = (function() {
   /**
    * Recalculates the pixel dimensions and resizes the canvas element
    */
-	Grid.prototype.resize = function() {
-		this.pixel_dimensions = {
-			width: this.width * this.size,
-			height: this.height * this.size
-		};
+    Grid.prototype.resize = function() {
+      this.pixel_dimensions = {
+        width: this.width * this.size,
+        height: this.height * this.size
+      };
 
-		this.canvas.setAttribute('width', this.pixel_dimensions.width);
-		this.canvas.setAttribute('height', this.pixel_dimensions.height);
+      this.canvas.setAttribute('width', this.pixel_dimensions.width);
+      this.canvas.setAttribute('height', this.pixel_dimensions.height);
 
-		this.canvas.width = this.pixel_dimensions.width;
-		this.canvas.height = this.pixel_dimensions.height;
+      this.canvas.width = this.pixel_dimensions.width;
+      this.canvas.height = this.pixel_dimensions.height;
 
-    this.render();
-	};
+      this.render();
+    };
 
   /**
    * Draws all X and Y lines
@@ -80,9 +80,9 @@ MODULE.Grid = (function() {
   /**
    * Clears the canvas
    */
-	Grid.prototype.clear = function() {
-		this.grid.clearRect(0, 0, this.pixel_dimensions.width, this.pixel_dimensions.height);
-	};
+    Grid.prototype.clear = function() {
+      this.grid.clearRect(0, 0, this.pixel_dimensions.width, this.pixel_dimensions.height);
+    };
 
   /**
    * Figure out what the line size should be for the given cell size

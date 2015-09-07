@@ -31,8 +31,6 @@ MODULE.AudioCordova = (function() {
       var audio_obj;
       if (audio.type === MODULE.Audio.MUSIC) {
         audio_obj = new Media(filename, null, null, function(status) {
-          console.log("LOOP CALLBACK FOR " + audio.file + " WITH STATUS " + status);
-
           if (self.current === audio_id && status === Media.MEDIA_STOPPED) {
             audio_obj.play();
           }
