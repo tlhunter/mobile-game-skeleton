@@ -115,12 +115,19 @@ MODULE.LevelScreen = (function() {
         // TODO: Congratulate user on winning
         end_game = true;
         console.log("Beat the final level... Now what?");
+        app.analytics.set({
+          finished_game: true
+        });
       }
 
       if (data.level === my_level + 1) {
         levelup = true;
         app.storage.set('level', data.level);
         app.interstitial.displayAdIfNeeded(data.level);
+
+        app.analytics.set({
+          highest_level: data.level
+        });
       }
 
       var rank = app.rank.get(data.level, data.generation, data.played);
