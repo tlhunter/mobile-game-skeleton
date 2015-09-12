@@ -1,17 +1,4 @@
 {
-  "dictionary": {
-    "ad_min_level": 12,
-    "ad_mod_level": 3,
-    "mixpanel": "f598ce903232263c47ca516bff05c18b",
-    "admob": "pub-3769178507272044",
-    "admob_android": "ca-app-pub-3769178507272044/5009054623",
-    "admob_ios": "ca-app-pub-3769178507272044/7962521020",
-    "adsense": "ca-pub-3769178507272044/8012451824",
-    "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green <strong>Playable Zone</strong> to toggle cells.</p>\n<p>No cells can be alive in the red <strong>Dead Zones</strong>.</p>\n<p>The rainbow tiles are <strong class='cycle'>Goal</strong> tiles and need to be activiated to beat levels.</p>\n<p>The strobing red tiles are <strong class='red-cycle'>Anti Goal</strong> tiles and if activated you lose.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n  <li>Any live cell with fewer than two live neighbours dies.</li>\n  <li>Any live cell with two or three live neighbours lives.</li>\n  <li>Any live cell with more than three live neighbours dies.</li>\n  <li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life</a> on WikiPedia.</p>",
-    "confirm_reset": "Are you SURE you would like to <strong>destroy</strong> all your progress and settings and start over?",
-    "last_level_incomplete": "<h3>You Won!</h3>\n\n<p>Congratulations on beating the final level of Strategic Game of Life!</p>\n<p>Be sure to go back and play each level and achieve an <span class='cycle'>A</span> ranking!</p>\n<p>If enough people enjoy this game I'll add more levels.</p>",
-    "last_level_complete": "<h3>You Won!</h3>\n\n<p>Congratulations on beating the final level of Strategic Game of Life!</p>\n<p>You've successfully beaten every level with a rank of <span class='cycle'>A</span>!</p>\n<p>If enough people enjoy this game I'll add more levels.</p>"
-  },
   "audio": {
     "background": {
       "id": "background",
@@ -68,6 +55,87 @@
       "name": "Stop",
       "file": "audio/stop.wav",
       "fileios": "audio/stop.wav"
+    }
+  },
+  "dictionary": {
+    "mixpanel": "f598ce903232263c47ca516bff05c18b",
+    "admob": "pub-3769178507272044",
+    "admob_android": "ca-app-pub-3769178507272044/5009054623",
+    "admob_ios": "ca-app-pub-3769178507272044/7962521020",
+    "adsense": "ca-pub-3769178507272044/8012451824",
+    "how_to_play": "<h3>How to Play</h3>\n\n<p>Tap the arena in a green <strong>Playable Zone</strong> to toggle cells.</p>\n<p>No cells can be alive in the red <strong>Dead Zones</strong>.</p>\n<p>The rainbow tiles are <strong class='cycle'>Goal</strong> tiles and need to be activiated to beat levels.</p>\n<p>The strobing red tiles are <strong class='red-cycle'>Anti Goal</strong> tiles and if activated you lose.</p>\n\n<h3>Conway's Game of Life</h3>\n\n<p>The Game of Life is governed by the following four rules:</p>\n\n<ol>\n  <li>Any live cell with fewer than two live neighbours dies.</li>\n  <li>Any live cell with two or three live neighbours lives.</li>\n  <li>Any live cell with more than three live neighbours dies.</li>\n  <li>Any dead cell with exactly three live neighbours becomes a live cell.</li>\n</ol>\n\n<p>If you're interested in learning more, read about <a href=\"https://en.wikipedia.org/wiki/Conway's_Game_of_Life\" target=\"_blank\">Conway's Game of Life</a> on WikiPedia.</p>",
+    "confirm_reset": "Are you SURE you would like to <strong>destroy</strong> all your progress and settings and start over?",
+    "last_level_incomplete": "<h3>You Won!</h3>\n\n<p>Congratulations on beating the final level of Strategic Game of Life!</p>\n<p>Be sure to go back and play each level and achieve an <span class='cycle'>A</span> ranking!</p>\n<p>If enough people enjoy this game I'll add more levels.</p>",
+    "last_level_complete": "<h3>You Won!</h3>\n\n<p>Congratulations on beating the final level of Strategic Game of Life!</p>\n<p>You've successfully beaten every level with a rank of <span class='cycle'>A</span>!</p>\n<p>If enough people enjoy this game I'll add more levels.</p>",
+    "ad_min_level": 12,
+    "ad_mod_level": 3
+  },
+  "library": {
+    "1": {
+      "id": 1,
+      "name": "Glider (45&deg;)",
+      "image": "images/library/glider.png",
+      "url": "http://www.conwaylife.com/wiki/Glider"
+    },
+    "2": {
+      "id": 2,
+      "name": "Still Lifes",
+      "image": "images/library/still-lifes.png",
+      "url": "http://www.conwaylife.com/wiki/Still_life"
+    },
+    "3": {
+      "id": 3,
+      "name": "Spaceship (90&deg;)",
+      "image": "images/library/spaceship.png",
+      "url": "http://www.conwaylife.com/wiki/Spaceship"
+    },
+    "4": {
+      "id": 4,
+      "name": "Multum in Parvo",
+      "image": "images/library/multum-in-parvo.png",
+      "url": "http://www.conwaylife.com/wiki/Multum_in_parvo"
+    },
+    "5": {
+      "id": 5,
+      "name": "Blinker",
+      "image": "images/library/pulsar.png",
+      "url": "http://www.conwaylife.com/wiki/Blinker"
+    },
+    "6": {
+      "id": 6,
+      "name": "Glider Gun",
+      "image": "images/library/glider-gun.png",
+      "url": "http://www.conwaylife.com/wiki/Gun"
+    },
+    "7": {
+      "id": 7,
+      "name": "Pentadecathlon",
+      "image": "images/library/pentadecathlon.png",
+      "url": "http://www.conwaylife.com/wiki/Pentadecathlon"
+    },
+    "8": {
+      "id": 8,
+      "name": "Eater",
+      "image": "images/library/eater.png",
+      "url": "http://www.conwaylife.com/wiki/Eater"
+    },
+    "9": {
+      "id": 9,
+      "name": "Sparky",
+      "image": "images/library/sparky.png",
+      "url": "http://www.conwaylife.com/wiki/Sparky"
+    },
+    "10": {
+      "id": 10,
+      "name": "Gliders by the Dozen",
+      "image": "images/library/gliders-by-the-dozen.png",
+      "url": "http://www.conwaylife.com/wiki/Gliders_by_the_dozen"
+    },
+    "11": {
+      "id": 11,
+      "name": "Orion 2",
+      "image": "images/library/orion-2.png",
+      "url": "http://www.conwaylife.com/wiki/Orion_2"
     }
   },
   "campaign": {
@@ -1962,74 +2030,6 @@
       "description": "Prevent the Red Cells from achieving a population of 20! You will win once the 20th generation is met. Be careful, you can only play 10 Green Cells."
     }
   },
-  "library": {
-    "1": {
-      "id": 1,
-      "name": "Glider (45&deg;)",
-      "image": "images/library/glider.png",
-      "url": "http://www.conwaylife.com/wiki/Glider"
-    },
-    "2": {
-      "id": 2,
-      "name": "Still Lifes",
-      "image": "images/library/still-lifes.png",
-      "url": "http://www.conwaylife.com/wiki/Still_life"
-    },
-    "3": {
-      "id": 3,
-      "name": "Spaceship (90&deg;)",
-      "image": "images/library/spaceship.png",
-      "url": "http://www.conwaylife.com/wiki/Spaceship"
-    },
-    "4": {
-      "id": 4,
-      "name": "Multum in Parvo",
-      "image": "images/library/multum-in-parvo.png",
-      "url": "http://www.conwaylife.com/wiki/Multum_in_parvo"
-    },
-    "5": {
-      "id": 5,
-      "name": "Blinker",
-      "image": "images/library/pulsar.png",
-      "url": "http://www.conwaylife.com/wiki/Blinker"
-    },
-    "6": {
-      "id": 6,
-      "name": "Glider Gun",
-      "image": "images/library/glider-gun.png",
-      "url": "http://www.conwaylife.com/wiki/Gun"
-    },
-    "7": {
-      "id": 7,
-      "name": "Pentadecathlon",
-      "image": "images/library/pentadecathlon.png",
-      "url": "http://www.conwaylife.com/wiki/Pentadecathlon"
-    },
-    "8": {
-      "id": 8,
-      "name": "Eater",
-      "image": "images/library/eater.png",
-      "url": "http://www.conwaylife.com/wiki/Eater"
-    },
-    "9": {
-      "id": 9,
-      "name": "Sparky",
-      "image": "images/library/sparky.png",
-      "url": "http://www.conwaylife.com/wiki/Sparky"
-    },
-    "10": {
-      "id": 10,
-      "name": "Gliders by the Dozen",
-      "image": "images/library/gliders-by-the-dozen.png",
-      "url": "http://www.conwaylife.com/wiki/Gliders_by_the_dozen"
-    },
-    "11": {
-      "id": 11,
-      "name": "Orion 2",
-      "image": "images/library/orion-2.png",
-      "url": "http://www.conwaylife.com/wiki/Orion_2"
-    }
-  },
   "ranks": {
     "a": {
       "id": "a",
@@ -2095,5 +2095,5 @@
       "score": 0
     }
   },
-  "version": "20150825074517"
+  "version": "20150912223015"
 }
