@@ -27,16 +27,16 @@ Project was built using `cordova@5.3.3`, YMMV with different versions.
 
 ### Building
 
+Use a different command based on the environment you want to build for:
+
 ```bash
-cordova build <platform>
+gulp build-ios
+gulp build-android
+gulp build-web
 ```
 
-Builds the specified platform, namely `ios`, `android`, and `firefoxos`.
-
-TODO: Handle this entirely using gulp
-
 ```bash
-gulp <platform>
+gulp <type>
 ```
 
 Compiles one of the types `scripts`, `styles`, `html`, or if omitted, all of them.
@@ -45,7 +45,7 @@ Compiles one of the types `scripts`, `styles`, `html`, or if omitted, all of the
 gulp watch
 ```
 
-Compiles all three types, then when any change occurs, recompiles.
+Compiles all three types, then when any change occurs, recompiles. You probably want to do this after `gulp build-web` for testing locally.
 
 ```bash
 gulp data
@@ -57,7 +57,11 @@ Download data from the CMS to tmp/data.json. Needed for Cordova build steps.
 
 This isn't a library you can simply download and start using, it's actually a complete game. If you want to build a whole new game using this as a base, you'll want to keep the following in mind:
 
- * CMS uses
+ * CMS uses [Grille](https://www.npmjs.com/package/grille), though you can edit the JSON by hand
+  * If demand is high enough I'll include a copy of the original spreadsheet
+ * Create a Mixpanel account (or remove any occurrence of `analytics`)
+ * Create a Ad Mob account (or remove any occurrence of `interstitial`)
+
 
 ## Platform Specific Notes
 

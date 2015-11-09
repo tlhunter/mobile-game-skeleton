@@ -16,7 +16,7 @@
     "url": "git@github.com:tlhunter/mobile-game-skeleton.git"
   },
   "author": "Thomas Hunter II <me@thomashunter.name>",
-  "license": "BSD/GPL",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/tlhunter/mobile-game-skeleton/issues"
   },
