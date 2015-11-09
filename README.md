@@ -24,6 +24,22 @@ TODO: Where is this data downloaded from?
 
 ## iOS Notes
 
+### Fixing Validation in Xcode
+
+#### Symptom
+
+When performing the validation step before submitting the app to Apple a validation error occurs.
+
+#### Solution
+
+Change the Info > Bundle Identifier to:
+
+```
+name.thomashunter.sgol
+```
+
+The default one, `name.thomashunter.strategicgol`, was deemed too long by Apple and had to change, so now it's different from Android and iOS.
+
 ### Fixing the Status Bar
 
 #### Symptom

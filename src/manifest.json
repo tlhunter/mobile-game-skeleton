@@ -1,7 +1,7 @@
 {
   "name": "Strategic Game of Life",
   "short_name": "Strategic GoL",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Strategic Game of Life: Conway's Game of Life reimagined as a strategic campaign of levels to beat.",
   "icons": [
     {

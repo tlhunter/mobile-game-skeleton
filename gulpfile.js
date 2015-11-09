@@ -295,6 +295,7 @@ gulp.task('build-ios', ['prebuild-ios'], function(done) {
 });
 
 gulp.task('build-web', ['prebuild-web'], function(done) {
+  // TODO: run prebuild-web? Why isn't that here?!
   console.log("Building for FirefoxOS and Web...");
   return gulp.src('www/**', { base: 'www/' }).pipe(gulp.dest(WEB_BUILD));
 });
