@@ -2,7 +2,7 @@
 
 This project was created by <a href="https://github.com/tlhunter">Thomas Hunter II</a> as a proof of concept for building cross-platform games using <a href="https://cordova.apache.org/">Apache Cordova</a>. Specifically this project can be used to build for Web/Firefox OS _without_ the need to have Cordova installed. Otherwise, building for iOS and Android will require Cordova.
 
-This engine takes a hybrid approach to game development. Menus with button-based navigation are built using familiar HTML and CSS. Navigation involved hiding and showing various screens. Actual game-loop rendering taked place on a dedicated canvas.
+This engine takes a hybrid approach to game development. Menus with button-based navigation are built using familiar HTML and CSS. Navigation involved hiding and showing various screens. Actual game-loop rendering takes place on a dedicated canvas.
 
 
 ## Play the Original Game
