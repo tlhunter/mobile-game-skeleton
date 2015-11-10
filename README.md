@@ -2,6 +2,8 @@
 
 This project was created by <a href="https://github.com/tlhunter">Thomas Hunter II</a> as a proof of concept for building cross-platform games using <a href="https://cordova.apache.org/">Apache Cordova</a>. Specifically this project can be used to build for Web/Firefox OS _without_ the need to have Cordova installed. Otherwise, building for iOS and Android will require Cordova.
 
+This engine takes a hybrid approach to game development. Menus with button-based navigation are built using familiar HTML and CSS. Navigation involved hiding and showing various screens. Actual game-loop rendering taked place on a dedicated canvas.
+
 
 ## Play the Original Game
 
@@ -23,7 +25,7 @@ npm install -g cordova gulp
 npm install
 ```
 
-Project was built using `cordova@5.3.3`, YMMV with different versions.
+Project was built using `cordova@5.3.3`, your mileage may vary with different versions.
 
 ### Building
 
@@ -68,6 +70,10 @@ This isn't a library you can simply download and start using, it's actually a co
 Cordova, unfortunately, isn't perfect. Listed below is a bunch of platform-specific hacks one needs to employ when building this project.
 
 ### iOS Notes
+
+I recommend you read the [Cordova iOS Getting Started Guide](https://cordova.apache.org/docs/en/2.5.0/guide/getting-started/ios/).
+
+You'll want to load the included Xcode Project to perform builds.
 
 #### Fixing Validation in Xcode
 
@@ -143,6 +149,12 @@ if (self.avSession) {
 https://issues.apache.org/jira/browse/CB-7599
 
 ### Android Notes
+
+I recommend you read the [Cordova Android Getting Started Guide](https://cordova.apache.org/docs/en/2.5.0/guide/getting-started/android/).
+
+Luckily the entire process of building your Android APK can be automated using the command line. Check out `bin/sign-android.sh` for an example on how to sign your APK.
+
+#### Debugging
 
 To debug the app in Chrome inspector, you'll need to do the following:
 
