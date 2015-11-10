@@ -29,6 +29,8 @@ Project was built using `cordova@5.3.3`, your mileage may vary with different ve
 
 ### Building
 
+#### Build Entire Project
+
 Use a different command based on the environment you want to build for:
 
 ```bash
@@ -37,23 +39,29 @@ gulp build-android
 gulp build-web
 ```
 
+#### Build Sub Components
+
+Compiles one of the types `scripts`, `styles`, `html`, or if omitted, all of them.
+
 ```bash
 gulp <type>
 ```
 
-Compiles one of the types `scripts`, `styles`, `html`, or if omitted, all of them.
+#### Automatic Rebuild
+
+Compiles all three types, then when any change occurs, recompiles. You probably want to do this after `gulp build-web` for testing locally.
 
 ```bash
 gulp watch
 ```
 
-Compiles all three types, then when any change occurs, recompiles. You probably want to do this after `gulp build-web` for testing locally.
+#### Download Data
+
+Download data from the CMS to tmp/data.json. Needed for Cordova build steps.
 
 ```bash
 gulp data
 ```
-
-Download data from the CMS to tmp/data.json. Needed for Cordova build steps.
 
 ## Forking Guide
 
