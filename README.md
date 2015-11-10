@@ -164,13 +164,16 @@ Luckily the entire process of building your Android APK can be automated using t
 
 #### Debugging
 
-To debug the app in Chrome inspector, you'll need to do the following:
+To debug the app in Chrome inspector, you'll need to edit the following:
 
 ```
-edit platforms/android/AndroidManifest.xml
+platforms/android/AndroidManifest.xml
+```
 
-# Add this debuggable attribute
-# <application android:debuggable="true" ...
+Add this debuggable attribute
+
+```xml
+<application android:debuggable="true" ...>
 ```
 
 You'll want to build the android app _without_ the --release flag.
