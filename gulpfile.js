@@ -45,11 +45,24 @@ var PATHS = {
   ]
 };
 
+gulp.task('mkdirp', function(done) {
+  exec('mkdir -p ./www/dist', function(err, output) {
+    if (err) {
+      console.error(err);
+      throw new Error(err);
+    }
+
+    console.log(output);
+    console.log("mkdirp Task Completed");
+
+    done();
+  });
+});
 /**
  * Deletes everything in the www directory.
  * If you're editing files in there you're doing something wrong!
  */
-gulp.task('empty', function(done) {
+gulp.task('empty', ['mkdirp'], function(done) {
   exec('rm -rf ./www/*', function(err, output) {
     if (err) {
       console.error(err);
@@ -70,7 +83,7 @@ gulp.task('default', [
 ]);
 
 // TODO: Generate Sourcemaps
-gulp.task('scripts', function() {
+gulp.task('scripts', ['mkdirp'], function() {
   return gulp
     .src(PATHS.scripts)
     .pipe(uglify())
@@ -80,7 +93,7 @@ gulp.task('scripts', function() {
 
 // TODO: https://github.com/postcss/autoprefixer
 // TODO: Generate Sourcemaps
-gulp.task('styles', function() {
+gulp.task('styles', ['mkdirp'], function() {
   return gulp
     .src(PATHS.styles)
     .pipe(less())
@@ -89,11 +102,11 @@ gulp.task('styles', function() {
     .pipe(gulp.dest(DIST));
 });
 
-gulp.task('html-cordova', function() {
+gulp.task('html-cordova', ['mkdirp'], function() {
   return buildHTML(true);
 });
 
-gulp.task('html-web', function() {
+gulp.task('html-web', ['mkdirp'], function() {
   return buildHTML(false);
 });
 
