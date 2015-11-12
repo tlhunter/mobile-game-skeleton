@@ -67,7 +67,10 @@ gulp build-web
 Compiles one of the types `scripts`, `styles`, `html`, or if omitted, all of them.
 
 ```bash
-gulp <type>
+gulp scripts
+gulp styles
+gulp html
+gulp
 ```
 
 #### Automatic Rebuild
