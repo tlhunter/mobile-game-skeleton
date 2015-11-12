@@ -91,12 +91,12 @@ Download data from the CMS to tmp/data.json. Needed for Cordova build steps.
 gulp data
 ```
 
-## Forking Guide
+## Further Steps
 
 This isn't a library you can simply download and start using, it's actually a complete game. If you want to build a whole new game using this as a base, you'll want to keep the following in mind:
 
  * CMS uses [Grille](https://www.npmjs.com/package/grille), though you can edit the JSON by hand
-  * If demand is high enough I'll include a copy of the original spreadsheet
+  * There's a snapshot of the Google Spreadsheet in [res/cms-snapshots](res/cms-snapshots) you can import
  * Create a Mixpanel account (or remove any occurrence of `analytics`)
  * Create a Ad Mob account (or remove any occurrence of `interstitial`)
 
