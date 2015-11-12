@@ -42,6 +42,8 @@ gulp build-web
 
 Finally, open [http://localhost:1337](http://localhost:1337) in your web browser and play a sample game.
 
+![SGoL Screenshot](./res/dev-screenshot.png?raw=true "SGoL Screenshot")
+
 ### Building With Cordova
 
 Project was built using `cordova@5.3.3`, your mileage may vary with different versions.
