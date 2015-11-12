@@ -1,6 +1,6 @@
 # Mobile Game Skeleton
 
-This project was created by <a href="https://github.com/tlhunter">Thomas Hunter II</a> as a proof of concept for building cross-platform games using <a href="https://cordova.apache.org/">Apache Cordova</a>. Specifically this project can be used to build for Web/Firefox OS _without_ the need to have Cordova installed. Otherwise, building for iOS and Android will require Cordova.
+This project was as a proof of concept for building cross-platform games using <a href="https://cordova.apache.org/">Apache Cordova</a>. Specifically this project can be used to build for Web/Firefox OS _without_ the need to have Cordova installed. Otherwise, building for iOS and Android will require Cordova.
 
 This engine takes a hybrid approach to game development. Menus with button-based navigation are built using familiar HTML and CSS. Navigation involved hiding and showing various screens. Actual game-loop rendering takes place on a dedicated canvas.
 
@@ -23,7 +23,7 @@ If you're interested in how this game looks and performs on your device:
 First grab all the necessary files:
 
 ```bash
-npm install -g gulp
+npm install -g gulp # might need sudo
 npm install
 ```
 
@@ -40,7 +40,7 @@ In another terminal run a build for the website
 gulp build-web
 ```
 
-Finally, open http://localhost:1337 in your web browser and play a sample game.
+Finally, open [http://localhost:1337](http://localhost:1337) in your web browser and play a sample game.
 
 ### Building With Cordova
 
