@@ -18,16 +18,39 @@ If you're interested in how this game looks and performs on your device:
 
 ## Commands
 
-### Installation
+### Getting Started (Build for Web)
+
+First grab all the necessary files:
 
 ```bash
-npm install -g cordova gulp
+npm install -g gulp
 npm install
 ```
 
+Then run the sample server
+
+```bash
+cd server
+node ./sgol.js
+```
+
+In another terminal run a build for the website
+
+```bash
+gulp build-web
+```
+
+Finally, open http://localhost:1337 in your web browser and play a sample game.
+
+### Building With Cordova
+
 Project was built using `cordova@5.3.3`, your mileage may vary with different versions.
 
-### Building
+#### Install Cordova
+
+```bash
+npm install -g cordova
+```
 
 #### Build Entire Project
 
@@ -77,7 +100,7 @@ This isn't a library you can simply download and start using, it's actually a co
 
 Cordova, unfortunately, isn't perfect. Listed below is a bunch of platform-specific hacks one needs to employ when building this project.
 
-### iOS Notes
+### iOS Hacks
 
 I recommend you read the [Cordova iOS Getting Started Guide](https://cordova.apache.org/docs/en/2.5.0/guide/getting-started/ios/).
 
