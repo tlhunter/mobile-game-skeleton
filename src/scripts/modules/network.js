@@ -11,8 +11,7 @@ MODULE.Network = (function() {
       local: true
     },
     'remote-data-production': {
-      // http://zyu.me/apps/sgol/dist/data.json
-      url: 'http://zyu.me/apps/sgol/dist/data.json',
+      url: 'http://sgol.phobosrising.co/dist/data.json',
       local: false
     },
     'remote-data-development': {

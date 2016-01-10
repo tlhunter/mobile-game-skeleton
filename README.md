@@ -9,7 +9,7 @@ This engine takes a hybrid approach to game development. Menus with button-based
 
 If you're interested in how this game looks and performs on your device:
 
-* [Strategic Game of Life in Web Browser](http://zyu.me/apps/sgol)
+* [Strategic Game of Life in Web Browser](http://sgol.phobosrising.co)
 * [Strategic Game of Life on Google Play](https://play.google.com/store/apps/details?id=name.thomashunter.strategicgol)
 * [Strategic Game of Life on Firefox Marketplace](https://marketplace.firefox.com/app/strategic-gol)
 * [Strategic Game of Life on iOS App Store](https://itunes.apple.com/us/app/strategic-game-of-life/id1033673016)
