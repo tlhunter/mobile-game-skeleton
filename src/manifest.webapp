@@ -2,13 +2,13 @@
   "name": "Strategic GoL",
   "version": "0.8.1",
   "description": "Strategic Game of Life: Conway's Game of Life reimagined as a strategic campaign of levels to beat.",
-  "launch_path": "/apps/sgol/index.html",
+  "launch_path": "/index.html",
   "icons": {
     "128": "/apps/sgol/images/meta/app-128.png"
   },
   "developer": {
-    "name": "Thomas Hunter II (@tlhunter)",
-    "url": "https://thomashunter.name"
+    "name": "Phobos Rising (@phobosrising)",
+    "url": "http://phobosrising.co"
   },
   "default_locale": "en",
   "type": "web",
