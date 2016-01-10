@@ -1,7 +1,7 @@
 {
   "name": "mobile-game-skeleton",
-  "version": "0.8.1",
-  "description": "",
+  "version": "0.9.1",
+  "description": "Strategic Game of Life: Conway's Game of Life reimagined as a strategic campaign of levels to beat.",
   "main": "server/server.js",
   "directories": {
     "test": "test"
