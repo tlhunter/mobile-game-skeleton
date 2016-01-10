@@ -7,14 +7,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-admobpro": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-admobpro"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-extension": {
         "source": {
             "type": "registry",
@@ -23,20 +15,36 @@
         "is_top_level": false,
         "variables": {}
     },
-    "org.apache.cordova.media": {
-        "source": {
-            "type": "registry",
-            "id": "org.apache.cordova.media"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "org.apache.cordova.file": {
         "source": {
             "type": "registry",
             "id": "org.apache.cordova.file"
         },
         "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-admobpro": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-admobpro"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-file": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-media": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-media"
+        },
+        "is_top_level": true,
         "variables": {}
     }
 }

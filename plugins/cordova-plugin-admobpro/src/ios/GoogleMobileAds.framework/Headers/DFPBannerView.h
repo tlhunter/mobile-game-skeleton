@@ -6,6 +6,8 @@
 //
 
 #import <GoogleMobileAds/GADBannerView.h>
+#import <GoogleMobileAds/GADCorrelator.h>
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 
 @protocol DFPCustomRenderedBannerViewDelegate;
 @protocol GADAdSizeDelegate;
@@ -24,9 +26,7 @@
 /// Optional delegate that is notified when creatives send app events.
 @property(nonatomic, weak) IBOutlet id<GADAppEventDelegate> appEventDelegate;
 
-/// Optional delegate that is notified when creatives cause the banner to change size. To avoid
-/// crashing the app, remember to nil this property before releasing the object that implements the
-/// GADAdSizeDelegate protocol.
+/// Optional delegate that is notified when creatives cause the banner to change size.
 @property(nonatomic, weak) IBOutlet id<GADAdSizeDelegate> adSizeDelegate;
 
 /// Optional array of NSValue encoded GADAdSize structs, specifying all valid sizes that are
@@ -47,6 +47,9 @@
 ///   \endcode
 @property(nonatomic, copy) NSArray *validAdSizes;
 
+/// Correlator object for correlating this object to other ad objects.
+@property(nonatomic, strong) GADCorrelator *correlator;
+
 /// Indicates that the publisher will record impressions manually when the ad becomes visible to the
 /// user.
 @property(nonatomic, assign) BOOL enableManualImpressions;
@@ -61,6 +64,8 @@
 /// Use this function to resize the banner view without launching a new ad request.
 - (void)resize:(GADAdSize)size;
 
+#pragma mark Deprecated
+
 /// Sets the receiver's valid ad sizes to the values pointed to by the provided NULL terminated list
 /// of GADAdSize pointers.
 ///
@@ -70,6 +75,7 @@
 ///   GADAdSize size2 = kGADAdSizeLargeBanner;
 ///   [bannerView setValidAdSizesWithSizes:&size1, &size2, NULL];
 ///   \endcode
-- (void)setValidAdSizesWithSizes:(GADAdSize *)firstSize, ... NS_REQUIRES_NIL_TERMINATION;
+- (void)setValidAdSizesWithSizes:(GADAdSize *)firstSize, ... NS_REQUIRES_NIL_TERMINATION
+                                 GAD_DEPRECATED_MSG_ATTRIBUTE("Use validAdSizes property.");
 
 @end
